@@ -1,11 +1,30 @@
 ---
-title: New user information
+title: Welcome to the Palmetto Cluster Documentation
 keywords: homepage
 sidebar: documentation_sidebar
 permalink: index.html
 ---
 
-## Obtaining an account
+## Getting Help
+
+### Palmetto Office Hours
+
+Palmetto Office Hours are held every **Wednesday 8-11 AM, at Barre Hall B102**.
+Just drop by - no appointment necessary.
+
+### Email ithelp
+
+Email <ithelp@clemson.edu> and include the word "Palmetto" in the subject line.
+The Palmetto staff will automatically receive your message.
+
+### Research support
+
+The [CITI](http://citi.clemson.edu) group offers various research computing support
+services. Please visit our website to learn more.
+
+## Information for New Users
+
+### Obtaining an account
 
 An account is required to access and use the Palmetto
 cluster. All Clemson University students, faculty and staff
@@ -16,22 +35,18 @@ can request an account here:
 Account requests are generally processed in a few hours,
 but may take up to a few days.
 
-## Training
+### Training
 
 The [CITI](http://citi.clemson.edu) group offers a workshop
 on using the Palmetto custer every month.
 See upcoming training sessions [here](http://citi.clemson.edu/training).
 
-## Getting Help
+### On-boarding sessions
 
-1. See the quick start guide, how-tos, software guide and programmers' guide
-for information
-1. Drop by the Palmetto Office Hours, held every Wednesday 8-11 AM, at Barre Hall 2138,
-for any questions relating to using Palmetto cluster
-1. For new users, we offer on-boarding sessions every Friday 9-10 AM, at Barre Hall 2138,
-where we can discuss how you can use Palmetto effectively to accomplish your research goals
-1. E-mail ithelp@clemson.edu with any problems/concerns and include the word "Palmetto" in the subject line
-1. Visit http://citi.clemson.edu for services offered by our research suppport staff
+For new users of Palmetto, we offer on-boarding sessions every **Friday 9-10 AM, at Barre Hall B102**.
+Please drop by
+to discuss how Palmetto can help you realize your research goals,
+and get help with getting started on Palmetto cluster.
 
 ## Acknowledging Palmetto Cluster
 
