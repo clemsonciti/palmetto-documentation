@@ -1,0 +1,157 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Palmetto Cluster Documentation
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: User's Guide
+    output: web, pdf
+    folderitems:
+
+    - title: New User Information
+      url: /index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Cluster Overview
+      url: /userguide_palmetto_overview.html
+      output: web, pdf
+
+    - title: Quick Start
+      url: /userguide_quickstart.html
+      output: web, pdf
+
+    - title: Linux Overview
+      url: /userguide_linux_overview.html
+      output: web, pdf
+
+      subfolders:
+      - title: How To
+        output: web, pdf
+        subfolderitems:
+
+        - title: Check disk usage
+          url: /userguide_howto_check_disk_usage.html
+          output: web, pdf
+
+        - title: Check licenses
+          url: /userguide_howto_check_license_usage.html
+          output: web, pdf
+
+        - title: Check max jobs
+          url: /userguide_howto_check_max_jobs.html
+          output: web, pdf
+
+        - title: Choose scratch system
+          url: /userguide_howto_choose_right_filesystem.html
+          output: web, pdf
+
+        - title: Create modules
+          url: /userguide_howto_create_own_modules.html
+          output: web, pdf
+
+        - title: Install software
+          url: /userguide_howto_install_software.html
+          output: web, pdf
+
+        - title: Monitor jobs
+          url: /userguide_howto_monitor_jobs.html
+          output: web, pdf
+
+        - title: Run GUI applications
+          url: /userguide_howto_run_graphical_applications.html
+          output: web, pdf
+
+        - title: Submit long-running jobs
+          url: /userguide_howto_run_long_jobs.html
+          output: web, pdf
+
+        - title: Submit many tasks/jobs simultaneously
+          url: /userguide_howto_run_many_tasks.html
+          output: web, pdf
+
+        - title: Use GPUs
+          url: /userguide_howto_use_gpus.html
+          output: web, pdf
+
+        - title: Use MPI
+          url: /userguide_howto_use_mpi.html
+          output: web, pdf
+
+  - title: Software Guide
+    output: web, pdf
+    folderitems:
+
+    - title: Software on Palmetto
+      url: /software_index.html
+      output: web, pdf
+
+    - title: ABAQUS
+      url: /software_abaqus.html
+      output: web, pdf
+
+    - title: Amber
+      url: /software_amber.html
+      output: web, pdf
+
+    - title: ANSYS
+      url: /software_ansys.html
+      output: web, pdf
+
+    - title: COMSOL
+      url: /software_comsol.html
+      output: web, pdf
+
+    - title: GROMACS
+      url: /software_gromacs.html
+      output: web, pdf
+
+    - title: HOOMD
+      url: /software_hoomd.html
+      output: web, pdf
+
+    - title: Java
+      url: /software_java.html
+      output: web, pdf
+
+    - title: LAMMPS
+      url: /software_lammps.html
+      output: web, pdf
+
+    - title: MATLAB
+      url: /software_matlab.html
+      output: web, pdf
+
+    - title: MrBayes
+      url: /software_mrbayes.html
+      output: web, pdf
+
+    - title: Paraview
+      url: /software_paraview.html
+      output: web, pdf
+
+    - title: Rclone
+      url: /software_rclone.html
+      output: web, pdf
+
+    - title: Tassel
+      url: /software_tassel.html
+      output: web, pdf
+
+    - title: Trinity
+      url: /software_trinity.html
+      output: web, pdf
