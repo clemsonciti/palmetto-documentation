@@ -36,32 +36,60 @@ components including:
 1. an easy-to-use file transfer client
 (which allows you to exchange files and folders
 between your own computer and Palmetto)
-2. an X11 server to support SSH tunneling of graphical programs 
+2. an X11 server to support SSH tunneling of graphical programs
 (you no longer have to download, install, and run XMing separately).
-3. a graphical port-forwarding interface to support easy access to 
+3. a graphical port-forwarding interface to support easy access to
 web-based UI launched inside Palmetto
 
-The user interface of MobaXterm contains a terminal, allowing Windows users to 
-interact with Palmetto in a manner similar to Mac OS X and Linux users. 
+The user interface of MobaXterm contains a terminal, allowing Windows users to
+interact with Palmetto in a manner similar to Mac OS X and Linux users.
 
 After downloading and installing MobaXterm,
-users can log-in using the connection information below:
+users can log-in by following these steps:
 
-~~~
-$ ssh username@login.palmetto.clemson.edu 
-~~~
+1. Launch the MobaXterm program
 
-where `username` is your Clemson user ID.
+<img src="{{site.baseurl}}/images/mobaxterm_01.png" style="width:1000px">
 
-The Figure below illustrates how MobaXterm is used to connect to 
-Palmetto. The frame containing files and directories to the left
-is the content of your home directory. The red circle shows the 
-two buttons that allow you to download from (light-green arrow) and 
-upload to (purple arrow) Palmetto. The green circle indicates
-a X11 server running inside MobaXterm. The orange circle shows the
-button to call up portfowarding capabilities. 
+2. On the top-left corner of MobaXterm, click the **Session** button. Select
+the SSH setting and confirm that the following settings are set:
 
-<img src="{{site.baseurl}}/images/mobaxterm.png" style="width:1000px">
+- Remote host: user.palmetto.clemson.edu
+- Port: 22
+- X11-Forwarding is checked
+- Compression is checked
+- Remote environment is **Interactive shell**
+- SSH-browser type is **SCP (enhanced speed)**
+
+<img src="{{site.baseurl}}/images/mobaxterm_02.png" style="width:1000px">
+
+3. CLick **OK** and a new session window will be opened, where you will be
+prompted for your Palmetto password and the DUO authentication.
+
+<img src="{{site.baseurl}}/images/mobaxterm_03.png" style="width:1000px">
+
+4. After being authenticated, you will login to the **login001** node
+(formerly **user001**).
+
+<img src="{{site.baseurl}}/images/mobaxterm_04.png" style="width:1000px">
+
+Setting information for this session is saved, and for future login, you
+can see this session on the **Recent sessions** form of the main MobaXterm
+window as well as the **Saved sessions** tab of the side window. The side
+window can be displayed or hidden by clicking on the blue double-arrow sign
+on the top left of MobaXterm.
+
+<img src="{{site.baseurl}}/images/mobaxterm_05.png" style="width:1000px">
+
+<img src="{{site.baseurl}}/images/mobaxterm_06.png" style="width:1000px">
+
+MobaXterm also comes with a built-in file browser and transfer GUI
+(SSH-browser). This GUI is accessible via the **SCP** tab of the side
+window. Using the Upload (green arrow pointing up) and
+and Dowload (blue arrow pointing down) buttons at the top of the SCP tab,
+you can easily transfer files between Palmetto and your local computer.
+
+<img src="{{site.baseurl}}/images/mobaxterm_07.png" style="width:1000px">
 
 -----------------------------------------------------------------------
 
