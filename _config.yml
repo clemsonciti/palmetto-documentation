@@ -28,9 +28,9 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-#feedback_subject_line: Palmetto cluster documentation feedback
+feedback_subject_line: Palmetto cluster documentation feedback
 
-#feedback_email: atrikut@clemson.edu
+feedback_email: atrikut@clemson.edu
 # used as a contact email for the Feedback link in the top navigation bar
 
 # feedback_disable: true
@@ -39,7 +39,7 @@ exclude:
 # feedback_text: "Need help?"
 # if you uncomment the previous line, it changes the Feedback text
 
-feedback_link: "https://github.com/clemsonciti/palmetto-documentation/issues"
+# feedback_link: "https://github.com/clemsonciti/palmetto-documentation/issues"
 # if you uncomment the previous line, it changes where the feedback link points to
 
 highlighter: rouge
