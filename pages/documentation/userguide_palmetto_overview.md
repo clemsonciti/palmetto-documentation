@@ -5,8 +5,6 @@ sidebar: documentation_sidebar
 permalink: userguide_palmetto_overview.html
 ---
 
-
-
 ## Compute hardware
 
 Palmetto is a heterogenous cluster composed
@@ -133,4 +131,3 @@ Please see https://citi.sites.clemson.edu/infrastructure/ for details and pricin
 For more information about the condominium model and purchasing Palmetto nodes,
 including Palmetto nodes on grants please contact Jeronica Williams
 (jeronic@clemson.edu) or Marcin Ziolkowski (zziolko@clemson.edu).
-

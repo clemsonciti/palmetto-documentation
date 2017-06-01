@@ -5,14 +5,12 @@ sidebar: documentation_sidebar
 permalink: userguide_quickstart.html
 ---
 
-
-
------------------------------------------------------------------------
-
 ## Logging in
 
 Any user with a Palmetto Cluster account can log-in using
 [SSH (Secure Shell)](https://en.wikipedia.org/wiki/Comparison_of_SSH_clients).
+Mac OS X and Linux systems come with an SSH client installed,
+while Windows users will need to download one.
 
 ### Mac OS X and Linux users
 
@@ -29,71 +27,67 @@ where `username` is your Clemson user ID.
 
 MobaXterm is the recommended SSH client for Windows and can be downloaded
 [here](<http://mobaxterm.mobatek.net/download.html>).
-This software is recommended because it is free and comes with
-an comprehensive set of wrapper functions to support
-components including:
+This software is recommended because it is free and comes with:
 
-1. an easy-to-use file transfer client
-(which allows you to exchange files and folders
-between your own computer and Palmetto)
-2. an X11 server to support SSH tunneling of graphical programs
-(you no longer have to download, install, and run XMing separately).
-3. a graphical port-forwarding interface to support easy access to
-web-based UI launched inside Palmetto
+* A built-in file transfer client,
+which allows you to exchange files and folders
+between your own computer and Palmetto
 
-The user interface of MobaXterm contains a terminal, allowing Windows users to
-interact with Palmetto in a manner similar to Mac OS X and Linux users.
+* An X11 server which allows you to run graphical
+programs on Palmetto cluster
+
+* A graphical port-forwarding interface
+to support easy access to web-based programs launched inside Palmetto
 
 After downloading and installing MobaXterm,
 users can log-in by following these steps:
 
-1. Launch the MobaXterm program
+1.  Launch the MobaXterm program
 
-<img src="{{site.baseurl}}/images/mobaxterm_01.png" style="width:1000px">
+    <img src="{{site.baseurl}}/images/mobaxterm_01.png" style="width:1000px">
 
-2. On the top-left corner of MobaXterm, click the **Session** button. Select
-the SSH setting and confirm that the following settings are set:
+2.  On the top-left corner of MobaXterm, click the **Session** button. Select
+    the SSH setting and confirm that the following settings are set:
 
-- Remote host: user.palmetto.clemson.edu
-- Port: 22
-- X11-Forwarding is checked
-- Compression is checked
-- Remote environment is **Interactive shell**
-- SSH-browser type is **SCP (enhanced speed)**
+    Parameter           |   Value
+    --------------------|-------------------------------------
+    Remote host         | `login.palmetto.clemson.edu`
+    Port                |  22
+    X11-Forwarding      | enabled
+    Compression         | enabled
+    Remote environment  | Interactive shell
+    SSH-browser type    | **SCP (enhanced speed)**
 
-<img src="{{site.baseurl}}/images/mobaxterm_02.png" style="width:1000px">
+    <img src="{{site.baseurl}}/images/mobaxterm_02.png" style="width:1000px">
 
-3. CLick **OK** and a new session window will be opened, where you will be
-prompted for your Palmetto password and the DUO authentication.
+3.  Click **OK** and a new session window will be opened, where you will be
+    prompted for your Palmetto password and the DUO authentication.
 
-<img src="{{site.baseurl}}/images/mobaxterm_03.png" style="width:1000px">
+    <img src="{{site.baseurl}}/images/mobaxterm_03.png" style="width:1000px">
 
-4. After being authenticated, you will login to the **login001** node
-(formerly **user001**).
+4.  After being authenticated, you will login to the **login001** node.
 
-<img src="{{site.baseurl}}/images/mobaxterm_04.png" style="width:1000px">
+    <img src="{{site.baseurl}}/images/mobaxterm_04.png" style="width:1000px">
 
-Setting information for this session is saved, and for future login, you
-can see this session on the **Recent sessions** form of the main MobaXterm
-window as well as the **Saved sessions** tab of the side window. The side
-window can be displayed or hidden by clicking on the blue double-arrow sign
-on the top left of MobaXterm.
+    All settings for this session are saved, and for future logins, you
+    can select this session from the **Recent sessions** form of the main MobaXterm
+    window as well as the **Saved sessions** tab of the side window. The side
+    window can be displayed or hidden by clicking on the blue double-arrow sign
+    on the top left of MobaXterm.
 
-<img src="{{site.baseurl}}/images/mobaxterm_05.png" style="width:1000px">
+    <img src="{{site.baseurl}}/images/mobaxterm_05.png" style="width:1000px">
 
-<img src="{{site.baseurl}}/images/mobaxterm_06.png" style="width:1000px">
+    <img src="{{site.baseurl}}/images/mobaxterm_06.png" style="width:1000px">
 
-MobaXterm also comes with a built-in file browser and transfer GUI
-(SSH-browser). This GUI is accessible via the **SCP** tab of the side
-window. Using the Upload (green arrow pointing up) and
-and Dowload (blue arrow pointing down) buttons at the top of the SCP tab,
-you can easily transfer files between Palmetto and your local computer.
+    MobaXterm also comes with a built-in file browser and transfer GUI
+    (SSH-browser). This GUI is accessible via the **SCP** tab of the side
+    window. Using the Upload (green arrow pointing up) and
+    and Dowload (blue arrow pointing down) buttons at the top of the SCP tab,
+    you can easily transfer files between Palmetto and your local computer.
 
-<img src="{{site.baseurl}}/images/mobaxterm_07.png" style="width:1000px">
+    <img src="{{site.baseurl}}/images/mobaxterm_07.png" style="width:1000px">
 
------------------------------------------------------------------------
-
-## Palmetto nodes
+## Structure of Palmetto Cluster
 
 The Palmetto cluster is a collection of
 several computers (nodes).
@@ -180,8 +174,6 @@ and 10 Gbps Myrinet interconnect.).
 A useful command on the login node is `whatsfree`,
 which gives information about how many nodes from each
 phase are currently in use, free, or offlined for maintenance.
-
------------------------------------------------------------------------
 
 ## Filesystems
 
