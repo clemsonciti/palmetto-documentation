@@ -18,25 +18,28 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: User's Guide
+  - title: General Information
     output: web, pdf
     folderitems:
 
     - title: General Information
       url: /index.html
       output: web, pdf
-      type: homepage
 
-    - title: Cluster Overview
+    - title: About Palmetto Cluster
       url: /userguide_palmetto_overview.html
+      output: web, pdf
+
+  - title: User's Guide
+    output: web, pdf
+    folderitems:
+
+    - title: Linux Review
+      url: /userguide_linux_review.html
       output: web, pdf
 
     - title: Basic Usage
       url: /userguide_basic_usage.html
-      output: web, pdf
-
-    - title: Linux Overview
-      url: /userguide_linux_overview.html
       output: web, pdf
 
       subfolders:

@@ -1,6 +1,6 @@
 ---
 title: Basic Usage
-keywords: [login,submit,job,data,transfer]
+keywords: [login,submit,job,data,transfer,PBS,script]
 sidebar: documentation_sidebar
 permalink: userguide_basic_usage.html
 ---

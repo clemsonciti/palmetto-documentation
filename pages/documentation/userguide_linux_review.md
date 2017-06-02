@@ -2,7 +2,7 @@
 title: Review of Linux
 keywords: Linux
 sidebar: documentation_sidebar
-permalink: userguide_linux_overview.html
+permalink: userguide_linux_review.html
 ---
 
 
