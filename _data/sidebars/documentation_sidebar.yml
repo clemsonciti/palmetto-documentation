@@ -22,7 +22,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: New User Information
+    - title: General Information
       url: /index.html
       output: web, pdf
       type: homepage
@@ -31,8 +31,8 @@ entries:
       url: /userguide_palmetto_overview.html
       output: web, pdf
 
-    - title: Quick Start
-      url: /userguide_quickstart.html
+    - title: Basic Usage
+      url: /userguide_basic_usage.html
       output: web, pdf
 
     - title: Linux Overview

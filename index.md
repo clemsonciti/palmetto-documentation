@@ -1,5 +1,5 @@
 ---
-title: Welcome to the Palmetto Cluster Documentation
+title: General Information
 keywords: homepage
 sidebar: documentation_sidebar
 permalink: index.html

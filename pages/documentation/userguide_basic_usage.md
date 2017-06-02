@@ -1,8 +1,8 @@
 ---
-title: Quick Start
+title: Basic Usage
 keywords: [login,submit,job,data,transfer]
 sidebar: documentation_sidebar
-permalink: userguide_quickstart.html
+permalink: userguide_basic_usage.html
 ---
 
 ## Logging in
