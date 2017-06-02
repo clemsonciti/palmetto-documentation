@@ -46,7 +46,7 @@ Individual-owned or group-owned licensed software can also be run on Palmetto.
 ## Software with graphical applications
 
 See [this]({{site.baseurl}}/userguide_howto_run_graphical_applications.html) section
-of the User's Guide on how to check license usage.
+of the User's Guide on how to use software with graphical user interface (GUI).
 
 ## Installing your own software
 
