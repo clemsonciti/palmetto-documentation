@@ -181,14 +181,14 @@ Various filesystems are available for users to store data.
 These differ in capacity, data-persistence, and efficiency,
 and it is important that users understand which filesystem to use under which circumstances.
 
-#### 1. `/home/` directory
+### 1. `/home` directory
 
 The `/home` directory is shared and visible to all nodes.
 Each user has a sub-directory in the `/home` directory (`/home/username`)
 where they can store up to 100 GB.
 Data stored here is backed-up on a nightly basis.
 
-#### 2. `/scratch1`, `/scratch2`, `/scratch3` directories
+### 2. `/scratch1`, `/scratch2`, `/scratch3` directories
 
 The `/scratch` directories are shared and visible to all nodes.
 Each user has a sub-directory in each of these scratch directories,
@@ -196,7 +196,7 @@ where they can store virtually unlimited amount of data **temporarily**.
 Data stored in the scratch directories is not backed-up in any way,
 and data that is unused for 30 days is automatically deleted (and cannot be recovered).
 
-#### 3. The `local_scratch` filesystem
+### 3. The `/local_scratch` directory
 
 The `/home` and scratch systems are all
 Networked Attached Storage (NAS) systems.
@@ -206,9 +206,7 @@ In contrast to these NAS systems,
 Data in the `local_scratch` of a compute node can only be
 accessed for the period of the job.
 
------------------------------------------------------------------------
-
-## Pre-installed software on Palmetto - modules
+## Pre-installed software on Palmetto
 
 The Palmetto cluster provides a limited number of packages
 (including site-licensed packages),
@@ -265,8 +263,6 @@ $ echo $PATH
 
 You can also look at the modulefiles in `/software/modulefiles`
 to get a better idea of how loading a module works.
-
------------------------------------------------------------------------
 
 ## Job submission and control
 
