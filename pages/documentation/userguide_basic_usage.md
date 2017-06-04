@@ -457,13 +457,14 @@ with `qsub` on the command line,
 or with a `#PBS` directory in a batch script.
 
 Parameter | Purpose | Example
---------- | ------- | --------
-`-N` | Job name (7 characters)	| `-N maxrun1`
-`-l` | Job limits (lowercase L), hardware & other requirements for job | `-l select=1:ncpus=8:mem=1gb`
-`-q` | Queue to direct this job to (`workq` is the default, `supabad` is an example of specific research group's job queue) | `-q supabad`
-`-o` | Path to stdout file for this job (environment variables are no longer accepted here) | `-o stdout.txt`
-`-e` | Path to stderr file for this job (environment variables are no longer accepted here) | `-e stderr.txt`
-`-M` | E-mail for messages from the PBS server	 | `-M username@clemson.edu`
+----------|---------|---------
+`-N`      | Job name (7 characters)	| `-N maxrun1`
+`-l`      | Job limits (lowercase L), hardware & other requirements for job. | `-l select=1:ncpus=8:mem=1gb`
+`-q`      | Queue to direct this job to (`workq` is the default, `supabad` is an example of specific research group's job queue) | `-q supabad`
+`-o`      | Path to stdout file for this job (environment variables are not accepted here) | `-o stdout.txt`
+`-e`      | Path to stderr file for this job (environment variables are not accepted here) | `-e stderr.txt`
+`-M`      | E-mail for messages from the PBS server	 | `-M username@clemson.edu`
+`-j oe`   | Join the output and error streams and write to a single file | `-j oe`
 
 For example, in a batch script:
 
@@ -486,11 +487,9 @@ The `-l` switch provided to `qsub` or along with the `#PBS` directive
 can be used to specify the amount and kind of compute hardware (cores, memory, GPUs, interconnect, etc.,),
 its location, i.e., the node(s) and phase from which to request hardware,
 
-
-Parameter   | Purpose
+Option      | Purpose
 ------------|--------------------------------------------------------------
-`select`    | Number of chunks and resources per chunk. Two or more "chunks" can be placed on a single node,
-              but a single "chunk" cannot span more than one node.
+`select`    | Number of chunks and resources per chunk. Two or more "chunks" can be placed on a single node, but a single "chunk" cannot span more than one node.
 `walltime`  | Expected wall time of job (job is terminated after this time)
 `place`     | Controls the placemenet of the different chunks
 
