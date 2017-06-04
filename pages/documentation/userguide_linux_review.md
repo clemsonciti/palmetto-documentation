@@ -5,8 +5,6 @@ sidebar: documentation_sidebar
 permalink: userguide_linux_review.html
 ---
 
-
-
 Don't use Linux every day? A bit rusty? No problem, here's a brief review of some of the basics:
 
 ## Why Linux?
@@ -30,11 +28,12 @@ when you connect to Palmetto.
 
 ## When you log-in
 
+See the [Logging in]({{site.baseurl}}/userguide_basic_usage.html#logging-in) section of the User's Guide
+for instructions for logging in to the cluster.
 When you log-in, you'll be presented with a system message called the "message of the day" (MOTD).
 It looks something like this, with your command prompt waiting for you below this message:
 
 ~~~
-
  -----------------------------------------------------------------------------
        Welcome to the PALMETTO CLUSTER at CLEMSON UNIVERSITY
 
@@ -74,7 +73,6 @@ It looks something like this, with your command prompt waiting for you below thi
  -------------- This file is: /etc/motd -------- Last Updated: 31-May-2016 ---
 
 ~~~
-
 
 Notice that the command prompt indicates what node (`login001`) you are currently connected to.
 The `~` (tilde symbol) indicates that you are in your home directory `/home/username`. When you log-in to 
@@ -212,16 +210,18 @@ $ echo $MPI_HOME
 Control access to files and directories by setting permissions (`r` = read, `w` = write, 
 `x` = execute).  Use `ls -l` ("long listing") to see permissions settings:
 
-    [username@login001 ~]$ ls -al
-    total 3750128
-    drwx------ 102 username cuuser     143360 Mar 13 14:34 .
-    drwxr-xr-x 862 root  root        81920 Mar 13 13:51 ..
-    -rwx------   1 username cuuser        176 May 26  2010 .bash_profile
-    -rwx------   1 username cuuser       5667 Feb 27 10:54 .bashrc
-    -rwxr-xr-x   1 username staff      622783 Mar 13 14:33 dictionary.txt
-    -rwxr-xr-x   1 username staff      891777 Mar 13 14:34 personnel.txt
-    drwx------   2 username cuuser       4096 Jul  6  2010 petascale
-    drwx------   2 username cuuser       4096 Mar  5 15:14 tools
+~~~
+[username@login001 ~]$ ls -al
+total 3750128
+drwx------ 102 username cuuser     143360 Mar 13 14:34 .
+drwxr-xr-x 862 root  root        81920 Mar 13 13:51 ..
+-rwx------   1 username cuuser        176 May 26  2010 .bash_profile
+-rwx------   1 username cuuser       5667 Feb 27 10:54 .bashrc
+-rwxr-xr-x   1 username staff      622783 Mar 13 14:33 dictionary.txt
+-rwxr-xr-x   1 username staff      891777 Mar 13 14:34 personnel.txt
+drwx------   2 username cuuser       4096 Jul  6  2010 petascale
+drwx------   2 username cuuser       4096 Mar  5 15:14 tools
+~~~
 
 That first column of information listed here contains the permissions settings for each file 
 or directory.  For example,
@@ -256,7 +256,9 @@ Digit | Permission
 6     | `rw-`
 7     | `rwx`
 
-    -rwxr-xr-x   1 username staff      622783 Mar 13 14:33 dictionary.txt
+~~~
+-rwxr-xr-x   1 username staff      622783 Mar 13 14:33 dictionary.txt
+~~~
 
 `chmod 740 dictionary.txt` With this command, you are changing permissions so that this file will be 
 read-only (`r--`) for members of your group and other users will have no access (`---`).  Now, 
@@ -401,9 +403,13 @@ Here are a few more "advanced" utilities that some users may find useful.
 Print a list of directories and libraries available for linking (in this example, "name" 
 could also be just part of the name):
 
-    ldconfig -p | grep name
+~~~
+ldconfig -p | grep name
+~~~
 
 Print all shared library dependencies for an executable (a way to see if the libraries you 
 need to run that exe are available):
 
-    ldd myprogram.exe
+~~~
+ldd myprogram.exe
+~~~

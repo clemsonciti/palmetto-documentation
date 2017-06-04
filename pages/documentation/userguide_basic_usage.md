@@ -12,6 +12,10 @@ Any user with a Palmetto Cluster account can log-in using
 Mac OS X and Linux systems come with an SSH client installed,
 while Windows users will need to download one.
 
+All connections to Palmetto require two-factor authentication (2FA).
+If you are not enrolled in 2FA yet,
+you may enroll using the link <https://2fa.clemson.edu/>.
+
 ### Mac OS X and Linux users
 
 Mac OS X or Linux users may open a Terminal, and
@@ -22,6 +26,7 @@ $ ssh username@login.palmetto.clemson.edu
 ~~~
 
 where `username` is your Clemson user ID.
+You will be prompted for both your password and DUO authentication.
 
 ### Windows
 
@@ -87,39 +92,158 @@ users can log-in by following these steps:
 
     <img src="{{site.baseurl}}/images/mobaxterm_07.png" style="width:1000px">
 
-## Structure of Palmetto Cluster
+## Basic tasks
 
-The Palmetto cluster is a collection of
-several computers (nodes).
-Each node has a [hostnames](https://en.wikipedia.org/wiki/Hostname)
-used to identify that node,
-such as `example.palmetto.clemson.edu`.
+### Storing files and folders
 
-1. Login node: the login node is the entry-point to the cluster,
-All users begin by logging-in to this node. The hostname of the login node
-is `login.palmetto.clemson.edu`. It also has an "internal" hostname `login001`.
+#### Home and scratch directories
 
-1. Compute nodes: the nodes that actually do most of the "computing" on the cluster.
-Users make requests for temporary reservations
-(or **jobs**) on the compute nodes for running their applications
-(up to 72 or 168 hours, depending on
-the hardware configuration of the node.
-The compute nodes have hostnames `node0001.palmetto.clemson.edu`, `node0002.palmetto.clemson.edu`,
-etc.,
-The Palmetto cluster has over 2000 compute nodes.
+Various filesystems are available for users to store data.
+These differ in capacity, data-persistence, and efficiency,
+and it is important that users understand which filesystem
+to use under which circumstances.
 
-1. Data transfer node: special node that is used for transfering
-data to and from the cluster.
-The data transfer node has the hostname `xfer01-ext.palmetto.clemson.edu`.
+Location                |	Available space                     | Notes
+------------------------|---------------------------------------|---------------------------------------------------------------------------
+`/home/username`        |   100 GB per user                     | Backed-up nightly, permanent storage space accessible from all nodes
+`/scratch1/username`    |   233 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, OrangeFS Parallel File Sytem
+`/scratch2/username`    |   160 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, XFS
+`/scratch3/username`    |   129 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, ZFS
+`/local_scratch`        |   Varies between nodes (99GB-800GB)   | Per-node temporary work space, accessible only for the lifetime of job
 
-Palmetto is fairly "heterogeneous",
-meaning that not all the compute nodes have the same hardware configuration.
-Nodes differ in the number of CPU cores, amount of RAM, local disk space,
-interconnect, etc.,
-The hardware configuration of the different nodes is available in the file `/etc/hardware-table`:
+The `/home` and `/scratch` directories are shared by all nodes.
+In contrast, each node has its own `/local_scratch` directory.
+
+All data in the `/home` directory is permanent
+(not automatically deleted) and backed-up on a nightly basis.
+If you lose data in the `/home` directory,
+it may be possible to recover it if it was previously backed up.
+
+Data in the `/scratch` directories is **not** backed up,
+and any data that is untouched for 30 days is automatically
+removed from the `/scratch` directories.
+Data that cannot easily be reproduced should **not** be stored
+in the `/scratch` directories,
+and any data that is not required should be
+removed as soon as possible.
+
+See [this guide]({{site.baseurl}}/userguide_howto_choose_right_filesystem.html)
+on how to choose the appropriate filesystem for your work.
+
+#### Temporary reservations
+
+All users may apply for temporary reservation
+of the following resources:
+
+1. Up to 150 TB of long-term storage
+2. Up to 8.5 TB of fast SSD scratch space
+
+All requests will be reviewed by Clemson University
+Computational Advisory Team (CU-CAT).
+Reservation requests can be made [here](https://citi.sites.clemson.edu/new-reservation/
+).
+
+#### Purchased storage
+
+Users or groups may also
+purchase storage in 1 TB increments.
+For details about purchased storage, please contact the Palmetto support staff
+(<ithelp@clemson.edu>, and include the word "Palmetto" in the subject line).
+
+### Moving data in and out of the cluster
+
+#### Small files (kilobytes or a few megabytes)
+
+On Windows machines, using the MobaXterm SSH client,
+the built-in file browser can be used (**SCP** tab of the side window).
+Using the Upload (green arrow pointing up) and
+and Dowload (blue arrow pointing down) buttons at the top of the SCP tab,
+you can easily transfer small files between Palmetto and your local computer.
+
+<img src="{{site.baseurl}}/images/mobaxterm_07.png" style="width:1000px">
+
+On Unix systems, you can also use the `scp` (secure copy) command to
+perform file transfers. The general form of the `scp` command is:
 
 ~~~
+$ scp <path_to_source> username@xfer01-ext.palmetto.clemson.edu:<path_to_destination>
+~~~
 
+For example, here is the `scp` command to copy a file from the
+current directory on your local machine to your
+`/home/username` directory on Palmetto
+(this command is entered into a terminal running on your local machine,
+**not** on Palmetto):
+
+~~~
+$ scp myfile.txt username@xfer01-ext.palmetto.clemson.edu:/home/username
+~~~
+
+... and to do the same in reverse,
+i.e., copy from Palmetto to your local machine.
+(again, from a terminal running on your local machine,
+**not** on Palmetto):
+
+~~~
+$ scp username@xfer01-ext.palmetto.clemson.edu:/home/username/myfile.txt .
+~~~
+
+The `.` represents the working directory on the local machine.
+
+For folders, include the `-r` switch:
+
+~~~
+$ scp -r myfolder username@xfer01-ext.palmetto.clemson.edu:/home/username
+~~~
+
+#### Transfering larger files (more than a few megabytes)
+
+For larger files, we recommend using the [Globus](https://www.globus.org/)
+file transfer application. Here, we demonstrate how to use Globus Online
+to transfer files between Palmetto and a local machine (laptop).
+However, Globus can be used for file transfers to/from other locations as well.
+
+1.  You will need to have a Globus account set up to begin.
+    Visit [https://www.globus.org/](https://www.globus.org/)
+    and set up a Globus account.
+
+2.  To begin transfering files,
+    navigate to the Globus Online transfer utility
+    here:
+    [https://www.globus.org/app/transfer](https://www.globus.org/app/transfer).
+
+3.  The transfer utility allows you to transfer
+    files between "endpoints".
+    You will need to set your local machine
+    as a Globus Connect Personal Endpoint for the file transfer.
+    As a part of this step, you must install the
+    Globus Connect Personal application
+    (see here:
+    [https://www.globus.org/app/endpoints/create-gcp](https://www.globus.org/app/endpoints/create-gcp)
+    ).
+    After installing,
+    ensure that the application is running.
+    You should then be able to set your local machine as one endpoint.
+    In the figure below, the endpoint is named `My Personal Mac`.
+
+4.  As the second endpoint,
+    choose `clemson#xfer01-ext.palmetto.clemson.edu`.
+
+5.  You can now transfer files between any locations on your
+    local machine and the Palmetto cluster.
+
+    <img src="{{site.baseurl}}/images/globus.png" style="width:750px">
+
+### Checking available compute hardware
+
+The login node `login001` (the node that users first log-in to),
+is not meant for running computationally intensive tasks.
+Instead, users must reserve hardware from the **compute nodes**
+of the cluster. Currently, Palmetto cluster has over 2020 compute
+nodes. The hardware configuration of the different nodes is available
+in the file `/etc/hardware-table`:
+
+~~~
 $ cat /etc/hardware-table
 
 PALMETTO HARDWARE TABLE      Last updated:  Dec 25 2016
@@ -161,52 +285,21 @@ PBS resource requests are always lowercase.
 (6) 2 NVIDIA Tesla K40m cards per node, use resource request "ngpus=[1|2]" and "gpu_model=k40"
 (7) Use resource request "ssd=true" to request a chunk with SSD in location /ssd1, /ssd2, and /ssd3 (100GB max each)
 (8) Use resource request "nphis=[1|2]" to request phi nodes, the model is Xeon 7120p
-
 ~~~
 
-When reading the `hardware-table` file,
-remember that the cluster is composed of several phases (currently phases 0-15).
-Each phase is composed of several nodes (e.g., phase 5a has 370 nodes)
-with the same hardware configuration
-(e.g., each node in phase 5a has 8 cores, 32 GB ram, 31 GB local disk space,
-and 10 Gbps Myrinet interconnect.).
+The compute nodes are divided into "phases" (currently phases 0-15).
+Each phase is composed of several nodes with identical configuration,
+e.g., each node in phase 5a has 8 cores, 32 GB ram, 31 GB local disk space,
+and 10 Gbps Myrinet interconnect.
 
-A useful command on the login node is `whatsfree`,
-which gives information about how many nodes from each
-phase are currently in use, free, or offlined for maintenance.
+A useful command on the login node is `whatsfree`, which gives information
+about how many nodes from each phase are currently in use, free, or offlined
+for maintenance.
 
-## Filesystems
+Later sections of this guide will describe how to submit **jobs** to
+the cluster, i.e., reserve compute nodes for running computational tasks.
 
-Various filesystems are available for users to store data.
-These differ in capacity, data-persistence, and efficiency,
-and it is important that users understand which filesystem to use under which circumstances.
-
-### 1. `/home` directory
-
-The `/home` directory is shared and visible to all nodes.
-Each user has a sub-directory in the `/home` directory (`/home/username`)
-where they can store up to 100 GB.
-Data stored here is backed-up on a nightly basis.
-
-### 2. `/scratch1`, `/scratch2`, `/scratch3` directories
-
-The `/scratch` directories are shared and visible to all nodes.
-Each user has a sub-directory in each of these scratch directories,
-where they can store virtually unlimited amount of data **temporarily**.
-Data stored in the scratch directories is not backed-up in any way,
-and data that is unused for 30 days is automatically deleted (and cannot be recovered).
-
-### 3. The `/local_scratch` directory
-
-The `/home` and scratch systems are all
-Networked Attached Storage (NAS) systems.
-This means they are shared by all nodes.
-In contrast to these NAS systems,
-`local_scratch` is a filesystem local to each node.
-Data in the `local_scratch` of a compute node can only be
-accessed for the period of the job.
-
-## Pre-installed software on Palmetto
+### Checking and using available software
 
 The Palmetto cluster provides a limited number of packages
 (including site-licensed packages),
@@ -214,13 +307,13 @@ that can be used by all Palmetto users.
 These packages are available as **modules**,
 and must be activated/deactivated using the `module` command:
 
-Command |   Purpose
---------|----------------------------------------------------------------------
-`module avail` | List all packages available (on current system)
-`module add package/version` | Add a package to your current shell environment
-`module list` | List packages you have loaded
-`module rm package/version` | Remove a currently loaded package
-`module purge` | Remove *all* currently loaded packages
+Command                         |   Purpose
+--------------------------------|----------------------------------------------------------------------
+`module avail`                  | List all packages available (on current system)
+`module add package/version`    | Add a package to your current shell environment
+`module list`                   | List packages you have loaded
+`module rm package/version`     | Remove a currently loaded package
+`module purge`                  | Remove *all* currently loaded packages
 
 For example, to load the GCC (v4.8.1), CUDA Toolkit (v6.5.14)
 and OpenMPI (v1.8.4) modules, you can use the command:
@@ -262,154 +355,46 @@ $ echo $PATH
 ~~~
 
 You can also look at the modulefiles in `/software/modulefiles`
-to get a better idea of how loading a module works.
+to understand what happens when you add a module.
 
-## Job submission and control
+### Start an interactive job
 
-To use the cluster,
-users submit requests for temporary reservation
-of hardware resources (CPU cores, memory, GPUs, etc.,).
-These reservations are known as **jobs**,
-and there are two kinds of jobs that you may request:
-
-1.  **Interactive jobs** which allow you to interactively run
-tasks using a command-line interface
-
-2.  **Batch jobs** which allow you to schedule
-the running of tasks
-
-Interactive jobs are often best used during
-prototyping, testing, and debugging;
-but they are also used for running graphical applications
-on the cluster.
-Batch jobs are often best used for "production" runs, i.e., for
-running a large number of tasks and/or long-running tasks
-for which the user need not remain logged in to the cluster.
-
-The Palmetto cluster uses the
-Portable Batch Scheduling system (PBS)
-to manage jobs.
-The scheduler takes into account the resources (CPUs, memory, etc.,)
-requested by the job.
-If the resources are available, then the job is immediately
-started.
-If the resources are unavailable, the job is *queued*,
-and will start whenever the requested resources are free.
-
-### Interactive jobs
-
-You can schedule a simple
-interactive job using the `qsub` command
-with the additional `-I` switch:
+An interactive job can be started using the `qsub` command.
+Here is an example of an interactive job:
 
 ~~~
-[username@login001 ~]$ qsub -I
-~~~
-
-Depending on whether there are resources available on
-the cluster or not, the job may start immediately,
-or may take a while.
-
-When the job starts, you will see the following output:
-
-~~~
+[username@login001 ~]$ qsub -I -l select=1:ncpus=2:mem=4gb,walltime=4:00:00
 qsub (Warning): Interactive jobs will be treated as not rerunnable
-qsub: waiting for job 4222909.pbs02 to start
-qsub: job 4222909.pbs02 ready
-[username@node0561 ~]$
-~~~
+qsub: waiting for job 8730.pbs02 to start
+qsub: job 8730.pbs02 ready
 
-We see that the prompt is changed from
-`[username@login001 ~]$` to
-something like `[username@node0561 ~]$`.
-Here, `node0561` is the allocated compute node
-(you may see a different node).
-Once logged in to this node,
-you can, for example,
-set up your environment (i.e., load required modules)
-and run some computationally intensive task.
-In the below example commands,
-we load the `anaconda3/2.5.0` module,
-and run a Python script called `runsim.py`.
-
-~~~
-[username@node0561 ~]$ module add anaconda3/2.5.0
-[username@node0561 ~]$ cd /home/username/projects/simulation
-[username@node0561 simulation]$ python runsim.py
-~~~
-
-The `exit` command exits the current command shell
-(and ends the interactive job), bringing you back to
-the shell running on `login001`:
-
-~~~
-[username@node0561 ~]$ exit
-logout
-
-qsub: job 4222909.pbs02 completed
+[username@node0021 ~]$ module add python/3.4
+[username@node0021 ~]$ python runsim.py
+.
+.
+.
+[username@node0021 ~]$ exit
 [username@login001 ~]$
 ~~~
 
-The above job assumed the following default resource requests:
+Above, we request an interactive job using 1 "chunk" of hardware (`select=1`),
+2 CPU cores per "chunk", and 4gb of RAM per "chunk", for a wall time of 4 hours.
+Once these resources are available, we receive a Job ID (`8730.pbs02`),
+and a command-line session running on `node0021`.
 
-1.  1 node
-2.  1 CPU core
-3.  1 GB of memory
-4.  30 minutes of wall time
+### Submit a batch job
 
-Here is a more complex interactive job request:
+Interactive jobs require you to be logged-in while your tasks are running.
+In contrast, you may logout after submitting a batch job,
+and examine the results at a later time. This is useful when you need to
+run several computational tasks to the cluster, and/or when your
+computational tasks are expected to run for a long time.
 
-~~~
-$ qsub -I -l select=2:ncpus=2:mem=4gb,walltime=1:30:00
-qsub (Warning): Interactive jobs will be treated as not rerunnable
-qsub: waiting for job 4222951.pbs02 to start
-qsub: job 4222951.pbs02 ready
-
-[atrikut@node1113 ~]$
-~~~
-
-In the above request, in addition to the `-I` switch,
-we use the `-l` parameter to specify the job "limits".
-Its value is `select=2:ncpus=2:mem=4gb,walltime=1:30:00`,
-which specifies the limits as:
-
-* 2 "chunks" of hardware, with 2 CPU cores per chunk
-and 4 GB of memory per chunk
-* 1 hour and 30 minutes of walltime
-
-It is important to remember that job limits are
-specified as a required number of "hardware chunks",
-rather than "nodes".
-Each of these "chunks" must be able to fit into
-a node. For example, we cannot specify a "chunk" with
-7000 CPU cores and 6 GPUs, as none of the compute nodes on
-Palmetto can accommodate this chunk.
-
-Several small chunks may be placed by the scheduler on
-a single node, and indeed, at a given time,
-a compute node may be shared by several users.
-For example, in the above job limits specification
-(2 chunks with 2 CPU cores and 4 GB of RAM each),
-both chunks are small enough that they may be placed
-on the same compute node.
-
-When your job spans more than one node,
-then the command-line session is started only on one
-of these nodes known as the "lead node".
-From the lead node, you can `ssh` into the other allocated
-nodes (we will later see how to check what nodes your
-jobs are running on).
-
-**Note**: simply requesting a higher number of CPU cores
-will generally not make your program run faster.
-
-### Batch jobs
-
-For batch jobs,
-the job requirements and tasks to be run
-must be specified in a *batch script*.
-As an example, here is a simple batch script
-(let's call it `example.pbs`):
+To submit a batch job, you must prepare a **batch script**
+(you can do this using an editor like `vim` or `nano`).
+Following is an example of a batch script (call it `example.pbs`).
+In the batch job below, we really don't do anything useful
+(just sleep or "do nothing" for 60 seconds),
 
 ~~~
 #PBS -N example
@@ -422,316 +407,96 @@ echo Hello World from `hostname`
 sleep 60
 ~~~
 
-Lines beginning with `#PBS` are directives to the scheduler,
-and ignored by the compute nodes.
-The other lines are executed on the allocated compute nodes
-(actually, they are executed only by the "lead" node),
-and ignored by the scheduler.
-
-To submit a batch job, you can use `qsub` followed
-by the name of the script:
+After saving the above file, you can submit the batch job using `qsub`:
 
 ~~~
-$ qsub example.pbs
-
-4256957.pbs02
+[username@login001 ~]$ qsub example.pbs
+8738.pbs02
 ~~~
 
-The output of `qsub` is a unique
-job ID which can be used to query the status of a job
-using the `qstat` command:
+The returned job ID can be used to query the status of the job (using `qstat`)
+(or delete it using `qdel`):
 
 ~~~
-$ qstat 4256957.pbs02
-
-
+[username@login001 ~]$ qstat 8738.pbs02
 Job id            Name             User              Time Use S Queue
 ----------------  ---------------- ----------------  -------- - -----
-4256957.pbs02     example          atrikut           00:00:00 R c1_solo
+8738.pbs02        example          username           00:00:00 R c1_solo
 ~~~
 
-The output of `qstat` shows,
-among other things, the status of the job
-(under the column `S`). Here, the status is shown as Running (`R`).
-Jobs may also have a Queued (`Q`) status, or Error (`E`) status.
-Queued jobs are waiting for
-the requested resources to become available
-before they can be run.
-
-Once the job is complete,
-you should see the following output for `qstat`:
+Once the job is completed, you will see the files `example.o8738` (containing output if any)
+and `example.e8738` (containing errors if any) from your job.
 
 ~~~
-$ qstat 4256957.pbs02
-qstat: 4256957.pbs02 Job has finished, use -x or -H to obtain historical job information
+[username@login001 ~]$ cat example.o8738
+Hello World from node0230.palmetto.clemson.edu
 ~~~
 
-You should also see two new files
-in the working directory of your job
-with names `<jobname>.o<job ID>` and `<jobname>.e<job ID>`:
+## Job submission and control on Palmetto
 
-~~~
-$ ls
+The Palmetto cluster uses the Portable Batch Scheduling system (PBS)
+to manage jobs. Here are some basic 
 
-example.o4256957    example.e4256957
-~~~
+Command                         | Action
+--------------------------------|--------------------------------
+`qsub xyz.pbs`                  | Submit the job script `xyz.pbs`
+`qstat <job id>`                | Check the status of the job with given job ID
+`qstat -u <username>`           | Check the status of all jobs submitted by given username
+`qstat -xf <job id>`            | Check detailed information for job with given job ID
+`qsub -q <queuename> xyz.pbs`   | Submit to queue `queuename`
+`qdel <job id>`                 | Delete the job (queued or running) with given job ID
+`qdel -Wforce <job id>`         | Use when job not responding to just `qdel`
 
-The `.o` file contains any standard output your job may produce
-and the `.e` file contains any standard errors.
-In addition, if your job produces any data,
-such as logs, figures, etc., these will appear in the working directory
-(or whatever directory you configured them to be placed in).
+For more details and more advanced commands for submitting and controlling jobs,
+please refer to the [PBS Professional User's Guide](http://www.pbsworks.com/pdfs/PBSUserGuide14.2.pdf).
 
-~~~
-$ cat example.o4256957
+### PBS job options
 
-Hello World from node0570
-RESOURCES REQUESTED
-mem=2gb,ncpus=1,walltime=00:10:00
-
-RESOURCES USED
-cpupercent=0,cput=00:00:00,mem=0kb,ncpus=1,vmem=0kb,walltime=00:00:12
-~~~
-
-The above script included two directives for the scheduler:
-
-~~~
-#PBS -N example
-#PBS -l select=1:ncpus=1:mem=2gb,walltime=00:10:00
-~~~
-
-These directives specified the name for the job
-(using the `-N` parameter),
-and a list of resources required (using the `-l` parameter).
-Following is a list of parameters you can use
-(note that these parameters can also be used in interactive job requests):
+The following switches can be used either
+with `qsub` on the command line,
+or with a `#PBS` directory in a batch script.
 
 Parameter | Purpose | Example
---------- | ------- | -------- 
+--------- | ------- | --------
 `-N` | Job name (7 characters)	| `-N maxrun1`
 `-l` | Job limits (lowercase L), hardware & other requirements for job | `-l select=1:ncpus=8:mem=1gb`
 `-q` | Queue to direct this job to (`workq` is the default, `supabad` is an example of specific research group's job queue) | `-q supabad`
 `-o` | Path to stdout file for this job (environment variables are no longer accepted here) | `-o stdout.txt`
 `-e` | Path to stderr file for this job (environment variables are no longer accepted here) | `-e stderr.txt`
 `-M` | E-mail for messages from the PBS server	 | `-M username@clemson.edu`
-`-m` | Type of notification you wish to receive (b,e,a,n) | `-m ea`
 
-### Querying job information and deleting jobs
-
-As mentioned above, the `qstat` command can be used
-to query the status of a particular job:
+For example, in a batch script:
 
 ~~~
-$ qstat 7600424.pbs02
-Job id            Name             User              Time Use S Queue
-----------------  ---------------- ----------------  -------- - -----
-7600424.pbs02     pi-mpi           atrikut           00:00:00 R c1_single
+#PBS -N hydrogen
+#PBS -l select=1:ncpus=24:mem=200gb,walltime=4:00:00
+#PBS -q bigmem
+#PBS -j oe
 ~~~
 
-To list the job IDs and status of all your jobs,
-you can use the `-u` switch:
+And in an interactive job request on the command line:
 
 ~~~
-$ qstat -u username
-
-
-pbs02:
-                                                            Req'd  Req'd   Elap
-Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time  S Time
---------------- -------- -------- ---------- ------ --- --- ------ ----- - -----
-7600567.pbs02   username  c1_singl pi-mpi-1     1382   4   8    4gb 00:05 R 00:00
-7600569.pbs02   username  c1_singl pi-mpi-2    20258   4   8    4gb 00:05 R 00:00
-7600570.pbs02   username  c1_singl pi-mpi-3     2457   4   8    4gb 00:05 R 00:00
+$ qsub -I -N hydrogen -q bigmem -j oe -l select=1:ncpus=24:mem=200gb,walltime=4:00:00
 ~~~
 
-Once a job has finished running,
-`qstat -xf` can be used to obtain detailed job information:
+### Resource limits specification
+
+The `-l` switch provided to `qsub` or along with the `#PBS` directive
+can be used to specify the amount and kind of compute hardware (cores, memory, GPUs, interconnect, etc.,),
+its location, i.e., the node(s) and phase from which to request hardware,
+
+
+Parameter   | Purpose
+------------|--------------------------------------------------------------
+`select`    | Number of chunks and resources per chunk. Two or more "chunks" can be placed on a single node,
+              but a single "chunk" cannot span more than one node.
+`walltime`  | Expected wall time of job (job is terminated after this time)
+`place`     | Controls the placemenet of the different chunks
+
+Here are some examples of resource limits specification:
 
 ~~~
-$ qstat -xf 7600424.pbs02
-
-Job Id: 7600424.pbs02
-    Job_Name = pi-mpi
-    Job_Owner = atrikut@login001.palmetto.clemson.edu
-    resources_used.cpupercent = 103
-    resources_used.cput = 00:00:04
-    resources_used.mem = 45460kb
-    resources_used.ncpus = 8
-    resources_used.vmem = 785708kb
-    resources_used.walltime = 00:02:08
-    job_state = F
-    queue = c1_single
-    server = pbs02
-    Checkpoint = u
-    ctime = Tue Dec 13 14:09:32 2016
-    Error_Path = login001.palmetto.clemson.edu:/home/atrikut/MPI/pi-mpi.e7600424
-
-    exec_host = node0088/1*2+node0094/1*2+node0094/2*2+node0085/0*2
-    exec_vnode = (node0088:ncpus=2:mem=1048576kb:ngpus=0:nphis=0)+(node0094:ncp
-	us=2:mem=1048576kb:ngpus=0:nphis=0)+(node0094:ncpus=2:mem=1048576kb:ngp
-	us=0:nphis=0)+(node0085:ncpus=2:mem=1048576kb:ngpus=0:nphis=0)
-    Hold_Types = n
-    Join_Path = oe
-    Keep_Files = n
-    Mail_Points = a
-    Mail_Users = atrikut@clemson.edu
-    mtime = Tue Dec 13 14:11:42 2016
-    Output_Path = login001.palmetto.clemson.edu:/home/atrikut/MPI/pi-mpi.o760042
-	4
-    Priority = 0
-    qtime = Tue Dec 13 14:09:32 2016
-    Rerunable = True
-    Resource_List.mem = 4gb
-    Resource_List.mpiprocs = 8
-    Resource_List.ncpus = 8
-    Resource_List.ngpus = 0
-    Resource_List.nodect = 4
-    Resource_List.nphis = 0
-    Resource_List.place = free:shared
-    Resource_List.qcat = c1_workq_qcat
-    Resource_List.select = 4:ncpus=2:mem=1gb:interconnect=1g:mpiprocs=2
-    Resource_List.walltime = 00:05:00
-    stime = Tue Dec 13 14:09:33 2016
-    session_id = 2708
-    jobdir = /home/atrikut
-    substate = 92
-    Variable_List = PBS_O_SYSTEM=Linux,PBS_O_SHELL=/bin/bash,
-	PBS_O_HOME=/home/atrikut,PBS_O_LOGNAME=atrikut,
-	PBS_O_WORKDIR=/home/atrikut/MPI,PBS_O_LANG=en_US.UTF-8,
-	PBS_O_PATH=/software/examples/:/home/atrikut/local/bin:/usr/lib64/qt-3
-	.3/bin:/opt/pbs/default/bin:/opt/gold/bin:/usr/local/bin:/bin:/usr/bin:
-	/usr/local/sbin:/usr/sbin:/sbin:/opt/mx/bin:/home/atrikut/bin,
-	PBS_O_MAIL=/var/spool/mail/atrikut,PBS_O_QUEUE=c1_workq,
-	PBS_O_HOST=login001.palmetto.clemson.edu
-    comment = Job run at Tue Dec 13 at 14:09 on (node0088:ncpus=2:mem=1048576kb
-	:ngpus=0:nphis=0)+(node0094:ncpus=2:mem=1048576kb:ngpus=0:nphis=0)+(nod
-	e0094:ncpus=2:mem=1048576kb:ngpus=0:nphis=0)+(node0085:ncpus=2:mem=1048
-	576kb:ngpus=0:nphis=0) and finished
-    etime = Tue Dec 13 14:09:32 2016
-    run_count = 1
-    Stageout_status = 1
-    Exit_status = 0
-    Submit_arguments = job.sh
-    history_timestamp = 1481656302
-    project = _pbs_project_default
-~~~
-
-Similarly, to get detailed information about
-a running job, you can use `qstat -f`.
-
-To delete a job (whether in queued, running or error status),
-you can use the `qdel` command.
-
-~~~
-$ qdel 7600424.pbs02
-~~~
-
-### Maximum walltime of jobs
-
-The maximum wall time for all jobs in the default `workq`
-queue is 168 hours (1 week) for jobs running on
-Phases 1-6 of the cluster, and 72 hours (3 days)
-for jobs running on all other phases.
-
-Any jobs that run for longer than the specified wall time
-will be abruptly stopped. You should specify a wall time
-that is slightly longer than what is actually required
-for your job to allow for delays in network communication
-or I/O.
-
-### Execution queues and job limits
-
-When submitting jobs, you can specify a "queue"
-to submit to using the `-q` switch; for example:
-
-~~~
-$ qsub example.pbs -q bigmem
-~~~
-
-If not specified, the default queue for all users
-is the `workq` queue.
-The only other general queue is the `bigmem` queue,
-which you must submit to if you require any
-of the large-memory machines from Phase 0 of the cluster.
-
-Jobs that are submitted to the default `workq` queue
-are forwarded to 
-specific *job execution queues* based on job critera
-(e.g., how many cores are required, how much memory, etc.,).
-
-Each execution queue has its own limits for
-how many jobs can be running at one time,
-and how many jobs can 
-be waiting in that execution queue.
-These limits change based on availability and usage of the
-cluster.
-
-You can see what the current limits
-are using the `checkqueuecfg` command:
-
-~~~
-$ checkqueuecfg
-
-
-Jobs submitted to WORKQ or BIGMEM will end up in one of the
-general execution
-queues listed below based on the number of cores or gpus
-or phis requested.
-
-The maximum number of running jobs per user in execution queues may vary
-throughout the day depending on cluster load.  Jobs in owner queues may
-preempt jobs in general execution queues and the preempted jobs will be
-automatically requeued.
-
-NOTE: Each core comes with 2gb ram, so if a job is asking for 1 core and
-and 16gb memory, the job will run in the solo execution queue.  This is
-equivalent to 8 cores worth of memory therefore this one
-job counts as 8 jobs towards the user's maximum for the queue.
-
-                per job    per job   per user
-
-MX QUEUES      min_cpus   max_cpus   max_jobs
-c1_solo               1          1       5000
-c1_single             2         24         50
-c1_tiny              25        128         10
-c1_small            129        512          2
-c1_medium           513       2048          2
-c1_large           2049       4096          1
-
-IB QUEUES      min_cpus   max_cpus   max_jobs
-c2_single             2         24          5
-c2_tiny              25        128          3
-c2_small            129        512          1
-c2_medium           513       2048          1
-c2_large           2049       4096          0
-
-GPU QUEUES     min_gpus   max_gpus   max_jobs
-gpu_small             1          4          5
-gpu_medium            5         16          3
-gpu_large            17        128          1
-
-PHI QUEUE      min_phis   max_phis   max_jobs
-phi_small             1          2          1
-
-BIGMEM QUEUE   min_cpus   max_cpus   max_jobs
-bigmem_e              1         64          1
-~~~
-
-If you are part of an "owner" group on the cluster,
-then your group may have additional submission queues that
-you can submit to. Jobs submitted to these owner queues
-have priortiy over general `workq` jobs and can pre-empt such
-jobs.
-
-#### Job limits specification examples
-
-There are various resources you can specify in your
-job limits specification (`-l`). These apply to
-interactive jobs as well as batch jobs.
-Here are some examples for the job limits specifications:
-
-~~~
--l select=1:ncpus=8:chip_manufacturer=intel:interconnect=10g
 -l select=1:ncpus=8:chip_model=opteron:interconnect=10g
 -l select=1:ncpus=16:chip_type=e5-2665:interconnect=56g:mem=62gb,walltime=16:00:00
 -l select=1:ncpus=8:chip_type=2356:interconnect=10g:mem=15gb
@@ -739,8 +504,8 @@ Here are some examples for the job limits specifications:
 -l select=1:ncpus=4:mem=15gb:ngpus=2,walltime=00:20:00
 -l select=1:ncpus=4:mem=15gb:ngpus=1:gpu_model=k40,walltime=00:20:00
 -l select=1:ncpus=2:mem=15gb:host=node1479,walltime=00:20:00
--l select=2:ncpus=2:mem=15gb,walltime=00:20:00,place=scatter # force each chunk to be on a different node
--l select=2:ncpus=2:mem=15gb,walltime=00:20:00,place=pack # force each chunk to be on the same node
+-l select=2:ncpus=2:mem=15gb,walltime=00:20:00,place=scatter    # force each chunk to be on a different node
+-l select=2:ncpus=2:mem=15gb,walltime=00:20:00,place=pack       # force each chunk to be on the same node
 ~~~
 
 and examples of options you can use in the job limit specification:
@@ -772,9 +537,194 @@ interconnect=fdr    (56 Gbps FDR InfiniBand, same as 56g)
 ssd=true   			(Use a node with an SSD hard drive)
 ~~~
 
-Of course, not all the above options are all
-compatible with each other; you should review the file
-`/etc/hardware-table` when drafting job limits specifications.
+### Querying job information and deleting jobs
+
+The `qstat` command can be used
+to query the status of a particular job:
+
+~~~
+$ qstat 7600424.pbs02
+Job id            Name             User              Time Use S Queue
+----------------  ---------------- ----------------  -------- - -----
+7600424.pbs02     pi-mpi           username           00:00:00 R c1_single
+~~~
+
+To list the job IDs and status of all your jobs,
+you can use the `-u` switch:
+
+~~~
+$ qstat -u username
+
+pbs02:
+                                                            Req'd  Req'd   Elap
+Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time  S Time
+--------------- -------- -------- ---------- ------ --- --- ------ ----- - -----
+7600567.pbs02   username  c1_singl pi-mpi-1     1382   4   8    4gb 00:05 R 00:00
+7600569.pbs02   username  c1_singl pi-mpi-2    20258   4   8    4gb 00:05 R 00:00
+7600570.pbs02   username  c1_singl pi-mpi-3     2457   4   8    4gb 00:05 R 00:00
+~~~
+
+Once a job has finished running,
+`qstat -xf` can be used to obtain detailed job information:
+
+~~~
+$ qstat -xf 7600424.pbs02
+
+Job Id: 7600424.pbs02
+    Job_Name = pi-mpi
+    Job_Owner = username@login001.palmetto.clemson.edu
+    resources_used.cpupercent = 103
+    resources_used.cput = 00:00:04
+    resources_used.mem = 45460kb
+    resources_used.ncpus = 8
+    resources_used.vmem = 785708kb
+    resources_used.walltime = 00:02:08
+    job_state = F
+    queue = c1_single
+    server = pbs02
+    Checkpoint = u
+    ctime = Tue Dec 13 14:09:32 2016
+    Error_Path = login001.palmetto.clemson.edu:/home/username/MPI/pi-mpi.e7600424
+
+    exec_host = node0088/1*2+node0094/1*2+node0094/2*2+node0085/0*2
+    exec_vnode = (node0088:ncpus=2:mem=1048576kb:ngpus=0:nphis=0)+(node0094:ncp
+	us=2:mem=1048576kb:ngpus=0:nphis=0)+(node0094:ncpus=2:mem=1048576kb:ngp
+	us=0:nphis=0)+(node0085:ncpus=2:mem=1048576kb:ngpus=0:nphis=0)
+    Hold_Types = n
+    Join_Path = oe
+    Keep_Files = n
+    Mail_Points = a
+    Mail_Users = username@clemson.edu
+    mtime = Tue Dec 13 14:11:42 2016
+    Output_Path = login001.palmetto.clemson.edu:/home/username/MPI/pi-mpi.o760042
+	4
+    Priority = 0
+    qtime = Tue Dec 13 14:09:32 2016
+    Rerunable = True
+    Resource_List.mem = 4gb
+    Resource_List.mpiprocs = 8
+    Resource_List.ncpus = 8
+    Resource_List.ngpus = 0
+    Resource_List.nodect = 4
+    Resource_List.nphis = 0
+    Resource_List.place = free:shared
+    Resource_List.qcat = c1_workq_qcat
+    Resource_List.select = 4:ncpus=2:mem=1gb:interconnect=1g:mpiprocs=2
+    Resource_List.walltime = 00:05:00
+    stime = Tue Dec 13 14:09:33 2016
+    session_id = 2708
+    jobdir = /home/username
+    substate = 92
+    Variable_List = PBS_O_SYSTEM=Linux,PBS_O_SHELL=/bin/bash,
+	PBS_O_HOME=/home/username,PBS_O_LOGNAME=username,
+	PBS_O_WORKDIR=/home/username/MPI,PBS_O_LANG=en_US.UTF-8,
+	PBS_O_PATH=/software/examples/:/home/username/local/bin:/usr/lib64/qt-3
+	.3/bin:/opt/pbs/default/bin:/opt/gold/bin:/usr/local/bin:/bin:/usr/bin:
+	/usr/local/sbin:/usr/sbin:/sbin:/opt/mx/bin:/home/username/bin,
+	PBS_O_MAIL=/var/spool/mail/username,PBS_O_QUEUE=c1_workq,
+	PBS_O_HOST=login001.palmetto.clemson.edu
+    comment = Job run at Tue Dec 13 at 14:09 on (node0088:ncpus=2:mem=1048576kb
+	:ngpus=0:nphis=0)+(node0094:ncpus=2:mem=1048576kb:ngpus=0:nphis=0)+(nod
+	e0094:ncpus=2:mem=1048576kb:ngpus=0:nphis=0)+(node0085:ncpus=2:mem=1048
+	576kb:ngpus=0:nphis=0) and finished
+    etime = Tue Dec 13 14:09:32 2016
+    run_count = 1
+    Stageout_status = 1
+    Exit_status = 0
+    Submit_arguments = job.sh
+    history_timestamp = 1481656302
+    project = _pbs_project_default
+~~~
+
+Similarly, to get detailed information about
+a running job, you can use `qstat -f`.
+
+To delete a job (whether in queued, running or error status),
+you can use the `qdel` command.
+
+~~~
+$ qdel 7600424.pbs02
+~~~
+
+### Job limits on Palmetto
+
+#### Walltime
+
+Jobs running in phases 1-6 of the cluster (nodes with interconnect `mx`)
+can run for a maximum walltime of 168 hours (7 days).
+
+Job running in phases 7 and higher of the cluster
+can run for a maximum walltime of 72 hours (3 days).
+
+#### Number of jobs
+
+When you submit a job,
+it is forwarded to a specific **execution queue**
+based on job critera
+(e.g., how many cores, RAM, are needed, required walltime, etc.).
+Broadly speaking there are three classes of execution queues:
+
+1. MX queues: jobs submitted to run on the older hardware (phases 1-6)
+will be forwarded to theses queues.
+
+2. IB queues: jobs submitted to run the newer hardware (phases 6 and up)
+will be forwarded to these queues.
+
+3. bigmem queue: jobs submitted to the large-memory machines (phase 0).
+
+Each execution queue has its own limits for
+how many jobs can be running at one time,
+and how many jobs can 
+be waiting in that execution queue.
+The maximum number of running jobs per user in
+execution queues may vary
+throughout the day depending on cluster load.
+Users can see what the current limits
+are using the `checkqueuecfg` command:
+
+~~~
+$ checkqueuecfg
+
+                per job    per job   per user
+
+MX QUEUES      min_cpus   max_cpus   max_jobs
+c1_solo               1          1       5000
+c1_single             2         24         50
+c1_tiny              25        128         10
+c1_small            129        512          2
+c1_medium           513       2048          2
+c1_large           2049       4096          1
+
+IB QUEUES      min_cpus   max_cpus   max_jobs
+c2_single             2         24          5
+c2_tiny              25        128          3
+c2_small            129        512          1
+c2_medium           513       2048          1
+c2_large           2049       4096          0
+
+BIGMEM QUEUE   min_cpus   max_cpus   max_jobs
+bigmem_e              1         64          1
+~~~
+
+The `qstat` command tells you which of the execution queues
+your job is forwarded to. For example, here is an interactive
+job requesting 8 CPU cores, a K40 GPU, and 32gb RAM:
+
+~~~
+$ qsub -I -l select=1:ncpus=8:ngpus=1:gpu_model=k40:mem=32gb,walltime=2:00:00
+qsub (Warning): Interactive jobs will be treated as not rerunnable
+qsub: waiting for job 9567792.pbs02 to start
+~~~
+
+We see from `qstat` that the job request is forward to
+the `c2_sing` queue:
+
+~~~
+[username@login001 ~]$ qstat 9567792.pbs02
+Job id            Name             User              Time Use S Queue
+----------------  ---------------- ----------------  -------- - -----
+9567792.pbs02     STDIN            username                  0 Q c2_single
+~~~
 
 ### Example PBS scripts
 
@@ -782,133 +732,3 @@ A list of example PBS scripts for submitting
 jobs to the Palmetto cluster can be found
 [here](https://github.com/clemsonciti/palmetto-examples).
 
-### Summary of commands for job submission and job control
-
-Command                         | Action
---------------------------------|--------------------------------
-`qsub xyz.pbs`                  | Submit the job script `xyz.pbs`
-`qstat <job id>`                | Check the status of the job with given job ID
-`qstat -u <username>`           | Check the status of all jobs submitted by given username
-`qstat -xf <job id>`            | Check detailed information for job with given job ID
-`qsub -q <queuename> xyz.pbs`   | Submit to queue `queuename`
-`qdel <job id>`                 | Delete the job (queued or running) with given job ID
-`qdel -Wforce <job id>`         | Use when job not responding to just `qdel`
-
-For more details and more advanced commands for submitting and controlling jobs,
-please refer to the [PBS Professional User's Guide](http://www.pbsworks.com/pdfs/PBSUserGuide14.2.pdf).
-
------------------------------------------------------------------------
-
-## Data Management
-
-### Transfering data in and out of the cluster
-
-#### Small files
-
-To transfer data in and out of the cluster,
-you can use an SFTP client
-such as FileZilla (https://filezilla-project.org/).
-When connecting to Palmetto for File transfer,
-always remember to connect to the special
-data transfer node, and **not** the login node.
-
-Field                   | Value
------------------------ | ----------------------------
-Host Name               | `xfer01-ext.palmetto.clemson.edu`
-User Name               | `username`
-Port Number             | `22`
-
-On Unix systems, you can also
-use the `scp` (secure copy) command to perform file transfers.
-For example,
-here is the `scp` command to copy a file from the
-current directory on your local machine to your
-`/home/username` directory on Palmetto
-(this command is entered into a terminal running on your local machine):
-
-~~~
-$ scp myfile.gvrx username@xfer01-ext.palmetto.clemson.edu:/home/username
-~~~
-
-... and to do the same in reverse,
-i.e., copy from Palmetto to your local machine.
-(again, from a terminal running on your local machine):
-
-~~~
-$ scp username@xfer01-ext.palmetto.clemson.edu:/home/username/myfile.gvrx .
-~~~
-
-The `.` represents the working directory on the local machine.
-
-#### Transfering larger files
-
-For larger files, we recommend
-using the [Globus](https://www.globus.org/)
-file transfer application.
-Here, we demonstrate how to use Globus Online
-to transfer files between Palmetto and a local machine (laptop).
-However, Globus can be used for file transfers to/from other locations as well.
-
-1.  You will need to have a Globus account set up to begin.
-    Visit [https://www.globus.org/](https://www.globus.org/)
-    and set up a Globus account.
-
-2.  To begin transfering files,
-    navigate to the Globus Online transfer utility
-    here:
-    [https://www.globus.org/app/transfer](https://www.globus.org/app/transfer).
-
-3.  The transfer utility allows you to transfer
-    files between "endpoints".
-    You will need to set your local machine
-    as a Globus Connect Personal Endpoint for the file transfer.
-    As a part of this step, you must install the
-    Globus Connect Personal application
-    (see here:
-    [https://www.globus.org/app/endpoints/create-gcp](https://www.globus.org/app/endpoints/create-gcp)
-    ).
-    After installing,
-    ensure that the application is running.
-    You should then be able to set your local machine as one endpoint.
-    In the figure below, the endpoint is named `My Personal Mac`.
-
-4.  As the second endpoint,
-    choose `clemson#xfer01-ext.palmetto.clemson.edu`.
-
-5.  You can now transfer files between any locations on your
-    local machine and the Palmetto cluster.
-
-<img src="{{site.baseurl}}/images/globus.png" style="width:750px">
-
-### Storing data in the long term
-
-While the scratch systems can be used
-to keep data during analysis/processing temporarily,
-they are **not** meant for long-term storage of data.
-The home directory is backed-up and safer
-for storing data in the long term.
-However, it is limited to only 100 GB.
-
-If you need to store and access larger amounts of
-data on the Palmetto cluster for an extended
-period of time, the following options are available:
-
-#### 1. Temporary reservations
-
-All users may apply for temporary reservation
-of the following resources:
-
-1. Up to 150 TB of long-term storage
-2. Up to 8.5 TB of fast SSD scratch space
-
-All requests will be reviewed by Clemson University
-Computational Advisory Team (CU-CAT).
-Reservation requests can be made [here](https://citi.sites.clemson.edu/new-reservation/
-).
-
-#### 2. Purchased storage
-
-Users or groups may also
-purchase storage in 1 TB increments.
-For details about purchased storage, please contact the Palmetto support staff
-(<ithelp@clemson.edu>, and include the word "Palmetto" in the subject line).

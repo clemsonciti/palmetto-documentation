@@ -55,10 +55,6 @@ entries:
           url: /userguide_howto_check_license_usage.html
           output: web, pdf
 
-        - title: Check max jobs
-          url: /userguide_howto_check_max_jobs.html
-          output: web, pdf
-
         - title: Choose scratch system
           url: /userguide_howto_choose_right_filesystem.html
           output: web, pdf
