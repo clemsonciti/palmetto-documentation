@@ -63,7 +63,7 @@ Xming icon in the system tray:
 ### Mac OS X 10.9+ users
 
 Mac OS X users will need to install
-XQuartz (http://xquartz.macosforge.org).
+XQuartz: <http://xquartz.macosforge.org>.
 XQuartz can be launched from Applications > Utilities.
 When you see the XQuartz 'X' icon on your dock,
 that indicates that it's running.
