@@ -112,6 +112,7 @@ Command                                 | Description
 
 A manual page ("man page") serves as the "user manual page" for any particular command, 
 including detailed information about how to use or customize each command:
+
 ~~~
 $ man ls
 ~~~
