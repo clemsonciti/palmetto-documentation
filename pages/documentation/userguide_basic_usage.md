@@ -435,16 +435,19 @@ Hello World from node0230.palmetto.clemson.edu
 ## Job submission and control on Palmetto
 
 The Palmetto cluster uses the Portable Batch Scheduling system (PBS)
-to manage jobs. Here are some basic 
+to manage jobs. Here are some basic PBS commands
+for submitting, querying and deleting jobs:
 
 Command                         | Action
 --------------------------------|--------------------------------
+`qsub -I`                       | Submit an interactive job (reserves 1 core, 1gb RAM, 30 minutes walltime)
 `qsub xyz.pbs`                  | Submit the job script `xyz.pbs`
 `qstat <job id>`                | Check the status of the job with given job ID
 `qstat -u <username>`           | Check the status of all jobs submitted by given username
 `qstat -xf <job id>`            | Check detailed information for job with given job ID
 `qsub -q <queuename> xyz.pbs`   | Submit to queue `queuename`
 `qdel <job id>`                 | Delete the job (queued or running) with given job ID
+`qpeek <job id>`                | "Peek" at the standard output from a running job
 `qdel -Wforce <job id>`         | Use when job not responding to just `qdel`
 
 For more details and more advanced commands for submitting and controlling jobs,
@@ -730,4 +733,3 @@ Job id            Name             User              Time Use S Queue
 A list of example PBS scripts for submitting
 jobs to the Palmetto cluster can be found
 [here](https://github.com/clemsonciti/palmetto-examples).
-
