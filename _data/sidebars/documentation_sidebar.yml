@@ -172,5 +172,5 @@ entries:
       output: web, pdf
 
     - title: R
-      url: /programmers_R.html
+      url: /programmers_r.html
       output: web, pdf
