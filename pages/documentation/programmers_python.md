@@ -145,7 +145,7 @@ Most packages and their dependencies can be installed in one of the following wa
 
 1. Using `pip`
 2. Downloading and building the package and its dependencies yourself
-3. Using the `conda`
+3. Using the `conda` package manager
 
 Several packages will provide the option
 to install in more than one way.
