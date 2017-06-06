@@ -78,6 +78,12 @@ It is also possible for users to build, configure, and install
 customized version of R from source. To do so, the following
 steps must be taken:
 
+
+- When building software, always ask for an interactive job first:
+```bash
+$ qsub -I -l select=1:ncpus=8:mem=4gb,walltime=4:00:00
+```
+
 - Create a temporary installation directory
 ```bash
 $ cd $HOME
@@ -86,7 +92,6 @@ $ mkdir -p software/packages
 ```
 
 - Dependency Installation: 
-
 ```bash
 $ cd $HOME/tmp
 $ wget http://zlib.net/zlib-1.2.11.tar.gz
@@ -135,7 +140,6 @@ $ export LDFLAGS="-L$HOME/software/packages/lib"
 
 - Download the selected R source code into a temporary location in your home directory 
 on Palmetto and install R into /home/yourusername/software/R/3.4.0
-
 ```bash
 $ cd $HOME/tmp
 $ wget https://cran.r-project.org/src/base/R-3/R-3.4.0.tar.gz
@@ -148,7 +152,6 @@ $ make install
 
 - To use this location installation of R, path to its 
 executables must be exported:
-
 ```bash
 $ export R_HOME=/home/yourusername/software/R-3.4.0
 $ export PATH=$R_HOME/bin:$PATH
