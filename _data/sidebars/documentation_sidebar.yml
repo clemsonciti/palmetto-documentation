@@ -154,3 +154,23 @@ entries:
     - title: Trinity
       url: /software_trinity.html
       output: web, pdf
+
+  - title: Programmer's Guide
+    output: web, pdf
+    folderitems:
+
+    - title: Compilers
+      url: /programmers_compilers.html
+      output: web, pdf
+
+    - title: OpenMP
+      url: /programmers_openmp.html
+      output: web, pdf
+
+    - title: Python
+      url: /programmers_python.html
+      output: web, pdf
+
+    - title: R
+      url: /programmers_R.html
+      output: web, pdf
