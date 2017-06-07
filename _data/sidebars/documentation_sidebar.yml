@@ -174,3 +174,27 @@ entries:
     - title: R
       url: /programmers_r.html
       output: web, pdf
+
+  - title: JupyterHub
+    output: web, pdf
+    folderitems:
+
+    - title: JupyterHub on Palmetto Cluster
+      url: /jupyterhub_index.html
+      output: web, pdf
+
+    - title: Basic Interface
+      url: /jupyterhub_interface.html
+      output: web,pdf
+
+    - title: Writing Notebooks
+      url: /jupyterhub_notebooks.html
+      output: web,pdf
+
+    - title: Configuration
+      url: /jupyterhub_configuration.html
+      output: web,pdf
+
+    - title: Help and Resources
+      url: /jupyterhub_resources.html
+      output: web,pdf
