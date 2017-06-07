@@ -44,6 +44,13 @@ $ module add abaqus/6.14
 $ abaqus viewer -mesa
 ~~~
 
+Similarly,
+to launch the ABAQUS CAE graphical interface:
+
+~~~
+$ abaqus cae -mesa
+~~~
+
 ## Running ABAQUS in batch mode
 
 To run ABAQUS in batch mode on Palmetto cluster,
