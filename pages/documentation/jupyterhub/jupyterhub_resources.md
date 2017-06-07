@@ -15,7 +15,7 @@ A collection of Jupyter notebooks created for research and teaching across sever
 
 The official Jupyter Notebook documentation:
 
-https://jupyter-notebook.readthedocs.io/en/latest/
+<https://jupyter-notebook.readthedocs.io/en/latest/>
 
 The documentation for IPython, the kernel used to create Python-based notebooks:
 
