@@ -1,5 +1,5 @@
 ---
-title: About JupyterHub
+title: JupyterHub on the Palmetto Cluster
 keywords: [jupyterhub,jupyter,Python,R,MATLAB]
 sidebar: documentation_sidebar
 permalink: jupyterhub_index.html
