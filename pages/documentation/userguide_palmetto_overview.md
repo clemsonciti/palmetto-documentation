@@ -1,6 +1,6 @@
 ---
 title: About Palmetto Cluster
-keywords: overview
+keywords: [hardware,storage,condo,purchase]
 sidebar: documentation_sidebar
 permalink: userguide_palmetto_overview.html
 ---

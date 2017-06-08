@@ -18,6 +18,12 @@ Just drop by - no appointment necessary.
 
 Email <ithelp@clemson.edu> and include the word "Palmetto" in the subject line.
 The Palmetto staff will automatically receive your message.
+Please provide us with as much information as possible, including:
+
+1. The exact commands that you run immediately after logging in, which will reproduce the problem
+1. The exact output from each command
+1. The locations of the files/folders involved, especially your PBS batch script
+1. Other details which may be relevant (OS, SSH client, etc.,)
 
 ### Research support
 

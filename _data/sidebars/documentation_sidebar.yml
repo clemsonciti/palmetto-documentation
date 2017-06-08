@@ -30,6 +30,10 @@ entries:
       url: /userguide_palmetto_overview.html
       output: web, pdf
 
+    - title: FAQ
+      url: /userguide_faq.html
+      output: web, pdf
+
   - title: User's Guide
     output: web, pdf
     folderitems:
