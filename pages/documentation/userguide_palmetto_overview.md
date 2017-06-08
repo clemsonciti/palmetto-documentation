@@ -5,67 +5,68 @@ sidebar: documentation_sidebar
 permalink: userguide_palmetto_overview.html
 ---
 
-## Compute hardware
+## Overview
 
-Palmetto is a heterogenous cluster composed
-of 2021 compute nodes (23072 cores),
-with varying core counts, RAM, interconnect, etc.,
-After logging in, the command
+<img src="{{site.baseurl}}/images/palmetto-front-view.png" style="width:500px">
 
-~~~
-$ cat /etc/hardware-table
-~~~
+<img src="{{site.baseurl}}/images/palmetto-nodes-closeup.png" style="width:500px">
 
-presents an overview of available compute hardware on the cluster:
+Palmetto is Clemson University's primary high-performance computing (HPC) resource;
+heavily utilized by researchers, students, faculty, and staff from a broad range of disciplines. 
 
-~~~
-PALMETTO HARDWARE TABLE      Last updated:  Dec 25 2016
+Currently, Palmetto is comprised of 2021 compute nodes (totalling 23072 CPU cores),
+and features:
 
-PHASE COUNT  MAKE   MODEL    CHIP(0)                CORES  RAM(1)    /local_scratch   Interconnect         GPUs  PHIs SSD
- 0      5    HP     DL580    Intel Xeon    7542       24   505 GB(2)    99 GB         1g, 10g, mx           0     0    0
- 0      1    HP     DL980    Intel Xeon    7560       64     2 TB(2)    99 GB         1g, 10g, mx           0     0    0
- 1    191    Dell   PE1950   Intel Xeon    E5345       8    12 GB       37 GB         1g, 10g, mx           0     0    0
- 2    243    Dell   PE1950   Intel Xeon    E5410       8    12 GB       37 GB         1g, 10g, mx           0     0    0
- 3    234    Sun    X2200    AMD   Opteron 2356        8    16 GB      193 GB         1g, 10g, mx           0     0    0
- 4    329    IBM    DX340    Intel Xeon    E5410       8    16 GB      111 GB         1g, 10g, mx           0     0    0
- 5a   370    Sun    X6250    Intel Xeon    L5420       8    32 GB       31 GB         1g, 10g, mx           0     0    0
- 5b     9    Sun    X4150    Intel Xeon    E5410       8    16 GB       99 GB         1g, 10g, mx           0     0    0
- 6     68    HP     DL165    AMD   Opteron 6176       24    48 GB      193 GB         1g, 10g, mx           0     0    0
- 7a    42    HP     SL230    Intel Xeon    E5-2665    16    64 GB      240 GB         1g, 56g, fdr          0     0    0
- 7b    12    HP     SL250s   Intel Xeon    E5-2665    16    64 GB      240 GB         1g, 56g, fdr          2(3)  0    0
- 8a    71    HP     SL250s   Intel Xeon    E5-2665    16    64 GB      900 GB         1g, 56g, fdr          2(4)  0    300 GB(7)
- 8b    57    HP     SL250s   Intel Xeon    E5-2665    16    64 GB      420 GB         1g, 56g, fdr          2(4)  0    0
- 8c    68    Dell   PEC6220  Intel Xeon    E5-2665    16    64 GB      350 GB         1g, 10ge              0     0    0
- 9     72    HP     SL250s   Intel Xeon    E5-2665    16   128 GB      420 GB         1g, 56g, fdr, 10ge    2(4)  0    0
-10     80    HP     SL250s   Intel Xeon    E5-2670v2  20   128 GB      800 GB         1g, 56g, fdr, 10ge    2(4)  0    0
-11a    40    HP     SL250s   Intel Xeon    E5-2670v2  20   128 GB      800 GB         1g, 56g, fdr, 10ge    2(6)  0    0
-11b     4    HP     SL250s   Intel Xeon    E5-2670v2  20   128 GB      800 GB         1g, 56g, fdr, 10ge    0     2(8) 0
-12     30    Lenovo NX360M5  Intel Xeon    E5-2680v3  24   128 GB      800 GB         1g, 56g, fdr, 10ge    2(6)  0    0
-13     24    Dell   C4130    Intel Xeon    E5-2680v3  24   128 GB      800 GB         1g, 56g, fdr, 10ge    2(6)  0    0
-14     12    HP     XL1X0R   Intel Xeon    E5-2680v3  24   128 GB      800 GB         1g, 56g, fdr, 10ge    2(6)  0    0
-15     32    Dell   C4130    Intel Xeon    E5-2680v3  24   128 GB      800 GB         1g, 56g, fdr, 10ge    2(6)  0    0
+* 2021 compute nodes, totalling 23072 cores
+* 386 nodes equipped with NVIDIA Tesla GPUs: 280 nodes with NVIDIA K20 GPUs (2 per node), 106 nodes with NVIDIA K40 GPUs (2 per node)
+* 4 nodes with Intel Phi co-processors (2 per node)
+* 6 large memory nodes (5 with 505GB, 1 with 2TB), 262 nodes with 128GB of memory
+* 100GB of personal space (backed up daily for 42 days) for each user
+* "unlimited" scratch storage for temporary files
+* 10 Gbps Ethernet, 10 Gbps Myrinet and 56Gbps Infiniband networks
+* maximum run time for a single task limited to 72 hours (Infiniband nodes) or 168 hours (Myrinet nodes)
+* ranked 4th among the public academic institutions in the US on Top500 list (155 on Top500)
+* benchmarked at 814.4 TFlops (17,372 cores from Infiniband part of Palmetto)
 
-TOTAL: 2021 nodes
+## Compute Hardware
 
-PBS resource requests are always lowercase.
-
-(0) CHIP has 3 resources:   chip_manufacturer, chip_model, chip_type
-(1) Leave 2GB for the operating system when requesting memory in PBS jobs
-(2) Specify queue "bigmem" to access the large memory machines, only ncpus and mem are valid PBS resource requests
-(3) 2 NVIDIA Tesla M2075 cards per node, use resource request "ngpus=[1|2]" and "gpu_model=m2075"
-(4) 2 NVIDIA Tesla K20m cards per node, use resource request "ngpus=[1|2]" and "gpu_model=k20"
-(5) 2 NVIDIA Tesla M2070-Q cards per node, use resource request "ngpus=[1|2]" and "gpu_model=m2070q"
-(6) 2 NVIDIA Tesla K40m cards per node, use resource request "ngpus=[1|2]" and "gpu_model=k40"
-(7) Use resource request "ssd=true" to request a chunk with SSD in location /ssd1, /ssd2, and /ssd3 (100GB max each)
-(8) Use resource request "nphis=[1|2]" to request phi nodes, the model is Xeon 7120p
-~~~
+The cluster is divided into several "phases";
+the basic hardware configuration (node count, cores, RAM)
+is given below. For more detailed and up-to-date information,
+you can view the file `/etc/hardware-table` after logging in.
 
 ### Myrinet phases
 
-Phases 0-6 of the cluster consist of older hardware
+About 1400 nodes (Phases 0-6 of) the cluster consist of older hardware
 with 10 Gbps Myrinet interconnect.
 
+Phase  	| Node count 	| Cores | RAM
+----------------------------------------
+1  		| 191    		| 8    	| 12 GB
+2    	| 243    		| 8    	| 12 GB
+3    	| 234    		| 8    	| 16 GB
+4    	| 329    		| 8    	| 16 GB
+5a   	| 370    		| 8    	| 32 GB
+5b     	| 9      		| 8    	| 16 GB
+6     	| 68    		| 24    | 48 GB
+
 ### Infiniband phases
+
+Phase  	| Node count 	| Cores | RAM
+----------------------------------------
+7a		| 42 			| 16   	| 64 GB
+7b    	| 12    		| 16   	| 64 GB
+8a    	| 71    		| 16   	| 128 GB
+8b    	| 57    		| 16   	| 128 GB
+8c 		| 68    		| 16   	| 128 GB
+9     	| 72     		| 16   	| 128 GB
+10     	| 80    		| 20   	| 128 GB
+11a		| 40			| 20	| 128 GB
+11b		| 4				| 20	| 128 GB
+12		| 30			| 24	| 128 GB
+13		| 24			| 24	| 128 GB
+14		| 12			| 24	| 128 GB
+15		| 32			| 24	| 128 GB
 
 Phases 7-15 of the cluster consist of newer hardware
 with 56 Gbpbs Infiniband interconnect,
@@ -73,17 +74,22 @@ and additionally 10 Gbps Ethernet for phases 9-15.
 
 ### GPUs
 
-There are 386 nodes on Palmetto equipped with NVIDIA Tesla GPUs:
-280 nodes with NVIDIA K20 GPUs (2 per node),
-and 106 nodes with NVIDIA K40 GPUs (2 per node).
+There are about 380 nodes (phases 7a-8b, 9-11a, 12-15)
+on Palmetto equipped with NVIDIA Tesla GPUs
+(M2075, K20m, M2070q and K40m).
 
 ### Intel Xeon Phi accelerators
 
-4 nodes are equipped with Intel Phi co-processors (2 per node).
+4 nodes (phase 11b) are equipped with Intel Phi co-processors (2 per node).
 
 ### Big-memory nodes
 
 Phase 0 consists of 6 "bigmem" machines with large core count and RAM (505 GB/2 TB).
+
+Phase  	| Node count 	| Cores 	| RAM
+----------------------------------------
+0		| 5 			| 24   		| 505 GB
+0    	| 1	    		| 64   		| 2 TB
 
 ## Storage
 
