@@ -5,7 +5,7 @@ sidebar: documentation_sidebar
 permalink: index.html
 ---
 
-**The "old" Palmetto documentation can be found at [palmetto.clemson.edu/palmetto/old](https://palmetto.clemson.edu/palmetto/old) and will be taken down soon.**
+**The "old" Palmetto documentation can be found [here](https://palmetto.clemson.edu/palmetto/old) and will be taken down soon.**
 
 ## Getting Help
 
