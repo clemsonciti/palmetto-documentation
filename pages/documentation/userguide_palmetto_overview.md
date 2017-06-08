@@ -1,5 +1,5 @@
 ---
-title: Overview of Palmetto Cluster
+title: About Palmetto Cluster
 keywords: overview
 sidebar: documentation_sidebar
 permalink: userguide_palmetto_overview.html
@@ -8,8 +8,6 @@ permalink: userguide_palmetto_overview.html
 ## Overview
 
 <img src="{{site.baseurl}}/images/palmetto-front-view.png" style="width:500px">
-
-<img src="{{site.baseurl}}/images/palmetto-nodes-closeup.png" style="width:500px">
 
 Palmetto is Clemson University's primary high-performance computing (HPC) resource;
 heavily utilized by researchers, students, faculty, and staff from a broad range of disciplines. 
@@ -30,6 +28,8 @@ and features:
 
 ## Compute Hardware
 
+<img src="{{site.baseurl}}/images/palmetto-nodes-closeup.png" style="width:500px">
+
 The cluster is divided into several "phases";
 the basic hardware configuration (node count, cores, RAM)
 is given below. For more detailed and up-to-date information,
@@ -41,7 +41,7 @@ About 1400 nodes (Phases 0-6 of) the cluster consist of older hardware
 with 10 Gbps Myrinet interconnect.
 
 Phase  	| Node count 	| Cores | RAM
-----------------------------------------
+--------|---------------|-------|-------
 1  		| 191    		| 8    	| 12 GB
 2    	| 243    		| 8    	| 12 GB
 3    	| 234    		| 8    	| 16 GB
@@ -53,7 +53,7 @@ Phase  	| Node count 	| Cores | RAM
 ### Infiniband phases
 
 Phase  	| Node count 	| Cores | RAM
-----------------------------------------
+--------|---------------|-------|-------
 7a		| 42 			| 16   	| 64 GB
 7b    	| 12    		| 16   	| 64 GB
 8a    	| 71    		| 16   	| 128 GB
@@ -87,7 +87,7 @@ on Palmetto equipped with NVIDIA Tesla GPUs
 Phase 0 consists of 6 "bigmem" machines with large core count and RAM (505 GB/2 TB).
 
 Phase  	| Node count 	| Cores 	| RAM
-----------------------------------------
+--------|---------------|-----------|---
 0		| 5 			| 24   		| 505 GB
 0    	| 1	    		| 64   		| 2 TB
 
