@@ -80,3 +80,9 @@ The current price is **$150 per TB**.
 The data is stored in the ZFS filesystem format.
 Owners of the previous SAMQFS storage
 may expand existing storage at the same price.
+
+## Contact information
+
+Individuals interested in purchase of Palmetto hardware
+may contact Jeronica Williams at
+<jeronic@clemson.edu> or 864.656.5888 (office).
