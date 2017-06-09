@@ -10,7 +10,7 @@ permalink: userguide_faq.html
 Palmetto cluster is available at no charge to all Clemson University
 students, faculty and staff.
 
-Palmetto [Condo owners]({{site.baseurl}}/palmetto/userguide_palmetto_overview.html#condominium-model)
+Palmetto [Condo owners]({{site.baseurl}}/userguide_palmetto_overview.html#condominium-model)
 may also request access to collaborators unaffiliated with Palmetto Cluster.
 This request must be made by the owner (not the collaborator)
 to <ithelp@clemson.edu>.
