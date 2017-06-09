@@ -1,0 +1,6 @@
+<FilesMatch "owners.html">
+  AuthType Shibboleth
+  ShibRequireSession On
+  ShibUseHeaders On
+  require shibboleth
+</FilesMatch>
