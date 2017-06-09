@@ -119,21 +119,4 @@ jobs.
 
 Palmetto cluster operates in a condominium model which allows faculty to
 purchase immediate access to compute nodes on the cluster.
-By purchasing a compute node, faculty get priority to use an
-equivalent hardware across all new phases of the cluster.
-All unused compute cycles are made available for general Palmetto users.
-Owners may preempt other users making the hardware they purchased immediately available.
-Purchased nodes are available to faculty for a period of 4 years,
-after that the priority to use them expires.
-
-Being an owner allows users to:
-
-* have immediate access to the amount of compute hardware they have purchased by preempting other users
-* have a dedicated group on Palmetto cluster
-* invite external collaborators (not associated with Clemson) to use their purchased resources
-* have extended maximum time for a single task up to 336 hours (14 days)
-
-Please see https://citi.sites.clemson.edu/infrastructure/ for details and pricing.
-For more information about the condominium model and purchasing Palmetto nodes,
-including Palmetto nodes on grants please contact Jeronica Williams
-(jeronic@clemson.edu) or Marcin Ziolkowski (zziolko@clemson.edu).
+More information can be found in the [Owner's Guide]({{site.baseurl}}/owners.html).
