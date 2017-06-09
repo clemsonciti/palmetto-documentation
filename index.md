@@ -51,7 +51,7 @@ See upcoming training sessions [here](http://citi.clemson.edu/training).
 
 ### On-boarding sessions
 
-For new users of Palmetto, we offer on-boarding sessions every **Friday 9-10 AM, at Barre Hall B102**.
+For new users of Palmetto, we offer on-boarding sessions every **Friday 9-10 AM, at Barre Hall 2138**.
 Please drop by
 to discuss how Palmetto can help you realize your research goals,
 and get help with getting started on Palmetto cluster.
