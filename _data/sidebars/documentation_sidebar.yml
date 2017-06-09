@@ -202,3 +202,11 @@ entries:
     - title: Help and Resources
       url: /jupyterhub_resources.html
       output: web,pdf
+
+  - title: Owner's Guide
+    output: web, pdf
+    folderitems:
+
+    - title: Owner's Guide
+      url: /owners.html
+      output: web, pdf
