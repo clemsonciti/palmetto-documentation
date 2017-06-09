@@ -494,7 +494,7 @@ Option      | Purpose
 ------------|--------------------------------------------------------------
 `select`    | Number of chunks and resources per chunk. Two or more "chunks" can be placed on a single node, but a single "chunk" cannot span more than one node.
 `walltime`  | Expected wall time of job (job is terminated after this time)
-`place`     | Controls the placemenet of the different chunks
+`place`     | Controls the placement of the different chunks
 
 Here are some examples of resource limits specification:
 
@@ -663,13 +663,13 @@ can run for a maximum walltime of 72 hours (3 days).
 When you submit a job,
 it is forwarded to a specific **execution queue**
 based on job critera
-(e.g., how many cores, RAM, are needed, required walltime, etc.).
-Broadly speaking there are three classes of execution queues:
+(how many cores, RAM, etc.).
+There are three classes of execution queues:
 
-1. MX queues: jobs submitted to run on the older hardware (phases 1-6)
+1. MX queues (`c1_` queues): jobs submitted to run on the older hardware (phases 1-6)
 will be forwarded to theses queues.
 
-2. IB queues: jobs submitted to run the newer hardware (phases 6 and up)
+2. IB queues (`c2_` queues): jobs submitted to run the newer hardware (phases 6 and up)
 will be forwarded to these queues.
 
 3. bigmem queue: jobs submitted to the large-memory machines (phase 0).
@@ -719,7 +719,7 @@ qsub: waiting for job 9567792.pbs02 to start
 ~~~
 
 We see from `qstat` that the job request is forward to
-the `c2_sing` queue:
+the `c2_single` queue:
 
 ~~~
 [username@login001 ~]$ qstat 9567792.pbs02
@@ -727,6 +727,9 @@ Job id            Name             User              Time Use S Queue
 ----------------  ---------------- ----------------  -------- - -----
 9567792.pbs02     STDIN            username                  0 Q c2_single
 ~~~
+
+From the output of `checkqueuecfg` above,
+we see that each user can have a maximum of **5** running jobs in this queue.
 
 ### Example PBS scripts
 
