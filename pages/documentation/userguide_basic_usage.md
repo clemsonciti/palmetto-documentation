@@ -457,7 +457,7 @@ please refer to the [PBS Professional User's Guide](http://www.pbsworks.com/pdfs
 
 The following switches can be used either
 with `qsub` on the command line,
-or with a `#PBS` directory in a batch script.
+or with a `#PBS` directive in a batch script.
 
 Parameter | Purpose | Example
 ----------|---------|---------
