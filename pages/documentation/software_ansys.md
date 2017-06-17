@@ -183,5 +183,5 @@ The results file (`EXAMPLE.rst`)
 contains the results of the simulation which can be viewed
 using the ANSYS APDL graphical interface:
 
-<img src="{{site.baseurl}}/images/ansys-screenshot-results.png" style="width:650px"></img>
+<img src="{{site.baseurl}}/images/ansys-screenshot-results.png" style="width:650px">
 

@@ -209,4 +209,4 @@ The output database (`.odb`) file
 contains the results of the simulation which can be viewed
 using the ABAQUS viewer:
 
-<img src="{{site.baseurl}}/images/abaqus-screenshot-results.png" style="width:650px"></img>
+<img src="{{site.baseurl}}/images/abaqus-screenshot-results.png" style="width:650px">
