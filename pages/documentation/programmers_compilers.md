@@ -12,6 +12,7 @@ for C, C++ and Fortran applications:
 
 1. GNU Compiler Collection (`gcc`)
 2. Intel Compiler Suite
+3. PGI Compiler Suite
 
 ~~~
 $ module avail gcc
@@ -19,6 +20,10 @@ $ module avail gcc
 
 ~~~
 $ module avail intel
+~~~
+
+~~~
+$ module avail pgi
 ~~~
 
 ## Compiling "Hello World" Program
@@ -42,6 +47,7 @@ Compiler | Module        | Command
 -------- | ------------- | --------------------
 Intel    | `intel/13.0`  | `icc hello.c -o hello.x`
 GCC      | `gcc/4.8.1`   | `gcc hello.c -o hello.x`
+PGI      | `pgi/16.10`   | `pgcc hello.c -o hello.x`
 
 ### C++
 
@@ -63,6 +69,7 @@ Compiler | Module        | Command
 -------- | ------------- | --------------------
 Intel    | `intel/13.0`  | `icpc hello.cpp -o hello.x`
 GCC      | `gcc/4.8.1`   | `g++ hello.cpp -o hello.x`
+PGI      | `pgi/16.10`   | `pgc++ hello.cpp -o hello.x`
 
 ### FORTRAN
 
@@ -80,6 +87,7 @@ Compiler | Module        | Command
 -------- | ------------- | --------------------
 Intel    | `intel/13.0`  | `ifort test.f90 -o test.x`
 GCC      | `gcc/4.8.1`   | `gfortran test.f90 -o test.x`
+PGI      | `pgi/16.10`   | `pgfortran test.f90 -o hello.x`
 
 ## GCC compiler options
 
