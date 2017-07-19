@@ -11,7 +11,7 @@ permalink: index.html
 
 ### Palmetto Office Hours
 
-Palmetto Office Hours are held every **Wednesday 8-11 AM, at Barre Hall B102**.
+Palmetto Office Hours are held every **Wednesday 8-11 AM, at Barre Hall 2138**.
 Just drop by - no appointment necessary.
 
 ### Email ithelp
