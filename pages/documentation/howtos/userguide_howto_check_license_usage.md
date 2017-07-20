@@ -11,7 +11,7 @@ using the `lmstat` command. For example,
 to see usage of COMSOL licenses:
 
 ~~~
-/usr/local/flexlm/lmstat -a -c /usr/local/flexlm/licenses/comsol.dat
+/software/USR_LOCAL/flexlm/lmstat -a -c /software/USR_LOCAL/flexlm/licenses/comsol.dat 
 ~~~
 
 Other packages for which you can check license usage similarly
