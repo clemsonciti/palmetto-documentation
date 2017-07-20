@@ -15,9 +15,9 @@ to see usage of COMSOL licenses:
 ~~~
 
 Other packages for which you can check license usage similarly
-are listed in the `/usr/local/flexlm/licenses` directory:
+are listed in the `/software/USR_LOCAL/flexlm/licenses` directory:
 
 ~~~
-$ ls /usr/local/flexlm/licenses
+$ ls /software/USR_LOCAL/flexlm/licenses
 abaqus.dat    accelrys.dat  ansys.dat     comsol.dat    converge.dat  intel.dat     matlab.dat
 ~~~
