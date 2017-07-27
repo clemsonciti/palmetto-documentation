@@ -111,6 +111,10 @@ entries:
           url: /userguide_howto_run_many_tasks.html
           output: web, pdf
 
+        - title: Use large memory nodes
+          url: /userguide_howto_use_bigmem_nodes.html
+          output: web, pdf
+
         - title: Use GPUs
           url: /userguide_howto_use_gpus.html
           output: web, pdf

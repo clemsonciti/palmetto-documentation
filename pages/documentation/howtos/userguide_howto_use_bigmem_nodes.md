@@ -1,13 +1,16 @@
 ---
-title: How to use the big-memory machines
+title: How to use the big-memory nodes
 keywords: [memory,bigmem]
 sidebar: documentation_sidebar
-permalink: userguide_howto_use_bigmem_machines.html
+permalink: userguide_howto_use_bigmem_nodes.html
 ---
 
 Phase 0 of the cluster contains
-"big memory" machines, each with a large amount of RAM.
-To use these machines, you must submit jobs to the
+"big memory" nodes, each with a large amount of RAM.
+See the output of `whatsfree` for the configuration
+(amount of cores/RAM available in each of these nodes).
+
+To use these nodes, you must submit jobs to the
 special `bigmem` queue.
 For example, in your job script you can include the
 `#PBS -q bigmem` directive:
