@@ -12,12 +12,11 @@ or `qsub` command (interactive jobs).
 All GPU nodes on Palmetto have 2 GPUs per node,
 so the value for `ngpus` can only be 1 or 2.
 In addition, you can also specify
-the option `gpu_model` (`m2075`, `m2070q`, `k20`, `k40`)
+the option `gpu_model` (`m2075`, `m2070q`, `k20`, `k40`, or `p100`)
 to request a specific GPU type.
 
 ~~~
 $ qsub -I  -l select=1:ncpus=1:ngpus=1:gpu_model=k20:mem=2gb,walltime=2:00:00
-
 ~~~
 
 To confirm whether your application is using the GPU,
