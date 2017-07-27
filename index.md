@@ -5,8 +5,6 @@ sidebar: documentation_sidebar
 permalink: index.html
 ---
 
-**The "old" Palmetto documentation can be found [here](http://palmetto.clemson.edu/palmetto/old) and will be taken down soon.**
-
 ## Getting Help
 
 ### Palmetto Office Hours
@@ -63,3 +61,4 @@ include a short statement in the Acknowledgment section.
 As an example, the acknowledgment may look like this:
 
 **Clemson University is acknowledged for generous allotment of compute time on Palmetto cluster.**
+
