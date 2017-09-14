@@ -15,7 +15,7 @@ You can check the availability of MATLAB licenses
 using the `lmstat` command:
 
 ~~~
-/usr/local/flexlm/lmstat -a -c /usr/local/flexlm/licenses/matlab.dat
+/usr/flexlm/lmstat -a -c /usr/flexlm/licenses/matlab.dat 
 ~~~
 
 ## Running the MATLAB graphical interface

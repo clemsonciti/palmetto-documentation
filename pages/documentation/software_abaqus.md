@@ -22,7 +22,7 @@ To see license usage of ABAQUS-related packages,
 you can use the `lmstat` command:
 
 ~~~
-/usr/local/flexlm/lmstat -a -c /usr/local/flexlm/licenses/abaqus.dat
+/usr/flexlm/lmstat -a -c /usr/flexlm/licenses/abaqus.dat
 ~~~
 
 ## Running ABAQUS interactive viewer
