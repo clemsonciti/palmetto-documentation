@@ -6,7 +6,7 @@ other than a web browser on your local machine (laptop or workstation).
 You will also need an account on the Palmetto cluster.
 A new account can be requested by all Clemson students, faculty or staff
 [here](http://citi.clemson.edu/new-account/).
-The user guide for the Palmetto cluster can be found [here](http://www.palmetto.clemson.edu/pages/userguide.html).
+The user guide for the Palmetto cluster can be found [here](http://www.palmetto.clemson.edu/palmetto).
 
 **1.** Start by visiting [https://www.palmetto.clemson.edu/jupyterhub](https://www.palmetto.clemson.edu/jupyterhub).
     

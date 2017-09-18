@@ -13,7 +13,7 @@ This can happen for various reasons:
 
 1. **If the cluster is especially busy**: depending on the resources you request for your Notebook server, it may start immediately, or may be "queued". JupyterHub keeps requests in the queue for up to 5 minutes, after which your request is timed out. You may be successful if you try again after a while.
 
-1. **Due to invalid/excessive resource requests**: for example, asking for a single CPU core and 64 GB of memory is an invalid request, as single core requests are currently limited to 15 GB. It may be useful to consult the [Palmetto user's guide](http://www.palmetto.clemson.edu/pages/userguide.html) when requesting resources.
+1. **Due to invalid/excessive resource requests**: for example, asking for a single CPU core and 64 GB of memory is an invalid request, as single core requests are currently limited to 15 GB. It may be useful to consult the [Palmetto user's guide](http://www.palmetto.clemson.edu/palmetto) when requesting resources.
 
 1. If you still can't log in, please e-mail <ithelp@clemson.edu> and let us know.
 

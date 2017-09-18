@@ -8,7 +8,7 @@ permalink: software_ansys.html
 ## Launching ANSYS graphical interfaces
 
 To run the various ANSYS graphical programs,
-you must [log-in with tunneling enabled]({{site.baseurl}}/pages/userguide/HowTo.html#how-to-run-graphical-software),
+you must [log-in with tunneling enabled]({{site.baseurl}}/userguide_howto_run_graphical_applications.html)
 and then ask for an interactive session:
 
 ~~~

@@ -5,8 +5,6 @@ sidebar: documentation_sidebar
 permalink: software_comsol.html
 ---
 
-
-
 COMSOL is an application for solving Multiphysics problems.
 To see the available COMSOL modules on Palmetto:
 
@@ -26,7 +24,7 @@ you can use the `lmstat` command:
 ## Running COMSOL GUI
 
 To run the COMSOL graphical interface,
-you must [log-in with tunneling enabled]({{site.baseurl}}/pages/userguide/HowTo.html#how-to-run-graphical-software),
+you must [log-in with tunneling enabled]({{site.baseurl}}/userguide_howto_run_graphical_applications.html),
 and then ask for an interactive session:
 
 ~~~

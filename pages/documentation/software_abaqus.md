@@ -28,7 +28,7 @@ you can use the `lmstat` command:
 ## Running ABAQUS interactive viewer
 
 To run the interactive viewer,
-you must [log-in with tunneling enabled]({{site.baseurl}}/pages/userguide/howtos/run_graphical_applications.html),
+you must [log-in with tunneling enabled]({{site.baseurl}}/userguide_howto_run_graphical_applications.html),
 and then ask for an interactive session:
 
 ~~~
