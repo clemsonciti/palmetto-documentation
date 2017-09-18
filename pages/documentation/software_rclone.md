@@ -22,7 +22,7 @@ you must perform a one-time configuration.
 You can configure `rclone` to work with as many services as you like.
 
 For the one-time configuration, you will need to
-[log-in with tunneling enabled]({{site.baseurl}}/pages/userguide/howtos/run_graphical_applications.html).
+[log-in with tunneling enabled]({{site.baseurl}}/pages/userguide_howto_run_graphical_applications.html).
 Once logged-in, ask for an interactive job:
 
 ~~~
