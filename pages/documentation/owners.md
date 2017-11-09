@@ -74,8 +74,10 @@ Owners of storage on Palmetto cluster enjoy the following benefits:
 ### Current storage pricing
 
 Storage may be purchased in 1 TB chunks (server shared with other users)
-or 150 TB (dedicated storage server offering better performance).
-The current price is **$150 per TB**.
+or 150 TB.
+Purchase of 150 TB grants the owner access to an isolated storage system,
+which may offer better performance.
+The current price for both the above options is **$150 per TB**.
 
 The data is stored in the ZFS filesystem format.
 Owners of the previous SAMQFS storage
