@@ -122,6 +122,7 @@ In the batch script `job.sh`:
 2. For ANSYS jobs, you should always use `local_scratch` as the working directory.
    The following lines create the folder `/local_scratch/username` on each node
    requested by the job, and copy the input file there.
+
    ~~~
    do
        ssh $node "mkdir $SCRATCH"
@@ -140,6 +141,7 @@ In the batch script `job.sh`:
    and then remove the `/local_scratch/username` directory
    on each node requested by the job. Remember to always remove any files
    you create in `/local_scratch` at the end of your jobs:
+
    ~~~
 	do
 		ssh $node "cp -r $SCRATCH/* $PBS_O_WORKDIR"
