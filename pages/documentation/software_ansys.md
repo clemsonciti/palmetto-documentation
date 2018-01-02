@@ -25,7 +25,7 @@ $ module add intel/12.1
 
 And then launch the required program:
 
-** For ANSYS APDL **
+**For ANSYS APDL**
 
 ~~~
 $ ansys172 -g
@@ -33,22 +33,28 @@ $ ansys172 -g
 
 If you are using e.g., ANSYS 17.0 instead, then the executable is called `ansys170`.
 
-** For CFX **
+**For CFX**
 
 ~~~
 $ cfxlaunch
 ~~~
 
-** For ANSYS Workbench **
+**For ANSYS Workbench**
 
 ~~~
 $ runwb2
 ~~~
 
-** For Fluent **
+**For Fluent**
 
 ~~~
 $ fluent
+~~~
+
+**For ANSYS Electromagnetics**
+
+~~~
+$ ansysedt
 ~~~
 
 ## Running ANSYS in batch mode
