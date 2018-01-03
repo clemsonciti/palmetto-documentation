@@ -125,6 +125,7 @@ In the batch script `job.sh`:
 2. For ABAQUS jobs, you should always use `local_scratch` as the scratch directory.
    The following lines create the folder `/local_scratch/username` on each node
    requested by the job:
+
    ~~~
    do
    SCRATCH=/local_scratch/$USER
