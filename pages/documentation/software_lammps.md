@@ -5,8 +5,6 @@ sidebar: documentation_sidebar
 permalink: software_lammps.html
 ---
 
-
-
 There are a few different versions of LAMMPS available on the cluster,
 but users are encouraged to install their own version of LAMMPS
 in case newer versions different configurations are desired.
@@ -22,7 +20,7 @@ lammps/10Jan15-dp     lammps/17Dec13-dp     lammps/17Dec13-dp-k20 lammps/29Aug14
 In this example, we will demonstrate installing LAMMPS (version `17Nov16`) with support
 for KOKKOS.
 
-1. After logging in, ask for an interactive session (with GPU):
+1.  After logging in, ask for an interactive session (with GPU):
 
     ~~~
     $ qsub -I -l select=1:ncpus=8:mpiprocs=8:ngpus=1:mem=32gb,walltime=2:00:00
@@ -58,7 +56,7 @@ at http://lammps.sandia.gov/doc/Manual.html.
     $ cd ../..
     ~~~
 
-6. Compile LAMMPS:
+6.  Compile LAMMPS:
 
     ~~~
     $ make yes-kokkos
