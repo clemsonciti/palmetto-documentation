@@ -47,14 +47,10 @@ $ ssh login001
 Finally, you can create Jupyter notebooks by clicking **New**,
 and selecting a notebook *kernel* to use.
 Kernels are processes that run interactive code in a
-particular programming language and return output to the user. The default kernels available are:
-
-1. Python
-2. R
-3. MATLAB
-
-When you select a kernel, the notebook interface is opened in a new tab.
-Note that the MATLAB kernel requires extra [configuration]({{site.baseurl}}/jupyterhub_configuration.html).
+particular programming language and return output to the user.
+By default, only Python kernels are provided. But it is very easy to
+install additional kernels for langauges such as R and MATLAB.
+See [adding new kernels]({{site.baseurl}}/jupyterhub_new_kernels.html).
 
 ### Running notebooks and terminals
 

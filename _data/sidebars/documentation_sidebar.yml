@@ -226,6 +226,10 @@ entries:
     - title: Configuration
       url: /jupyterhub_configuration.html
       output: web,pdf
+    
+    - title: Adding New Kernels
+      url: /jupyterhub_new_kernels.html
+      output: web,pdf
 
     - title: Help and Resources
       url: /jupyterhub_resources.html
