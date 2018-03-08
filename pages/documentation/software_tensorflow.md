@@ -63,6 +63,7 @@ If you would like to use Tensorflow from Jupyter Notebook on Palmetto via
    ```
    module load cuda-toolkit/9.0.176
    module load cuDNN/9.0v7
+   ```
 
 1. Log into [JupyterHub](https://www.palmetto.clemson.edu/jupyterhub)
 
