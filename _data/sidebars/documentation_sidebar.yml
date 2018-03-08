@@ -183,6 +183,10 @@ entries:
       url: /software_tassel.html
       output: web, pdf
 
+    - title: Tensorflow
+      url: /software_tensorflow.html
+      output: web, pdf
+
     - title: Trinity
       url: /software_trinity.html
       output: web, pdf
