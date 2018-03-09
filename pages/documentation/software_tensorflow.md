@@ -9,6 +9,12 @@ permalink: software_tensorflow.html
 
 ## Installing Tensorflow
 
+1. Request an interactive session on a GPU node. For example:
+
+   ```
+   $ qsub -I -l select=1:ncpus=16:mem=20gb:ngpus=1:gpu_model=k40,walltime=3:00:00
+   ```
+
 1. Load the required modules
 
    ```
