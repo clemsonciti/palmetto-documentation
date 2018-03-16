@@ -7,12 +7,16 @@ permalink: software_tensorflow.html
 
 # Installing Tensorflow and setting up the corresponding JupyterHub kernel
 
+This page explains how to install the [Tensorflow](https://www.tensorflow.org/)
+package for use with GPUs on the cluster,
+and how to use it from Jupyter Notebook via [JupyterHub](https://www.palmetto.clemson.edu/palmetto/jupyterhub_index.html).
+
 ## Installing Tensorflow
 
 1. Request an interactive session on a GPU node. For example:
 
    ```
-   $ qsub -I -l select=1:ncpus=16:mem=20gb:ngpus=1:gpu_model=k40,walltime=3:00:00
+   $ qsub -I -l select=1:ncpus=16:mem=20gb:ngpus=1:gpu_model=p100,walltime=3:00:00
    ```
 
 1. Load the required modules
@@ -44,7 +48,17 @@ permalink: software_tensorflow.html
    $ conda install imageio
    ```
 
+1. You can now run Python and test the install:
 
+   ```
+   $ python
+
+   >>> import tensorflow as tf
+   ```
+
+   Each time you login, you will first need to load the required modules
+   and also activate the `tf_env` conda environment before
+   running Python.
 
 ## Setting up the kernel for JupyterHub:
 
@@ -71,21 +85,12 @@ If you would like to use Tensorflow from Jupyter Notebook on Palmetto via
    module load cuDNN/9.0v7
    ```
 
-1. Log into [JupyterHub](https://www.palmetto.clemson.edu/jupyterhub)
+1. Log into [JupyterHub](https://www.palmetto.clemson.edu/jupyterhub). Suggested settings:
 
    ```
-   Suggested settings:
-   Num of chunks: 1 (tensorflow will only use one chunk anyway)
+   Number of chunks: 1 (Never request more than 1 chunk as Tensorflow will only use 1 chunk)
    CPU cores: 16
    Memory: 62gb
-   Num of GPU: 1 or 2
-   Walltime: anything you like
-   Queue: workq (do not change)
-   ```
-
-1. Click on "New", and select "Tensorflow" (or whatever kernel name you chose in Step 1).
-   To test:
-
-   ```
-   $ import tensorflow as tf
+   Number of GPUs: 1 or 2
+   Queue: workq
    ```
