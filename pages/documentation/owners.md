@@ -46,16 +46,14 @@ Owner jobs have a maximum walltime of 336 hours
 
 The node configuration currently available for purchase is:
 
-* HP Apollo xl1x0r compute node
-* 2 x Intel Xeon E5-2680v3 "Haswell" @2.5 GHz (for a total of 24 cores)
-* 2 x NVIDIA Tesla K40c GPU accelerators
+* 2 x Intel Xeon E5-2680v4 "Broadwell" @2.4 GHz (for a total of 28 cores)
+* 2 x NVIDIA Tesla P100 GPU accelerators
 * 128 GB DDR4 RAM
-* 2 x 1 TB local hard drives
+* 1.8 TB local hard drives
 * On-board 10 Gbps Ethernet NIC
 * InfiniBand FDR 56 Gbps network card
 
-The node price for Clemson faculty/staff is **$6,250.00**.
-All grant budgets should assume $8,000 price as a projected price for future expansions of Palmetto cluster.
+The node price for Clemson faculty/staff is **$10,000**.
 
 ## Purchasing Storage on Palmetto Cluster
 
@@ -86,5 +84,4 @@ may expand existing storage at the same price.
 ## Contact information
 
 Individuals interested in purchase of Palmetto hardware
-may contact Jeronica Williams at
-<jeronic@clemson.edu> or 864.656.5888 (office).
+may contact Dustin Atkins at <datkins@clemson.edu>.
