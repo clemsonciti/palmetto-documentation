@@ -736,3 +736,17 @@ we see that each user can have a maximum of **5** running jobs in this queue.
 A list of example PBS scripts for submitting
 jobs to the Palmetto cluster can be found
 [here](https://github.com/clemsonciti/palmetto-examples).
+
+## Common problems/issues
+
+**Problem: Program crashes on login node with message `Killed`**: When
+running commands or editing files on the login node, users may
+notice that their processes end abruptly with the error message `Killed`.
+Processes with names such as `a.out`, `matlab`, etc.,
+are automatically killed on the login node because they may consume
+excessive computational resources. Unfortunately, this also means that
+benign processes, such as editing a file with the word `matlab` as part
+of its name could also be killed.
+
+**Solution:** Request an interactive session on a compute node (`qsub -I`),
+and then run the application/command.
