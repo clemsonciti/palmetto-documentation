@@ -53,7 +53,9 @@ The node configuration currently available for purchase is:
 * On-board 10 Gbps Ethernet NIC
 * InfiniBand FDR 56 Gbps network card
 
-The node price for Clemson faculty/staff is **$10,000**.
+The node price for Clemson faculty/staff is **$7500** for a period
+of 4 years. Any grant applications should assume **$10,000** as
+price for future purchases.
 
 ## Purchasing Storage on Palmetto Cluster
 
@@ -75,7 +77,8 @@ Storage may be purchased in 1 TB chunks (server shared with other users)
 or 150 TB.
 Purchase of 150 TB grants the owner access to an isolated storage system,
 which may offer better performance.
-The current price for both the above options is **$150 per TB**.
+The current price for both the above options is **$150 per TB**
+for a period of 4 years.
 
 The data is stored in the ZFS filesystem format.
 Owners of the previous SAMQFS storage
