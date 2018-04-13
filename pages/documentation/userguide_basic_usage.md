@@ -87,7 +87,7 @@ users can log-in by following these steps:
     MobaXterm also comes with a built-in file browser and transfer GUI
     (SSH-browser). This GUI is accessible via the **SCP** tab of the side
     window. Using the Upload (green arrow pointing up) and
-    and Dowload (blue arrow pointing down) buttons at the top of the SCP tab,
+    and Download (blue arrow pointing down) buttons at the top of the SCP tab,
     you can easily transfer files between Palmetto and your local computer.
 
     <img src="{{site.baseurl}}/images/mobaxterm_07.png" style="width:1000px">
