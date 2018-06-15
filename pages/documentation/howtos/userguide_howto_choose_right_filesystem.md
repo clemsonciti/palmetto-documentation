@@ -20,10 +20,14 @@ Some examples of data that is typically stored in the home directory:
 1. Final results from simulations/analyses
 
 Some examples of data that is typically **not** stored in the home directory
-(and are more suited to the *scratch* directories).
+(and are more suited to the *scratch* directories):
 
 1. Intermediate data produced during simulations/analyses
 1. Raw output that is to be processed to produce final results
+
+Users may store unlimited amount of data in the scratch directories,
+but data untouched for 30 days is automatically deleted and cannot
+be recovered.
 
 `/scratch2` and `/scratch3` are general purpose filesystems,
 and will generally perform well for jobs:
