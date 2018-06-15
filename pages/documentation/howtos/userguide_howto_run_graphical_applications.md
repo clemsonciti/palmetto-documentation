@@ -26,6 +26,8 @@ your mouse pointer over the X-server button in the MobaXterm GUI.
 If not, click on the button to start the X-server.
 Then, log-in as usual.
 
+See below for an example of how to run graphical applications once logged in.
+
 ### Windows Users (Other SSH client)
 
 Here, we describe the steps for Windows users that are using
@@ -64,15 +66,23 @@ Xming icon in the system tray:
 
 Mac OS X users will need to install
 XQuartz: <http://xquartz.macosforge.org>.
-XQuartz can be launched from Applications > Utilities.
-When you see the XQuartz 'X' icon on your dock,
-that indicates that it's running.
+After installing Xquartz, do not open/launch it.
+Open a terminal, and enter the following command
+**without logging in to Palmetto**:
+
+~~~
+$ defaults write org.macosforge.xquartz.X11 enable_iglx -bool true
+~~~
+
 Now, log in to Palmetto from the terminal using the `ssh`
 command, providing the additional `-X` switch:
 
 ~~~
 $ ssh -X username@login.palmetto.clemson.edu
 ~~~
+
+You should see that XQuartz is automatically launched.
+See below for an example of how to run graphical applications once logged in.
 
 ### Linux users
 
@@ -97,7 +107,7 @@ qsub: waiting for job 11678.pbs02 to start
 qsub: job11678.pbs02 ready
 ~~~
 
-You **must** include the `-X` switch to `qsub` when using graphical applications
+You **must** include the `-X` switch with `qsub 0-I` when using graphical applications
 in your interactive job. After the job is started, run the `glxgears` command:
 
 ~~~
