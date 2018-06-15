@@ -162,7 +162,7 @@ you can easily transfer small files between Palmetto and your local computer.
 
 <img src="{{site.baseurl}}/images/mobaxterm_07.png" style="width:1000px">
 
-On Unix systems, you can also use the `scp` (secure copy) command to
+On Unix systems, you can use the `scp` (secure copy) command to
 perform file transfers. The general form of the `scp` command is:
 
 ~~~
@@ -172,8 +172,8 @@ $ scp <path_to_source> username@xfer01-ext.palmetto.clemson.edu:<path_to_destina
 For example, here is the `scp` command to copy a file from the
 current directory on your local machine to your
 `/home/username` directory on Palmetto
-(this command is entered into a terminal running on your local machine,
-**not** on Palmetto):
+(this command is entered into a terminal
+when **not logged-in to Palmetto**):
 
 ~~~
 $ scp myfile.txt username@xfer01-ext.palmetto.clemson.edu:/home/username
