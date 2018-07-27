@@ -36,12 +36,12 @@ to launch the interactive viewer,
 you can use the `comsol` command to run COMSOL:
 
 ~~~
-$ comsol -np 8 -tmpdir /local_scratch
+$ comsol -np 8 -tmpdir $TMPDIR
 ~~~
 
 The `-np` option can be used to specify the number of
 CPU cores to use.
-Remember to **always** use `local_scratch` as
+Remember to **always** use `$TMPDIR` as
 the working directory for COMSOL jobs.
 
 ## Running COMSOL in batch mode
@@ -83,7 +83,7 @@ module add comsol/5.2
 
 cd $PBS_O_WORKDIR
 
-comsol batch -np 8 -tmpdir /local_scratch -inputfile free_convection.mph -outputfile free_convection_output.mph
+comsol batch -np 8 -tmpdir $TMPDIR -inputfile free_convection.mph -outputfile free_convection_output.mph
 ~~~
 
 ### COMSOL batch job across several nodes
@@ -100,6 +100,6 @@ module add comsol/5.2
 cd $PBS_O_WORKDIR
 
 uniq $PBS_NODEFILE > comsol_nodefile
-comsol batch -clustersimple -f comsol_nodefile -tmpdir /local_scratch -inputfile free_convection.mph -outputfile free_convection_output.mph
+comsol batch -clustersimple -f comsol_nodefile -tmpdir $TMPDIR -inputfile free_convection.mph -outputfile free_convection_output.mph
 ~~~
 
