@@ -92,21 +92,18 @@ cd $PBS_O_WORKDIR
 
 machines=$(uniq -c $PBS_NODEFILE | awk '{print $2":"$1}' | tr '\n' :)
 
-SCRATCH=/local_scratch/$USER
-
 for node in `uniq $PBS_NODEFILE`
 do
-    ssh $node "mkdir -p $SCRATCH"
-    ssh $node "cp $PBS_O_WORKDIR/input.txt $SCRATCH"
+    ssh $node "sleep 5"
+    ssh $node "cp input.txt $TMPDIR"
 done
 
-cd $SCRATCH
-ansys172 -dir $SCRATCH -j EXAMPLE -s read -l en-us -b -i input.txt -o output.txt -dis -machines $machines -usessh
+cd $TMPDIR
+ansys172 -dir $TMPDIR -j EXAMPLE -s read -l en-us -b -i input.txt -o output.txt -dis -machines $machines -usessh
 
 for node in `uniq $PBS_NODEFILE`
 do
-    ssh $node "cp -r $SCRATCH/* $PBS_O_WORKDIR"
-    ssh $node "rm -rf $SCRATCH"
+    ssh $node "cp -r $TMPDIR/* $PBS_O_WORKDIR"
 done
 ~~~
 
@@ -119,14 +116,13 @@ In the batch script `job.sh`:
    machines=$(uniq -c $PBS_NODEFILE | awk '{print $2":"$1}' | tr '\n' :)
    ~~~  
 
-2. For ANSYS jobs, you should always use `local_scratch` as the working directory.
-   The following lines create the folder `/local_scratch/username` on each node
-   requested by the job, and copy the input file there.
+2. For ANSYS jobs, you should always use `$TMPDIR` (`/local_scratch`) as the working directory.
+   The following lines ensure that `$TMPDIR` is created on each node:
 
    ~~~
    do
-       ssh $node "mkdir $SCRATCH"
-       cp input.txt $SCRATCH
+       ssh $node "sleep 5"
+       ssh $node "cp input.txt $TMPDIR"
    done
    ~~~  
 
@@ -134,18 +130,15 @@ In the batch script `job.sh`:
    such as the path to the `input.txt` file, the scratch directory to use, etc.,
 
    ~~~
-   ansys172 -dir $SCRATCH -j EXAMPLE -s read -l en-us -b -i input.txt -o output.txt -dis -machines $machines -usessh
+   ansys172 -dir $TMPDIR -j EXAMPLE -s read -l en-us -b -i input.txt -o output.txt -dis -machines $machines -usessh
    ~~~  
 
-4. Finally, the following lines copy all the data,
-   and then remove the `/local_scratch/username` directory
-   on each node requested by the job. Remember to always remove any files
-   you create in `/local_scratch` at the end of your jobs:
+4. Finally, the following lines copy all the data
+   from `$TMPDIR`:
 
    ~~~
 	do
-		ssh $node "cp -r $SCRATCH/* $PBS_O_WORKDIR"
-		ssh $node "rm -rf $SCRATCH"
+		ssh $node "cp -r $TMPDIR/* $PBS_O_WORKDIR"
 	done
    ~~~
 
