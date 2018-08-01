@@ -59,8 +59,8 @@ has in `/etc/hardware-table`:
 $ cat /etc/hardware-table
 ~~~
 
-`local_scratch` will generally give the best performance compared
-to the other filesystems. When using `local_scratch`, there are a few things to be kept in mind:
+`/local_scratch` will generally give the best performance compared
+to the other filesystems. When using `/local_scratch`, there are a few things to be kept in mind:
 
 1.  Data should live in `local_scratch` only for the lifetime of the job: this means
 that any data required by the job must be copied into `local_scratch` at the beginning
@@ -78,30 +78,46 @@ the maximum number of cores for that phase, e.g.:
 $ qsub -I -l select=1:ncpus=16:mem=4gb:phase=8b,walltime=1:00:00
 ~~~
 
-3.  When using `local_scratch` in MPI (multi-node) jobs, each node will need to copy
-data over to its `local_scratch`. To accomplish this, you can have commands similar to the
-following in your batch script:
+3.  The only directory that is writable in `/local_scratch` is the directory
+    `/local_scratch/pbs.$PBS_JOBID/`,
+     where ${PBS_JOBID} refers to the job ID.
+     For example, a job with job ID 21961.pbs02 can only read/write to the folder /local_scratch/pbs.21961.pbs02.
+     The environment variable `$TMPDIR` can be used to conveniently access this location.
 
-~~~
+4.  When using `local_scratch` in MPI (multi-node) jobs,
+    keep in mind that the `$TMPDIR` folder is not automatically created on every node.
+    PBS will create the folder whenever
+    it detects a process running as the user
+    on that node.
+    A convenient way to ensure that `$TMPDIR` is available on all nodes
+    is to run the `sleep` command on all nodes.
+    
+    Next, each node will need to copy
+    data over to its `$TMPDIR` folder.
+    To accomplish this, you can have commands similar to the
+    following in your batch script:
 
-# beginning of job (copy data from home to local_scratch)
+    ~~~
+    # ensure that /local_Scratch is created on all nodes:
+    module load gcc/4.8.1 openmpi/1.10.3
+    mpirun "sleep 20"
+    module purge
 
-for node in `uniq $PBS_NODEFILE`
-do
-    ssh $node mkdir -p /local_scratch/username
-    ssh $node cp /home/username/project/input_file /local_scratch/username
-done
+    # beginning of job (copy data from home to local_scratch)
+    for node in `uniq $PBS_NODEFILE`
+    do
+        ssh $node cp /home/username/project/input_file $TMPDIR
+    done
 
-# ....other commands
+    # ....other commands
 
-# end of job (copy data from local_scratch to home)
+    # end of job (copy data from local_scratch to home)
 
-for node in `uniq $PBS_NODEFILE`
-do
-    ssh $node cp /local_scratch/username/output_file /home/username/project
-    ssh $node rm -r /local_scratch/username
-done
-~~~
+    for node in `uniq $PBS_NODEFILE`
+    do
+        ssh $node cp $TMPDIR/output_file /home/username/project
+    done
+    ~~~
 
 `$PBS_NODEFILE` is a file containing
 the nodes assigned to each chunk of hardware requested.
