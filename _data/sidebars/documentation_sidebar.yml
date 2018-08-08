@@ -60,7 +60,8 @@ entries:
           output: web, pdf
 
         - title: Check queue limits
-          url: /usergude_howto_check_max_jobs.html
+          url: /userguide_howto_check_max_jobs.html
+          output: web, pdf
 
         - title: Choose scratch system
           url: /userguide_howto_choose_right_filesystem.html
