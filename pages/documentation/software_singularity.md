@@ -42,6 +42,8 @@ and Singularity is
 
 * [SingularityHub](https://singularity-hub.org/)
 
+* The [NVIDIA GPU Cloud](https://ngc.nvidia.com/signin/email) for GPU-optimized images.
+
 * Many individual projects contain specific instructions for installation via
 Docker and/or Singularity, and may host pre-built images in other locations.
 
