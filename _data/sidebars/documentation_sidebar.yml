@@ -71,26 +71,6 @@ entries:
           url: /userguide_howto_control_job_placement.html
           output: web, pdf
 
-        - title: Install software
-          url: /userguide_howto_install_software.html
-          output: web, pdf
-
-        - title: Monitor jobs
-          url: /userguide_howto_monitor_jobs.html
-          output: web, pdf
-
-        - title: Run GUI applications
-          url: /userguide_howto_run_graphical_applications.html
-          output: web, pdf
-
-        - title: Submit long-running jobs
-          url: /userguide_howto_run_long_jobs.html
-          output: web, pdf
-
-        - title: Submit many tasks/jobs simultaneously
-          url: /userguide_howto_run_many_tasks.html
-          output: web, pdf
-
         - title: Create modules
           url: /userguide_howto_create_own_modules.html
           output: web, pdf
@@ -181,6 +161,10 @@ entries:
 
     - title: Rclone
       url: /software_rclone.html
+      output: web, pdf
+
+    - title: Singularity
+      url: /software_singularity.html
       output: web, pdf
 
     - title: Tassel
