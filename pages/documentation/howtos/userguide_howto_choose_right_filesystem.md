@@ -100,7 +100,7 @@ $ qsub -I -l select=1:ncpus=16:mem=4gb:phase=8b,walltime=1:00:00
     ~~~
     # ensure that /local_Scratch is created on all nodes:
     module load gcc/4.8.1 openmpi/1.10.3
-    mpirun "sleep 20"
+    mpirun sleep 20
     module purge
 
     # beginning of job (copy data from home to local_scratch)
