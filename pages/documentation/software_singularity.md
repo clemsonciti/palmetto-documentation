@@ -192,7 +192,9 @@ Once credentials are set in the environment,
 we’re ready to pull and convert the NGC image to a local Singularity image file.
 The general form of this command for NGC HPC images is:
 
+```
 $ singularity build <local_image> docker://nvcr.io/<registry>/<app:tag>
+```
 
 This singularity build command will download the `app:tag` NGC Docker image,
 convert it to Singularity format,
@@ -219,8 +221,8 @@ As all NGC containers are optimized for NVIDIA GPU acceleration we will always w
 to enable NVIDIA GPU support  within the container.
 
 The Singularity command below represents the standard form of the Singularity command used on the Palmetto cluster.
-It will mount the present working directory on the host to /host_pwd in the container process and
-set the present working directory of the container process to /host_pwd.
+It will mount the present working directory on the host to `/host_pwd` in the container process and
+set the present working directory of the container process to `/host_pwd`
 This means that when our process starts it will be effectively running in the host directory
 the singularity command was launched from.
 
