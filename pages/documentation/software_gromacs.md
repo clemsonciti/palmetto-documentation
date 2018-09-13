@@ -5,7 +5,7 @@ sidebar: documentation_sidebar
 permalink: software_gromacs.html
 ---
 
-# GROMACS modules
+## GROMACS modules
 
 Various installations of GROMACS are available on the cluster.
 Different modules are provided for GPU-enabled and non-GPU versions
@@ -22,7 +22,7 @@ gromacs/4.6.5-dp-ompi          gromacs/5.0.1-dp-g481-o181     gromacs/5.0.5-gpu
 gromacs/4.5.4-sp
 ~~~
 
-## Running GROMACS without GPU
+### Running GROMACS without GPU
 
 To use the non-GPU version of GROMACS,
 here is an example interactive job:
@@ -51,7 +51,7 @@ export OMP_NUM_THREADS=1
 mpirun mdrun_mpi ...
 ~~~
 
-## Running GPU-enabled GROMACS
+### Running GPU-enabled GROMACS
 
 For the GPU version
 
@@ -74,14 +74,14 @@ But because there are only 2 GPUs per node, we launch only two MPI processes.
 In the above example, each MPI process can also use 10 CPU cores
 in addition to a GPU (this is enabled by setting the variable `OMP_NUM_THREADS` to 10).
 
-# GPU-enabled GROMACS using Singularity and NGC
+## GPU-enabled GROMACS using Singularity and NGC
 
 The NVIDIA GPU cloud provides images for GPU-enabled GROMACS
 that can be downloaded and run using Singularity on the Palmetto cluster.
 This is the recommended way to run GROMACS on Palmetto.
 
 
-## Downloading the image
+### Downloading the image
 
 Before downloading images from NGC,
 you will need to obtain an NVIDIA NGC API key,
@@ -116,7 +116,7 @@ $ singularity pull docker://nvcr.io/hpc/gromacs:2016.4
 
 The above should take a few seconds to complete.
 
-## Running GROMACS interactively
+### Running GROMACS interactively
 
 As an example,
 we'll consider running the GROMACS ADH benchmark.
@@ -194,7 +194,7 @@ Upon exiting the container,
 the `.log` and `.edr` files will be found in the output directory,
 `/scratch3/$USER/gromacs_ADH_benchmark`.
 
-## Running GROMACS in batch mode
+### Running GROMACS in batch mode
 
 The same benchmark can be run in batch mode by
 encapsulating the commands in a script `run_adh.sh`,
