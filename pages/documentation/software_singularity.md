@@ -186,7 +186,7 @@ $ export SINGULARITY_DOCKER_PASSWORD=<NVIDIA NGC API key>
 ```
 
 More information describing how to obtain and use your NVIDIA NGC API key can be found
-[here](https://docs.nvidia.com/ngc/ngc-user-guide/index.html).
+[here](https://docs.nvidia.com/ngc/ngc-getting-started-guide/index.html).
 
 Once credentials are set in the environment,
 we’re ready to pull and convert the NGC image to a local Singularity image file.
