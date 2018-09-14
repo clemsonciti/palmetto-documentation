@@ -223,7 +223,7 @@ cd $PBS_O_WORKDIR
 
 cp run_adh.sh $TMPDIR
 
-singularity shell --nv \
+singularity exec --nv \
     -B /scratch3/$USER/gromacs_ADH_benchmark:/input \
     -B /scratch3/$USER/gromacs_ADH_benchmark:/output \
     -B $TMPDIR:/work \
