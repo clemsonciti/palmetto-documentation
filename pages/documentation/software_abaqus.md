@@ -89,7 +89,7 @@ module add abaqus/6.14
 NCORES=`wc -l $PBS_NODEFILE | gawk '{print $1}'`
 cd $PBS_O_WORKDIR
 
-SCRATCH=/local_scratch/$USER
+SCRATCH=$TMPDIR
 
 # SSH into each node and create the scratch directory
 # copy all input files into the scratch directory
@@ -107,7 +107,6 @@ abaqus job=abdemo double input=$SCRATCH/boltpipeflange_axi_solidgask.inp scratch
 # SSH into each node and remove the scratch directory
 for node in `uniq $PBS_NODEFILE`
 do
-SCRATCH=/local_scratch/$USER
 ssh $node "cp -r $SCRATCH/* $PBS_O_WORKDIR"
 ssh $node "rm -rf $SCRATCH"
 done
@@ -123,11 +122,11 @@ In the batch script `job.sh`:
    ~~~  
 
 2. For ABAQUS jobs, you should always use `local_scratch` as the scratch directory.
-   The following lines create the folder `/local_scratch/username` on each node
-   requested by the job:
+   The following lines ensure that `local_scratch`
+   
    ~~~
    do
-   SCRATCH=/local_scratch/$USER
+   SCRATCH=$TMPDIR
    ssh $node "mkdir $SCRATCH"
    done
    ~~~  
