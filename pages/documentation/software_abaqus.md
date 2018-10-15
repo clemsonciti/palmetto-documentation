@@ -86,17 +86,17 @@ ABAQUS job submission folders on Palmetto.
 module purge
 module add abaqus/6.14
 
+pbsdsh sleep 20
+
 NCORES=`wc -l $PBS_NODEFILE | gawk '{print $1}'`
 cd $PBS_O_WORKDIR
 
 SCRATCH=$TMPDIR
 
-# SSH into each node and create the scratch directory
 # copy all input files into the scratch directory
 for node in `uniq $PBS_NODEFILE`
 do
-ssh $node "mkdir $SCRATCH"
-ssh $node "cp $PBS_O_WORKDIR/*.inp $SCRATCH"
+    ssh $node "cp $PBS_O_WORKDIR/*.inp $SCRATCH"
 done
 
 cd $SCRATCH
@@ -104,11 +104,10 @@ cd $SCRATCH
 # run the abaqus program, providing the .inp file as input
 abaqus job=abdemo double input=$SCRATCH/boltpipeflange_axi_solidgask.inp scratch=$SCRATCH cpus=$NCORES mp_mode=mpi interactive 
 
-# SSH into each node and remove the scratch directory
+# copy results back from scratch directory to $PBS_O_WORKDIR
 for node in `uniq $PBS_NODEFILE`
 do
-ssh $node "cp -r $SCRATCH/* $PBS_O_WORKDIR"
-ssh $node "rm -rf $SCRATCH"
+    ssh $node "cp -r $SCRATCH/* $PBS_O_WORKDIR"
 done
 ~~~
 
@@ -121,34 +120,12 @@ In the batch script `job.sh`:
    NCORES=`wc -l $PBS_NODEFILE | gawk '{print $1}'`
    ~~~  
 
-2. For ABAQUS jobs, you should always use `local_scratch` as the scratch directory.
-   The following lines ensure that `local_scratch`
-   
-   ~~~
-   do
-   SCRATCH=$TMPDIR
-   ssh $node "mkdir $SCRATCH"
-   done
-   ~~~  
-
-3. The following line runs the ABAQUS program, specifying various options
+2. The following line runs the ABAQUS program, specifying various options
    such as the path to the `.inp` file, the scratch directory to use, etc.,
 
    ~~~
    abaqus job=abdemo double input=/scratch2/$USER/ABAQUS/boltpipeflange_axi_solidgask.inp scratch=$SCRATCH cpus=$NCORES mp_mode=mpi interactive
    ~~~  
-
-4. Finally, the following lines remove the /local_scratch/username directory
-   on each node requested by the job. Remember to always remove any files
-   you create in `/local_scratch` at the end of your jobs:
-
-   ~~~
-   for node in `uniq $PBS_NODEFILE`
-   do
-   SCRATCH=/local_scratch/$USER
-   ssh $node "rm -rf $SCRATCH"
-   done
-   ~~~
 
 To submit the job:
 
