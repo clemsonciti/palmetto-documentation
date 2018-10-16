@@ -81,9 +81,12 @@ but below are the steps that users can follow to install and run it.
     ```
 
     Run the script interactively:
+    
     `$ python test_hoomd.py`
+    
 
-    Alternatively, you can setup a PBS job script to run HOOMD in batch mode. A sample is below for Test_Hoomd.sh:
+    Alternatively, you can setup a PBS job script to run HOOMD in batch mode. A sample is below for *Test_Hoomd.sh*:
+    
 
     ```
     #PBS -N HOOMD
