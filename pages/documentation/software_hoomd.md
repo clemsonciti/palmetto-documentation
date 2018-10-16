@@ -44,7 +44,7 @@ but below are the steps that users can follow to install and run it.
     $ make test #Optional
     $ make install  #This will create a hoomd folder in ~/applications/lib/python
     $ ccmake .
-    #press **c** to configure then press **g** to generate.
+    press "c" to configure then press "g" to generate.
     ```
 
 
