@@ -6,6 +6,7 @@ permalink: software_hoomd.html
 ---
 
 
+# Installing HOOMD
 
 [HOOMD](http://glotzerlab.engin.umich.edu/hoomd-blue/) (HOOMD-Blue) performs general purpose particle 
 dynamics simulations on a single cluster node, 
@@ -47,11 +48,13 @@ but below are the steps that users can follow to install and run it.
     press "c" to configure then press "g" to generate.
     ```
 
-
 6.	Export the Python path to installed HOOMD folder. You might want to add this to bashrc file for faster load the HOOMD module:
 
-    `$ export PYTHONPATH=$PYTHONPATH:$HOME/applications/lib/python`
-
+    ```
+    $ export PYTHONPATH=$PYTHONPATH:$HOME/applications/lib/python
+    ```
+    
+# Run HOOMD
 
     Now the HOOMD-BLUE v2.3.5 has been installed. Create a simple python file “test_hoomd.py” to run HOOMD 
 
@@ -80,12 +83,12 @@ but below are the steps that users can follow to install and run it.
     $ module add anaconda3/5.1.0 gcc/5.4.0 cuda-toolkit/9.0.176
     ```
 
-    Run the script interactively:
+    ## Run the script interactively:
     
     `$ python test_hoomd.py`
     
 
-    Alternatively, you can setup a PBS job script to run HOOMD in batch mode. A sample is below for *Test_Hoomd.sh*:
+    ## Alternatively, you can setup a PBS job script to run HOOMD in batch mode. A sample is below for *Test_Hoomd.sh*:
     
 
     ```
