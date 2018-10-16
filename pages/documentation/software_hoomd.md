@@ -28,7 +28,7 @@ but below are the steps that users can follow to install and run it.
     $ git clone --recursive https://bitbucket.org/glotzer/hoomd-blue
     ```
 
-4.	A folder hoomd-blue is cloned to the folder. Create build folder and go inside
+4.	A folder hoomd-blue is cloned to the *source* folder. Create *build* folder and go inside
 
     ```
     $ cd hoomd-blue
@@ -48,7 +48,7 @@ but below are the steps that users can follow to install and run it.
     ```
 
 
-6.	Export the Python path to installed HOOMD folder. You might want to add this to bashrc for faster load the HOOMD module:
+6.	Export the Python path to installed HOOMD folder. You might want to add this to bashrc file for faster load the HOOMD module:
 
     `$ export PYTHONPATH=$PYTHONPATH:$HOME/applications/lib/python`
 
@@ -101,4 +101,5 @@ but below are the steps that users can follow to install and run it.
     ```
 
     Submit the job:
+    
     `$ qsub Test_Hoomd.sh`
