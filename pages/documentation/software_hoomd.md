@@ -53,9 +53,9 @@ but below are the steps that users can follow to install and run it.
     `$ export PYTHONPATH=$PYTHONPATH:$HOME/applications/lib/python`
 
 
-Now the HOOMD-BLUE v2.3.5 has been installed. Create a simple python file “test_hoomd.py” to run HOOMD 
+    Now the HOOMD-BLUE v2.3.5 has been installed. Create a simple python file “test_hoomd.py” to run HOOMD 
 
-```
+    ```
     import hoomd
     import hoomd.md
     hoomd.context.initialize("");
@@ -80,10 +80,10 @@ Now the HOOMD-BLUE v2.3.5 has been installed. Create a simple python file “tes
     $ module add anaconda3/5.1.0 gcc/5.4.0 cuda-toolkit/9.0.176
     ```
 
-Run the script interactively:
+    Run the script interactively:
     `$ python test_hoomd.py`
 
-Alternatively, you can setup a PBS job script to run HOOMD in batch mode. A sample is below for Test_Hoomd.sh:
+    Alternatively, you can setup a PBS job script to run HOOMD in batch mode. A sample is below for Test_Hoomd.sh:
 
     ```
     #PBS -N HOOMD
