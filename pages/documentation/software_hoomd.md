@@ -34,12 +34,12 @@ but below are the steps that users can follow to install and run it.
 
 5.	Use CMAKE to configure the build and proceed with installing HOOMD to folder ~/applications
 
-   ```$ cmake ../ -DCMAKE_INSTALL_PREFIX=~/applications/lib/python -DCMAKE_CXX_FLAGS=-march=native -DCMAKE_C_FLAGS=-march=native -DCMAKE_BUILD_TYPE=Release -DENABLE_CUDA=ON -DENABLE_MPI=ON -DSINGLE_PRECISION=ON
+ ```$ cmake ../ -DCMAKE_INSTALL_PREFIX=~/applications/lib/python -DCMAKE_CXX_FLAGS=-march=native -DCMAKE_C_FLAGS=-march=native -DCMAKE_BUILD_TYPE=Release -DENABLE_CUDA=ON -DENABLE_MPI=ON -DSINGLE_PRECISION=ON
     $ make –j16 #Use 16 cores to compile faster
     $ make test #Optional
     $ make install  #This will create a hoomd folder in ~/applications/lib/python
     $ ccmake .
-    #press “c” to configure then press “g” to generate.```
+    #press **c** to configure then press **g** to generate.```
 
 
 6.	Export the Python path to installed HOOMD folder. You might want to add this to bashrc for faster load the HOOMD module:
