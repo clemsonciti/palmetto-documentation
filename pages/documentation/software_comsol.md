@@ -68,7 +68,7 @@ Both of these examples run the
 "Heat Transfer by Free Convection" application described
 [here](https://www.comsol.com/model/heat-transfer-by-free-convection-122).
 In addition to the `job.sh` and `job_mpi.sh` scripts, to run the examples and reproduce the results,
-you will need to download the file `free_convection.mph` provided
+you will need to download the file `free_convection.mph` (choose the correct version) provided
 with the description (login required).
 
 ### COMSOL batch job on a single node, using multiple cores:
