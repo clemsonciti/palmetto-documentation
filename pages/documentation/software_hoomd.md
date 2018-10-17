@@ -55,7 +55,7 @@ but below are the steps that users can follow to install and run it.
     ```
     
 # Run HOOMD
-* Now the HOOMD-BLUE v2.3.5 has been installed. Create a simple python file “test_hoomd.py” to run HOOMD 
+  Now the HOOMD-BLUE v2.3.5 has been installed. Create a simple python file “test_hoomd.py” to run HOOMD 
 
     ```
     import hoomd
