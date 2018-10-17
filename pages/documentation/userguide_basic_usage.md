@@ -687,25 +687,35 @@ are using the `checkqueuecfg` command:
 ~~~
 $ checkqueuecfg
 
-                per job    per job   per user
+MX QUEUES     min_cores_per_job  max_cores_per_job   max_mem_per_queue  max_jobs_per_queue   max_walltime
+c1_solo                       1                  1              4000gb                2000      168:00:00
+c1_single                     2                 24             90000gb                 750      168:00:00
+c1_tiny                      25                128             25600gb                  25      168:00:00
+c1_small                    129                512             24576gb                   6      168:00:00
+c1_medium                   513               2048             81920gb                   5      168:00:00
+c1_large                   2049               4096             32768gb                   1      168:00:00
 
-MX QUEUES      min_cpus   max_cpus   max_jobs
-c1_solo               1          1       5000
-c1_single             2         24         50
-c1_tiny              25        128         10
-c1_small            129        512          2
-c1_medium           513       2048          2
-c1_large           2049       4096          1
+IB QUEUES     min_cores_per_job  max_cores_per_job   max_mem_per_queue  max_jobs_per_queue   max_walltime
+c2_single                     1                 24               600gb                   5       72:00:00
+c2_tiny                      25                128              4096gb                   2       72:00:00
+c2_small                    129                512              6144gb                   1       72:00:00
+c2_medium                   513               2048             16384gb                   1       72:00:00
+c2_large                   2049               4096                 0gb                   0       72:00:00
 
-IB QUEUES      min_cpus   max_cpus   max_jobs
-c2_single             2         24          5
-c2_tiny              25        128          3
-c2_small            129        512          1
-c2_medium           513       2048          1
-c2_large           2049       4096          0
+GPU QUEUES     min_gpus_per_job   max_gpus_per_job  min_cores_per_job  max_cores_per_job   max_mem_per_queue  max_jobs_per_queue   max_walltime
+gpu_small                     1                  4                  1                 96              3840gb                  20       72:00:00
+gpu_medium                    5                 16                  1                256              5120gb                   5       72:00:00
+gpu_large                    17                128                  1               1024             20480gb                   5       72:00:00
 
-BIGMEM QUEUE   min_cpus   max_cpus   max_jobs
-bigmem_e              1         64          1
+SMP QUEUE     min_cores  max_cores   max_jobs   max_walltime
+bigmem                1         64          3       72:00:00
+
+
+   'max_mem' is the maximum amount of memory all your jobs in this queue can
+   consume at any one time.  For example, if the max_mem for the solo queue
+   is 4000gb, and your solo jobs each need 10gb, then you can run a
+   maximum number of 4000/10 = 400 jobs in the solo queue, even though the
+   current max_jobs setting for the solo queue may be set higher than 400.
 ~~~
 
 The `qstat` command tells you which of the execution queues
