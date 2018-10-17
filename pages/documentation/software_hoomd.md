@@ -82,12 +82,12 @@ $ qsub -I -l select=1:ncpus=16:mem=64gb:ngpus=2:gpu_model=p100:mpiprocs=16:inter
 $ module add anaconda3/5.1.0 gcc/5.4.0 cuda-toolkit/9.0.176
 ```
 
-*Run the script interactively:
+* Run the script interactively:
 
 `$ python test_hoomd.py`
 
 
-*Alternatively, you can setup a PBS job script to run HOOMD in batch mode. A sample is below for *Test_Hoomd.sh*:
+* Alternatively, you can setup a PBS job script to run HOOMD in batch mode. A sample is below for *Test_Hoomd.sh*:
 
 
 ```
