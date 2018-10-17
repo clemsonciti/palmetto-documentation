@@ -12,7 +12,7 @@ or `qsub` command (interactive jobs).
 All GPU nodes on Palmetto have 2 GPUs per node,
 so the value for `ngpus` can only be 1 or 2.
 In addition, you can also specify
-the option `gpu_model` (`m2075`, `m2070q`, `k20`, `k40`, or `p100`)
+the option `gpu_model` (`m2075`, `k20`, `k40`, `p100` or `v100`)
 to request a specific GPU type.
 
 ~~~
@@ -31,24 +31,25 @@ $ ssh node1582
 $ nvidia-smi
 
 +-----------------------------------------------------------------------------+
-| NVIDIA-SMI 367.44                 Driver Version: 367.44                    |
+| NVIDIA-SMI 396.26                 Driver Version: 396.26                    |
 |-------------------------------+----------------------+----------------------+
 | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
 | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
 |===============================+======================+======================|
-|   0  Tesla K20m          Off  | 0000:24:00.0     Off |                    0 |
-| N/A   52C    P8    19W / 225W |      9MiB /  4742MiB |      0%      Default |
+|   0  Tesla K20m          Off  | 00000000:24:00.0 Off |                    0 |
+| N/A   42C    P0    75W / 225W |    114MiB /  4743MiB |     76%      Default |
 +-------------------------------+----------------------+----------------------+
-|   1  Tesla K20m          Off  | 0000:27:00.0     Off |                    0 |
-| N/A   32C    P8    17W / 225W |      9MiB /  4742MiB |      0%      Default |
+|   1  Tesla K20m          Off  | 00000000:27:00.0 Off |                    0 |
+| N/A   21C    P8    16W / 225W |     16MiB /  4743MiB |      0%      Default |
 +-------------------------------+----------------------+----------------------+
 
 +-----------------------------------------------------------------------------+
 | Processes:                                                       GPU Memory |
-|  GPU       PID  Type  Process name                               Usage      |
+|  GPU       PID   Type   Process name                             Usage      |
 |=============================================================================|
-|    0      5339    G   /usr/bin/X                                       9MiB |
-|    1      5339    G   /usr/bin/X                                       9MiB |
+|    0      3034      G   /usr/bin/X                                     4MiB |
+|    0     30903      C   gmx                                           98MiB |
+|    1      3034      G   /usr/bin/X                                     4MiB |
 +-----------------------------------------------------------------------------+
 ~~~
 
