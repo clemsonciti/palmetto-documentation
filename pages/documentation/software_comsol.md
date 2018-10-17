@@ -11,14 +11,14 @@ To see the available COMSOL modules on Palmetto:
 ~~~
 $ module avail comsol
 
-comsol/4.3b comsol/5.0  comsol/5.1  comsol/5.2
+comsol/4.3b comsol/4.4  comsol/5.0  comsol/5.1  comsol/5.2  comsol/5.3
 ~~~
 
 To see license usage of COMSOL-related packages,
 you can use the `lmstat` command:
 
 ~~~
-/usr/flexlm/lmstat -a -c /usr/flexlm/licenses/comsol.dat
+/software/USR_LOCAL/flexlm/lmstat -a -c /software/USR_LOCAL/flexlm/licenses/comsol.dat 
 ~~~
 
 ## Running COMSOL GUI
@@ -36,6 +36,7 @@ to launch the interactive viewer,
 you can use the `comsol` command to run COMSOL:
 
 ~~~
+$ module add comsol/5.3
 $ comsol -np 8 -tmpdir $TMPDIR
 ~~~
 
