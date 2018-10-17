@@ -669,7 +669,7 @@ There are three classes of execution queues:
 1. MX queues (`c1_` queues): jobs submitted to run on the older hardware (phases 1-6)
 will be forwarded to theses queues.
 
-2. IB queues (`c2_` queues): jobs submitted to run the newer hardware (phases 6 and up)
+2. IB queues (`c2_` queues): jobs submitted to run the newer hardware (phases 7 and up)
 will be forwarded to these queues.
 
 3. bigmem queue: jobs submitted to the large-memory machines (phase 0).
