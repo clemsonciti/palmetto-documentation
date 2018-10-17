@@ -161,7 +161,7 @@ Similarly, `>>` can be used to append to the end of a file
 without overwriting what's already there:
 
 ~~~
-$ echo "Right now it's $DATE" >> list.txt
+$ echo "Right now it's `date`" >> list.txt
 ~~~
 
 Another useful technique is to redirect one program's output (stdout)
