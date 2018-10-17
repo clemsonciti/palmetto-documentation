@@ -390,6 +390,8 @@ Command | Description
 `Ctrl+D` | log-out of current session (same as exit)
 `!!` | repeats the last command
 `cd -` | change directory to previous location
+`Ctrl+Insert` | copy selected text 
+`Shift+Insert` | paste text
 
 ## Additional Useful Commands
 
