@@ -106,7 +106,7 @@ to use under which circumstances.
 Location                |	Available space                     | Notes
 ------------------------|---------------------------------------|---------------------------------------------------------------------------
 `/home/username`        |   100 GB per user                     | Backed-up nightly, permanent storage space accessible from all nodes
-`/scratch1/username`    |   233 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, OrangeFS Parallel File Sytem
+`/scratch1/username`    |   233 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, OrangeFS Parallel File System
 `/scratch2/username`    |   160 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, XFS
 `/scratch3/username`    |   129 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, ZFS
 `/local_scratch`        |   Varies between nodes (99GB-800GB)   | Per-node temporary work space, accessible only for the lifetime of job
@@ -360,7 +360,7 @@ before and after loading some module:
 
 ~~~
 $ echo $PATH
-$ module add python/2.7.7
+$ module add python/2.7.13
 $ echo $PATH
 ~~~
 
