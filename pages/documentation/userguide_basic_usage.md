@@ -772,5 +772,5 @@ Periodically move important data back to the `/home` directory.
 or the `/scratch` directories, which are shared by all nodes, each
 node has its own `/local_scratch` directory. It is much faster to read/write
 data to `/local_scratch`, and doing so will not affect other users.
-(see example [here](https://www.palmetto.clemson.edu/palmetto/userguide_howto_choose_right_filesystem.html).
+(see example [here])(https://www.palmetto.clemson.edu/palmetto/userguide_howto_choose_right_filesystem.html).
 
