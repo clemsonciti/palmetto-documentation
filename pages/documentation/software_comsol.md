@@ -36,7 +36,7 @@ to launch the interactive viewer,
 you can use the `comsol` command to run COMSOL:
 
 ~~~
-$ module add comsol/5.3
+$ module add comsol/5.2
 $ comsol -np 8 -tmpdir $TMPDIR
 ~~~
 
@@ -69,7 +69,7 @@ Both of these examples run the
 [here](https://www.comsol.com/model/heat-transfer-by-free-convection-122).
 In addition to the `job.sh` and `job_mpi.sh` scripts, to run the examples and reproduce the results,
 you will need to download the file `free_convection.mph` provided
-with the description.
+with the description (login required).
 
 ### COMSOL batch job on a single node, using multiple cores:
 
