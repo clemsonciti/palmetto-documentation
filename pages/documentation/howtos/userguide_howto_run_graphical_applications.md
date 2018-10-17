@@ -31,13 +31,12 @@ See below for an example of how to run graphical applications once logged in.
 ### Windows Users (Other SSH client)
 
 Here, we describe the steps for Windows users that are using
-the [SSH Secure Shell Client](https://www.palmetto.clemson.edu/palmetto/old/files/sshclient.exe).
+the [SSH Secure Shell Client](https://www.ssh.com/ssh/).
 Users will need the following software to run graphical
 applications:
 
-1.  SSH Secure Shell by SSH Communications Security Corporation,
-enhanced SSH client with CU 
-site license: <https://www.palmetto.clemson.edu/palmetto/old/files/sshclient.exe>.
+1.  SSH Secure Shell by SSH Communications Security Corporation
+site license: <https://www.ssh.com/ssh/download/>.
 
 2.  Xming, Windows-based X-server
 (<http://www.straightrunning.com/XmingNotes>
@@ -65,7 +64,7 @@ Xming icon in the system tray:
 ### Mac OS X 10.9+ users
 
 Mac OS X users will need to install
-XQuartz: <http://xquartz.macosforge.org>.
+XQuartz: <https://www.xquartz.org/>.
 After installing Xquartz, do not open/launch it.
 Open a terminal, and enter the following command
 **without logging in to Palmetto**:
@@ -107,7 +106,7 @@ qsub: waiting for job 11678.pbs02 to start
 qsub: job11678.pbs02 ready
 ~~~
 
-You **must** include the `-X` switch with `qsub 0-I` when using graphical applications
+You **must** include the `-X` switch with `qsub -I` when using graphical applications
 in your interactive job. After the job is started, run the `glxgears` command:
 
 ~~~
@@ -131,7 +130,7 @@ with X11 tunneling
 using one "chunk" of cluster hardware consisting of
 4 compute cores,
 4 MPI processes,
-128 GB RAM,
+64 GB RAM,
 and this job will run for up to 2 hours.
 When this interactive job begins running,
 you will be logged-in to one of the compute nodes
