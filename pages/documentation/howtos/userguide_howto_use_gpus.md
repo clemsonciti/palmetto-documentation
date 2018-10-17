@@ -27,7 +27,7 @@ In addition to `/usr/bin/X`, if you see your application in this list,
 then it is using the GPU:
 
 ~~~
-$ ssh node1582
+$ ssh node1800
 $ nvidia-smi
 
 +-----------------------------------------------------------------------------+
