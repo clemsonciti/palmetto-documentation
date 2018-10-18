@@ -53,10 +53,13 @@ you can additionally use the `-nodisplay` and `-nosplash` options:
 ~~~
 $ matlab -nodisplay -nosplash
 ~~~
+
 To quit matlab command-line interface, type:
+
 ~~~
 $ exit
 ~~~
+
 ## MATLAB in batch jobs
 
 To use MATLAB in your batch jobs,
@@ -69,9 +72,11 @@ matlab -nodisplay -nosplash -r myscript
 ~~~
 will run the MATLAB script `myscript.m`, 
 Or:
+
 ~~~
 matlab -nodisplay -nosplash < myscript.m > myscript_results.txt
 ~~~
+
 will run the MATLAB script `myscript.m` and write the output to *myscript_results.txt* file.
 Thus, an example batch job using MATLAB could have
 a batch script as follows:
@@ -118,7 +123,7 @@ by *compiling* your MATLAB code into an executable.
 This can be done from within the MATLAB command-line as follows:
 
 ~~~
-matlab -nodisplay -nosplash
+$ matlab -nodisplay -nosplash
 >> mcc -R -nodisplay -R -singleCompThread -R -nojvm -m mycode.m
 ~~~
 
