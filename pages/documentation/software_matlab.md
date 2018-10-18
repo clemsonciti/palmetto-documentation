@@ -68,13 +68,14 @@ which lets you **r**un commands specified on the command-line.
 For example:
 
 ~~~
-matlab -nodisplay -nosplash -r myscript
+$ matlab -nodisplay -nosplash -r myscript
 ~~~
+
 will run the MATLAB script `myscript.m`, 
 Or:
 
 ~~~
-matlab -nodisplay -nosplash < myscript.m > myscript_results.txt
+$ matlab -nodisplay -nosplash < myscript.m > myscript_results.txt
 ~~~
 
 will run the MATLAB script `myscript.m` and write the output to *myscript_results.txt* file.
