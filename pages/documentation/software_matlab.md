@@ -15,7 +15,7 @@ You can check the availability of MATLAB licenses
 using the `lmstat` command:
 
 ~~~
-/usr/flexlm/lmstat -a -c /usr/flexlm/licenses/matlab.dat 
+/software/USR_LOCAL/flexlm/lmstat -a -c /software/USR_LOCAL/flexlm/licenses/matlab.dat 
 ~~~
 
 ## Running the MATLAB graphical interface
@@ -31,7 +31,7 @@ $ qsub -I -X -l select=1:ncpus=1:mem=2gb,walltime=1:00:00
 Once logged-in, you must load one of the MATLAB modules:
 
 ~~~
-$ module add matlab/2016a
+$ module add matlab/2017a
 ~~~
 
 And then launch the MATLAB program:
@@ -40,7 +40,7 @@ And then launch the MATLAB program:
 $ matlab
 ~~~
 
-**Warning**: do not attempt to run MATLAB right after
+**Warning**: DO NOT attempt to run MATLAB right after
 logging-in (i.e., on the `login001` node).
 Always ask for an interactive job first.
 MATLAB sessions are automatically killed on the login node.
@@ -53,7 +53,10 @@ you can additionally use the `-nodisplay` and `-nosplash` options:
 ~~~
 $ matlab -nodisplay -nosplash
 ~~~
-
+To quit matlab command-line interface, type:
+~~~
+$ exit
+~~~
 ## MATLAB in batch jobs
 
 To use MATLAB in your batch jobs,
@@ -64,8 +67,12 @@ For example:
 ~~~
 matlab -nodisplay -nosplash -r myscript
 ~~~
-
-will run the MATLAB script `myscript.m`.
+will run the MATLAB script `myscript.m`, 
+Or:
+~~~
+matlab -nodisplay -nosplash < myscript.m > myscript_results.txt
+~~~
+will run the MATLAB script `myscript.m` and write the output to *myscript_results.txt* file.
 Thus, an example batch job using MATLAB could have
 a batch script as follows:
 
@@ -76,11 +83,11 @@ a batch script as follows:
 #PBS -l select=1:ncpus=1:mem=5gb
 #PBS -l walltime=1:00:00
 
-module add matlab/2014a
+module add matlab/2017a
 
 cd $PBS_O_WORKDIR
 
-taskset -c 0-$(($OMP_NUM_THREADS-1)) matlab -nodisplay -nodesktop -nosplash -r test > test_results.txt
+taskset -c 0-$(($OMP_NUM_THREADS-1)) matlab -nodisplay -nosplash < myscript.m > myscript_results.txt
 ~~~
 
 **Note**: MATLAB will sometimes attemps to use all available
@@ -111,6 +118,7 @@ by *compiling* your MATLAB code into an executable.
 This can be done from within the MATLAB command-line as follows:
 
 ~~~
+matlab -nodisplay -nosplash
 >> mcc -R -nodisplay -R -singleCompThread -R -nojvm -m mycode.m
 ~~~
 
@@ -131,6 +139,6 @@ a command like the following:
 ~~~
 
 Once the executable is produced,
-ou can run it like any other executable in your batch jobs.
+you can run it like any other executable in your batch jobs.
 Of course, you'll also need the same `matlab` and
 (optional) GCC module loaded for your job's runtime environment.
