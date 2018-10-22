@@ -1,5 +1,5 @@
 ---
-title: How to submit job to owner's node 
+title: How to submit job to owner's node
 keywords: [submit, owner's node]
 sidebar: documentation_sidebar
 permalink: userguide_howto_submit_job_ownernode.html
