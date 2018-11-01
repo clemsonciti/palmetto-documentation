@@ -12,9 +12,30 @@ Any user with a Palmetto Cluster account can log-in using
 Mac OS X and Linux systems come with an SSH client installed,
 while Windows users will need to download one.
 
-All connections to Palmetto require two-factor authentication (2FA).
-If you are not enrolled in 2FA yet,
+### Two-Factor Authentication (2FA)
+
+All connections to Palmetto require 2FA. If you are not enrolled in 2FA yet,
 you may enroll using the link <https://2fa.clemson.edu/>.
+2FA comes with three options for registerd devices (smart phone or tablet):
+
+~~~
+Using keyboard-interactive authentication.
+Duo two-factor login for $user
+
+Enter a passcode or select one of the following options:
+
+ 1. Duo Push to XXX-XXX-XXXX
+ 2. Phone call to XXX-XXX-XXXX
+ 3. SMS passcodes to XXX-XXX-XXXX
+
+Passcode or option (1-3):
+~~~
+* Option 1: response to Duo Push to your device by clicking **Yes**
+* Option 2: listen to the automatic call from system and select any key on your device.
+* Option 3: You will receive 10 different passcodes sent to your device. Enter any of the passcode to the command prompt.
+* Option 4: If user connecting with DUO token device purchased from CCIT, press 3 and use the token generated passcode. 
+
+More information can be found at [here](https://ccit.clemson.edu/support/current-students/two-factor-authentication-2fa/)
 
 ### Mac OS X and Linux users
 
