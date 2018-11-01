@@ -33,7 +33,10 @@ Passcode or option (1-3):
 * Option 1: response to Duo Push to your device by clicking **Approve**
 * Option 2: listen to the automatic call from system and select any key on your device.
 * Option 3: You will receive 10 different passcodes sent to your device. Enter any of the passcode to the command prompt.
-* Option 4: If user connecting with DUO token device purchased from CCIT, press 3 and use the token generated passcode. 
+* Option 4: If user connecting with DUO token device purchased from CCIT, use the token generated passcode
+```
+Passcode or option (1-3): 1234567
+```
 
 More information can be found at [here](https://ccit.clemson.edu/support/current-students/two-factor-authentication-2fa/)
 
