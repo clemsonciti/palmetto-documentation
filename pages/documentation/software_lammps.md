@@ -59,6 +59,7 @@ There are two different methods of compiling LAMMPS using **make** or **cmake**.
     A new executable file **lmp_mpi** will be produced in the *src* folder. You can copy this executable over to the working directory of your jobs. Note that the size of the executable may be a hundred MB
     
     Note: there are optional packages which can be installed together with the above package using *make yes-*. For example: 
+    
     ~~~
     $ make yes-USER-MISC
     $ make yes-KSPACE
@@ -74,7 +75,7 @@ There are two different methods of compiling LAMMPS using **make** or **cmake**.
     ~~~
 
 6.  Compile LAMMPS using **cmake** with **GPU** support:
-The detailed manual can be found [here](https://github.com/lammps/lammps/blob/master/cmake/README.md) with more information on the options to be included. In this instruction, we only cover a certain number of options that are enough install cmake with GPU:
+    The detailed manual can be found [here](https://github.com/lammps/lammps/blob/master/cmake/README.md) with more information on the options to be included. In this instruction, we only cover a certain number of options that are enough install cmake with GPU:
 
     ~~~
     $ mkdir build
@@ -83,48 +84,34 @@ The detailed manual can be found [here](https://github.com/lammps/lammps/blob/ma
     $ make -j8
     ~~~
 
-In the above script; the *-DGPU_ARCH=sm_35* was used because the gpu_model was set at Kepler (k40). Please refer to the above [guideline](https://github.com/lammps/lammps/blob/master/cmake/README.md) for setting particular gpu architecture
+    In the above script; the *-DGPU_ARCH=sm_35* was used because the gpu_model was set at Kepler (k40). Please refer to the above [guideline](https://github.com/lammps/lammps/blob/master/cmake/README.md) for setting particular gpu architecture
 
-Note: there are optional packages which can be installed together with the above package using *-D[Options]=on*. For example: 
+    Note: there are optional packages which can be installed together with the above package using *-D[Options]=on*. For example: 
 
     ~~~
     $ cmake ../cmake/ -DPKG_MISC=on -DPKG_KSPACE=on -DPKG_MOLECULE=on -DPKG_MANYBODY=on -DPKG_DIPOLE=on -DPKG_CLASS2=on -DPKG_ASPHERE=on -DPKG_REPLICA=on -DPKG_GRANULAR=on -DPKG_RIGID=on
     ~~~
     
-The executable `lmp` will be produced. You can copy this executable over to the working directory of your jobs.
+The executable file **lmp** will be produced. You can copy this executable over to the working directory of your jobs.
 Note that the size of the executable may be a hundred MB.
 
 ## Running LAMMPS - an example
 
-This example will use the above compiled LAMMPS in a batch script.
-The input file and batch script for this example can
-be obtained using the following commands:
+Several existing examples are in the installed folder: *lammps-22Aug18/examples/*
+Detailes description of all examples are [here](https://lammps.sandia.gov/doc/Examples.html#).
+In order to run the example, simply copy the executable files created from step 5 and 6 to particular example folder and follow the **README** for detailed description on how to run.
+
+For instance, in order to run an example *accelerate* using GPU package. Copy **lmp** to that folder.
+Here is a sample batch script `job.sh` for this example:
 
 ~~~
-$ module add examples
-$ example get LAMMPS
-
-Getting example LAMMPS
-Example LAMMPS copied into /home/username/LAMMPS.
-~~~
-
-Next, you will have to copy the above executable
-`lmp` into the `LAMMPS` directory.
-Examine the input file `in.lj`
-and the batch script `job.sh` for this example.
-The batch script looks as follows:
-
-~~~
-#PBS -N lammps_example
-#PBS -l select=1:ncpus=10:mpiprocs=10:ngpus=1:mem=32gb,walltime=1:00:00
+#PBS -N accelerate 
+#PBS -l select=1:ncpus=8:mpiprocs=8:ngpus=1:mem=32gb,walltime=1:00:00
 #PBS -j oe
 
 module purge
 module load gcc/5.4.0
 module load openmpi/1.10.3
-module load fftw/3.3.4-g481
-module load cuda-toolkit/8.0.44
-  
 
-mpirun -n 8 lmp -k on t 8 g 1 -sf kk < in.lj
+mpirun -np 8 lmp -sf gpu < in.lj        # 8 MPI, 8 MPI/GPU
 ~~~
