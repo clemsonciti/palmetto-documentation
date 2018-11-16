@@ -502,6 +502,7 @@ Parameter | Purpose | Example
 `-e`      | Path to stderr file for this job (environment variables are not accepted here) | `-e stderr.txt`
 `-M`      | E-mail for messages from the PBS server	 | `-M username@clemson.edu`
 `-j oe`   | Join the output and error streams and write to a single file | `-j oe`
+`-r n`	  | Ask PBS **not** to restart the job if it's failed	|  `-r n`
 
 For example, in a batch script:
 
