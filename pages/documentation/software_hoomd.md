@@ -20,7 +20,7 @@ but below are the steps that users can follow to install and run it.
 
 2.	Load the required modules:
 
-    `$ module add anaconda3/5.1.0 gcc/5.4.0 cuda-toolkit/9.0.176 cmake/3.10.0 openmpi/1.10.3 sqlite/3.21.0`
+    `$ module add anaconda3/5.1.0 gcc/5.4.0 cuda-toolkit/9.0.176 cmake/3.6.1 openmpi/1.10.3 sqlite/3.21.0`
 
 3.	Download the latest version (currently: v2.3.5) of HOOMD-BLUE to installed directory: (e.g: ~/source/)
 
