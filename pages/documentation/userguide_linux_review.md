@@ -39,39 +39,33 @@ It looks something like this, with your command prompt waiting for you below thi
 
    * Email ithelp@clemson.edu with questions or to report problems.
 
-   * Quarterly maintenance periods:  late May (followed by Top 500 benchmark),
-     early August, late November and early Feb.  Email will be sent
-     before each period with details of cluster availability.
+   * Palmetto "office hours" are every Wednesday 8am-11am in 412 Cooper Library.
 
-   Documentation and sample programs:
-         User guide:  http://citi.clemson.edu/palmetto
-    Sample programs:  https://github.com/clemsonciti/palmetto-examples
-     Cluster status:  http://head.palmetto.clemson.edu/stats
-       Cluster load:  http://head.palmetto.clemson.edu/stats/snapshot.html
+   * Quarterly maintenance periods:  May (followed by Top 500 benchmark),
+     August, November and Feb.  Email will be sent before each period with
+     details of cluster availability.
+
+        User guide:  http://www.palmetto.clemson.edu/palmetto
+   Sample programs:  https://github.com/clemsonciti/palmetto-examples
+        JupyterHub:  https://www.palmetto.clemson.edu/jupyterhub
 
    Useful commands:
-     pbstop -m 24             - current node usage
-     module avail             - list software packages
-     qstat -xf jobid          - check status of jobid
-     qstat -Qf queuename      - check status of queuename
+     module avail             - list available software packages
+     qstat -xf jobid          - check status of your job
+     qstat -Qf queuename      - check status of a queue
      checkquota               - check your disk quota
      checkqueuecfg            - check general workq max running limits
-     checkunits               - check owner preemption units
      cat /etc/hardware-table  - list node hardware: ram,cores,chip,etc.
-     qpeek                    - peek at running job's stdout or stderr
-     whatsfree                - see what type of nodes are free right now
+     qpeek                    - look at a running job's stdout or stderr
+     whatsfree                - see what nodes are free right now
 
-   Palmetto "office hours" are every Wednesday 8am-11am, Barre Hall room 2138
+   Please do not use /home as your PBS working directory.  Jobs with /home
+   as working directory may be killed as performance deteriorates.
 
-   DO NOT RUN JOBS ON THE USER LOGIN NODE, INCLUDING PRE/POST PROCESSING.
-   THEY WILL BE TERMINATED WITHOUT NOTICE.  NO EXCEPTIONS.
+   DO NOT RUN JOBS/PROGRAMS/TESTS/PRE-OR-POST PROCESSING ON THE LOGIN NODE.
+   They will be terminated without notice. No exceptions.
 
-   Please do not use /home as your PBS working directory.  This impacts
-   performance for everyone. Jobs with /home as working directory
-   may be killed as performance deteriorates.
-
- -------------- This file is: /etc/motd -------- Last Updated: 31-May-2016 ---
-
+ -------------- This file is: /etc/motd -------- Last Updated: 21-FEB-2018 ----
 ~~~
 
 Notice that the command prompt indicates what node (`login001`) you are currently connected to.
@@ -167,7 +161,7 @@ Similarly, `>>` can be used to append to the end of a file
 without overwriting what's already there:
 
 ~~~
-$ echo "Right now it's $DATE" >> list.txt
+$ echo "Right now it's `date`" >> list.txt
 ~~~
 
 Another useful technique is to redirect one program's output (stdout)
@@ -396,6 +390,8 @@ Command | Description
 `Ctrl+D` | log-out of current session (same as exit)
 `!!` | repeats the last command
 `cd -` | change directory to previous location
+`Ctrl+Insert` | copy selected text 
+`Shift+Insert` | paste text
 
 ## Additional Useful Commands
 

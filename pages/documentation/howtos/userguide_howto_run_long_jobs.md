@@ -6,8 +6,8 @@ permalink: userguide_howto_run_long_jobs.html
 ---
 
 Currently,
-jobs are limited to walltime of 72 hours (phases 6 and up)
-and 168 hours (phases 1-6).
+jobs are limited to walltime of 72 hours (phases 7 and up exclude phase 8c)
+and 168 hours (phases 1-6 and 8c).
 If you expect that your computations may take
 more time, you have several options:
 

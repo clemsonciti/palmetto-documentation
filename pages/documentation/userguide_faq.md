@@ -32,5 +32,5 @@ for 15 minutes. Wait a while and try again.
 1. Perhaps you are not enrolled for 2FA. Visit <http://2fa.app.clemson.edu/>.
 1. Something else is wrong.
 
-If you need to change your password, please contact the CCIT Help Desk.
+If you need to change your password, please go to [Clemson Password Change Service](https://idp.clemson.edu/password/change.php) or contact the CCIT Help Desk.
 The Palmetto team cannot help with changing your password.

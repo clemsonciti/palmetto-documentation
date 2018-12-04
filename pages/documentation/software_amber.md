@@ -5,7 +5,7 @@ sidebar: documentation_sidebar
 permalink: software_amber.html
 ---
 
-In this example we will use "alp" test from Abmber's test suite.
+In this example we will use "alp" test from Amber's test suite.
 To get the files relevant to this example:
 
 ~~~

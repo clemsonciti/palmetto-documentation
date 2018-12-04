@@ -26,7 +26,7 @@ For the one-time configuration, you will need to
 Once logged-in, ask for an interactive job:
 
 ~~~
-$ qsub -I -X ...
+$ qsub -I -X
 ~~~
 
 Once the job starts, load the `rclone` module:
@@ -52,7 +52,6 @@ Once this is done, the browser will close and your remote is configured.
 After this, you can kill the job and exit this `ssh` session:
 
 ~~~
-$ exit
 $ exit
 ~~~
 
