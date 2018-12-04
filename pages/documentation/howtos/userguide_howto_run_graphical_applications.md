@@ -75,10 +75,10 @@ $ defaults write org.macosforge.xquartz.X11 enable_iglx -bool true
 ~~~
 
 Now, log in to Palmetto from the terminal using the `ssh`
-command, providing the additional `-X` switch:
+command, providing the additional `-Y` switch:
 
 ~~~
-$ ssh -X username@login.palmetto.clemson.edu
+$ ssh -Y username@login.palmetto.clemson.edu
 ~~~
 
 You should see that XQuartz is automatically launched.
