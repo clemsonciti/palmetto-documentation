@@ -36,8 +36,8 @@ and will generally perform well for jobs:
 - where each file is read from and written by a single process, or
 - where the majority of reads and writes are less than a few megabytes
 
-`/scratch1` is a
-[parallel file system](https://en.wikipedia.org/wiki/Clustered_file_system)
+`/scratch1` and `/scratch4` are 
+[parallel file systems](https://en.wikipedia.org/wiki/Clustered_file_system)
 which will perform better for jobs
 where multiple processes, across multiple nodes, read or write
 the same file using parallel I/O routines.
@@ -48,7 +48,7 @@ Several popular data formats such as
 [NetCDF](https://www.unidata.ucar.edu/software/netcdf/docs_rc/)
 may be written to or read from efficiently in this manner.
 Programs using MPI I/O will also be able to
-efficiently read and write to `scratch1`.
+efficiently read and write to `/scratch1` and `/scratch4`.
 
 The `/local_scratch` filesystem should **always** be preferred over the above scratch systems
 unless the amount of data involved cannot fit in `local_scratch`.

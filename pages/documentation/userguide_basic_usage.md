@@ -133,6 +133,7 @@ Location                |	Available space                     | Notes
 `/scratch1/username`    |   233 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, OrangeFS Parallel File System
 `/scratch2/username`    |   160 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, XFS
 `/scratch3/username`    |   129 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, ZFS
+`/scratch4/username`    |   175 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, BeeGFS Parallel File System
 `/local_scratch`        |   Varies between nodes (99GB-800GB)   | Per-node temporary work space, accessible only for the lifetime of job
 
 The `/home` and `/scratch` directories are shared by all nodes.
