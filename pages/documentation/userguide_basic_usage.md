@@ -501,7 +501,8 @@ Parameter | Purpose | Example
 `-q`      | Queue to direct this job to (`workq` is the default, `supabad` is an example of specific research group's job queue) | `-q supabad`
 `-o`      | Path to stdout file for this job (environment variables are not accepted here) | `-o stdout.txt`
 `-e`      | Path to stderr file for this job (environment variables are not accepted here) | `-e stderr.txt`
-`-M`      | E-mail for messages from the PBS server	 | `-M username@clemson.edu`
+`-m`      | Email from the PBS server with flag **a**bort\ **b**egin\ **e**nd for job's notification.  | `-m abe` 
+`-M`      | Specify external E-mail for messages from the PBS server. If -M is not used and -m is specified, PBS will send email to userid@clemson.edu | `-M username@domain.com`
 `-j oe`   | Join the output and error streams and write to a single file | `-j oe`
 `-r n`	  | Ask PBS **not** to restart the job if it's failed	|  `-r n`
 
@@ -511,6 +512,8 @@ For example, in a batch script:
 #PBS -N hydrogen
 #PBS -l select=1:ncpus=24:mem=200gb,walltime=4:00:00
 #PBS -q bigmem
+#PBS -m abe
+#PBS -M userid@domain.com
 #PBS -j oe
 ~~~
 
