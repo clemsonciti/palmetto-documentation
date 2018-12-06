@@ -501,8 +501,8 @@ Parameter | Purpose | Example
 `-q`      | Queue to direct this job to (`workq` is the default, `supabad` is an example of specific research group's job queue) | `-q supabad`
 `-o`      | Path to stdout file for this job (environment variables are not accepted here) | `-o stdout.txt`
 `-e`      | Path to stderr file for this job (environment variables are not accepted here) | `-e stderr.txt`
-`-m`      | Email from the PBS server with flag **a**bort\ **b**egin\ **e**nd for job's notification.  | `-m abe` 
-`-M`      | Specify external E-mail for messages from the PBS server. If -M is not used and -m is specified, PBS will send email to userid@clemson.edu | `-M username@domain.com`
+`-m`      | mail event: Email from the PBS server with flag **a**bort\ **b**egin\ **e**nd \ or **n**o mail for job's notification.  | `-m abe` 
+`-M`      | Specify list of user to whom mail about the job is sent. The user list argument is of the form: [user[@host],user[@host],...]. If **-M** is not used and **-m** is specified, PBS will send email to userid@clemson.edu | `-M user1@domain1.com,user2@domain2.com`
 `-j oe`   | Join the output and error streams and write to a single file | `-j oe`
 `-r n`	  | Ask PBS **not** to restart the job if it's failed	|  `-r n`
 
@@ -521,6 +521,12 @@ And in an interactive job request on the command line:
 
 ~~~
 $ qsub -I -N hydrogen -q bigmem -j oe -l select=1:ncpus=24:mem=200gb,walltime=4:00:00
+~~~
+
+For more detailed information, please take a look at:
+
+~~~
+$man qsub
 ~~~
 
 ### Resource limits specification
