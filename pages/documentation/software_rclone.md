@@ -42,14 +42,95 @@ Start by entering the following command:
 
 ~~~
 $ rclone config
+
+n) New remote
+q) Quit config
 ~~~
 
-Follow the instructions on the command line -  when recommended to "leave blank", just hit Enter.
-When asked if you want to use auto config, say yes (Y).
-This will open the Firefox web browser, allowing you to log-in to your Google account.
-Once this is done, the browser will close and your remote is configured.
+```
+n/q>
+```
+Hit **n** then Enter to create a new remote host
 
-After this, you can kill the job and exit this `ssh` session:
+```
+name>
+```
+Provide any name for this remote host. For example: **gmaildrive**
+
+```
+What type of source is it?
+Choose a number from below
+ 1) amazon cloud drive
+ 2) drive
+ 3) dropbox
+ 4) google cloud storage
+ 5) local
+ 6) s3
+ 7) swift
+type>
+```
+
+Provide any number for the remote source. For example choose number **2** for goolge drive.
+
+```
+Google Application Client Id - leave blank normally.
+client_id> *Enter to leave blank*
+Google Application Client Secret - leave blank normally.
+client_secret> *Enter to leave blank*
+
+Remote config
+Use auto config?
+ * Say Y if not sure
+ * Say N if you are working on a remote or headless machine or Y didn't work
+y) Yes
+n) No
+y/n>
+```
+
+Use **y** if you are not sure
+
+```
+If your browser doesn't open automatically go to the following link: http://127.0.0.1:53682/auth
+Log in and authorize rclone for access
+Waiting for code...
+```
+
+This will open the Firefox web browser, allowing you to log-in to your Google account.
+Enter your username and password then accept to let **rclone** access your Goolge drive.
+Once this is done, the browser will ask you to go back to rclone to continue.
+
+```
+Got code
+--------------------
+[gmaildrive]
+client_id =
+client_secret =
+token = {"access_token":"ya29.GdsferfdfsdfsdvSfkV9D2NC7toQeLFHOxKWlcRhzOFb9D8iDX3u9uhYVoGr20cx_9f6ipqRfi7MNf2_FbbLxrneQAm4z8_R1f-aKg59l8FU","token_type":"Bearer","refresh_token":"1/LjIDjisZnOyPHU","expiry":"2018-12-07T12:30:07.854235862-05:00"}
+--------------------
+y) Yes this is OK
+e) Edit this remote
+d) Delete this remote
+y/e/d>
+```
+
+Select **y** to finish configure this remote host.
+The **gmaildrive** host will then be created.
+
+```
+Current remotes:
+
+Name                 Type
+====                 ====
+gmaildrive           drive
+
+e) Edit existing remote
+n) New remote
+d) Delete remote
+q) Quit config
+e/n/d/q>
+```
+
+After this, you can quit the config using **q**, kill the job and exit this `ssh` session:
 
 ~~~
 $ exit
@@ -58,8 +139,12 @@ $ exit
 ## Using rclone
 
 Whenever transfering files (using `rclone` or otherwise),
-log-in to the `xfer01-ext.palmetto.clemson.edu` node,
+log-in to the **xfer01-ext.palmetto.clemson.edu** as the Remote host
+In MacOS, open new terminal and **ssh** node,
 and **not** the login node `login.palmetto.clemson.edu`.
+
+- In MobaXterm, create a new ssh session with **xfer01-ext.palmetto.clemson.edu** as the Remote host
+- In MacOS, open new terminal and **ssh user@xfer01-ext.palmetto.clemson.edu**
 
 Once logged-in, load the `rclone` module:
 
@@ -67,17 +152,23 @@ Once logged-in, load the `rclone` module:
 $ module add rclone/1.23
 ~~~
 
-After the above one-time setup, you can use `rclone` to (for example),
-copy a file from Palmetto to your Google Drive:
+You can check the content of the remote host **gmaildrive**:
+
+```
+$ rclone ls gmaildrive:
+$ rclone lsd gmaildrive: 
+```
+
+You can use `rclone` to (for example) copy a file from Palmetto to any folder in your Google Drive:
 
 ~~~
-$ rclone copy /path/to/file/on/palmetto remotename:
+$ rclone copy /path/to/file/on/palmetto gmaildrive:/path/to/folder/on/drive
 ~~~
 
-Or if you want to copy to a specific destination on Google Drive:
+Or if you want to copy to a specific destination on Google Drive back to Palmetto:
 
 ~~~
-$ rclone copy /path/to/file/on/palmetto remotename:/path/to/folder/on/drive
+$ rclone copy gmaildrive:/path/to/folder/on/drive /path/to/file/on/palmetto
 ~~~
 
 Additional `rclone` commands can be found [here](http://rclone.org/docs/).
