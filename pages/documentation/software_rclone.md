@@ -45,16 +45,15 @@ $ rclone config
 
 n) New remote
 q) Quit config
+n/q>
 ~~~
 
-```
-n/q>
-```
 Hit **n** then Enter to create a new remote host
 
 ```
 name>
 ```
+
 Provide any name for this remote host. For example: **gmaildrive**
 
 ```
@@ -74,9 +73,9 @@ Provide any number for the remote source. For example choose number **2** for go
 
 ```
 Google Application Client Id - leave blank normally.
-client_id> *Enter to leave blank*
+client_id> # Enter to leave blank
 Google Application Client Secret - leave blank normally.
-client_secret> *Enter to leave blank*
+client_secret> # Enter to leave blank
 
 Remote config
 Use auto config?
@@ -105,7 +104,7 @@ Got code
 [gmaildrive]
 client_id =
 client_secret =
-token = {"access_token":"ya29.GdsferfdfsdfsdvSfkV9D2NC7toQeLFHOxKWlcRhzOFb9D8iDX3u9uhYVoGr20cx_9f6ipqRfi7MNf2_FbbLxrneQAm4z8_R1f-aKg59l8FU","token_type":"Bearer","refresh_token":"1/LjIDjisZnOyPHU","expiry":"2018-12-07T12:30:07.854235862-05:00"}
+token = {"access_token":"xyz","token_type":"Bearer","refresh_token":"xyz","expiry":"yyyy-mm-ddThh:mm:ss"}
 --------------------
 y) Yes this is OK
 e) Edit this remote
@@ -138,13 +137,10 @@ $ exit
 
 ## Using rclone
 
-Whenever transfering files (using `rclone` or otherwise),
-log-in to the **xfer01-ext.palmetto.clemson.edu** as the Remote host
-In MacOS, open new terminal and **ssh** node,
-and **not** the login node `login.palmetto.clemson.edu`.
+Whenever transfering files (using `rclone` or otherwise), login to the transfer node `xfer01-ext.palmetto.clemson.edu`.
 
 - In MobaXterm, create a new ssh session with **xfer01-ext.palmetto.clemson.edu** as the Remote host
-- In MacOS, open new terminal and **ssh user@xfer01-ext.palmetto.clemson.edu**
+- In MacOS, open new terminal and `ssh user@xfer01-ext.palmetto.clemson.edu`
 
 Once logged-in, load the `rclone` module:
 
