@@ -22,10 +22,8 @@ $ qsub -I -l select=1:ncpus=16:mem=64gb:mpiprocs=16:interconnect=fdr,walltime=2:
 2. Load necessary module.
 
 ```
-$ module add anaconda3/5.0.1 gcc/6.3.0 Qt/5.9.2 sqlite
+$ module add anaconda3/5.0.1 gcc/6.3.0 Qt/5.9.2 sqlite/3.21.0
 ```
-anaconda3/4.3.0   3) gcc/5.4.0         4) Qt/5.6
-
 
 3. Download the latest version of ns-3 (currently 3.29) to your home installed directory: (e.g: ~/source/)
 As this is The first time you build the ns-3 project you should build using the allinone environment. 
@@ -46,5 +44,6 @@ $ cd ns-allinone-3.29
 5. Install the ns-3:
 
 ```
-$ ./build.py --enable-examples --enable-tests -- --python=/usr/bin/python
+$ ./build.py --enable-examples --enable-tests -- --python=/software/anaconda3/5.0.1/bin/python
+
 ```
