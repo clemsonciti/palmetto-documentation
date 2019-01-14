@@ -138,7 +138,7 @@ If you would like to use Tensorflow from Jupyter Notebook on Palmetto via
    Number of chunks: 1 (Never request more than 1 chunk as Tensorflow will only use 1 chunk)
    CPU cores: 16
    Memory: 62gb
-   Number of GPUs: 1 or 2
+   Number of GPUs: 1 or 2 (Note: if GPU node is acquired, at least 2 CPU cores are required)
    Queue: workq
    ```
 
