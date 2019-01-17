@@ -87,4 +87,5 @@ may expand existing storage at the same price.
 ## Contact information
 
 Individuals interested in purchase of Palmetto hardware
-may contact Dustin Atkins at <datkin2@clemson.edu>.
+may contact the Advanced Computing and Data Science team by email ithelp@clemson.edu
+and include “Palmetto nodes purchase” in the subject line. 
