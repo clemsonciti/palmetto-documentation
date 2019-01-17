@@ -87,4 +87,4 @@ may expand existing storage at the same price.
 ## Contact information
 
 Individuals interested in purchase of Palmetto hardware
-may contact Dustin Atkins at <datkins@clemson.edu>.
+may contact Dustin Atkins at <datkin2@clemson.edu>.
