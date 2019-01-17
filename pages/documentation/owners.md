@@ -46,11 +46,11 @@ Owner jobs have a maximum walltime of 336 hours
 
 The node configuration currently available for purchase is:
 
-* 2 x Intel Xeon E5-2680v4 "Broadwell" @2.4 GHz (for a total of 28 cores)
-* 2 x NVIDIA Tesla P100 GPU accelerators
-* 128 GB DDR4 RAM
+* 2 x Intel Xeon 6148G scalable processors Dell R740 (for a total of 40 cores)
+* 2 x NVIDIA Tesla V100 GPU accelerators
+* 372 GB DDR4 RAM
 * 1.8 TB local hard drives
-* On-board 10 Gbps Ethernet NIC
+* On-board 25 Gbps Ethernet NIC
 * InfiniBand FDR 56 Gbps network card
 
 The node price for Clemson faculty/staff is **$7500** for a period
