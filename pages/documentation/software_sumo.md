@@ -6,6 +6,8 @@ permalink: software_sumo.html
 ---
 
 # Installing Simulation of Urban Mobility
+SUMO is an open source, highly portable, microscopic and continuous road traffic simulation package designed to handle large road networks. It allows for intermodal simulation including pedestrians and comes with a large set of tools for scenario creation.
+The code and the issue tracker can be found [here](https://github.com/eclipse/sumo/)
 
 This page explains how to install the [SUMO](https://sourceforge.net/projects/sumo/files/)
 package on the cluster.
@@ -35,7 +37,7 @@ package on the cluster.
    $ make install
    ```
 
-1. Install [PROJ](ttps://download.osgeo.org/proj), version 4.9.3
+1. Install [PROJ](https://download.osgeo.org/proj), version 4.9.3
 
    ```
    $ cd ~/source
@@ -68,11 +70,7 @@ package on the cluster.
    $ make install
    ```
 
-   Each time you login, you will first need to load the required modules
-   and also activate the `tf_env` conda environment before
-   running Python.
-
-## Installing SUMO
+ ## Installing SUMO
 
    After installing all dependencies, start installing [SUMO](http://prdownloads.sourceforge.net/sumo/):
 
@@ -81,7 +79,7 @@ package on the cluster.
    download from source then upload to Palmetto: https://sourceforge.net/projects/sumo/files/sumo/version%201.1.0/sumo-src-1.1.0.tar.gz/download
    $ tar -xvf sumo-src-1.1.0.tar.gz
    $ cd sumo-src-1.1.0
-   $ ./configure --with-fox-config=$HOME/applications/bin/fox-config --with-proj-gdal=$HOME/applications/bin/proj --with-xerces=$HOME/applications/bin/xerces-c/3.1.4
+   $ ./configure --with-fox-config=$HOME/applications/bin/fox-config --with-proj-gdal=$HOME/applications/ --with-xerces=$HOME/applications
    $ make 
    $ make install
    ```
