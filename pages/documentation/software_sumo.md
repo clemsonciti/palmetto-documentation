@@ -12,7 +12,7 @@ package on the cluster.
 
 ## Installing submodules
 
-1. Request an interactive session on a GPU node. For example:
+1. Request an interactive session. For example:
 
    ```
    $ qsub -I -l select=1:ncpus=6:mem=24gb:interconnect=fdr,walltime=3:00:00
@@ -35,7 +35,7 @@ package on the cluster.
    $ make install
    ```
 
-1.Install [PROJ](ttps://download.osgeo.org/proj), version 4.9.3
+1. Install [PROJ](ttps://download.osgeo.org/proj), version 4.9.3
 
    ```
    $ cd ~/source
@@ -76,7 +76,7 @@ package on the cluster.
 
    After installing all dependencies, start installing [SUMO](http://prdownloads.sourceforge.net/sumo/):
 
-    ```
+   ```
    $ cd ~/source
    download from source then upload to Palmetto: https://sourceforge.net/projects/sumo/files/sumo/version%201.1.0/sumo-src-1.1.0.tar.gz/download
    $ tar -xvf sumo-src-1.1.0.tar.gz
