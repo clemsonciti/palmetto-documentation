@@ -5,7 +5,6 @@ sidebar: documentation_sidebar
 permalink: software_sumo.html
 ---
 
-# Installing Simulation of Urban Mobility
 SUMO is an open source, highly portable, microscopic and continuous road traffic simulation package designed to handle large road networks. It allows for intermodal simulation including pedestrians and comes with a large set of tools for scenario creation.
 The code and the issue tracker can be found [here](https://github.com/eclipse/sumo/)
 
@@ -70,13 +69,14 @@ package on the cluster.
    $ make install
    ```
 
+
  ## Installing SUMO
 
    After installing all dependencies, start installing [SUMO](http://prdownloads.sourceforge.net/sumo/):
 
    ```
-   $ cd ~/source
-   download from source then upload to Palmetto: https://sourceforge.net/projects/sumo/files/sumo/version%201.1.0/sumo-src-1.1.0.tar.gz/download
+    download sumo from [here](https://sourceforge.net/projects/sumo/files/sumo/version%201.1.0/sumo-src-1.1.0.tar.gz/download) then upload to ~/source
+   $ cd ~/source  
    $ tar -xvf sumo-src-1.1.0.tar.gz
    $ cd sumo-src-1.1.0
    $ ./configure --with-fox-config=$HOME/applications/bin/fox-config --with-proj-gdal=$HOME/applications/ --with-xerces=$HOME/applications
