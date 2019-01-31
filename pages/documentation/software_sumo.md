@@ -73,8 +73,7 @@ package on the cluster.
 
 After installing all dependencies, start installing [SUMO](http://prdownloads.sourceforge.net/sumo/).
    
-Download sumo from [source](https://sourceforge.net/projects/sumo/files/sumo/version%201.1.0/sumo-src-1.1.0.tar.gz/download) then upload sumo to ~/source
-
+Download sumo from [source](https://sourceforge.net/projects/sumo/files/sumo/version%201.1.0/sumo-src-1.1.0.tar.gz/download) then upload the code to installed folder:
 
   ```
   $ cd ~/source  
