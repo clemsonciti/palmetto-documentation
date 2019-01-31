@@ -75,12 +75,13 @@ After installing all dependencies, start installing [SUMO](http://prdownloads.so
    
 Download sumo from [source](https://sourceforge.net/projects/sumo/files/sumo/version%201.1.0/sumo-src-1.1.0.tar.gz/download) then upload the code to installed folder:
 
-  ```
-  $ cd ~/source  
-  $ tar -xvf sumo-src-1.1.0.tar.gz
-  $ cd sumo-src-1.1.0
-  $ ./configure --with-fox-config=$HOME/applications/bin/fox-config --with-proj-gdal=$HOME/applications/ --with-xerces=$HOME/applications
-  $ make 
-  $ make install   
-  ```
+   ```
+   $ cd ~/source  
+   $ tar -xvf sumo-src-1.1.0.tar.gz
+   $ cd sumo-src-1.1.0
+   $ ./configure --with-fox-config=$HOME/applications/bin/fox-config --with-proj-gdal=$HOME/applications/ --with-xerces=$HOME/applications
+   $ make 
+   $ make install   
+   
+   ```
 
