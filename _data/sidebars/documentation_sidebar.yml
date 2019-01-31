@@ -178,6 +178,10 @@ entries:
     - title: Trinity
       url: /software_trinity.html
       output: web, pdf
+      
+    - title: Sumo
+      url: /software_sumo.html
+      output: web, pdf
 
   - title: Programmer's Guide
     output: web, pdf
