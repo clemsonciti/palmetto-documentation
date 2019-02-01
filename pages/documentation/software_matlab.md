@@ -25,13 +25,13 @@ you must [log-in with tunneling enabled]({{site.baseurl}}/userguide_howto_run_gr
 and then ask for an interactive session:
 
 ~~~
-$ qsub -I -X -l select=1:ncpus=1:mem=2gb,walltime=1:00:00
+$ qsub -I -X -l select=1:ncpus=2:mem=24gb,walltime=1:00:00
 ~~~
 
 Once logged-in, you must load one of the MATLAB modules:
 
 ~~~
-$ module add matlab/2017a
+$ module add matlab/2018b
 ~~~
 
 And then launch the MATLAB program:
@@ -89,7 +89,7 @@ a batch script as follows:
 #PBS -l select=1:ncpus=1:mem=5gb
 #PBS -l walltime=1:00:00
 
-module add matlab/2017a
+module add matlab/2018b
 
 cd $PBS_O_WORKDIR
 
