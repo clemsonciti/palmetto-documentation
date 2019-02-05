@@ -1,3 +1,10 @@
+---
+title: Adding new kernels to Jupyterhub
+keywords: [jupyterhub,kernel,conda]
+sidebar: documentation_sidebar
+permalink: jupyterhub_add_kernel.html
+---
+
 ## Adding new kernels
 
 In addition to the default kernels provided (Python, R, and MATLAB), it is possible to create your own kernels. To install kernels for other languages, see the setup instructions for the language [here](https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages).
