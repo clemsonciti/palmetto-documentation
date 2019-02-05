@@ -224,7 +224,7 @@ entries:
       output: web,pdf
     
     - title: Adding New Kernels
-      url: /jupyterhub_new_kernels.html
+      url: /jupyterhub_add_kernel.html
       output: web,pdf
 
     - title: Help and Resources
