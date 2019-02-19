@@ -178,6 +178,10 @@ entries:
     - title: Trinity
       url: /software_trinity.html
       output: web, pdf
+      
+    - title: Sumo
+      url: /software_sumo.html
+      output: web, pdf
 
   - title: Programmer's Guide
     output: web, pdf
@@ -220,7 +224,7 @@ entries:
       output: web,pdf
     
     - title: Adding New Kernels
-      url: /jupyterhub_new_kernels.html
+      url: /jupyterhub_add_kernel.html
       output: web,pdf
 
     - title: Help and Resources

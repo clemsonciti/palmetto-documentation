@@ -5,8 +5,6 @@ sidebar: documentation_sidebar
 permalink: software_abaqus.html
 ---
 
-**ABAQUS 6.14 Documentation**: bobcat.nus.edu.sg:2080/v6.14/index.html
-
 ABAQUS is a Finite Element Analysis software used
 for engineering simulations.
 Currently, ABAQUS versions 6.10, 6.13, 6.14 are available on Palmetto cluster
@@ -22,7 +20,7 @@ To see license usage of ABAQUS-related packages,
 you can use the `lmstat` command:
 
 ~~~
-/usr/flexlm/lmstat -a -c /usr/flexlm/licenses/abaqus.dat
+/software/USR_LOCAL/flexlm/lmstat -a -c /software/USR_LOCAL/flexlm/licenses/abaqus.dat
 ~~~
 
 ## Running ABAQUS interactive viewer

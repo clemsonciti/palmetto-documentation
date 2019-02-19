@@ -106,7 +106,7 @@ Location        |	Available space                     | Notes
 `/local_scratch`|   Varies between nodes (99GB-800GB)   | Per-node temporary work space, accessible only for the lifetime of job
 
 Additional high-performance and backed-up storage may be purchased
-for group usage. Please visit http://citi.clemson.edu/infrastructure
+for group usage. Please visit [http://citi.clemson.edu/infrastructure](http://citi.clemson.edu/infrastructure)
 for details and pricing.
 
 ## Job scheduling

@@ -5,12 +5,13 @@ sidebar: documentation_sidebar
 permalink: software_mrbayes.html
 ---
 
+*MrBayes*  is a program for Bayesian inference and model choice across a wide range of phylogenetic and evolutionary models. MrBayes uses Markov chain Monte Carlo (MCMC) methods to estimate the posterior distribution of model parameters.
 
+## Installing BEAGLE Library
 
-## Installing BEAGLE Libraries
-
+__BEAGLE__ library is supported to dramatic speedups for codon and amino acid models on compatible hardware (NVIDIA graphics cards);
 To install MrBayes in your `/home` directory on Palmetto, you'll need to begin by installing 
-the BEAGLE libraries.  Here are the steps I used for doing this, starting with checking-out the 
+the BEAGLE library.  Here are the steps, starting with checking-out the 
 source code using Subversion:
 
     [galen@login001 ~]$ cd

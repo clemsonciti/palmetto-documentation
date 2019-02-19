@@ -11,14 +11,14 @@ To see the available COMSOL modules on Palmetto:
 ~~~
 $ module avail comsol
 
-comsol/4.3b comsol/5.0  comsol/5.1  comsol/5.2
+comsol/4.3b comsol/4.4  comsol/5.0  comsol/5.1  comsol/5.2  comsol/5.3
 ~~~
 
 To see license usage of COMSOL-related packages,
 you can use the `lmstat` command:
 
 ~~~
-/usr/flexlm/lmstat -a -c /usr/flexlm/licenses/comsol.dat
+/software/USR_LOCAL/flexlm/lmstat -a -c /software/USR_LOCAL/flexlm/licenses/comsol.dat 
 ~~~
 
 ## Running COMSOL GUI
@@ -36,6 +36,7 @@ to launch the interactive viewer,
 you can use the `comsol` command to run COMSOL:
 
 ~~~
+$ module add comsol/5.2
 $ comsol -np 8 -tmpdir $TMPDIR
 ~~~
 
@@ -67,8 +68,8 @@ Both of these examples run the
 "Heat Transfer by Free Convection" application described
 [here](https://www.comsol.com/model/heat-transfer-by-free-convection-122).
 In addition to the `job.sh` and `job_mpi.sh` scripts, to run the examples and reproduce the results,
-you will need to download the file `free_convection.mph` provided
-with the description.
+you will need to download the file `free_convection.mph` (choose the correct version) provided
+with the description (login required).
 
 ### COMSOL batch job on a single node, using multiple cores:
 
