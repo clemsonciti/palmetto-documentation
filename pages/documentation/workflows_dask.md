@@ -1,11 +1,11 @@
 ---
-title: "Scalable data analytics on Palmetto using Dask"
+title: "Scalable machine learning on Palmetto using Dask"
 keywords: [blog, dask, machine-learning, data]
 sidebar: documentation_sidebar
 permalink: workflows_dask.html
 ---
 
-Here, we provide an example of a large-scale data analytics workflow on Palmetto cluster
+Here, we provide an example of a large-scale machine learning workflow on Palmetto cluster
 using the Dask Python library.
 
 Check out our [Notebook](https://github.com/clemsonciti/dask-workflows-palmetto/blob/master/training-on-large-datasets.ipynb)

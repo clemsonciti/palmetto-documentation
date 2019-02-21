@@ -235,7 +235,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Large-scale data analytics with Dask
+    - title: Large-scale machine learning with Dask
       url: /workflows_dask.html
       output: web,pdf
 
