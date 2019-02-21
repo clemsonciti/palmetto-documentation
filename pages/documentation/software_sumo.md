@@ -9,7 +9,7 @@ SUMO is an open source, highly portable, microscopic and continuous road traffic
 The code and the issue tracker can be found [here](https://github.com/eclipse/sumo/)
 
 This page explains how to install the [SUMO](https://sourceforge.net/projects/sumo/files/)
-package on the cluster.
+package on the cluster. The procedure is contributed by Sakib Mahmud Khan - PhD Candidate at Transportation Cyber-Physical Systems Lab -Glenn Department of Civil Engineering.
 
 ## Installing submodules
 
@@ -75,6 +75,7 @@ After installing all dependencies, start installing [SUMO](http://prdownloads.so
 
 Download sumo from [source](https://sourceforge.net/projects/sumo/files/sumo/version%201.1.0/sumo-src-1.1.0.tar.gz/download) then upload the code to installed folder:
 
+
    ```
    $ cd ~/source
    $ tar -xvf sumo-src-1.1.0.tar.gz
@@ -83,3 +84,5 @@ Download sumo from [source](https://sourceforge.net/projects/sumo/files/sumo/ver
    $ make
    $ make install
    ```
+   
+   
