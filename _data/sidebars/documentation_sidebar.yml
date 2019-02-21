@@ -231,6 +231,14 @@ entries:
       url: /jupyterhub_resources.html
       output: web,pdf
 
+  - title: Workflow Examples
+    output: web, pdf
+    folderitems:
+
+    - title: Large-scale data analytics with Dask
+      url: /workflows_dask.html
+      output: web,pdf
+
   - title: Owner's Guide
     output: web, pdf
     folderitems:
