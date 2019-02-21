@@ -140,3 +140,13 @@ by opening the terminal and running the following commands:
 stop-dask-cluster
 start-dask-cluster
 ```
+
+* Dask worker processes may leave files named `worker-XYZW*` in your home directory,
+or files with a `.lock` suffix.
+After shutting down your notebook,
+it's safe to delete these files:
+
+```
+rm -r ~/worker-*
+rm ~/*.lock
+```
