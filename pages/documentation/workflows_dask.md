@@ -5,7 +5,7 @@ sidebar: documentation_sidebar
 permalink: workflows_dask.html
 ---
 
-Here, we provide examples of a large-scale data analytics workflow on Palmetto cluster
+Here, we provide an example of a large-scale data analytics workflow on Palmetto cluster
 using the Dask Python library.
 
 Check out our [Notebook](https://github.com/clemsonciti/dask-workflows-palmetto/blob/master/training-on-large-datasets.ipynb)
@@ -41,7 +41,7 @@ enabling you to train with very large datasets and/or very large models with sev
 
 ## Setting up Dask for use on Palmetto and JupyterHub
 
-1. Start by logging-in to Palmetto via JupyterHub (<https://palmetto.clemson.edu/jupyterhub>).
+1. Start by logging-in to Palmetto via JupyterHub (<http://palmetto.clemson.edu/jupyterhub>).
    You can choose the default spawner options, but you may want to select a longer walltime (e.g., 1 hour)
 2. Open a terminal (click New, and then Terminal)
 3. Clone the [dask-workflows-palmetto] repository with the following command:
@@ -93,10 +93,20 @@ that demonstrates using Dask for simple K-Means clustering of a large dataset:
 4. Open the Notebook `training-on-large-datasets.ipynb` after navigating
    to the `dask-workflows-palmetto` folder.
    
-## Other examples
+## Single-machine and distributed modes
 
-You can find other notebooks [here](https://examples.dask.org).
-However, if you wish to use Dask in distributed mode on Palmetto Cluster,
+Dask can be run on a single node
+or across multiple nodes.
+
+To run Dask in single-machine mode,
+include the following at the beginning of your Notebook:
+
+```
+from dask.distributed import Client
+client = Client()
+```
+
+If you wish to use Dask in distributed mode on Palmetto Cluster,
 you need to do the following:
 
 1. Start a Dask cluster by running the `start-dask-cluster` script on the Terminal
@@ -109,4 +119,24 @@ username = getpass.getuser()
 from dask.distributed import Client
 client = Client(scheduler_file='/home/{}/dask-scheduler.json'.format(username))
 client
+```
+
+## Further reading
+
+Other examples and worflows can be found at <http://examples.dask.org/>.
+You will need to make minor modifications to the notebooks
+in order to start the Dask client in single-machine or distirbuted mode (see above section).
+
+## Troubleshooting and common issues
+
+* For debugging and development, always run Dask in single-machine mode before
+trying distributed mode.
+
+* If the notebook becomes unresponsive when running dask in distributed mode,
+try re-starting the Dask cluster
+by opening the terminal and running the following commands:
+
+```
+stop-dask-cluster
+start-dask-cluster
 ```
