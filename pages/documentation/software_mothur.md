@@ -58,4 +58,8 @@ The code and the issue tracker can be found [here](https://github.com/mothur/mot
    ```
 
 1. The *mothur* executable file will be created in the installation folder: **/home/username/applications/bin**.
-Make sure you set
+Make sure you set the correct environment PATH in ~/.bashrc file
+
+   ```
+   export PATH=$PATH:$HOME/applications/bin
+   ```
