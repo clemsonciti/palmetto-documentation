@@ -1,5 +1,5 @@
 ---
-title: openbabel
+title: Open Babel
 keywords: [openbabel]
 sidebar: documentation_sidebar
 permalink: software_openbabel.html
