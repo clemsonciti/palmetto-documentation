@@ -17,7 +17,7 @@ The code and the issue tracker can be found [here](https://github.com/mothur/mot
 1. Load the required modules
 
    ```
-   $ module load boost/1.66.0 hdf5/1.10.1 openmpi/2.1.1 gcc/8.2.0
+   $ module load boost/1.65.1 hdf5/1.10.1 openmpi/1.10.3 gcc/8.2.0
    ```
 
 1. Download mothur from [source](https://github.com/mothur/mothur/releases/tag/v1.41.3). Here we download the latest version 1.41.3
