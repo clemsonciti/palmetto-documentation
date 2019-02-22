@@ -48,7 +48,7 @@ enabling you to train with very large datasets and/or very large models with sev
 3. Clone the [dask-workflows-palmetto] repository with the following command:
 
    ```
-   git clone https://github.com/clemsonciti/dask-workflows-palmetto 
+   $ git clone https://github.com/clemsonciti/dask-workflows-palmetto 
    ```
 4. Run the `setup-dask.sh` script to install the required packages and scripts
    with the command below.
@@ -56,8 +56,8 @@ enabling you to train with very large datasets and/or very large models with sev
    A corresponding script `remove-dask.sh` is provided if you wish to uninstall the components installed:
    
    ```
-   cd dask-workflows-palmetto
-   sh setup-dask.sh
+   $ cd dask-workflows-palmetto
+   $ sh setup-dask.sh
    ```
  
 5. You will need to restart your JupyterHub notebook server before the changes are effected.
@@ -86,7 +86,7 @@ that demonstrates using Dask for simple K-Means clustering of a large dataset:
 3. Once your notebook server has started up, start a terminal (New->Terminal), and then run:
 
    ```
-   start-dask-cluster
+   $ start-dask-cluster
    ```
    
    The cluster takes about a minute to start up.
@@ -102,7 +102,7 @@ or across multiple nodes.
 To run Dask in single-machine mode,
 include the following at the beginning of your Notebook:
 
-```
+```python
 from dask.distributed import Client
 client = Client()
 ```
@@ -113,12 +113,11 @@ you need to do the following:
 1. Start a Dask cluster by running the `start-dask-cluster` script on the Terminal
 2. In your notebooks, use the following code to start the Dask client:
 
-```
+```python
 import getpass
 username = getpass.getuser()
 
 from dask.distributed import Client
-m
 client = Client(scheduler_file='/home/{}/dask-scheduler.json'.format(username))
 client
 ```
@@ -140,6 +139,6 @@ After shutting down your notebook,
 it's safe to delete these files:
 
 ```
-rm -r ~/worker-*
-rm ~/*.lock
+$ rm -r ~/worker-*
+$ rm ~/*.lock
 ```
