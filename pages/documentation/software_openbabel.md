@@ -10,17 +10,17 @@ The code and the issue tracker can be found [here](https://openbabel.org/docs/de
 
 1. Request an interactive session. For example:
 
-   ```
-   $ qsub -I -l select=1:ncpus=8:mem=24gb:interconnect=fdr,walltime=3:00:00
-   ```
+  ```
+  $ qsub -I -l select=1:ncpus=8:mem=24gb:interconnect=fdr,walltime=3:00:00
+  ```
 
-1. Load the required modules
+2. Load the required modules
 
-   ```
-   $ module load cmake/3.6.1 gcc/4.8.1 
-   ```
+  ```
+  $ module load cmake/3.6.1 gcc/4.8.1 
+  ```
 
-1. Install Eigen (latest version 3.3.7)
+3. Install Eigen (latest version 3.3.7)
 
   ```
   $ wget http://bitbucket.org/eigen/eigen/get/3.3.7.tar.gz
@@ -31,7 +31,8 @@ The code and the issue tracker can be found [here](https://openbabel.org/docs/de
   $ cmake -DCMAKE_INSTALL_PREFIX=$HOME/applications/ ..
   $ make install
   ```
-1. Install wxWidgets (latest version 3.1.2)
+  
+4. Install wxWidgets (latest version 3.1.2)
   
   ```
   $ wget https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.2/wxWidgets-3.1.2.tar.bz2
@@ -43,26 +44,26 @@ The code and the issue tracker can be found [here](https://openbabel.org/docs/de
   
   ```
 
-1. Download Open Babel from [source](https://sourceforge.net/projects/openbabel/files/openbabel/2.4.1/openbabel-2.4.1.tar.gz/download).
+5. Download Open Babel from [source](https://sourceforge.net/projects/openbabel/files/openbabel/2.4.1/openbabel-2.4.1.tar.gz/download).
 Here we download the latest version 2.4.1.
 Upload the package openbabel-2.4.1.tar.gz to your Palmetto storage
 Unpack the downloaded file and go into openbabel source folder
 
-   ```
-   $ tar -xvf openbabel-2.4.1.tar.gz
-   $ cd openbabel-2.4.1
-   $ mkdir build
-   $ cd build
-   $ cmake ../openbabel-2.4.1 -DCMAKE_INSTALL_PREFIX=$HOME/applications/ -DLIB_INSTALL_DIR=$HOME/applications/lib -DEIGEN3_INCLUDE_DIR=$HOME/applications/include/eigen3 -DBUILD_GUI=ON ..
-   $ make -j4
-   $ make test #make sure that all tests should be passed
-   $ make install   
-   ```
+  ```
+  $ tar -xvf openbabel-2.4.1.tar.gz
+  $ cd openbabel-2.4.1
+  $ mkdir build
+  $ cd build
+  $ cmake ../openbabel-2.4.1 -DCMAKE_INSTALL_PREFIX=$HOME/applications/ -DLIB_INSTALL_DIR=$HOME/applications/lib -DEIGEN3_INCLUDE_DIR=$HOME/applications/include/eigen3 -DBUILD_GUI=ON ..
+  $ make -j4
+  $ make test #make sure that all tests should be passed
+  $ make install   
+  ```
    
-1. The *obabel* executable file will be created in the installation folder: **/home/username/applications/bin**.
+6. The *obabel* executable file will be created in the installation folder: **/home/username/applications/bin**.
 Make sure you set the correct environment PATH in ~/.bashrc file
 
-   ```
-   export PATH=$PATH:$HOME/applications/bin
-   ```
+  ```
+  export PATH=$PATH:$HOME/applications/bin
+  ```
   
