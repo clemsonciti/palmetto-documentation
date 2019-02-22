@@ -60,7 +60,7 @@ Unpack the downloaded file and go into openbabel source folder
   $ make install   
   ```
    
-6. The *obabel* executable file will be created in the installation folder: **/home/username/applications/bin**.
+6. The **obabel** executable file will be created in the installation folder: */home/username/applications/bin*.
 Make sure you set the correct environment PATH in ~/.bashrc file
 
   ```
