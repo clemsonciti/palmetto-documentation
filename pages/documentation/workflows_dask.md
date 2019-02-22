@@ -19,6 +19,7 @@ for parallel computing.
 Dask makes it easy to use computing resources such as
 the Palmetto Cluster
 for processing and analyzing data.
+
 Some features of Dask are:
 
 1. [Dask Arrays](https://docs.dask.org/en/latest/array.html):
@@ -117,6 +118,7 @@ import getpass
 username = getpass.getuser()
 
 from dask.distributed import Client
+m
 client = Client(scheduler_file='/home/{}/dask-scheduler.json'.format(username))
 client
 ```
@@ -132,17 +134,8 @@ in order to start the Dask client in single-machine or distirbuted mode (see abo
 * For debugging and development, always run Dask in single-machine mode before
 trying distributed mode.
 
-* If the notebook becomes unresponsive when running dask in distributed mode,
-try re-starting the Dask cluster
-by opening the terminal and running the following commands:
-
-```
-stop-dask-cluster
-start-dask-cluster
-```
-
-* Dask worker processes may leave files named `worker-XYZW*` in your home directory,
-or files with a `.lock` suffix.
+* Dask may leave files named `worker-XYZW*` or `*.lock` in your home directory,
+if they are terminated unexpectedly,
 After shutting down your notebook,
 it's safe to delete these files:
 
