@@ -46,7 +46,9 @@ The code and the issue tracker can be found [here](https://openbabel.org/docs/de
 
 5. Download Open Babel from [source](https://sourceforge.net/projects/openbabel/files/openbabel/2.4.1/openbabel-2.4.1.tar.gz/download).
 Here we download the latest version 2.4.1.
+
 Upload the package openbabel-2.4.1.tar.gz to your Palmetto storage
+
 Unpack the downloaded file and go into openbabel source folder
 
   ```
@@ -61,6 +63,7 @@ Unpack the downloaded file and go into openbabel source folder
   ```
    
 6. The **obabel** executable file will be created in the installation folder: */home/username/applications/bin*.
+
 Make sure you set the correct environment PATH in ~/.bashrc file
 
   ```
