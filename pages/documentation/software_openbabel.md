@@ -38,7 +38,7 @@ The code and the issue tracker can be found [here](https://openbabel.org/docs/de
    $ wget https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.2/wxWidgets-3.1.2.tar.bz2
    $ tar -xvf wxWidgets-3.1.2.tar.bz2
    $ cd wxWidgets-3.1.2
-   $ configure --prefix=$HOME/username/applications
+   $ configure --prefix=$HOME/applications
    $ make
    $ make install
    ```
