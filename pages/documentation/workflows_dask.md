@@ -127,18 +127,3 @@ client
 Other examples and worflows can be found at <http://examples.dask.org/>.
 You will need to make minor modifications to the notebooks
 in order to start the Dask client in single-machine or distirbuted mode (see above section).
-
-## Troubleshooting and common issues
-
-* For debugging and development, always run Dask in single-machine mode before
-trying distributed mode.
-
-* Dask may leave files named `worker-XYZW*` or `*.lock` in your home directory,
-if they are terminated unexpectedly,
-After shutting down your notebook,
-it's safe to delete these files:
-
-```
-$ rm -r ~/worker-*
-$ rm ~/*.lock
-```
