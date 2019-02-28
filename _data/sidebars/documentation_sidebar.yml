@@ -155,6 +155,10 @@ entries:
       url: /software_mrbayes.html
       output: web, pdf
 
+    - title: Open Babel
+      url: /software_openbabel.html
+      output: web, pdf
+      
     - title: Paraview
       url: /software_paraview.html
       output: web, pdf
