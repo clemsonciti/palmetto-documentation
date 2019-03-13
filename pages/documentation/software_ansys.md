@@ -12,7 +12,7 @@ you must [log-in with tunneling enabled]({{site.baseurl}}/userguide_howto_run_gr
 and then ask for an interactive session:
 
 ~~~
-$ qsub -I -X -l select=1:ncpus=8:mpiprocs=8:mem=6gb:interconnect=mx,walltime=01:00:00
+$ qsub -I -X -l select=1:ncpus=8:mpiprocs=8:mem=6gb:interconnect=1g,walltime=01:00:00
 ~~~
 
 Once logged-in to an interactive compute node,
@@ -81,7 +81,7 @@ The batch script `job.sh` submits the batch job to the cluster:
 ~~~
 #!/bin/bash
 #PBS -N ANSYSdis
-#PBS -l select=2:ncpus=4:mpiprocs=4:mem=11gb:interconnect=mx
+#PBS -l select=2:ncpus=4:mpiprocs=4:mem=11gb:interconnect=1g
 #PBS -l walltime=1:00:00
 #PBS -j oe
 

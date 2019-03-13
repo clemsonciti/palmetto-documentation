@@ -73,7 +73,7 @@ My PBS job script for running this job in parallel looks like this:
 {% highlight bash %}
 #!/bin/bash
 #PBS -N MrBayes
-#PBS -l select=1:ncpus=4:mpiprocs=4:mem=6gb:interconnect=mx,walltime=02:00:00
+#PBS -l select=1:ncpus=4:mpiprocs=4:mem=6gb:interconnect=1g,walltime=02:00:00
 #PBS -j oe
 
 source /etc/profile.d/modules.sh
