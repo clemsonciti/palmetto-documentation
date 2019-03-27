@@ -53,6 +53,7 @@ The node configuration currently available for purchase at subsidized rate for C
 * InfiniBand FDR 56 Gbps network card
 
 After May 2019 the price for new node is **$10,000** for period of **4 years** with the following configuration:
+
 * 2 x Intel “Cascade Lake” Xeon Gold CLX 6248 (for a total of 40 cores)
 * 2 x NVIDIA Tesla V100 32GB
 * 384 GB RAM
