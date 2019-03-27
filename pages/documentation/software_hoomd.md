@@ -53,7 +53,9 @@ but below are the steps that users can follow to install and run it.
     ```
     $ export PYTHONPATH=$PYTHONPATH:$HOME/applications/lib/python
     ```
+    
 ## Installing HOOMD with CPU only
+
 
 1.	First, Request an interactive session. For example:
 
