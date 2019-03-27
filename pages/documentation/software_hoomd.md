@@ -6,7 +6,7 @@ permalink: software_hoomd.html
 ---
 
 
-## Installing HOOMD
+## Installing HOOMD with GPU
 
 [HOOMD](http://glotzerlab.engin.umich.edu/hoomd-blue/) (HOOMD-Blue) performs general purpose particle 
 dynamics simulations on a single cluster node, 
@@ -14,7 +14,7 @@ taking advantage of NVIDIA GPU accelerators to attain a level of performance equ
 cores on a traditional large cluster.  HOOMD is not currently setup as a software module on Palmetto, 
 but below are the steps that users can follow to install and run it.
 
-1.	First, HOOMD must be compiled using a node with NVIDIA GPUs. Request an interactive session on a GPU node. For example:
+1.	First, Request an interactive session on a GPU node (for Hoomd with GPU). For example:
 
     `$ qsub -I -l select=1:ncpus=16:mem=64gb:ngpus=2:gpu_model=p100:mpiprocs=16:interconnect=fdr,walltime=2:00:00`
 
@@ -22,7 +22,7 @@ but below are the steps that users can follow to install and run it.
 
     `$ module add anaconda3/5.1.0 gcc/5.4.0 cuda-toolkit/9.0.176 cmake/3.6.1 openmpi/1.10.3 sqlite/3.21.0`
 
-3.	Download the latest version (currently: v2.3.5) of HOOMD-BLUE to installed directory: (e.g: ~/source/)
+3.	Download the latest version of HOOMD-BLUE to installed directory: (e.g: ~/source/)
 
     ```
     $ cd ~/source
@@ -41,6 +41,47 @@ but below are the steps that users can follow to install and run it.
 
     ```
     $ cmake ../ -DCMAKE_INSTALL_PREFIX=~/applications/lib/python -DCMAKE_CXX_FLAGS=-march=native -DCMAKE_C_FLAGS=-march=native -DCMAKE_BUILD_TYPE=Release -DENABLE_CUDA=ON -DENABLE_MPI=ON -DSINGLE_PRECISION=ON
+    $ make –j16 #Use 16 cores to compile faster
+    $ make test #Optional
+    $ make install  #This will create a hoomd folder in ~/applications/lib/python
+    $ ccmake .
+    press "c" to configure then press "g" to generate.
+    ```
+
+6.	Export the Python path to installed HOOMD folder. You might want to add this to bashrc file for faster load the HOOMD module:
+
+    ```
+    $ export PYTHONPATH=$PYTHONPATH:$HOME/applications/lib/python
+    ```
+## Installing HOOMD with CPU only
+
+1.	First, Request an interactive session. For example:
+
+    `$ qsub -I -l select=1:ncpus=16:mem=64gb:mpiprocs=16:interconnect=fdr,walltime=2:00:00`
+
+2.	Load the required modules:
+
+    `$ module add anaconda3/5.1.0 gcc/5.4.0 cmake/3.6.1 openmpi/1.10.3 sqlite/3.21.0`
+
+3.	Download the latest version (currently: v2.5.0) of HOOMD-BLUE to installed directory: (e.g: ~/source/)
+
+    ```
+    $ cd ~/source
+    $ wget http://glotzerlab.engin.umich.edu/Downloads/hoomd/hoomd-v2.5.0.tar.gz
+    ```
+
+4.	A folder hoomd-blue is cloned to the *source* folder. Create *build* folder and go inside
+
+    ```
+    $ cd hoomd-blue
+    $ mkdir build
+    $ cd build
+    ```
+
+5.	Use CMAKE to configure the build and proceed with installing HOOMD to folder ~/applications
+
+    ```
+    $ cmake ../ -DCMAKE_INSTALL_PREFIX=~/applications/lib/python -DCMAKE_CXX_FLAGS=-march=native -DCMAKE_C_FLAGS=-march=native -DCMAKE_BUILD_TYPE=Release -DENABLE_MPI=ON -DSINGLE_PRECISION=ON
     $ make –j16 #Use 16 cores to compile faster
     $ make test #Optional
     $ make install  #This will create a hoomd folder in ~/applications/lib/python
