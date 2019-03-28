@@ -55,10 +55,10 @@ The node configuration currently available for purchase at subsidized rate for C
 After May 2019 the price for new node is **$10,000** for period of **4 years** with the following configuration:
 
 * 2 x Intel “Cascade Lake” Xeon Gold CLX 6248 (for a total of 40 cores)
-* 2 x NVIDIA Tesla V100 32GB
-* 384 GB RAM
-* 25GbE 
-* Infiniband HDR-100 
+* 2 x NVIDIA Tesla V100 GPU 32GB
+* 372 GB DDR4 RAM
+* On-board 25Gbps Ethernet NIC
+* Infiniband HDR-100 Gbps network card
 
 ## Purchasing Storage on Palmetto Cluster
 
