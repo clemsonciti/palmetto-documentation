@@ -7,13 +7,13 @@ permalink: userguide_howto_control_job_placement.html
 
 ## Myrinet v/s infiniband nodes
 
-To control the placement of your job on the Myrinet (older)
+To control the placement of your job on the 1g Ethernet (older)
 or Infiniband (newer) part of the cluster,
-you can specify the `interconnect=mx` or `interconnect=fdr` option in your
+you can specify the `interconnect=1g` or `interconnect=fdr` option in your
 resource limits specification.
 
 ~~~
-$ qsub -I -l select=1:ncpus=2:mem=2gb:interconnect=mx,walltime=1:00:00
+$ qsub -I -l select=1:ncpus=2:mem=2gb:interconnect=1g,walltime=1:00:00
 ~~~
 
 ## Specify the phase

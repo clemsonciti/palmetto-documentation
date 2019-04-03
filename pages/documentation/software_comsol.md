@@ -28,7 +28,7 @@ you must [log-in with tunneling enabled]({{site.baseurl}}/userguide_howto_run_gr
 and then ask for an interactive session:
 
 ~~~
-$ qsub -I -X -l select=1:ncpus=8:mpiprocs=8:mem=6gb:interconnect=mx,walltime=00:15:00
+$ qsub -I -X -l select=1:ncpus=8:mpiprocs=8:mem=6gb:interconnect=1g,walltime=00:15:00
 ~~~
 
 Once logged-in to an interactive compute node,

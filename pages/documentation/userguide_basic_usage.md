@@ -269,42 +269,42 @@ nodes. The hardware configuration of the different nodes is available
 in the file `/etc/hardware-table`:
 
 ~~~
-$ cat /etc/hardware-table
+[atrikut@login001 ~]$ cat /etc/hardware-table
 
-PALMETTO HARDWARE TABLE      Last updated:  July 23 2018
+PALMETTO HARDWARE TABLE      Last updated:  Mar 04 2019
 
-PHASE COUNT  MAKE   MODEL    CHIP(0)                CORES  RAM(1)    /local_scratch   Interconnect         GPUs  PHIs SSD
- 0      6    HP     DL580    Intel Xeon    7542       24   505 GB(2)    99 GB         1g, 10g, mx           0     0    0
- 0      1    HP     DL980    Intel Xeon    7560       64     2 TB(2)    99 GB         1g, 10g, mx           0     0    0
- 0      1    HP     DL560    Intel Xeon    E5-4627v4  40   1.5 TB(2)   881 GB         1g, 56g, fdr, 10ge    0     0    0
- 0      1    Dell   R830     Intel Xeon    E5-4627v4  40   1.0 TB(2)   880 GB         1g, 56g, fdr, 10ge    0     0    0
- 0      1    HP     DL560    Intel Xeon    6138G      80   1.5 TB(2)   3.6 TB         1g, 10ge              0     0    0
- 1    108    Dell   PE1950   Intel Xeon    E5345       8    12 GB       37 GB         1g, 10g, mx           0     0    0
- 2a   206    Dell   PE1950   Intel Xeon    E5410       8    12 GB       37 GB         1g, 10g, mx           0     0    0
- 2b    37    Dell   PE1950   Intel Xeon    E5410       8    16 GB       37 GB         1g, 10g, mx           0     0    0
- 3    227    Sun    X2200    AMD   Opteron 2356        8    16 GB      193 GB         1g, 10g, mx           0     0    0
- 4    326    IBM    DX340    Intel Xeon    E5410       8    16 GB      111 GB         1g, 10g, mx           0     0    0
- 5a   329    Sun    X6250    Intel Xeon    L5420       8    32 GB       31 GB         1g, 10g, mx           0     0    0
- 5b     9    Sun    X4150    Intel Xeon    E5410       8    32 GB       99 GB         1g, 10g, mx           0     0    0
- 6     68    HP     DL165    AMD   Opteron 6176       24    48 GB      193 GB         1g, 10g, mx           0     0    0
- 7a    42    HP     SL230    Intel Xeon    E5-2665    16    64 GB      240 GB         1g, 56g, fdr          0     0    0
- 7b    12    HP     SL250s   Intel Xeon    E5-2665    16    64 GB      240 GB         1g, 56g, fdr          2(3)  0    0
- 8a    71    HP     SL250s   Intel Xeon    E5-2665    16    64 GB      900 GB         1g, 56g, fdr          2(4)  0    300 GB(7)
- 8b    57    HP     SL250s   Intel Xeon    E5-2665    16    64 GB      420 GB         1g, 56g, fdr          2(4)  0    0
- 8c    84    Dell   PEC6220  Intel Xeon    E5-2665    16    64 GB      350 GB         1g, 10ge              0     0    0
- 9     72    HP     SL250s   Intel Xeon    E5-2665    16   128 GB      420 GB         1g, 56g, fdr, 10ge    2(4)  0    0
-10     80    HP     SL250s   Intel Xeon    E5-2670v2  20   128 GB      800 GB         1g, 56g, fdr, 10ge    2(4)  0    0
-11a    40    HP     SL250s   Intel Xeon    E5-2670v2  20   128 GB      800 GB         1g, 56g, fdr, 10ge    2(6)  0    0
-11b     4    HP     SL250s   Intel Xeon    E5-2670v2  20   128 GB      800 GB         1g, 56g, fdr, 10ge    0     2(8) 0
-12     30    Lenovo NX360M5  Intel Xeon    E5-2680v3  24   128 GB      800 GB         1g, 56g, fdr, 10ge    2(6)  0    0
-13     24    Dell   C4130    Intel Xeon    E5-2680v3  24   128 GB      1.8 TB         1g, 56g, fdr, 10ge    2(6)  0    0
-14     12    HP     XL1X0R   Intel Xeon    E5-2680v3  24   128 GB      880 GB         1g, 56g, fdr, 10ge    2(6)  0    0
-15     32    Dell   C4130    Intel Xeon    E5-2680v3  24   128 GB      880 GB         1g, 56g, fdr, 10ge    2(6)  0    0
-16     40    Dell   C4130    Intel Xeon    E5-2680v4  28   128 GB      1.8 TB         1g, 56g, fdr, 10ge    2(9)  0    0
-17     20    Dell   C4130    Intel Xeon    E5-2680v4  28   128 GB      1.8 TB         1g, 56g, fdr, 10ge    2(9)  0    0
-18a     2    Dell   C4140    Intel Xeon    6148G      40   372 GB      1.9 TB         1g, 56g, fdr, 40ge    4(10) 0    0
-18b    65    Dell   R740     Intel Xeon    6148G      40   372 GB      1.8 TB         1g, 56g, fdr, 25ge    2(11) 0    0
-18c    10    Dell   R740     Intel Xeon    6148G      40   748 GB      1.8 TB         1g, 56g, fdr, 25ge    2(11) 0    0
+PHASE COUNT  MAKE   MODEL    CHIP(0)                CORES  RAM(1)    /local_scratch   Interconnect     GPUs  PHIs SSD
+ 0      6    HP     DL580    Intel Xeon    7542       24   505 GB(2)    99 GB         1ge               0     0    0
+ 0      1    HP     DL980    Intel Xeon    7560       64     2 TB(2)    99 GB         1ge               0     0    0
+ 0      1    HP     DL560    Intel Xeon    E5-4627v4  40   1.5 TB(2)   881 GB         10ge              0     0    0
+ 0      1    Dell   R830     Intel Xeon    E5-4627v4  40   1.0 TB(2)   880 GB         10ge              0     0    0
+ 0      2    HP     DL560    Intel Xeon    6138G      80   1.5 TB(2)   3.6 TB         10ge              0     0    0
+ 1     75    Dell   PE1950   Intel Xeon    E5345       8    12 GB       37 GB         1g                0     0    0
+ 2a   158    Dell   PE1950   Intel Xeon    E5410       8    12 GB       37 GB         1g                0     0    0
+ 2b    84    Dell   PE1950   Intel Xeon    E5410       8    16 GB       37 GB         1g                0     0    0
+ 3    225    Sun    X2200    AMD   Opteron 2356        8    16 GB      193 GB         1g                0     0    0
+ 4    326    IBM    DX340    Intel Xeon    E5410       8    16 GB      111 GB         1g                0     0    0
+ 5a   320    Sun    X6250    Intel Xeon    L5420       8    32 GB       31 GB         1g                0     0    0
+ 5b     9    Sun    X4150    Intel Xeon    E5410       8    32 GB       99 GB         1g                0     0    0
+ 6     67    HP     DL165    AMD   Opteron 6176       24    48 GB      193 GB         1g                0     0    0
+ 7a    42    HP     SL230    Intel Xeon    E5-2665    16    64 GB      240 GB         56g, fdr          0     0    0
+ 7b    12    HP     SL250s   Intel Xeon    E5-2665    16    64 GB      240 GB         56g, fdr          2(3)  0    0
+ 8a    71    HP     SL250s   Intel Xeon    E5-2665    16    64 GB      900 GB         56g, fdr          2(4)  0    300 GB(7)
+ 8b    57    HP     SL250s   Intel Xeon    E5-2665    16    64 GB      420 GB         56g, fdr          2(4)  0    0
+ 8c    88    Dell   PEC6220  Intel Xeon    E5-2665    16    64 GB      350 GB         10ge              0     0    0
+ 9     72    HP     SL250s   Intel Xeon    E5-2665    16   128 GB      420 GB         56g, fdr, 10ge    2(4)  0    0
+10     80    HP     SL250s   Intel Xeon    E5-2670v2  20   128 GB      800 GB         56g, fdr, 10ge    2(4)  0    0
+11a    40    HP     SL250s   Intel Xeon    E5-2670v2  20   128 GB      800 GB         56g, fdr, 10ge    2(6)  0    0
+11b     4    HP     SL250s   Intel Xeon    E5-2670v2  20   128 GB      800 GB         56g, fdr, 10ge    0     2(8) 0
+12     30    Lenovo NX360M5  Intel Xeon    E5-2680v3  24   128 GB      800 GB         56g, fdr, 10ge    2(6)  0    0
+13     24    Dell   C4130    Intel Xeon    E5-2680v3  24   128 GB      1.8 TB         56g, fdr, 10ge    2(6)  0    0
+14     12    HP     XL1X0R   Intel Xeon    E5-2680v3  24   128 GB      880 GB         56g, fdr, 10ge    2(6)  0    0
+15     32    Dell   C4130    Intel Xeon    E5-2680v3  24   128 GB      1.8 TB         56g, fdr, 10ge    2(6)  0    0
+16     40    Dell   C4130    Intel Xeon    E5-2680v4  28   128 GB      1.8 TB         56g, fdr, 10ge    2(9)  0    0
+17     20    Dell   C4130    Intel Xeon    E5-2680v4  28   128 GB      1.8 TB         56g, fdr, 10ge    2(9)  0    0
+18a     2    Dell   C4140    Intel Xeon    6148G      40   372 GB      1.9 TB(12)     56g, fdr, 25ge    4(10) 0    0
+18b    65    Dell   R740     Intel Xeon    6148G      40   372 GB      1.8 TB         56g, fdr, 25ge    2(11) 0    0
+18c    10    Dell   R740     Intel Xeon    6148G      40   748 GB      1.8 TB         56g, fdr, 25ge    2(11) 0    0
 
   *** PBS resource requests are always lowercase ***
 
@@ -320,6 +320,7 @@ PHASE COUNT  MAKE   MODEL    CHIP(0)                CORES  RAM(1)    /local_scra
 (9) 2 NVIDIA Tesla P100 cards per node, use resource request "ngpus=[1|2]" and "gpu_model=p100"
 (10)4 NVIDIA Tesla V100 cards per node with NVLINK2, use resource request "ngpus=[1|2|3|4]" and "gpu_model=v100nv"
 (11)2 NVIDIA Tesla V100 cards per node, use resource request "ngpus=[1|2]" and "gpu_model=v100"
+(12)Phase18a nodes contain only NVMe storage for local_scratch.
 ~~~
 
 The compute nodes are divided into "phases" (currently phases 0-18).
@@ -576,10 +577,8 @@ node_manufacturer=sun
 gpu_model=k20
 gpu_model=k40
 interconnect=1g     (1 Gbps Ethernet)
-interconnect=10g    (10 Gbps Myrinet, same as mx)
 interconnect=10ge   (10 Gbps Ethernet)
 interconnect=56g    (56 Gbps FDR InfiniBand, same as fdr)
-interconnect=mx     (10 Gbps Myrinet, same as 10g)
 interconnect=fdr    (56 Gbps FDR InfiniBand, same as 56g)
 ssd=true   			(Use a node with an SSD hard drive)
 ~~~
@@ -697,7 +696,7 @@ $ qdel 7600424.pbs02
 
 #### Walltime
 
-Jobs running in phases 1-6 of the cluster (nodes with interconnect `mx`)
+Jobs running in phases 1-6 of the cluster (nodes with interconnect `1g`)
 can run for a maximum walltime of 168 hours (7 days).
 
 Job running in phases 7 and higher of the cluster
@@ -717,7 +716,11 @@ will be forwarded to theses queues.
 2. IB queues (`c2_` queues): jobs submitted to run the newer hardware (phases 7 and up)
 will be forwarded to these queues.
 
-3. bigmem queue: jobs submitted to the large-memory machines (phase 0).
+3. GPU queues (`gpu_` queues): jobs that
+[request GPUs]({{site.baseurl}}/userguide_howto_use_gpus.html)
+will be forwarded to these queues.
+
+4. bigmem queue: jobs submitted to the large-memory machines (phase 0).
 
 Each execution queue has its own limits for
 how many jobs can be running at one time,

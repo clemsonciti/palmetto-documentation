@@ -48,18 +48,21 @@ Owner jobs have a maximum walltime of 336 hours
 
 ### Current compute hardware and pricing
 
-The node configuration currently available for purchase is:
+The node configuration currently available for purchase at subsidized rate for Clemson faculty/staff is **$7500** for a period of **4 years**:
 
 * 2 x Intel Xeon 6148G scalable processors Dell R740 (for a total of 40 cores)
 * 2 x NVIDIA Tesla V100 GPU accelerators
 * 372 GB DDR4 RAM
-* 1.8 TB local hard drives
 * On-board 25 Gbps Ethernet NIC
 * InfiniBand FDR 56 Gbps network card
 
-The node price for Clemson faculty/staff is **$7500** for a period
-of 4 years. Any grant applications should assume **$10,000** as
-price for future purchases.
+After May 2019 the price for new node is **$10,000** for period of **4 years** with the following configuration:
+
+* 2 x Intel “Cascade Lake” Xeon Gold CLX 6248 (for a total of 40 cores)
+* 2 x NVIDIA Tesla V100 GPU 32GB
+* 372 GB DDR4 RAM
+* On-board 25Gbps Ethernet NIC
+* Infiniband HDR-100 Gbps network card
 
 ## Purchasing Storage on Palmetto Cluster
 
