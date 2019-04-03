@@ -18,6 +18,10 @@ Such "owners" enjoy the following benefits:
 4.	Request access for external collaborators (unaffiliated with Clemson University)
 	to purchased compute resource
 
+For more information about condominium model and purchasing Palmetto nodes,
+including Palmetto nodes on grants please contact
+<hpc-admin@clemson.edu>.
+
 ### Condominium model
 
 In the condo model model, faculty/staff purchase "pre-emption" units,
