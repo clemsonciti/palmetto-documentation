@@ -95,6 +95,10 @@ entries:
           url: /userguide_howto_run_many_tasks.html
           output: web, pdf
 
+        - title: Submit a reservation request
+          url: /userguide_howto_submit_reservation_request.html
+          output: web, pdf
+
         - title: Use large memory nodes
           url: /userguide_howto_use_bigmem_nodes.html
           output: web, pdf

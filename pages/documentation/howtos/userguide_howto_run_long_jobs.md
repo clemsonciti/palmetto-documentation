@@ -27,9 +27,4 @@ to the running time. You are welcome to visit the Office Hours
 or schedule a meeting with our research support staff
 to discuss optimization
 
-* Submit a **reservation request**: you can also submit a request
-for special allocation of Palmetto hardware for an extended
-period. These special allocation requests are reviewed by
-the Clemson University Computational Advisory Team and
-may take up to 2-3 weeks to be processed. A reservation
-request can be made [here](https://citi.sites.clemson.edu/new-reservation).
+* [Submit a **reservation request**]({{site.baseurl}}/userguide_howto_submit_reservation_request.html)
