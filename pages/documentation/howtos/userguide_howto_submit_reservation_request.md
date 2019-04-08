@@ -14,10 +14,10 @@ A reservation request can be made by filling out the form [here](http://citi.cle
 
 Reservation requests will only be considered in exceptional circumstances. For example:
 
-1. You have an important deadline coming up (e.g., paper or conference submission) and may not be able to
+* You have an important deadline coming up (e.g., paper or conference submission) and may not be able to
 complete all required computations before this deadline without immediate access to hardware.
 
-2. You have a unique workflow that requires running a job for longer than the maximum walltime on Palmetto.
+* You have a unique workflow that requires running a job for longer than the maximum walltime on Palmetto.
 Please note that in the majority of cases, this can be solved by checkpointing or optimizing your application.
 
 For your request to be considered, you will need to provide the following information:
