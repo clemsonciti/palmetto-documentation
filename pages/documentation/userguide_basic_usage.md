@@ -252,7 +252,7 @@ However, Globus can be used for file transfers to/from other locations as well.
     In the figure below, the endpoint is named `My Personal Mac`.
 
 4.  As the second endpoint,
-    choose `clemson#xfer01-ext.palmetto.clemson.edu`.
+    choose `clemson#xfer01-ext.clemson.edu`.
 
 5.  You can now transfer files between any locations on your
     local machine and the Palmetto cluster.
