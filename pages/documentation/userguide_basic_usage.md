@@ -257,7 +257,7 @@ However, Globus can be used for file transfers to/from other locations as well.
 5.  You can now transfer files between any locations on your
     local machine and the Palmetto cluster.
 
-    <img src="{{site.baseurl}}/images/globus.png" style="width:750px">
+  
 
 ### Checking available compute hardware
 
