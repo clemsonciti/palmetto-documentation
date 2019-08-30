@@ -109,7 +109,7 @@ Here is a sample batch script `job.sh` for this example:
 #PBS -j oe
 
 module purge
-openmpi/3.1.4-gcc71-ucx
+module load openmpi/3.1.4-gcc71-ucx
 
 mpirun -np 8 lmp -sf gpu < in.lj        # 8 MPI, 8 MPI/GPU
 ~~~
