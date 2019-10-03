@@ -146,6 +146,10 @@ entries:
     - title: Java
       url: /software_java.html
       output: web, pdf
+      
+    - title: Julia
+      url: /software_julia.html
+      output: web, pdf
 
     - title: LAMMPS
       url: /software_lammps.html
