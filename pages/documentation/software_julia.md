@@ -1,6 +1,6 @@
 ---
-title: JULIA
-keywords: [JULIA]
+title: Julia
+keywords: [Julia]
 sidebar: documentation_sidebar
 permalink: software_julia.html
 ---
