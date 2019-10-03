@@ -8,7 +8,7 @@ permalink: software_julia.html
 Julia: high-level dynamic programming language that was originally designed to address the needs of high-performance numerical analysis and computational science.
 
 
-## Run Julia in Palmetto
+## Run Julia in Palmetto: Interactive
 
 There are a few different versions of Julia available on the cluster.
 
@@ -48,9 +48,11 @@ $ nano jump_gurobi.jl
 Then type/copy the following code to the file jump_gurobi.jl
 
 ```
-using JuMP, Gurobi
+import Pkg
+using JuMP
+using Gurobi
 
-m = Model(solver=GurobiSolver(Presolve=0))
+m = Model(with_optimizer(Gurobi.Optimizer))
 
 @variable(m, x >= 5)
 @variable(m, y >= 45)
@@ -59,9 +61,8 @@ m = Model(solver=GurobiSolver(Presolve=0))
 @constraint(m, 50x + 24y <= 2400)
 @constraint(m, 30x + 33y <= 2100)
 
-status = solve(m)
-println(" x = ", getvalue(x), " y = ", getvalue(y))
-
+status = optimize!(m)
+println(" x = ", JuMP.value(x), " y = ", JuMP.value(y))
 ```
 
 Save the jump_gurobi.jl file then you are ready to run julia:
@@ -77,7 +78,7 @@ julia>
 julia> using Pkg
 julia> Pkg.add("JuMP")
 julia> Pkg.add("Gurobi")
-julia> quit
+julia> exit()
 
 Run the julia_gurobi.jl script:
 
@@ -85,10 +86,10 @@ $ julia jump_gurobi.jl
 
 ```
 
+## Run Julia in Palmetto: Batch mode
 
 * Alternatively, you can setup a PBS job script to run Julia in batch mode. A sample is below for *submit_julia.sh*:
-# You must install the JuMP and Gurobi package first (one time installation)
-
+**You must install the JuMP and Gurobi package first (one time installation)**
 
 ```
 #!/bin/bash
@@ -96,7 +97,6 @@ $ julia jump_gurobi.jl
 #PBS -l select=1:ncpus=8:mem=16gb
 #PBS -l walltime=02:00:00
 #PBS -j oe
-#PBS -m
 
 module purge
 module add julia/1.1.1 gurobi/7.0.2
