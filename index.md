@@ -34,9 +34,14 @@ services. Please visit our website to learn more.
 
 An account is required to access and use the Palmetto
 cluster. All Clemson University students, faculty and staff
-can request an account here:
+can request an account following the procedure detailed below:
+1) Access the new ITHelp Portal at <https://clemson.cherwellondemand.com/CherwellPortal>
+2) After Logging in Select "Browse Our Services"
+3) Select Research > Research Computing > High Perf Computing and Storage
+4) Under High Perf Computing and Storage, select "Request Account"
+5) Enter the information requested and once the form is complete, press the "Submit" button.
 
-<http://citi.clemson.edu/new-account/>
+## <http://citi.clemson.edu/new-account/>
 
 Account requests are generally processed in a few hours,
 but may take up to a few days.
@@ -49,7 +54,7 @@ See upcoming training sessions [here](http://citi.clemson.edu/training).
 
 ### On-boarding sessions
 
-For new users of Palmetto, we offer on-boarding sessions every **Friday 9-10 AM, at Barre Hall 2138**.
+For new users of Palmetto, we offer on-boarding sessions every **Friday 9-10 AM, at Barre Hall 2108**.
 Please drop by
 to discuss how Palmetto can help you realize your research goals,
 and get help with getting started on Palmetto cluster.
