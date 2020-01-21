@@ -35,12 +35,13 @@ services. Please visit our website to learn more.
 An account is required to access and use the Palmetto
 cluster. All Clemson University students, faculty and staff
 can request an account following the procedure detailed below:
-1) Access the new ITHelp Portal at <https://clemson.cherwellondemand.com/CherwellPortal>
-2) After Logging in Select "Browse Our Services"
-3) Select Research > Research Computing > High Perf Computing and Storage
-4) Under High Perf Computing and Storage, select "Request Account"
-5) Enter the information requested.
-6) Once the form is complete, press the "Submit" button.
+
+1. Access the new ITHelp Portal at <https://clemson.cherwellondemand.com/CherwellPortal>
+1. After Logging in Select "Browse Our Services"
+1. Select Research > Research Computing > High Perf Computing and Storage
+1. Under High Perf Computing and Storage, select "Request Account"
+1. Enter the information requested.
+1. Once the form is complete, press the "Submit" button.
 
 Account requests are generally processed in a few hours,
 but may take up to a few days.
