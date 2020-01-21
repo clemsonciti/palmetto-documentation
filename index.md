@@ -39,9 +39,8 @@ can request an account following the procedure detailed below:
 2) After Logging in Select "Browse Our Services"
 3) Select Research > Research Computing > High Perf Computing and Storage
 4) Under High Perf Computing and Storage, select "Request Account"
-5) Enter the information requested and once the form is complete, press the "Submit" button.
-
-## <http://citi.clemson.edu/new-account/>
+5) Enter the information requested.
+6) Once the form is complete, press the "Submit" button.
 
 Account requests are generally processed in a few hours,
 but may take up to a few days.
