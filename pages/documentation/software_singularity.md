@@ -16,19 +16,25 @@ and on downloading, building and running containers with Singularity,
 please refer to the [Singularity documentation](https://www.sylabs.io/docs/).
 This page provides information about singularity specific to the Palmetto cluster.
 
-## Singularity module
+## Running Singularity
 
-It is recommended to use the following command to load the singularity module on Palmetto:
+Singularity is installed on all of the Palmetto compute nodes and the Palmetto LoginVMs, but it **IS NOT** present on the login.palmetto.clemson.edu node.
 
+To run singularity, you may simply run `singularity` or more specifically `/bin/singularity`.
+
+e.g.
 ```
-$ module load singularity
+$ singularity --version
+singularity version 3.5.3-1.el7
 ```
 
-Because the version of singularity provided on Palmetto changes frequently,
-it is **not** recommended to specify the version when loading the `singularity` module:
+### An important change for existing singularity users
 
+Formerly, Palmetto administrators had installed singularity as a "software module" on Palmetto, but that is no longer the case. If your job scripts have any statements that use the singularity module, then those statements will need to be completely removed; otherwise, your job script may error.
+
+Remove any statements from your job scripts that resemble the following lines:
 ```
-$ module load singularity/2.5.2     # not recommended
+module <some_command> singularity
 ```
 
 ## Where to download containers
@@ -38,7 +44,7 @@ Containers can be downloaded from DockerHub
 * [DockerHub](https://hub.docker.com/)
 contains containers for various software packages,
 and Singularity is
-[compatible with Docker images](https://www.sylabs.io/guides/2.5/user-guide/singularity_and_docker.html).
+[compatible with Docker images](https://sylabs.io/guides/3.5/user-guide/singularity_and_docker.html).
 
 * [SingularityHub](https://singularity-hub.org/)
 
@@ -55,12 +61,12 @@ but singularity makes it very easy.
 This example shows how to use singularity interactively,
 but singularity containers can be run in batch jobs as well.
 
-Start by requesting an interactive job, and loading the singularity module.
-Singularity can only be run on the compute nodes:
+Start by requesting an interactive job.
+
+NOTE: Singularity can only be run on the compute nodes and Palmetto Login VMs:
 
 ```
 $ qsub -I -l select=1:ngpus=2:ncpus=16:mpiprocs=16:mem=120gb,walltime=5:00:00
-$ module load singularity
 ```
 
 We recommend that all users store built singularity images
@@ -103,7 +109,7 @@ Before running OpenFOAM commands, we need to source a few environment variables
 (this step is specific to OpenFOAM):
 
 ```
-$ source /opt/openfoam6/etc/bashrc 
+$ source /opt/openfoam6/etc/bashrc
 ```
 
 Now, we are ready to run a simple example using OpenFOAM:
@@ -171,11 +177,7 @@ For instance to reserve 4 CPU cores, 2 NVIDIA Pascal GPUs, for 20 minutes the fo
 $ qsub -I -lselect=1:ncpus=4:mem=2gb:ngpus=2:gpu_model=p100,walltime=00:20:00
 ```
 
-After the interactive job has started we can load the Singularity module
-
-```
-$ module load singularity
-```
+Wait for the interactive job to give you control over the shell.
 
 Before pulling an NGC image, authentication credentials must be set.
 This is most easily accomplished by setting the following variables in the build environment.
