@@ -5,11 +5,17 @@ sidebar: documentation_sidebar
 permalink: software_tensorflow.html
 ---
 
-# Installing Tensorflow and setting up the corresponding JupyterHub kernel
+# Installing Tensorflow 1.15 and setting up the corresponding JupyterHub kernel
+
+*_Note: Tensorflow 1.x is now outdated, this guide provides install instructions for
+legacy code. It installs Tensorflow 1.15 and Keras 2.2.4 which are the latest versions
+in the 1.x code base._*
 
 This page explains how to install the [Tensorflow](https://www.tensorflow.org/)
 package for use with GPUs on the cluster,
 and how to use it from Jupyter Notebook via [JupyterHub](https://www.palmetto.clemson.edu/palmetto/jupyterhub_index.html).
+
+
 
 ## Installing Tensorflow for GPU node
 
@@ -39,10 +45,13 @@ and how to use it from Jupyter Notebook via [JupyterHub](https://www.palmetto.cl
    $ source activate tf_env
    ```
 
-1. Following the instructions [here](https://www.tensorflow.org/install/install_linux#installing_with_anaconda) for installing Tensorflow:
+1. Install Tensorflow, Keras and other optional (but usually required) packages:
 
    ```
-   $ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.5.0-cp36-cp36m-linux_x86_64.whl
+   $ conda install tensorflow-gpu==1.15.0
+   $ conda install keras==2.2.4
+   $ conda install numpy
+   $ conda install pandas
    $ conda install matplotlib
    $ conda install scipy
    $ conda install imageio
@@ -91,12 +100,12 @@ and how to use it from Jupyter Notebook via [JupyterHub](https://www.palmetto.cl
    ```
    $ conda install numba
    $ conda install pandas
-   $ conda install keras
    $ conda install cython
    $ conda install matplotlib
    $ conda install scipy
    $ conda install imageio   
-   $ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.12.0-cp36-cp36m-linux_x86_64.whl   
+   $ conda install tensorflow==1.15.0
+   $ conda install keras==2.2.4
    ```
 
 1. You can now run Python and test the install:
