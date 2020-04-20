@@ -19,18 +19,16 @@ and how to use it from Jupyter Notebook via [JupyterHub](https://www.palmetto.cl
    $ qsub -I -l select=1:ncpus=16:mem=20gb:ngpus=1:gpu_model=p100,walltime=3:00:00
    ```
 
-1. Load the required modules
+1. Load the Anaconda module:
 
    ```
-   $ module load cuda-toolkit/9.0.176
-   $ module load cuDNN/9.0v7
-   $ module load anaconda3/5.0.1
+   $ module load cuda-toolkit/9.0.176 cuDNN/9.0v7 anaconda3/5.0.1
    ```
 
-1. Create a conda environment called `tf_env` (or any name you like), with Python 3.6:
+1. Create a conda environment called `tf_env` (or any name you like):
 
    ```
-   $ conda create -n tf_env pip python=3.6
+   $ conda create -n tf_env
    ```
 
 1. Activate the conda environment:
@@ -39,13 +37,20 @@ and how to use it from Jupyter Notebook via [JupyterHub](https://www.palmetto.cl
    $ source activate tf_env
    ```
 
-1. Following the instructions [here](https://www.tensorflow.org/install/install_linux#installing_with_anaconda) for installing Tensorflow:
+1. Install Tensorflow with GPU support from the `anaconda` channel:
 
    ```
-   $ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.5.0-cp36-cp36m-linux_x86_64.whl
-   $ conda install matplotlib
-   $ conda install scipy
-   $ conda install imageio
+   $ conda install -c anaconda tensorflow-gpu=2.0.0
+   ```
+This will automatically install some packages that are required for Tensorflow, like SciPy or NumPy. To see the list of installed packages, type
+
+   ```
+   $ conda list
+   ```
+If you need additional packages (for example, Pandas), you can type
+
+   ```
+   $ conda install pandas
    ```
 
 1. You can now run Python and test the install:
@@ -58,7 +63,15 @@ and how to use it from Jupyter Notebook via [JupyterHub](https://www.palmetto.cl
 
    Each time you login, you will first need to load the required modules
    and also activate the `tf_env` conda environment before
-   running Python.
+   running Python:
+
+   ```
+   $ module load cuda-toolkit/9.0.176 cuDNN/9.0v7 anaconda3/5.0.1
+   $ source activate tf_env
+   ```
+
+
+
 
 ## Installing Tensorflow for non-GPU node
 
@@ -74,10 +87,10 @@ and how to use it from Jupyter Notebook via [JupyterHub](https://www.palmetto.cl
    $ module load cuda-toolkit/9.0.176 cuDNN/9.0v7 anaconda3/5.0.1
    ```
 
-1. Create a conda environment called `tf_env_cpu`, with Python 3.6:
+1. Create a conda environment called `tf_env_cpu`:
 
    ```
-   $ conda create -n tf_env_cpu pip python=3.6
+   $ conda create -n tf_env_cpu
    ```
 
 1. Activate the conda environment:
@@ -86,17 +99,21 @@ and how to use it from Jupyter Notebook via [JupyterHub](https://www.palmetto.cl
    $ source activate tf_env_cpu
    ```
 
-1. Following the instructions [here](https://www.tensorflow.org/install/install_linux#installing_with_anaconda) for installing Tensorflow:
+1. Install Tensorflow from the `anaconda` channel:
 
    ```
-   $ conda install numba
+   $ conda install -c anaconda tensorflow=2.0.0
+   ```
+
+   This will automatically install some packages that are required for Tensorflow, like SciPy or NumPy. To see the list of installed packages, type
+
+   ```
+   $ conda list
+   ```
+   If you need additional packages (for example, Pandas), you can type
+
+   ```
    $ conda install pandas
-   $ conda install keras
-   $ conda install cython
-   $ conda install matplotlib
-   $ conda install scipy
-   $ conda install imageio   
-   $ pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.12.0-cp36-cp36m-linux_x86_64.whl   
    ```
 
 1. You can now run Python and test the install:
@@ -106,22 +123,33 @@ and how to use it from Jupyter Notebook via [JupyterHub](https://www.palmetto.cl
 
    >>> import tensorflow as tf
    ```
-   
+
 ## Setting up the kernel for JupyterHub:
 
 If you would like to use Tensorflow from Jupyter Notebook on Palmetto via
 [JupyterHub](palmetto.clemson.edu/jupyterhub), you need the following additional steps:
 
-1. Install Jupyter and set up a Notebook kernel called "Tensorflow":
+1. After you have installed Tensorflow, install Jupyter in the same conda environment:
 
    ```
    $ conda install jupyter
+   ```
+
+1. Now, set up a Notebook kernel called "Tensorflow". For Tensorflow with GPU support, do:
+
+   ```
    $ python -m ipykernel install --user --name tf_env --display-name Tensorflow
    ```
-
-1. Create/edit the file `~/.jhubrc`:
+  For Tensorflow without GPU support, do:
 
    ```
+   $ python -m ipykernel install --user --name tf_env_cpu --display-name Tensorflow
+   ```
+
+1. Create/edit the file `.jhubrc` in your home directory:
+
+   ```
+   $ cd
    $ nano .jhubrc
    ```
 
@@ -141,5 +169,7 @@ If you would like to use Tensorflow from Jupyter Notebook on Palmetto via
    Number of GPUs: 1 or 2 (Note: if GPU node is acquired, at least 2 CPU cores are required)
    Queue: workq
    ```
+
+1. Once your JupyterHub has started, you should see the Tensorflow kernel in your list of kernels when you click "New".
 
 ### Setting up the kernel for non-GPU node is the same as GPU, except using tf_env_cpu
