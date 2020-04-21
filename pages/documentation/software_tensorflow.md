@@ -160,10 +160,10 @@ If you would like to use Tensorflow from Jupyter Notebook on Palmetto via
    module load cuDNN/9.0v7
    ```
 
-1. Log into [JupyterHub](https://www.palmetto.clemson.edu/jupyterhub). Suggested settings:
+1. Log into [JupyterHub](https://www.palmetto.clemson.edu/jupyterhub). Recommended settings:
 
    ```
-   Number of chunks: 1 (Never request more than 1 chunk as Tensorflow will only use 1 chunk)
+   Number of chunks: 1 
    CPU cores: 16
    Memory: 62gb
    Number of GPUs: 1 or 2 (Note: if GPU node is acquired, at least 2 CPU cores are required)
