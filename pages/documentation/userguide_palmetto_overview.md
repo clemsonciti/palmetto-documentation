@@ -56,7 +56,7 @@ Phase  	| Node count 	| Cores | RAM
 
 ### Infiniband phases
 Phases 7-19 of the cluster consist of newer hardware
-with 56 Gbpbs Infiniband interconnect (Phases 7-17) and 100 Gbpbs Infiniband interconnect (Phases 18-19). Maximum run time for a single task is limited to 72 hours.
+with 56 Gbps Infiniband interconnect (Phases 7-17) and 100 Gbps Infiniband interconnect (Phases 18-19). Maximum run time for a single task is limited to 72 hours.
 
 Phase  	| Node count 	| Cores | RAM
 --------|---------------|-------|-------
