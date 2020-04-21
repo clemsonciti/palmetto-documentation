@@ -95,7 +95,7 @@ on Palmetto equipped with NVIDIA Tesla GPUs
 
 ### Big-memory nodes
 
-Phase 0 consists of 6 "bigmem" machines with large core count and RAM (505 GB/2 TB).
+Phase 0 consists of 6 "bigmem" machines with large core count and RAM (505 GB to 2 TB).
 
 Phase  	| Node count 	| Cores 	| RAM
 --------|---------------|-----------|---
@@ -115,10 +115,10 @@ using Palmetto:
 Location        |	Available space                     | Notes
 ----------------|---------------------------------------|---------------------------------------------------------------------------
 `/home`         |   100 GB per user                     | Backed-up nightly, permanent storage space accessible from all nodes
-`/scratch1`     |   233 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, OrangeFS Parallel File Sytem
+`/scratch1`     |   233 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, BeeGFS Parallel File Sytem
 `/scratch2`     |   160 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, XFS
 `/scratch3`     |   129 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, ZFS
-`/scratch4`     |   174 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, OrangeFS Parallel File Sytem
+`/scratch4`     |   174 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, BeeGFS Parallel File Sytem
 `/local_scratch`|   Varies between nodes (99GB-800GB)   | Per-node temporary work space, accessible only for the lifetime of job
 
 Additional high-performance and backed-up storage may be purchased
