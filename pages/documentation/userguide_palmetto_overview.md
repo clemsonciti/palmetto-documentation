@@ -10,21 +10,21 @@ permalink: userguide_palmetto_overview.html
 <img src="{{site.baseurl}}/images/palmetto-front-view.png" style="width:500px">
 
 Palmetto is Clemson University's primary high-performance computing (HPC) resource;
-heavily utilized by researchers, students, faculty, and staff from a broad range of disciplines. 
+heavily utilized by researchers, students, faculty, and staff from a broad range of disciplines.
 
 Currently, Palmetto is comprised of 2021 compute nodes (totalling 23072 CPU cores),
 and features:
 
-* 2021 compute nodes, totalling 23072 cores
-* 386 nodes equipped with NVIDIA Tesla GPUs: 280 nodes with NVIDIA K20 GPUs (2 per node), 106 nodes with NVIDIA K40 GPUs (2 per node)
+* 2079 compute nodes, totalling 28832 cores
+* 595 nodes are equipped with 2x NVIDIA Tesla GPUs, with a total of 1194 GPUs in the cluster; 103 nodes each have 2x NVIDIA Tesla V100 GPUs
 * 4 nodes with Intel Phi co-processors (2 per node)
-* 6 large memory nodes (5 with 505GB, 1 with 2TB), 262 nodes with 128GB of memory
-* 100GB of personal space (backed up daily for 42 days) for each user
-* "unlimited" scratch storage for temporary files
-* 10 Gbps Ethernet, 10 Gbps Myrinet and 56Gbps Infiniband networks
-* maximum run time for a single task limited to 72 hours (Infiniband nodes) or 168 hours (Myrinet nodes)
-* ranked 4th among the public academic institutions in the US on Top500 list (155 on Top500)
-* benchmarked at 814.4 TFlops (17,372 cores from Infiniband part of Palmetto)
+* 17 large-memory nodes (with 0.5 TB - 2.0 TB of memory); in addition, 480 nodes have at least 128 GB of RAM
+* 100 GB of personal space (backed up daily for 42 days) for each user
+* 726 TB of scratch storage space for computing and a burst-buffer
+* 10 and 25 Gbps Ethernet, and 56 and 100 Gbps Infiniband networks
+* ranked 9th among the public academic institutions in the US (and 392nd overall among all world-wide supercomputers) on Top500 list, as of November 2019
+* benchmarked at 1.4 PFlops (44,016 cores from Infiniband part of Palmetto)
+* the cluster is 100% battery-backed
 
 ## Compute Hardware
 
@@ -35,48 +35,59 @@ the basic hardware configuration (node count, cores, RAM)
 is given below. For more detailed and up-to-date information,
 you can view the file `/etc/hardware-table` after logging in.
 
-### Myrinet phases
+### Ethernet phases
 
-About 1400 nodes (Phases 0-6 of) the cluster consist of older hardware
-with 10 Gbps Myrinet interconnect.
+Phases 0 through 6 of the cluster consist of older hardware
+with 10 Gbps Ethernet interconnect. Maximum run time for a single task is limited to 168 hours.
 
 Phase  	| Node count 	| Cores | RAM
 --------|---------------|-------|-------
-1  		| 191    		| 8    	| 12 GB
-2    	| 243    		| 8    	| 12 GB
-3    	| 234    		| 8    	| 16 GB
-4    	| 329    		| 8    	| 16 GB
-5a   	| 370    		| 8    	| 32 GB
-5b     	| 9      		| 8    	| 16 GB
-6     	| 68    		| 24    | 48 GB
+1a  		| 116    	| 8         	| 31 GB
+1b      | 42  		| 12        	| 92 GB
+2a    	| 10    		| 16    	| 382 GB
+2b    	| 134    		| 8     	| 15 GB
+3    	| 224    		| 8    	| 15 GB
+4    	| 323    		| 8    	| 15 GB
+5a   	| 310    		| 8    	| 31 GB
+5b     	| 9      		| 8    	| 31 GB
+5c   	| 19    		| 8    	| 22 GB
+5d     	| 20      		| 12    	| 46 GB
+6     	| 66    		| 24    | 46 GB
 
 ### Infiniband phases
+Phases 7-19 of the cluster consist of newer hardware
+with 56 Gbpbs Infiniband interconnect (Phases 7-17) and 100 Gbpbs Infiniband interconnect (Phases 18-19). Maximum run time for a single task is limited to 72 hours.
 
 Phase  	| Node count 	| Cores | RAM
 --------|---------------|-------|-------
-7a		| 42 			| 16   	| 64 GB
-7b    	| 12    		| 16   	| 64 GB
-8a    	| 71    		| 16   	| 128 GB
-8b    	| 57    		| 16   	| 128 GB
-8c 		| 68    		| 16   	| 128 GB
-9     	| 72     		| 16   	| 128 GB
-10     	| 80    		| 20   	| 128 GB
-11a		| 40			| 20	| 128 GB
-11b		| 4				| 20	| 128 GB
-12		| 30			| 24	| 128 GB
-13		| 24			| 24	| 128 GB
-14		| 12			| 24	| 128 GB
-15		| 32			| 24	| 128 GB
+7a		| 42 			| 16   	| 62 GB
+7b    	| 12    		| 16   	| 62 GB
+8a    	| 71    		| 16   	| 62 GB
+8b    	| 57    		| 16   	| 62 GB
+8c 		| 88    		| 16   	| 62 GB
+9     	| 72     		| 16   	| 126 GB
+10     	| 80    		| 20   	| 126 GB
+11a		| 40			| 20	| 126 GB
+11b		| 4				| 20	| 126 GB
+12		| 30			| 24	| 126 GB
+13		| 24			| 24	| 126 GB
+14		| 12			| 24	| 126 GB
+15		| 32			| 24	| 126 GB
+16		| 40			| 28	| 126 GB
+17		| 20			| 28	| 126 GB
+18a		| 2			| 40	| 372 GB
+18b		| 65			| 40	| 372 GB
+18c		| 10			| 40	| 748 GB
+19a		| 28			| 40	| 372 GB
+19b		| 4			| 48	| 372 GB
 
-Phases 7-15 of the cluster consist of newer hardware
-with 56 Gbpbs Infiniband interconnect,
-and additionally 10 Gbps Ethernet for phases 9-15.
+
 
 ### GPUs
 
-There are about 380 nodes (phases 7a-8b, 9-11a, 12-15)
+There are 595 nodes (phases 7a-8b, 9-11a, 12-19a)
 on Palmetto equipped with NVIDIA Tesla GPUs
-(M2075, K20m, M2070q and K40m).
+(M2075, K20m, M2070q, K40m, P100, V100).
 
 ### Intel Xeon Phi accelerators
 
@@ -88,8 +99,12 @@ Phase 0 consists of 6 "bigmem" machines with large core count and RAM (505 GB/2 
 
 Phase  	| Node count 	| Cores 	| RAM
 --------|---------------|-----------|---
-0		| 5 			| 24   		| 505 GB
-0    	| 1	    		| 64   		| 2 TB
+0		   | 6 			| 24   		| 505 GB
+0    	 | 1	    | 64   		| 2 TB
+0		   | 5 			| 32   		| 550 GB
+0    	 | 1	    | 40   		| 1.5 TB
+0		   | 1 			| 40   		| 1 TB
+0    	 | 3	    | 80   		| 1.5 TB
 
 ## Storage
 
@@ -103,6 +118,7 @@ Location        |	Available space                     | Notes
 `/scratch1`     |   233 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, OrangeFS Parallel File Sytem
 `/scratch2`     |   160 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, XFS
 `/scratch3`     |   129 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, ZFS
+`/scratch4`     |   174 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, OrangeFS Parallel File Sytem
 `/local_scratch`|   Varies between nodes (99GB-800GB)   | Per-node temporary work space, accessible only for the lifetime of job
 
 Additional high-performance and backed-up storage may be purchased
