@@ -44,7 +44,7 @@ Phase  	| Node count 	| Cores | RAM
 --------|---------------|-------|-------
 1a  		| 116    	| 8         	| 31 GB
 1b      | 42  		| 12        	| 92 GB
-2a    	| 10    		| 16    	| 382 GB
+2a\*    	| 10    		| 16    	| 382 GB
 2b    	| 134    		| 8     	| 15 GB
 3    	| 224    		| 8    	| 15 GB
 4    	| 323    		| 8    	| 15 GB
@@ -53,6 +53,8 @@ Phase  	| Node count 	| Cores | RAM
 5c   	| 19    		| 8    	| 22 GB
 5d     	| 20      		| 12    	| 46 GB
 6     	| 66    		| 24    | 46 GB
+
+\* coming very soon!
 
 ### Infiniband phases
 Phases 7-19 of the cluster consist of newer hardware
