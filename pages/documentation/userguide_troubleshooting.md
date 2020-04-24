@@ -18,22 +18,28 @@ checkquota
 We recommend to check your quota on a regular basis, so you have an idea how full your home directory is; this way, running out of space won't come as a surprise.
 
 To see which files and folders take the most space in your home directory, you can use the `du` (["disc usage"](http://www.linfo.org/du.html)) Linux command. Type this sequence:
+
 ~~~
 cd
 du -hs *
 ~~~
+
 This process might take a while to run. It will give you the size of all the files and folders inside the home directory. To remove them, use the `rm` (["remove"](http://www.linfo.org/rm.html)) command. Folders should be removed with `rm -r`. For example:
+
 ~~~
 rm my_file.txt
 rm -r my_folder
 ~~~
 
 **NOTE TO JUPYTERHUB USERS:** When you delete a file or a folder in JupyterHub interface, it places it into the Trash folder which is located inside your home directory. Essentially, you are moving a file from one location to another within your home directory, and the total size of the files in your home directory stays the same. To see the contents of your Trash folder, do this:
+
 ~~~
 cd ~/.local/share/Trash
 ls -al
 ~~~
+
 To remove **all** files in your Trash folder, you can then do this:
+
 ~~~
 rm -rf *
 ~~~

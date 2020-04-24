@@ -28,6 +28,7 @@ This can happen for various reasons:
 ### How do I stop the spawning process?
 
 [Log into Palmetto through a terminal](userguide_basic_usage.html) (**not JupyterHub**) and then type `qstat -u <your Clemson username>`. It will give you a list of jobs that you are trying to run on Palmetto. Find the job with the name `jupyterhub`; in the first column, you will see this job's ID (a 7-digit number). Then, kill it:
+
 ~~~
 qdel <the 7-digit job ID>
 ~~~
@@ -47,11 +48,15 @@ The most common cause of this is running out of space in your home directory. Pl
 ### I need to use a licensed software package inside a JupyterHub kernel
 
 If your notebook needs a licensed package, for example Gurobi, you will need to modify your `.jhubrc` file. Log out of JupyterHub, log into Palmetto through a terminal, and then start the text editor:
+
 ~~~
 nano ~/.jhubrc
 ~~~
+
 Once the Nano text editor has started, add this line:
+
 ~~~
 module load gurobi
 ~~~
+
 Then, press Ctrl+X to exit and save changes. Gurobi will be activated next time you start a JupyterHub server.
