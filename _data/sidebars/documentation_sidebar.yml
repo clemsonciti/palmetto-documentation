@@ -146,7 +146,7 @@ entries:
     - title: Java
       url: /software_java.html
       output: web, pdf
-      
+
     - title: Julia
       url: /software_julia.html
       output: web, pdf
@@ -166,7 +166,7 @@ entries:
     - title: Open Babel
       url: /software_openbabel.html
       output: web, pdf
-      
+
     - title: Paraview
       url: /software_paraview.html
       output: web, pdf
@@ -190,7 +190,7 @@ entries:
     - title: Trinity
       url: /software_trinity.html
       output: web, pdf
-      
+
     - title: Sumo
       url: /software_sumo.html
       output: web, pdf
@@ -234,7 +234,7 @@ entries:
     - title: Configuration
       url: /jupyterhub_configuration.html
       output: web,pdf
-    
+
     - title: Adding New Kernels
       url: /jupyterhub_add_kernel.html
       output: web,pdf
@@ -242,6 +242,11 @@ entries:
     - title: Help and Resources
       url: /jupyterhub_resources.html
       output: web,pdf
+
+    - title: JupyterHub troubleshooting
+      url: /jupyterhub_troubleshooting.html
+      output: web,pdf
+
 
   - title: Workflow Examples
     output: web, pdf
@@ -257,4 +262,12 @@ entries:
 
     - title: Owner's Guide
       url: /owners.html
+      output: web, pdf
+
+  - title: Troubleshooting
+    output: web, pdf
+    folderitems:
+
+    - title: Troubleshooting
+      url: /userguide_troubleshooting.html
       output: web, pdf
