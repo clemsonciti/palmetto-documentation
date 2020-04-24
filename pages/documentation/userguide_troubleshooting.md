@@ -17,7 +17,7 @@ checkquota
 
 We recommend to check your quota on a regular basis, so you have an idea how full your home directory is; this way, running out of space won't come as a surprise.
 
-To see which files and folders take the most space in your home directory, you can use the `du` (["disc usage"](http://www.linfo.org/du.html)) Linux command. Type this sequence:
+To see which files and folders take the most space in your home directory, you can use the `du` (["disk usage"](http://www.linfo.org/du.html)) Linux command. Type this sequence:
 
 ~~~
 cd
@@ -38,10 +38,10 @@ cd ~/.local/share/Trash
 ls -al
 ~~~
 
-To remove **all** files in your Trash folder, you can then do this:
+To remove **all** files in your Trash folder, you can do this:
 
 ~~~
-rm -rf *
+rm -rf ~/.local/share/Trash/*
 ~~~
 
 ## Palmetto account has expired

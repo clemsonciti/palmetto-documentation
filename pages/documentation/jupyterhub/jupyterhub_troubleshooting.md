@@ -15,6 +15,8 @@ First, ensure that you have an account on the Palmetto cluster. You can request 
 
 If you have an educational account on Palmetto, it is possible that it has expired. To see whether that's the case, [log into Palmetto through a terminal](userguide_basic_usage.html) (**not JupyterHub**) and then type `qsub -I`. If your educational account has expired, you will see the message `This educational account can no longer submit jobs`. In this case, you will need to [re-apply for a Palmetto account](index.html#obtaining-an-account).
 
+It is also possible that your home directory is full. Please read [how to fix this](userguide_troubleshooting.html#running-out-of-space-in-your-home-directory).
+
 ### I can log in, but when I click on "Spawn", nothing happens
 
 This can happen for various reasons:
