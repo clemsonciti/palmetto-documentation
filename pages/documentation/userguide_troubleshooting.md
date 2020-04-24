@@ -10,9 +10,11 @@ permalink: userguide_troubleshooting.html
 This is a very common situation, and the majority of the problems that Palmetto users experience are related to this. In particular, running out of space in your home directory will make JupyterHub unstable. Also, you will not be able to create any new files in your home directory, which means you cannot create new Anaconda environments and JupyterHub kernels or install new software.
 
 To fix it, [log into Palmetto through a terminal](userguide_basic_usage.html) (**not JupyterHub**). Palmetto users have a limit of 100 Gb on their home directories, so first thing to do is to check the size of your home directory. Once you log in, run this script:
+
 ~~~
 checkquota
 ~~~  
+
 We recommend to check your quota on a regular basis, so you have an idea how full your home directory is; this way, running out of space won't come as a surprise.
 
 To see which files and folders take the most space in your home directory, you can use the `du` (["disc usage"](http://www.linfo.org/du.html)) Linux command. Type this sequence:
