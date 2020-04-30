@@ -26,6 +26,10 @@ entries:
       url: /index.html
       output: web, pdf
 
+    - title: NEWS
+      url: /news.html
+      output: web, pdf
+
     - title: About Palmetto Cluster
       url: /userguide_palmetto_overview.html
       output: web, pdf
