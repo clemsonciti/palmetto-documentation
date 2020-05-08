@@ -5,6 +5,10 @@ sidebar: documentation_sidebar
 permalink: news.html
 ---
 
+**May 8, 2020**
+
+At noon, VirtualGL has been upgraded on all GPU nodes, to version 2.6.3.
+
 **April 28, 2020**
 
 At 4pm, `xfer01` and `hpcdtn01` nodes were rebooted to apply security patches. Palmetto users were notified. The reboot went on successfully and took about 10 minutes.
