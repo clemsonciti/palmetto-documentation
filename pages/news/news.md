@@ -6,6 +6,7 @@ permalink: news.html
 ---
 
 **May 21, 2020**
+
 At 4pm, there was a hardware malfunction of `/scratch4` storage. It was back in action at 7pm.
 
 **May 8, 2020**
