@@ -43,18 +43,17 @@ with 10 Gbps Ethernet interconnect. Maximum run time for a single task is limite
 Phase  	| Node count 	| Cores | RAM
 --------|---------------|-------|-------
 1a  		| 116    	| 8         	| 31 GB
-1b      | 42  		| 12        	| 92 GB
-2a\*    	| 10    		| 16    	| 382 GB
-2b    	| 134    		| 8     	| 15 GB
+1b      | 40  		| 12        	| 92 GB
+2a    	| 30    		| 16    	| 382 GB
+2b    	| 162    		| 8     	| 15 GB
 3    	| 224    		| 8    	| 15 GB
-4    	| 323    		| 8    	| 15 GB
-5a   	| 310    		| 8    	| 31 GB
+4    	| 319    		| 8    	| 15 GB
+5a   	| 309    		| 8    	| 31 GB
 5b     	| 9      		| 8    	| 31 GB
-5c   	| 19    		| 8    	| 22 GB
-5d     	| 20      		| 12    	| 46 GB
-6     	| 66    		| 24    | 46 GB
+5c   	| 32    		| 8    	| 22 GB
+5d     	| 23      		| 12    	| 46 GB
+6     	| 65    		| 24    | 46 GB
 
-\* coming very soon!
 
 ### Infiniband phases
 Phases 7-19 of the cluster consist of newer hardware
