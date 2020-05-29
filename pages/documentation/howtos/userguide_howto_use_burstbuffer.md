@@ -66,58 +66,59 @@ In the above example, the `stagein` command copies all files and subdirectories 
 
 
 Tips and FAQs
+
 1.	Why does using the Burst Buffer require permission from the CITI group?
 
-Because manual steps are required to set up the environment.
+    Because manual steps are required to set up the environment.
 
 2.	Why should I use the Burst Buffer?  
 
-Because it is the fastest scratch storage available on Palmetto.
+    Because it is the fastest scratch storage available on Palmetto.
 
 3.	What kind of jobs take advantage of the Burst Buffer?  
 
-Jobs that generate lots of files, or frequently write small amounts of data, or randomly accesses data in a shared dataset across nodes.  Trying it is the best way to know if it helps reduce your job’s walltime.
+    Jobs that generate lots of files, or frequently write small amounts of data, or randomly accesses data in a shared dataset across nodes.  Trying it is the best way to know if it helps reduce your job’s walltime.
 
 4.	Is the time that it takes to `stagein` and `stageout` my directory charged against my job’s walltime?  
 
-No, only the execution of your job outside of these statements is charged to the job’s walltime.
+    No, only the execution of your job outside of these statements is charged to the job’s walltime.
 
 5.	Can I `ssh` to the nodes in my job while the `stagein` process is occurring?  
 
-No. Your job status will show that your job is in the running state, but PBS will not allow you to `ssh` to any of the nodes until the `stagein` process has finished.
+    No. Your job status will show that your job is in the running state, but PBS will not allow you to `ssh` to any of the nodes until the `stagein` process has finished.
 
 6.	Does my job hold resources during the `stagein` and `stageout` process?  
 
-Yes.  Your job will be given whatever resources you have requested before the `stagein` process starts and will release those resources after the `stageout` process finishes.
+    Yes.  Your job will be given whatever resources you have requested before the `stagein` process starts and will release those resources after the `stageout` process finishes.
 
 7.	Are my permissions retained when my directory is copied from the staging area to the NVMe?
 
-Yes.  The primary node in your job issues the `cp -rp` command;  `-r` means copy everything recursively, and `-p` means to preserve the ownership, access mode, and timestamps of the original files.
+    Yes.  The primary node in your job issues the `cp -rp` command;  `-r` means copy everything recursively, and `-p` means to preserve the ownership, access mode, and timestamps of the original files.
 
 8.	What will `qstat` show me when the `stageout` processing is running?  
 
-`qstat` will show that the job is in the “E” or exit state.  The job will remain in this state until the `stageout` process has completed.
+    `qstat` will show that the job is in the “E” or exit state.  The job will remain in this state until the `stageout` process has completed.
 
 9.	Can I access my files while they are on the NVMe drives? Where can I find them?
 
-Yes.  You can access your files and directories while your job is executing.  You can find them at `/burstbuffer/{NPL}/{userid}`.  After the job finishes, the directory will no longer exist.
+    Yes.  You can access your files and directories while your job is executing.  You can find them at `/burstbuffer/{NPL}/{userid}`.  After the job finishes, the directory will no longer exist.
 
 10.	Can I access my files and directories in the staging area?  
 
-Yes.  You can access this location at any time from any node (`/burstbuffer/staging/{userid}`) once your Cherwell ticket is approved.
+    Yes.  You can access this location at any time from any node (`/burstbuffer/staging/{userid}`) once your Cherwell ticket is approved.
 
 11.	Why do my jobs require `interconnect` to be `hdr` or `fdr`?  
 
-Because the Burst Buffer is connected to the cluster with only the fastest Palmetto networks.  In fact, `hdr` is preferred over `fdr` whenever possible.
+    Because the Burst Buffer is connected to the cluster with only the fastest Palmetto networks.  In fact, `hdr` is preferred over `fdr` whenever possible.
 
 12.	What is the difference between protected and unprotected NVMe drives?  
 
-Protected drives mean that if a drive fails, data is not lost, and if a server goes down, the data is still available.  Unprotected means that data is lost if a drive fails, and if a server goes down, the data is not accessible until the server is available again.  
+    Protected drives mean that if a drive fails, data is not lost, and if a server goes down, the data is still available.  Unprotected means that data is lost if a drive fails, and if a server goes down, the data is not accessible until the server is available again.  
 
 13.	When should I use NVMe drives with protection?  
 
-Most cases should use the NVMe drives with protection. You MUST use NVMe with protection when your job DOES NOT meet the criteria for the unprotected case.  
+    Most cases should use the NVMe drives with protection. You MUST use NVMe with protection when your job DOES NOT meet the criteria for the unprotected case.  
 
 14.	When should I use NVMe drives without protection?  
 
-If your job needs the full *write* performance capacity of NVMe (read performance is the same for protected and unprotected) OR you need more than 84TB of space.  In both cases, you must be able to reproduce your results!
+    If your job needs the full *write* performance capacity of NVMe (read performance is the same for protected and unprotected) OR you need more than 84TB of space.  In both cases, you must be able to reproduce your results!
