@@ -65,7 +65,7 @@ In the above example, the `stagein` command copies all files and subdirectories 
 4.	Move results from the output directory to long term storage, when you are happy with your results.  
 
 
-Tips and FAQs
+### Tips and FAQs
 
 1.	Why does using the Burst Buffer require permission from the CITI group?
 
