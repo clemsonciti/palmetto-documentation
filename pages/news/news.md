@@ -5,6 +5,10 @@ sidebar: documentation_sidebar
 permalink: news.html
 ---
 
+**May 29, 2020**
+
+Burst Buffer, a file storage system with highly efficient I/O, has been added to Palmetto. For instructions, please see the [documentation](userguide_howto_use_burstbuffer.html).
+
 **May 21, 2020**
 
 At 4pm, there was a hardware malfunction of `/scratch4` storage. It was back in action at 7pm.

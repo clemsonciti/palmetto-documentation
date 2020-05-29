@@ -11,9 +11,10 @@ used as the working directory for jobs.
 It's acceptable for jobs to copy data from the home directory
 to a scratch directory at the beginning of the job
 and from scratch to home at the end of the job,
-but applications should not read or write data to the home directory.
+but applications should not read or write data to the home directory. For faster I/O,
+you may consider using [Burst Buffer](userguide_howto_use_burstbuffer.html).
 
-Some examples of data that is typically stored in the home directory: 
+Some examples of data that is typically stored in the home directory:
 
 1. Code repositories, scripts, or notes written by the user
 1. **compiled** programs/software
@@ -36,7 +37,7 @@ and will generally perform well for jobs:
 - where each file is read from and written by a single process, or
 - where the majority of reads and writes are less than a few megabytes
 
-`/scratch1` and `/scratch4` are 
+`/scratch1` and `/scratch4` are
 [parallel file systems](https://en.wikipedia.org/wiki/Clustered_file_system)
 which will perform better for jobs
 where multiple processes, across multiple nodes, read or write
@@ -91,7 +92,7 @@ $ qsub -I -l select=1:ncpus=16:mem=4gb:phase=8b,walltime=1:00:00
     on that node.
     A convenient way to ensure that `$TMPDIR` is available on all nodes
     is to run the `sleep` command on all nodes.
-    
+
     Next, each node will need to copy
     data over to its `$TMPDIR` folder.
     To accomplish this, you can have commands similar to the

@@ -107,6 +107,11 @@ entries:
           url: /userguide_howto_use_bigmem_nodes.html
           output: web, pdf
 
+        - title: Use Burst Buffer
+          url: /userguide_howto_use_burstbuffer.html
+          output: web, pdf
+
+
         - title: Use GPUs
           url: /userguide_howto_use_gpus.html
           output: web, pdf
