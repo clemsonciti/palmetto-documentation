@@ -1,11 +1,9 @@
 ---
-title: Burst buffer
+title: How to use Burst Buffers
 keywords: [burst_buffer]
 sidebar: documentation_sidebar
 permalink: userguide_howto_use_burstbuffer.html
 ---
-
-## Using the Burst Buffer
 
 The Burst Buffer is a new high-performance storage system for Palmetto users, consisting of four storage servers running a BeeGFS parallel file system running on flash-based (NVMe) storage along with a rotational disk staging area.  Although the Burst Buffer provides high-throughput and low-latency storage to all applications, its primary benefit is reducing I/O bottlenecks caused by small file operations and non-contiguous shared file access.
 
