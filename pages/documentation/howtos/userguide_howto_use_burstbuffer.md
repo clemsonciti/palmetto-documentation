@@ -1,5 +1,5 @@
 ---
-title: How to use Burst Buffers
+title: How to use Burst Buffer
 keywords: [burst_buffer]
 sidebar: documentation_sidebar
 permalink: userguide_howto_use_burstbuffer.html
@@ -26,6 +26,7 @@ A typical project involving the Burst Buffer, will have the following data flow.
 <img src="{{site.baseurl}}/images/Burstbuffer_workflow.svg" style="width:750px">
 <!-- <img src="images/Burstbuffer_workflow.svg" style="width:750px"> -->
 
+Burst Buffer data flow diagram.
 
 ### Resource Requirements
 To take advantage of the Burst Buffer’s performance, adequate interconnect and cpus must be requested to ensure a high-performance network connection from the compute node to the Burst Buffer.
