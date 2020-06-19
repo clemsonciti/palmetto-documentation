@@ -56,7 +56,7 @@ The node in phase 18b configuration currently available for purchase at subsidiz
 * On-board 25 Gbps Ethernet NIC
 * InfiniBand FDR 56 Gbps network card
 
-After May 2020 the price for new node in phase 19 is still at subsidized rate for Clemson faculty/staff at **$7,500** for a period of **4 years**. However, due to potential market fluctuations beyond the control of Clemson, we encourage PIs to budget for $10k to ensure all costs are covered. The node has the following configuration:
+After May 2020 the price for new node in phase 19 is still at subsidized rate for Clemson faculty/staff at **$7,500** for a period of **4 years**. However, due to potential market fluctuations beyond the control of Clemson, we encourage PIs to budget for **$10,000** to ensure all costs are covered. The node has the following configuration:
 
 * 2 x Intel “Cascade Lake” Xeon Gold CLX 6248 (for a total of 40 cores)
 * 2 x NVIDIA Tesla V100 GPU 32GB
