@@ -1,0 +1,14 @@
+site_name: Palmetto Documentation
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Basic Usage: basic.md
+  - Software on Palmetto: software.md
+  - Spack: spack.md
+  - JupyterLab: jupyter.md
+  - Programming: programming.md
+  - Owner: owner.md
+  - Training Workshops: workshop.md
+  - FAQ: faq.md
+theme: readthedocs
