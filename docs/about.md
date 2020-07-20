@@ -130,3 +130,12 @@ jobs.
 Palmetto cluster operates in a condominium model which allows faculty to
 purchase immediate access to compute nodes on the cluster.
 More information can be found in the [Owner's Guide]({{site.baseurl}}/owners.html).
+
+
+## Acknowledging Palmetto Cluster
+
+We would appreciate if all publications that include results generated using the Palmetto cluster
+include a short statement in the Acknowledgment section.
+As an example, the acknowledgment may look like this:
+
+**Clemson University is acknowledged for generous allotment of compute time on Palmetto cluster.**
