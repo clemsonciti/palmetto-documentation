@@ -1,5 +1,3 @@
-# Oerview
-
 ## Covid-19 update
 In response to recent events and effective Monday, March 16, the CITI ACDS team is now delivering Palmetto office-hours,
 consultations, and training **online via web-conferencing**. In particular, the weekly Wednesday office-hours and Friday on-boarding
