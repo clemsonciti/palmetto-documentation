@@ -1,4 +1,4 @@
-## abaqus
+## ABAQUS
 
 ABAQUS is a Finite Element Analysis software used
 for engineering simulations.
@@ -18,7 +18,8 @@ you can use the `lmstat` command:
 /software/USR_LOCAL/flexlm/lmstat -a -c /software/USR_LOCAL/flexlm/licenses/abaqus.dat
 ~~~
 
-## Running ABAQUS interactive viewer
+
+### Running ABAQUS interactive viewer
 
 To run the interactive viewer,
 you must [log-in with tunneling enabled]({{site.baseurl}}/userguide_howto_run_graphical_applications.html),
@@ -44,7 +45,7 @@ to launch the ABAQUS CAE graphical interface:
 $ abaqus cae -mesa
 ~~~
 
-## Running ABAQUS in batch mode
+### Running ABAQUS in batch mode
 
 To run ABAQUS in batch mode on Palmetto cluster,
 you can use the job script in the following example as a template.

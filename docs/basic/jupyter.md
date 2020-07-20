@@ -1,5 +1,7 @@
 
-# Running your first Jupyter notebook on Palmetto
+# JuputerLab Interface to Palmetto
+
+## Running your first Jupyter notebook on Palmetto
 
 In this section, you will:
 
