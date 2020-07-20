@@ -25,5 +25,8 @@ markdown_extensions:
   - markdown_include.include:
       base_path: docs
 
+extra_css:
+  - css/extra.css
+
 plugins:
   - search
