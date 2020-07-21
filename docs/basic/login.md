@@ -5,34 +5,6 @@ Any user with a Palmetto Cluster account can log-in using
 Mac OS X and Linux systems come with an SSH client installed,
 while Windows users will need to download one.
 
-### Two-Factor Authentication (2FA)
-
-All connections to Palmetto require 2FA. If you are not enrolled in 2FA yet,
-you may enroll using the link <https://2fa.clemson.edu/>.
-2FA comes with three options for registerd devices (smart phone or tablet):
-
-~~~
-Using keyboard-interactive authentication.
-Duo two-factor login for $user
-
-Enter a passcode or select one of the following options:
-
- 1. Duo Push to XXX-XXX-XXXX
- 2. Phone call to XXX-XXX-XXXX
- 3. SMS passcodes to XXX-XXX-XXXX
-
-Passcode or option (1-3):
-~~~
-* Option 1: response to Duo Push to your device by clicking **Approve**
-* Option 2: listen to the automatic call from system and select any key on your device.
-* Option 3: You will receive 10 different passcodes sent to your device. Enter any of the passcode to the command prompt.
-* Option 4: If user connecting with DUO token device purchased from CCIT, use the token generated passcode
-```
-Passcode or option (1-3): 1234567
-```
-
-More information can be found at [here](https://ccit.clemson.edu/support/current-students/two-factor-authentication-2fa/)
-
 ### Mac OS X and Linux users
 
 Mac OS X or Linux users may open a Terminal, and
@@ -48,28 +20,28 @@ You will be prompted for both your password and DUO authentication.
 ### Windows
 
 MobaXterm is the recommended SSH client for Windows and can be downloaded
-[here](<http://mobaxterm.mobatek.net/download.html>).
+from [MobaXterm's download page](http://mobaxterm.mobatek.net/download.html).
 This software is recommended because it is free and comes with:
 
-* A built-in file transfer client,
-which allows you to exchange files and folders
-between your own computer and Palmetto
+- A built-in file transfer client, which allows you to exchange files and folders 
+between your own computer and Palmetto in a convenient manner.
+- An X11 server which allows you to run graphical programs on Palmetto cluster
+- A graphical port-forwarding interface to support easy access to web-based 
+programs launched inside Palmetto
 
-* An X11 server which allows you to run graphical
-programs on Palmetto cluster
+*If you select the installation version of MobaXterm, you will need to unzip the downloaded
+file before running the installation program. Windows sometimes allow users to run the 
+installation from inside the zipped file, resulting in missing an additional utility file (still
+inside the zipped file).*
 
-* A graphical port-forwarding interface
-to support easy access to web-based programs launched inside Palmetto
-
-After downloading and installing MobaXterm,
-users can log-in by following these steps:
+After downloading and installing MobaXterm, users can log-in by following these steps:
 
 1.  Launch the MobaXterm program
 
-    <img src="{{site.baseurl}}/images/mobaxterm_01.png" style="width:1000px">
+    <img src="image/login/mobaxterm_01.PNG" style="width:1000px">
 
-2.  On the top-left corner of MobaXterm, click the **Session** button. Select
-    the SSH setting and confirm that the following settings are set:
+2.  On the top-left corner of MobaXterm, click the **Session** button. Confirm that the 
+following settings are set for **Basic SSH settings** and **Advanced SSH settings**:
 
     Parameter           |   Value
     --------------------|-------------------------------------
@@ -108,6 +80,37 @@ users can log-in by following these steps:
     you can easily transfer files between Palmetto and your local computer.
 
     <img src="{{site.baseurl}}/images/mobaxterm_07.png" style="width:1000px">
+
+### Two-Factor Authentication (2FA)
+
+All connections to Palmetto require 2FA. If you are not enrolled in 2FA yet,
+you may enroll using the link <https://2fa.clemson.edu/>.
+
+After you enter your login name and password, Palmetto will ask you to provide 
+additional authentication for 2FA via one of the following three options for registerd devices 
+(smart phone or tablet):
+
+~~~
+Using keyboard-interactive authentication.
+Duo two-factor login for $user
+
+Enter a passcode or select one of the following options:
+
+ 1. Duo Push to XXX-XXX-XXXX
+ 2. Phone call to XXX-XXX-XXXX
+ 3. SMS passcodes to XXX-XXX-XXXX
+
+Passcode or option (1-3):
+~~~
+* Option 1: response to Duo Push to your device by clicking **Approve**
+* Option 2: listen to the automatic call from system and select any key on your device.
+* Option 3: enter a passcode that is shown in your DUO app. 
+```
+Passcode or option (1-3): 1234567
+```
+
+More information can be found at [here](https://ccit.clemson.edu/support/current-students/two-factor-authentication-2fa/)
+
 
 ## Basic tasks
 
