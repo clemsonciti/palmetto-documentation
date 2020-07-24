@@ -1,6 +1,6 @@
 ## Overview
 
-<img src="{{site.baseurl}}/images/palmetto-front-view.png" style="width:500px">
+<img src="../../images/about/palmetto-front-view.png" style="width:500px">
 
 Palmetto is Clemson University's primary high-performance computing (HPC) resource;
 heavily utilized by researchers, students, faculty, and staff from a broad range of disciplines.
@@ -21,7 +21,7 @@ and features:
 
 ## Compute Hardware
 
-<img src="{{site.baseurl}}/images/palmetto-nodes-closeup.png" style="width:500px">
+<img src="../../images/about/palmetto-nodes-closeup.png" style="width:500px">
 
 The cluster is divided into several "phases";
 the basic hardware configuration (node count, cores, RAM)

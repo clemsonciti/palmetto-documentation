@@ -6,7 +6,9 @@ nav:
   - News: news.md
   - Owner: owner.md
   - Basic:
+    - New Account Request: basic/new.md
     - Login: basic/login.md
+    - Getting Started: basic/started.md
     - JupyterLab: basic/jupyter.md
   - Software: 
     - Software on Palmetto: software/software.md
