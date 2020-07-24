@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Gephi - Palmetto Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Gephi";
+    var mkdocs_page_input_path = "software/packages/gephi.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Palmetto Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../news/">News</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../owner/">Owner</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Basic</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../basic/login/">Login</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../basic/jupyter/">JupyterLab</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../software/">Software on Palmetto</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../spack/">User Software Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../programming/">Software Development</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Training and Outreach</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../training/schedule/">Training Schedule</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../training/workshop/">Workshop Descriptions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../faq/common/">Common Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../faq/faq/">FAQ</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Palmetto Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Gephi</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="gephi">Gephi</h2>
+<p>Gephi is an interactive visualization and exploration platform for all kinds of networks and 
+complex systems, dynamic and hierarchical graphs.  At this time, we don't have Gephi setup as a 
+software module on Palmetto, but downloading and installing it in your own <code>/home</code> or <code>/newscratch</code> 
+directory (and running it from that location) is easy to do.  Below are the procedures I used to do this:</p>
+<h3 id="download-and-setup-the-gephi-binary">Download and Setup the Gephi Binary</h3>
+<pre><code>wget https://launchpad.net/gephi/0.8/0.8.2beta/+download/gephi-0.8.2-beta.tar.gz
+tar -zxf gephi-0.8.2-beta.tar.gz
+</code></pre>
+<p>Now, the gephi binary is installed in <code>~/gephi/bin</code>.</p>
+<h3 id="running-gephi">Running Gephi</h3>
+<p>Connect to Palmetto with X11 tunneling enabled so you can "tunnel" the GUI running on Palmetto 
+through your SSH connection to your desktop:</p>
+<pre><code>ssh -X galen@login.palmetto.clemson.edu
+</code></pre>
+<p>Once you're logged-in to Palmetto, you'll need to launch an interactive job with X11 tunneling 
+enabled.  Be sure to request an allocation with enough memory for Gephi to handle your input data 
+properly (here, I'm requesing 31 GB RAM):</p>
+<pre><code>qsub -I -X -l select=1:ncpus=4:mem=31gb,walltime=6:00:00
+</code></pre>
+<p>If you are using a Windows system, you'll need to launch a local Xserver (like Xming) so your 
+system can display the tunneled GUI information.</p>
+<p>Once your local Xserver is ready, launch the Gephi GUI in your interactive session on Palmetto:</p>
+<pre><code>/home/galen/gephi/bin/gephi
+</code></pre>
+<p>Now, I can browse for data I have stored in my directories on Palmetto.  If your data is stored on 
+your local workstation, you must move that data to Palmetto so you can open it with Gephi.</p>
+<p>You may experience a short delay as the GUI is generated and tunneled to your desktop.  Responsiveness 
+between your local workstation and the tunneled GUI may be a bit slow/laggy, but the compute operations 
+taking place on that Palmetto compute node are not delayed.</p>
+<p><img alt="Gephi" src="{{site.baseurl}}/images/gephi.1.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

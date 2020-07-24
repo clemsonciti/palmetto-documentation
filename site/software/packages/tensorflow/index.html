@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Tensorflow - Palmetto Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tensorflow";
+    var mkdocs_page_input_path = "software/packages/tensorflow.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Palmetto Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../news/">News</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../owner/">Owner</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Basic</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../basic/login/">Login</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../basic/jupyter/">JupyterLab</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../software/">Software on Palmetto</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../spack/">User Software Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../programming/">Software Development</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Training and Outreach</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../training/schedule/">Training Schedule</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../training/workshop/">Workshop Descriptions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../faq/common/">Common Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../faq/faq/">FAQ</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Palmetto Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Tensorflow</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="installing-tensorflow-and-setting-up-the-corresponding-jupyterhub-kernel">Installing Tensorflow and setting up the corresponding JupyterHub kernel</h1>
+<p>This page explains how to install the <a href="https://www.tensorflow.org/">Tensorflow</a>
+package for use with GPUs on the cluster,
+and how to use it from Jupyter Notebook via <a href="https://www.palmetto.clemson.edu/palmetto/jupyterhub_index.html">JupyterHub</a>.</p>
+<h2 id="installing-tensorflow-for-gpu-node">Installing Tensorflow for GPU node</h2>
+<ol>
+<li>Request an interactive session on a GPU node. For example:</li>
+</ol>
+<p><code>$ qsub -I -l select=1:ncpus=16:mem=20gb:ngpus=1:gpu_model=p100,walltime=3:00:00</code></p>
+<ol>
+<li>Load the Anaconda module:</li>
+</ol>
+<p><code>$ module load cuda-toolkit/9.0.176 cuDNN/9.0v7 anaconda3/5.0.1</code></p>
+<ol>
+<li>Create a conda environment called <code>tf_env</code> (or any name you like):</li>
+</ol>
+<p><code>$ conda create -n tf_env</code></p>
+<ol>
+<li>Activate the conda environment:</li>
+</ol>
+<p><code>$ source activate tf_env</code></p>
+<ol>
+<li>Install Tensorflow with GPU support from the <code>anaconda</code> channel:</li>
+</ol>
+<p><code>$ conda install -c anaconda tensorflow-gpu=2.0.0</code>
+This will automatically install some packages that are required for Tensorflow, like SciPy or NumPy. To see the list of installed packages, type</p>
+<p><code>$ conda list</code>
+If you need additional packages (for example, Pandas), you can type</p>
+<p><code>$ conda install pandas</code></p>
+<ol>
+<li>You can now run Python and test the install:</li>
+</ol>
+<p>```
+   $ python</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import tensorflow as tf
+   ```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Each time you login, you will first need to load the required modules
+   and also activate the <code>tf_env</code> conda environment before
+   running Python:</p>
+<p><code>$ module load cuda-toolkit/9.0.176 cuDNN/9.0v7 anaconda3/5.0.1
+   $ source activate tf_env</code></p>
+<h2 id="installing-tensorflow-for-non-gpu-node">Installing Tensorflow for non-GPU node</h2>
+<ol>
+<li>Request an interactive session for non-GPU node. For example:</li>
+</ol>
+<p><code>$ qsub -I -l select=1:ncpus=16:mem=20gb,walltime=3:00:00</code></p>
+<ol>
+<li>Load the required modules</li>
+</ol>
+<p><code>$ module load cuda-toolkit/9.0.176 cuDNN/9.0v7 anaconda3/5.0.1</code></p>
+<ol>
+<li>Create a conda environment called <code>tf_env_cpu</code>:</li>
+</ol>
+<p><code>$ conda create -n tf_env_cpu</code></p>
+<ol>
+<li>Activate the conda environment:</li>
+</ol>
+<p><code>$ source activate tf_env_cpu</code></p>
+<ol>
+<li>Install Tensorflow from the <code>anaconda</code> channel:</li>
+</ol>
+<p><code>$ conda install -c anaconda tensorflow=2.0.0</code></p>
+<p>This will automatically install some packages that are required for Tensorflow, like SciPy or NumPy. To see the list of installed packages, type</p>
+<p><code>$ conda list</code>
+   If you need additional packages (for example, Pandas), you can type</p>
+<p><code>$ conda install pandas</code></p>
+<ol>
+<li>You can now run Python and test the install:</li>
+</ol>
+<p>```
+   $ python</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import tensorflow as tf
+   ```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="setting-up-the-kernel-for-jupyterhub">Setting up the kernel for JupyterHub:</h2>
+<p>If you would like to use Tensorflow from Jupyter Notebook on Palmetto via
+<a href="palmetto.clemson.edu/jupyterhub">JupyterHub</a>, you need the following additional steps:</p>
+<ol>
+<li>After you have installed Tensorflow, install Jupyter in the same conda environment:</li>
+</ol>
+<p><code>$ conda install jupyter</code></p>
+<ol>
+<li>Now, set up a Notebook kernel called "Tensorflow". For Tensorflow with GPU support, do:</li>
+</ol>
+<p><code>$ python -m ipykernel install --user --name tf_env --display-name Tensorflow</code>
+  For Tensorflow without GPU support, do:</p>
+<p><code>$ python -m ipykernel install --user --name tf_env_cpu --display-name Tensorflow</code></p>
+<ol>
+<li>Create/edit the file <code>.jhubrc</code> in your home directory:</li>
+</ol>
+<p><code>$ cd
+   $ nano .jhubrc</code></p>
+<p>Add the following two lines to the <code>.jhubrc</code> file, then exit.</p>
+<p><code>module load cuda-toolkit/9.0.176
+   module load cuDNN/9.0v7</code></p>
+<ol>
+<li>Log into <a href="https://www.palmetto.clemson.edu/jupyterhub">JupyterHub</a>. Recommended settings:</li>
+</ol>
+<p><code>Number of chunks: 1 
+   CPU cores: 16
+   Memory: 62gb
+   Number of GPUs: 1 or 2 (Note: if GPU node is acquired, at least 2 CPU cores are required)
+   Queue: workq</code></p>
+<ol>
+<li>Once your JupyterHub has started, you should see the Tensorflow kernel in your list of kernels when you click "New".</li>
+</ol>
+<h3 id="setting-up-the-kernel-for-non-gpu-node-is-the-same-as-gpu-except-using-tf_env_cpu">Setting up the kernel for non-GPU node is the same as GPU, except using tf_env_cpu</h3>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

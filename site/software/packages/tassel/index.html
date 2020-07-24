@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Tassel - Palmetto Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tassel";
+    var mkdocs_page_input_path = "software/packages/tassel.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Palmetto Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../news/">News</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../owner/">Owner</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Basic</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../basic/login/">Login</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../basic/jupyter/">JupyterLab</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../software/">Software on Palmetto</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../spack/">User Software Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../programming/">Software Development</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Training and Outreach</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../training/schedule/">Training Schedule</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../training/workshop/">Workshop Descriptions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../faq/common/">Common Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../faq/faq/">FAQ</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Palmetto Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Tassel</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><a href="http://www.maizegenetics.net/index.php?option=com_content&amp;task=view&amp;id=89&amp;Itemid=119">TASSEL</a> 
+(Trait Analysis by Association, Evolution, and Linkage) is a software package used to evaluate genotype 
+and trait associations with the tools of population and quantitative genetics. TASSEL can handle datasets 
+commonly encountered in the plant community, e.g. replicated trials, inbred lines, and complex structured 
+pedigrees.</p>
+<h2 id="downloadinginstalling-tassel-3">Downloading/installing TASSEL 3</h2>
+<p>Verify your Java version to ensure that you're downloading the correct version of TASSEL (TASSEL 3 is 
+used with Java version 6, TASSEL 4 is used with Java version 7):</p>
+<pre><code>[galen@login001 ~]$ java -version
+java version "1.6.0_11"
+Java(TM) SE Runtime Environment (build 1.6.0_11-b03)
+Java HotSpot(TM) 64-Bit Server VM (build 11.0-b16, mixed mode)
+</code></pre>
+<p>Download the latest build of TASSEL using Git:</p>
+<pre><code>[galen@login001 ~]$ git --version
+git version 1.7.1
+
+[galen@login001 ~]$ git clone git://git.code.sf.net/p/tassel/tassel3-standalone
+Initialized empty Git repository in /home/galen/tassel/tassel3-standalone/.git/
+remote: Counting objects: 293, done.
+remote: Compressing objects: 100% (290/290), done.
+remote: Total 293 (delta 114), reused 0 (delta 0)
+Receiving objects: 100% (293/293), 42.95 MiB | 1.86 MiB/s, done.
+Resolving deltas: 100% (114/114), done.
+</code></pre>
+<h2 id="running-tassel-3-using-the-gui">Running TASSEL 3 (using the GUI)</h2>
+<p><code>-Xms</code> is used to set the lower bound for the total heap size, <code>-Xmx</code> is used to set the upper bound.</p>
+<p>An incorrectly sized Java heap can lead to OutOfMemoryError exceptions or to a reduction in the 
+performance of the Java application. If the Java heap is smaller than the memory requirements of 
+the application, OutOfMemoryError exceptions are generated because of Java heap exhaustion. If the 
+Java heap is slightly larger than the requirements of the application, garbage collection runs very 
+frequently and affects the performance of the application. Size your Java heap so that your application 
+runs with a minimum heap usage of 40%, and a maximum heap usage of 70%.</p>
+<p>Of course, you'll have to enable X11 tunneling to display the GUI.  See details presented here.</p>
+<pre><code>[galen@login001 ~]$ qsub -I -X -l select=1:ncpus=1:mem=11gb
+qsub (Warning): Interactive jobs will be treated as not rerunnable
+qsub: waiting for job 6360074.pbs01 to start
+qsub: job 6360074.pbs01 ready
+
+[galen@node0133 ~]$ export PATH=/home/galen/tassel3-standalone:$PATH
+[galen@node0133 ~]$ cd tassel3-standalone/
+[galen@node0133 tassel3-standalone]$ ./start_tassel.pl -Xms512m -Xmx10g
+</code></pre>
+<p><img alt="Tassel" src="{{site.baseurl}}/images/tassel.1.png" /></p>
+<h2 id="running-tassel-3-from-the-command-line">Running TASSEL 3 (from the command line)</h2>
+<p>Please review the user guide for running Tassel 3 from the command line.  It's available here:  <a href="http://www.maizegenetics.net/tassel/docs/TasselPipelineCLI.pdf">http://www.maizegenetics.net/tassel/docs/TasselPipelineCLI.pdf</a></p>
+<p>See note about heap size settings, above.</p>
+<pre><code>[galen@login001 ~]$ qsub -I -l select=1:ncpus=1:mem=11gb
+qsub (Warning): Interactive jobs will be treated as not rerunnable
+qsub: waiting for job 6360074.pbs01 to start
+qsub: job 6360074.pbs01 ready
+
+[galen@node0133 ~]$ export PATH=/home/galen/tassel3-standalone:$PATH
+[galen@node0133 ~]$ cd tassel3-standalone/
+[galen@node0133 tassel3-standalone]$ ./run_pipeline.pl -Xms512m -Xmx10g ./run_pipeline.pl -fork1 -h my_hapmap_file.txt -ld -ldd png -o my_output_file.png -runfork1
+</code></pre>
+<p>Below is a simple example of a TASSEL 3 PBS job script:</p>
+<p>{% highlight bash %}</p>
+<h1 id="binbash">!/bin/bash</h1>
+<h1 id="pbs-n-tas-test">PBS -N TAS-TEST</h1>
+<h1 id="pbs-l-select1ncpus1mem11gbwalltime120000">PBS -l select=1:ncpus=1:mem=11gb,walltime=12:00:00</h1>
+<h1 id="pbs-j-oe">PBS -j oe</h1>
+<p>cd $PBS_O_WORKDIR
+export PATH=/home/galen/tassel3-standalone:$PATH</p>
+<p>./run_pipeline.pl -Xms512m -Xmx10g ./run_pipeline.pl -fork1 \
+-h my_hapmap_file.txt -ld -ldd png -o my_output_file.png -runfork1
+{% endhighlight %}</p>
+<h4 id="updating-tassel-3">Updating TASSEL 3</h4>
+<p>Updating your TASSEL 3 installation to the latest version is easy.  Simply enter the TASSEL 3 
+installation directory and run <code>git pull</code></p>
+<pre><code>[galen@login001 ~]$ cd tassel3-standalone
+[galen@login001 tassel3-standalone]$ git pull
+</code></pre>
+<h2 id="downloadinginstalling-tassel-4">Downloading/installing TASSEL 4</h2>
+<p>Verify your Java version to ensure that you're downloading the correct version of TASSEL 
+(TASSEL 3 is used with Java version 6, TASSEL 4 is used with Java version 7). To install your own 
+build (version) of Java, see the instructions presented here.</p>
+<pre><code>[galen@login001 ~]$ java -version
+java version "1.7.0_45"
+Java(TM) SE Runtime Environment (build 1.7.0_45-b18)
+Java HotSpot(TM) 64-Bit Server VM (build 24.45-b08, mixed mode)
+</code></pre>
+<p>Download the latest build of TASSEL using Git:</p>
+<pre><code>[galen@login001 ~]$ git --version
+git version 1.7.1
+
+[galen@login001 ~]$ git clone git://git.code.sf.net/p/tassel/tassel4-standalone
+Initialized empty Git repository in /home/galen/tassel4-standalone/.git/
+remote: Counting objects: 361, done.
+remote: Compressing objects: 100% (358/358), done.
+remote: Total 361 (delta 176), reused 0 (delta 0)
+Receiving objects: 100% (361/361), 48.07 MiB | 3.83 MiB/s, done.
+Resolving deltas: 100% (176/176), done.
+</code></pre>
+<h2 id="running-tassel-4-using-the-gui">Running TASSEL 4 (using the GUI)</h2>
+<p><code>-Xms</code> is used to set the lower bound for the total heap size, <code>-Xmx</code> is used to set the upper bound.</p>
+<p>An incorrectly sized Java heap can lead to OutOfMemoryError exceptions or to a reduction in the 
+performance of the Java application. If the Java heap is smaller than the memory requirements of the 
+application, OutOfMemoryError exceptions are generated because of Java heap exhaustion. If the Java 
+heap is slightly larger than the requirements of the application, garbage collection runs very frequently 
+and affects the performance of the application. Size your Java heap so that your application runs with a 
+minimum heap usage of 40%, and a maximum heap usage of 70%.</p>
+<p>Of course, you'll have to enable X11 tunneling to display the GUI.  See details presented here.</p>
+<pre><code>[galen@login001 ~]$ qsub -I -X -l select=1:ncpus=1:mem=11gb
+qsub (Warning): Interactive jobs will be treated as not rerunnable
+qsub: waiting for job 6360074.pbs01 to start
+qsub: job 6360074.pbs01 ready
+
+[galen@node0133 ~]$ export PATH=/home/galen/tassel4-standalone:$PATH
+[galen@node0133 ~]$ cd tassel4-standalone/
+[galen@node0133 tassel4-standalone]$ ./start_tassel.pl -Xms512m -Xmx10g
+</code></pre>
+<h2 id="running-tassel-4-from-the-command-line">Running TASSEL 4 (from the command line)</h2>
+<p>Please review the user guide for running Tassel 4 from the command line.<br />
+It's available here:  <a href="http://www.maizegenetics.net/tassel/docs/TasselPipelineCLI.pdf">http://www.maizegenetics.net/tassel/docs/TasselPipelineCLI.pdf</a></p>
+<p>See note about heap size settings, above.</p>
+<pre><code>[galen@login001 ~]$ qsub -I -l select=1:ncpus=1:mem=11gb
+qsub (Warning): Interactive jobs will be treated as not rerunnable
+qsub: waiting for job 6360074.pbs01 to start
+qsub: job 6360074.pbs01 ready
+
+[galen@node0133 ~]$ export PATH=/home/galen/tassel4-standalone:$PATH
+[galen@node0133 ~]$ cd tassel4-standalone/
+[galen@node0133 tassel4-standalone]$ ./run_pipeline.pl -Xms512m -Xmx10g ./run_pipeline.pl -fork1 -h my_hapmap_file.txt -ld -ldd png -o my_output_file.png -runfork1
+</code></pre>
+<p>Below is a simple example of a TASSEL 4 PBS job script:</p>
+<p>{% highlight bash %}</p>
+<h1 id="binbash_1">!/bin/bash</h1>
+<h1 id="pbs-n-tas-test_1">PBS -N TAS-TEST</h1>
+<h1 id="pbs-l-select1ncpus1mem11gbwalltime120000_1">PBS -l select=1:ncpus=1:mem=11gb,walltime=12:00:00</h1>
+<h1 id="pbs-j-oe_1">PBS -j oe</h1>
+<p>cd $PBS_O_WORKDIR
+export PATH=/home/galen/tassel4-standalone:$PATH</p>
+<p>./run_pipeline.pl -Xms512m -Xmx10g ./run_pipeline.pl -fork1 \
+-h my_hapmap_file.txt -ld -ldd png -o my_output_file.png -runfork1
+{% endhighlight %}</p>
+<h2 id="updating-tassel-4">Updating TASSEL 4</h2>
+<p>Updating your TASSEL 4 installation to the latest version is easy.  Simply enter the TASSEL 4 
+installation directory and run <code>git pull</code></p>
+<pre><code>[galen@login001 ~]$ cd tassel4-standalone
+[galen@login001 tassel4-standalone]$ git pull
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

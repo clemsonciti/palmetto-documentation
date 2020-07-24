@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Gromacs - Palmetto Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Gromacs";
+    var mkdocs_page_input_path = "software/packages/gromacs.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Palmetto Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../news/">News</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../owner/">Owner</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Basic</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../basic/login/">Login</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../basic/jupyter/">JupyterLab</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../software/">Software on Palmetto</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../spack/">User Software Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../programming/">Software Development</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Training and Outreach</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../training/schedule/">Training Schedule</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../training/workshop/">Workshop Descriptions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../faq/common/">Common Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../faq/faq/">FAQ</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Palmetto Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Gromacs</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="gromacs">GROMACS</h2>
+<p>Various installations of GROMACS are available on the cluster.
+Different modules are provided for GPU-enabled and non-GPU versions
+of GROMACS:</p>
+<pre><code>$ module avail gromacs
+
+---------------------------------------------------------------- /software/modulefiles -----------------------------------------------------------------
+gromacs/4.5.4-sp               gromacs/4.6.5-sp-k20-ompi      gromacs/5.0.1-sp-k20-g481-o181 gromacs/5.0.5-nogpu
+gromacs/4.6.5-dp-ompi          gromacs/5.0.1-dp-g481-o181     gromacs/5.0.5-gpu
+
+------------------------------------------------------------ /usr/share/Modules/modulefiles ------------------------------------------------------------
+gromacs/4.5.4-sp
+</code></pre>
+
+<h3 id="running-gromacs-without-gpu">Running GROMACS without GPU</h3>
+<p>To use the non-GPU version of GROMACS,
+here is an example interactive job:</p>
+<pre><code>$ qsub -I -l select=2:ncpus=20:phase=10:mem=100gb:mpiprocs=20,walltime=1:
+00:00
+$ module load gromacs/5.0.5-nogpu
+$ mpirun mdrun_mpi ...
+</code></pre>
+
+<p>where <code>...</code> specifies the input files and options of Gromacs.</p>
+<p>And an example of a PBS batch script for submitting a GROMACS batch script:</p>
+<pre><code>#!/bin/bash
+#PBS -l select=2:ncpus=20:phase=10:mem=100gb:mpiprocs=20
+#PBS -l walltime=1:00:00
+
+module load gromacs/5.0.5-nogpu
+cd $PBS_O_WORKDIR
+
+export OMP_NUM_THREADS=1
+
+mpirun mdrun_mpi ...
+</code></pre>
+
+<h3 id="running-gpu-enabled-gromacs">Running GPU-enabled GROMACS</h3>
+<p>For the GPU version</p>
+<pre><code>#!/bin/bash
+#PBS -l select=2:ncpus=20:ngpus=2:phase=10:mem=100gb:mpiprocs=2
+#PBS -l walltime=1:00:00
+
+module load gromacs/5.0.5-gpu
+cd $PBS_O_WORKDIR
+
+export OMP_NUM_THREADS=10
+
+mpirun mdrun_mpi ...
+</code></pre>
+
+<p>Note that the number of MPI processes per chunk is set as 2 when using the GPU.
+Normally, the number of MPI processes is the same as the number of CPU cores requested.
+But because there are only 2 GPUs per node, we launch only two MPI processes.
+In the above example, each MPI process can also use 10 CPU cores
+in addition to a GPU (this is enabled by setting the variable <code>OMP_NUM_THREADS</code> to 10).</p>
+<h3 id="gpu-enabled-gromacs-using-singularity-and-ngc">GPU-enabled GROMACS using Singularity and NGC</h3>
+<p>The NVIDIA GPU cloud provides images for GPU-enabled GROMACS
+that can be downloaded and run using Singularity on the Palmetto cluster.
+This is the recommended way to run GROMACS on Palmetto.</p>
+<h3 id="downloading-the-image">Downloading the image</h3>
+<p>Before downloading images from NGC,
+you will need to obtain an NVIDIA NGC API key,
+instructions for which can be found
+<a href="https://docs.nvidia.com/ngc/ngc-getting-started-guide/index.html">here</a>.</p>
+<p>Start an interactive job,
+and create a directory for storing Singularity images
+(if you don't have one already):</p>
+<pre><code>$ qsub -I -l select=1:ngpus=2:ncpus=16:mem=20gb:gpu_model=p100,walltime=5:00:00
+$ mkdir -p singularity-images
+</code></pre>
+
+<p>Set the required environment variables (you will need the API key for this step):</p>
+<pre><code>$ export SINGULARITY_DOCKER_USERNAME='$oauthtoken'
+$ export SINGULARITY_DOCKER_PASSWORD=&lt;NVIDA NGC API key&gt;
+</code></pre>
+
+<p>Navigate to the <code>singularity-images</code> directory and pull
+the GROMACS image (choose from the images listed
+<a href="https://ngc.nvidia.com/registry/hpc-gromacs">here</a>:</p>
+<pre><code>$ cd ~/singularity-images
+$ module load singularity
+$ singularity pull docker://nvcr.io/hpc/gromacs:2016.4
+</code></pre>
+
+<p>The above should take a few seconds to complete.</p>
+<h3 id="running-gromacs-interactively">Running GROMACS interactively</h3>
+<p>As an example,
+we'll consider running the GROMACS ADH benchmark.</p>
+<p>First, request an interactive job:</p>
+<pre><code>$ qsub -I -l select=1:ngpus=2:ncpus=16:mpiprocs=16:mem=120gb:gpu_model=p100,walltime=5:00:00
+</code></pre>
+
+<p>Load the singularity module:</p>
+<pre><code>$ module load singularity
+</code></pre>
+
+<p>Prepare the input and output directories:</p>
+<p>In this case,
+we use <code>/scratch3/$USER/gromacs_ADH</code>
+as both the input directory (containing the data)
+and the output directory (where output will be stored).</p>
+<p>Remember that <code>$TMPDIR</code> is cleaned up after the job completes,
+so it's important to move any data out of <code>$TMPDIR</code> after GROMACS completes running.
+Also, in this case, we are downloading the input data from the web,
+but if your input is stored in the <code>/home</code>/, <code>/scratch</code> or some other directory,
+then you can copy it to <code>$TMPDIR</code>:</p>
+<pre><code>$ mkdir -p /scratch3/$USER/gromacs_ADH_benchmark
+$ cd /scratch3/$USER/gromacs_ADH_benchmark
+$ wget ftp://ftp.gromacs.org/pub/benchmarks/ADH_bench_systems.tar.gz
+$ tar -xvf ADH_bench_systems.tar.gz
+</code></pre>
+
+<p>Use <code>singularity shell</code> to interactively run a container
+from the downloaded GROMACS image.
+The <code>-B</code> switch is used to "bind" directories on the host (Palmetto compute node)
+to directories in the container.
+The different bindings used are:</p>
+<ul>
+<li><code>/scratch3/$USER/gromacs_ADH_benchmark</code> is bound to <code>/input</code></li>
+<li><code>/scratch3/$USER/gromacs_ADH_benchmark</code> is bound to <code>/output</code></li>
+<li><code>$TMPDIR</code> is bound to <code>/work</code></li>
+</ul>
+<pre><code>$ singularity shell --nv \
+    -B /scratch3/$USER/gromacs_ADH_benchmark:/input \
+    -B /scratch3/$USER/gromacs_ADH_benchmark:/output \
+    -B $TMPDIR:/work \
+    --pwd /work \
+    ~/singularity-images/gromacs-2016.4.simg \
+</code></pre>
+
+<p>Running the benchmark:</p>
+<pre><code>$ source /opt/gromacs/install/2016.4/bin/GMXRC
+$ gmx_mpi grompp -f /input/adh_cubic/pme_verlet.mdp -c /input/adh_cubic/conf.gro -p /input/adh_cubic/topol.top 
+$ export OMP_NUM_THREADS=8
+$ mpirun -np 2 gmx_mpi mdrun -g adh_cubic.log -pin on -resethway -v -noconfout -nsteps 10000 -s topol.tpr -ntomp $OMP_NUM_THREADS
+</code></pre>
+
+<p>After the last command above completes,
+the <code>.edr</code> and <code>.log</code> files produced by GROMACS should be visible.
+Typically, the next step is to copy these results to the 
+output directory:</p>
+<pre><code>$ cp *.log *.edr /output
+$ exit
+</code></pre>
+
+<p>Upon exiting the container,
+the <code>.log</code> and <code>.edr</code> files will be found in the output directory,
+<code>/scratch3/$USER/gromacs_ADH_benchmark</code>.</p>
+<h3 id="running-gromacs-in-batch-mode">Running GROMACS in batch mode</h3>
+<p>The same benchmark can be run in batch mode by
+encapsulating the commands in a script <code>run_adh.sh</code>,
+and running it non-interactively using <code>singularity exec</code>.</p>
+<pre><code># run_adh.sh
+
+source /opt/gromacs/install/2016.4/bin/GMXRC
+gmx_mpi grompp -f /input/adh_cubic/pme_verlet.mdp -c /input/adh_cubic/conf.gro -p /input/adh_cubic/topol.top 
+export OMP_NUM_THREADS=8
+mpirun -np 2 gmx_mpi mdrun -g adh_cubic.log -pin on -resethway -v -noconfout -nsteps 10000 -s topol.tpr -ntomp $OMP_NUM_THREADS
+cp *.log *.edr /output
+</code></pre>
+
+<p>The PBS batch script for submitting the above
+(assuming that the <code>/scratch3/$USER/gromacs_ADH_benchmark</code> directory already contains the input files):</p>
+<pre><code>#PBS -N adh_cubic
+#PBS -l select=1:ngpus=2:ncpus=16:mem=20gb:gpu_model=p100,walltime=5:00:00
+
+module load singularity
+
+cd $PBS_O_WORKDIR
+
+cp run_adh.sh $TMPDIR
+
+singularity exec --nv \
+    -B /scratch3/$USER/gromacs_ADH_benchmark:/input \
+    -B /scratch3/$USER/gromacs_ADH_benchmark:/output \
+    -B $TMPDIR:/work \
+    --pwd /work \
+    ~/singularity-images/gromacs-2016.4.simg bash run_adh.sh
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

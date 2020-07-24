@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Hoomd - Palmetto Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Hoomd";
+    var mkdocs_page_input_path = "software/packages/hoomd.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Palmetto Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../news/">News</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../owner/">Owner</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Basic</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../basic/login/">Login</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../basic/jupyter/">JupyterLab</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../software/">Software on Palmetto</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../spack/">User Software Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../programming/">Software Development</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Training and Outreach</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../training/schedule/">Training Schedule</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../training/workshop/">Workshop Descriptions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../faq/common/">Common Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../faq/faq/">FAQ</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Palmetto Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Hoomd</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="hoomd">HOOMD</h2>
+<h3 id="run-hoomd">Run HOOMD</h3>
+<p>Now the HOOMD-BLUE v2.3.5 has been installed. Create a simple python file “test_hoomd.py” to run HOOMD </p>
+<pre><code>import hoomd
+import hoomd.md
+hoomd.context.initialize(&quot;&quot;);
+hoomd.init.create_lattice(unitcell=hoomd.lattice.sc(a=2.0), n=5);
+nl = hoomd.md.nlist.cell();
+lj = hoomd.md.pair.lj(r_cut=2.5, nlist=nl);
+lj.pair_coeff.set('A', 'A', epsilon=1.0, sigma=1.0);
+hoomd.md.integrate.mode_standard(dt=0.005);
+all = hoomd.group.all();
+hoomd.md.integrate.langevin(group=all, kT=0.2, seed=42);hoomd.analyze.log(filename=&quot;log-output.log&quot;,
+                  quantities=['potential_energy', 'temperature'],
+                  period=100,
+                  overwrite=True);
+hoomd.dump.gsd(&quot;trajectory.gsd&quot;, period=2e3, group=all, overwrite=True);
+hoomd.run(1e4);
+</code></pre>
+
+<p>If you have logged out of the node, request an interactive session on a GPU node and add required modules:</p>
+<pre><code>$ qsub -I -l select=1:ncpus=16:mem=64gb:ngpus=2:gpu_model=p100:mpiprocs=16:interconnect=fdr,walltime=2:00:00
+$ module add anaconda3/5.1.0 gcc/5.4.0 cuda-toolkit/9.0.176
+</code></pre>
+
+<p>Run the script interactively:</p>
+<pre><code>$ python test_hoomd.py
+</code></pre>
+
+<p>Alternatively, you can setup a PBS job script to run HOOMD in batch mode. A sample is below for <em>Test_Hoomd.sh</em>:</p>
+<pre><code>#PBS -N HOOMD
+#PBS -l select=1:ncpus=16:mem=64gb:ngpus=2:gpu_model=p100:mpiprocs=16:interconnect=fdr,walltime=02:00:00
+#PBS -j oe
+
+module purge
+module add anaconda3/5.1.0 gcc/5.4.0 cuda-toolkit/9.0.176
+
+cd $PBS_O_WORKDIR
+python test_hoomd.py
+</code></pre>
+
+<p>Submit the job:</p>
+<pre><code>$ qsub Test_Hoomd.sh
+</code></pre>
+
+<p>This is it.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

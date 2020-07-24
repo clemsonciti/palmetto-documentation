@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Mrbayes - Palmetto Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Mrbayes";
+    var mkdocs_page_input_path = "software/packages/mrbayes.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Palmetto Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../news/">News</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../owner/">Owner</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Basic</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../basic/login/">Login</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../basic/jupyter/">JupyterLab</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../software/">Software on Palmetto</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../spack/">User Software Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../programming/">Software Development</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Training and Outreach</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../training/schedule/">Training Schedule</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../training/workshop/">Workshop Descriptions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../faq/common/">Common Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../faq/faq/">FAQ</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Palmetto Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Mrbayes</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="mrbayes">MrBayes</h2>
+<p><em>MrBayes</em>  is a program for Bayesian inference and model choice across a wide range of phylogenetic and evolutionary models. MrBayes uses Markov chain Monte Carlo (MCMC) methods to estimate the posterior distribution of model parameters.</p>
+<h3 id="installing-beagle-library">Installing BEAGLE Library</h3>
+<p><strong>BEAGLE</strong> library is supported to dramatic speedups for codon and amino acid models on compatible hardware (NVIDIA graphics cards);
+To install MrBayes in your <code>/home</code> directory on Palmetto, you'll need to begin by installing 
+the BEAGLE library.  Here are the steps, starting with checking-out the 
+source code using Subversion:</p>
+<pre><code>[galen@login001 ~]$ cd
+[galen@login001 ~]$ svn checkout http://beagle-lib.googlecode.com/svn/trunk/ beagle-setup
+[galen@login001 ~]$ cd beagle-setup
+[galen@login001 beagle-setup]$ ./autogen.sh
+[galen@login001 beagle-setup]$ ./configure --prefix=/home/galen/beagle-lib
+[galen@login001 beagle-setup]$ make install
+</code></pre>
+<p>Once installed, I also needed to add the location of these new libraries to my <code>LD_LIBRARY_PATH</code> 
+(this can be done in your <code>~/.bashrc</code> file, or in your PBS job script as I have done at the bottom 
+of this section):</p>
+<pre><code>[galen@login001 beagle-setup]$ export LD_LIBRARY_PATH=/home/galen/beagle-lib/lib:$LD_LIBRARY_PATH
+</code></pre>
+<p>Finally, verify that everything is setup properly:</p>
+<pre><code>[galen@login001 beagle-setup]$ make check
+</code></pre>
+<h3 id="installing-mrbayes">Installing MrBayes</h3>
+<p>You can build a parallel version of MrBayes using OpenMPI or MPICH2.  I used MPICH2 and I 
+included the BEAGLE libraries when compiling MrBayes, so those libraries will also be needed 
+whenever I run MrBayes.</p>
+<pre><code>[galen@login001 src]$ module add gcc/4.4 mpich2/1.4
+
+[galen@login001 ~]$ wget http://downloads.sourceforge.net/project/mrbayes/mrbayes/3.2.1/mrbayes-3.2.1.tar.gz
+[galen@login001 ~]$ tar -zxf mrbayes-3.2.1.tar.gz
+[galen@login001 ~]$ cd mrbayes_3.2.1/src
+[galen@login001 src]$ export PKG_CONFIG_PATH=/home/galen/beagle-lib/lib/pkgconfig:$PKG_CONFIG_PATH
+[galen@login001 src]$ autoconf
+[galen@login001 src]$ ./configure --enable-mpi=yes --with-beagle=/home/galen/beagle-lib
+[galen@login001 src]$ make
+</code></pre>
+<p>Here, the <code>mb</code> executable was created in my <code>/home/galen/mrbayes_3.2.1/src</code> directory.</p>
+<h3 id="running-mrbayes">Running MrBayes</h3>
+<p>When running MrBayes in parallel, you'll need to use 1 processor core for each Markov chain, 
+and the default number of chains is 4 (3 heated and 1 that's not heated).</p>
+<p>Below is an example MrBayes job that uses one of the example Nexus files included with my 
+installation package <code>/home/galen/mrbayes_3.2.1/examples/primates.nex</code>.</p>
+<p>My MrBayes input file (mb_input) contains these commands:</p>
+<pre><code>begin mrbayes;
+  set autoclose=yes nowarn=yes;
+  execute primates.nex;
+  lset nst=6 rates=gamma;
+  mcmc nruns=1 ngen=10000 samplefreq=10 file=primates.nex;
+  mcmc file=primates.nex2;
+  mcmc file=primates.nex3;
+end;
+</code></pre>
+<p>My PBS job script for running this job in parallel looks like this:</p>
+<pre><code>#!/bin/bash
+#PBS -N MrBayes
+#PBS -l select=1:ncpus=4:mpiprocs=4:mem=6gb:interconnect=1g,walltime=02:00:00
+#PBS -j oe
+
+source /etc/profile.d/modules.sh
+module purge
+module add gcc/4.4 mpich2/1.4
+
+export LD_LIBRARY_PATH=/home/galen/beagle-lib/lib:$LD_LIBRARY_PATH
+NCORES=`qstat -xf $PBS_JOBID | grep List.ncpus | sed 's/^.\{26\}//'`
+cd $PBS_O_WORKDIR
+
+mpiexec -n $NCORES /home/galen/mrbayes_3.2.1/src/mb mb_input &gt; mb.log
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

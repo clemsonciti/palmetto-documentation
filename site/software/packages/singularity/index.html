@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Singularity - Palmetto Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../../css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Singularity";
+    var mkdocs_page_input_path = "software/packages/singularity.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Palmetto Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../news/">News</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../owner/">Owner</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Basic</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../basic/login/">Login</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../basic/jupyter/">JupyterLab</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../software/">Software on Palmetto</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../spack/">User Software Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../programming/">Software Development</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Training and Outreach</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../training/schedule/">Training Schedule</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../training/workshop/">Workshop Descriptions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Misc</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../faq/common/">Common Issues</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../faq/faq/">FAQ</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Palmetto Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Singularity</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="singularity">Singularity</h2>
+<p><a href="https://www.sylabs.io/">Singularity</a>
+is a tool for creating and running
+<a href="https://en.wikipedia.org/wiki/Operating-system-level_virtualization">containers</a>
+on HPC systems,
+similar to <a href="https://www.docker.com/">Docker</a>.</p>
+<p>For further information on Singularity,
+and on downloading, building and running containers with Singularity,
+please refer to the <a href="https://www.sylabs.io/docs/">Singularity documentation</a>.
+This page provides information about singularity specific to the Palmetto cluster.</p>
+<h3 id="running-singularity">Running Singularity</h3>
+<p>Singularity is installed on all of the Palmetto compute nodes and the Palmetto LoginVMs, but it <strong>IS NOT</strong> present on the login.palmetto.clemson.edu node.</p>
+<p>To run singularity, you may simply run <code>singularity</code> or more specifically <code>/bin/singularity</code>.</p>
+<p>e.g.</p>
+<pre><code>$ singularity --version
+singularity version 3.5.3-1.el7
+</code></pre>
+
+<h3 id="an-important-change-for-existing-singularity-users">An important change for existing singularity users</h3>
+<p>Formerly, Palmetto administrators had installed singularity as a "software module" on Palmetto, but that is no longer the case. If your job scripts have any statements that use the singularity module, then those statements will need to be completely removed; otherwise, your job script may error.</p>
+<p>Remove any statements from your job scripts that resemble the following lines:</p>
+<pre><code>module &lt;some_command&gt; singularity
+</code></pre>
+
+<h3 id="where-to-download-containers">Where to download containers</h3>
+<p>Containers can be downloaded from DockerHub</p>
+<ul>
+<li>
+<p><a href="https://hub.docker.com/">DockerHub</a>
+contains containers for various software packages,
+and Singularity is
+<a href="https://sylabs.io/guides/3.5/user-guide/singularity_and_docker.html">compatible with Docker images</a>.</p>
+</li>
+<li>
+<p><a href="https://singularity-hub.org/">SingularityHub</a></p>
+</li>
+<li>
+<p>The <a href="https://ngc.nvidia.com/signin/email">NVIDIA GPU Cloud</a> for GPU-optimized images.</p>
+</li>
+<li>
+<p>Many individual projects contain specific instructions for installation via
+Docker and/or Singularity, and may host pre-built images in other locations.</p>
+</li>
+</ul>
+<h3 id="example-running-openfoam-using-singularity">Example: Running OpenFOAM using Singularity</h3>
+<p>As an example, we consider installing and running the OpenFOAM CFD solver using Singularity.
+OpenFOAM can be quite difficult to install manually,
+but singularity makes it very easy.
+This example shows how to use singularity interactively,
+but singularity containers can be run in batch jobs as well.</p>
+<p>Start by requesting an interactive job.</p>
+<p>NOTE: Singularity can only be run on the compute nodes and Palmetto Login VMs:</p>
+<pre><code>$ qsub -I -l select=1:ngpus=2:ncpus=16:mpiprocs=16:mem=120gb,walltime=5:00:00
+</code></pre>
+
+<p>We recommend that all users store built singularity images
+in their <code>/home</code> directories.
+Singularity images can be quite large,
+so be sure to delete unused or old images:</p>
+<pre><code>$ mkdir ~/singularity-images
+$ cd ~/singularity-images
+</code></pre>
+
+<p>Next, we download the singularity image for OpenFOAM from DockerHub.
+This takes a few seconds to complete:</p>
+<pre><code>$ singularity pull docker://openfoam/openfoam6-paraview54
+</code></pre>
+
+<p>Once the image is downloaded,
+we are ready to run OpenFOAM.
+We use <code>singularity shell</code> to start a container,
+and run a shell in the container.</p>
+<p>The <code>-B</code> option is used to "bind" the <code>/scratch2/$USER</code> directory
+to a directory named <code>/scratch</code> in the container.</p>
+<p>We also the <code>--pwd</code> option to specify the working directory in the running container
+(in this case <code>/scratch</code>).
+This is <strong>always</strong> recommended.</p>
+<p>Typically, the working directory may be the $TMPDIR directory or
+one of the scratch directories.</p>
+<pre><code>$ singularity shell -B /scratch2/atrikut:/scratch --pwd /scratch openfoam6-paraview54.simg
+</code></pre>
+
+<p>Before running OpenFOAM commands, we need to source a few environment variables
+(this step is specific to OpenFOAM):</p>
+<pre><code>$ source /opt/openfoam6/etc/bashrc
+</code></pre>
+
+<p>Now, we are ready to run a simple example using OpenFOAM:</p>
+<pre><code>$ cp -r $FOAM_TUTORIALS/incompressible/simpleFoam/pitzDaily .
+$ cd pitzDaily
+$ blockMesh
+$ simpleFoam
+</code></pre>
+
+<p>The simulation takes a few seconds to complete,
+and should finish with the following output:</p>
+<pre><code>smoothSolver:  Solving for Ux, Initial residual = 0.00012056, Final residual = 7.8056e-06, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.000959834, Final residual = 6.43909e-05, No Iterations 6
+GAMG:  Solving for p, Initial residual = 0.00191644, Final residual = 0.000161493, No Iterations 3
+time step continuity errors : sum local = 0.00681813, global = -0.000731564, cumulative = 0.941842
+smoothSolver:  Solving for epsilon, Initial residual = 0.000137225, Final residual = 8.98917e-06, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.000215144, Final residual = 1.30281e-05, No Iterations 4
+ExecutionTime = 10.77 s  ClockTime = 11 s
+
+
+SIMPLE solution converged in 288 iterations
+
+streamLine streamlines write:
+    seeded 10 particles
+    Tracks:10
+    Total samples:11980
+    Writing data to &quot;/scratch/pitzDaily/postProcessing/sets/streamlines/288&quot;
+End
+</code></pre>
+
+<p>We are now ready to exit the container:</p>
+<pre><code>$ exit
+</code></pre>
+
+<p>Because the directory <code>/scratch</code> was bound to <code>/scratch2/$USER</code>, the simulation output is available in
+the directory <code>/scratch2/$USER/pitzDaily/postProcessing/</code>:</p>
+<pre><code>$ ls /scratch2/$USER/pitzDaily/postProcessing/
+sets
+</code></pre>
+
+<h3 id="gpu-enabled-software-using-singularity-containers-nvidia-gpu-cloud">GPU-enabled software using Singularity containers (NVIDIA GPU Cloud)</h3>
+<p>Palmetto also supports use of images provided by the <a href="https://www.nvidia.com/en-us/gpu-cloud/">NVIDIA GPU Cloud (NGC)</a>.</p>
+<p>The provides GPU-accelerated HPC and deep learning containers for scientific computing.
+NVIDIA tests HPC container compatibility with the Singularity runtime through a rigorous QA process.</p>
+<h3 id="pulling-ngc-images">Pulling NGC images</h3>
+<p>Singularity images may be pulled directly from the Palmetto GPU compute nodes,
+an interactive job is most convenient for this.
+Singularity uses multiple CPU cores when building the image
+and so it is recommended that a minimum of 4 CPU cores are reserved.
+For instance to reserve 4 CPU cores, 2 NVIDIA Pascal GPUs, for 20 minutes the following could be used:</p>
+<pre><code>$ qsub -I -lselect=1:ncpus=4:mem=2gb:ngpus=2:gpu_model=p100,walltime=00:20:00
+</code></pre>
+
+<p>Wait for the interactive job to give you control over the shell.</p>
+<p>Before pulling an NGC image, authentication credentials must be set.
+This is most easily accomplished by setting the following variables in the build environment.</p>
+<pre><code>$ export SINGULARITY_DOCKER_USERNAME='$oauthtoken'
+$ export SINGULARITY_DOCKER_PASSWORD=&lt;NVIDIA NGC API key&gt;
+</code></pre>
+
+<p>More information describing how to obtain and use your NVIDIA NGC API key can be found
+<a href="https://docs.nvidia.com/ngc/ngc-getting-started-guide/index.html">here</a>.</p>
+<p>Once credentials are set in the environment,
+we’re ready to pull and convert the NGC image to a local Singularity image file.
+The general form of this command for NGC HPC images is:</p>
+<pre><code>$ singularity build &lt;local_image&gt; docker://nvcr.io/&lt;registry&gt;/&lt;app:tag&gt;
+</code></pre>
+
+<p>This singularity build command will download the <code>app:tag</code> NGC Docker image,
+convert it to Singularity format,
+and save it to the local file named local_image.</p>
+<p>For example to pull the namd NGC container tagged with version 2.12-171025
+to a local file named <code>namd.simg</code> we can run:</p>
+<pre><code>$ singularity build ~/namd.simg docker://nvcr.io/hpc/namd:2.12-171025
+</code></pre>
+
+<p>After this command has finished we'll have a Singularity image file, <code>namd.simg</code>:</p>
+<h3 id="running-ngc-containers">Running NGC containers</h3>
+<p>Running NGC containers on Palmetto presents few differences from the run instructions provided on NGC for each application.
+Application-specific information may vary so it is recommended that you follow the
+container specific documentation before running with Singularity.
+If the container documentation does not include Singularity information,
+then the container has not yet been tested under Singularity.</p>
+<p>As all NGC containers are optimized for NVIDIA GPU acceleration we will always want to add the <code>--nv</code> flag
+to enable NVIDIA GPU support  within the container.</p>
+<p>The Singularity command below represents the standard form of the Singularity command used on the Palmetto cluster.
+It will mount the present working directory on the host to <code>/host_pwd</code> in the container process and
+set the present working directory of the container process to <code>/host_pwd</code>
+This means that when our process starts it will be effectively running in the host directory
+the singularity command was launched from.</p>
+<pre><code>$ singularity exec --nv -B $(pwd):/host_pwd --pwd /host_pwd &lt;image.simg&gt; &lt;cmd&gt;
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
