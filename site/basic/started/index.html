@@ -8,24 +8,24 @@
   
   
   
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Basic - Palmetto Documentation</title>
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Getting Started - Palmetto Documentation</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  <link href="../css/extra.css" rel="stylesheet" />
+  <link href="../../css/extra.css" rel="stylesheet" />
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Basic";
-    var mkdocs_page_input_path = "basic.md";
+    var mkdocs_page_name = "Getting Started";
+    var mkdocs_page_input_path = "basic/started.md";
     var mkdocs_page_url = null;
   </script>
   
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
@@ -39,9 +39,9 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Palmetto Documentation</a>
+        <a href="../.." class="icon icon-home"> Palmetto Documentation</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -49,53 +49,81 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../news/">News</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../news/">News</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../owner/">Owner</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../owner/">Owner</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Basic</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="new/">New Account Request</a>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../new/">New Account Request</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="login/">Login</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../login/">Login</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="started/">Getting Started</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Getting Started</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#storing-files-and-folders">Storing files and folders</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#home-and-scratch-directories">Home and scratch directories</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#temporary-reservations">Temporary reservations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#purchased-storage">Purchased storage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#moving-data-in-and-out-of-the-cluster">Moving data in and out of the cluster</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#small-files-kilobytes-or-a-few-megabytes">Small files (kilobytes or a few megabytes)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#transfering-larger-files-more-than-a-few-megabytes">Transfering larger files (more than a few megabytes)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#checking-available-compute-hardware">Checking available compute hardware</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#checking-and-using-available-software">Checking and using available software</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#start-an-interactive-job">Start an interactive job</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#submit-a-batch-job">Submit a batch job</a>
+    </li>
+    </ul>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="jupyter/">JupyterLab</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../jupyter/">JupyterLab</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Software</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../software/software/">Software on Palmetto</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../software/software/">Software on Palmetto</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../software/spack/">User Software Installation</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../software/spack/">User Software Installation</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../software/programming/">Software Development</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../software/programming/">Software Development</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Training and Outreach</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../training/schedule/">Training Schedule</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../training/schedule/">Training Schedule</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../training/workshop/">Workshop Descriptions</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../training/workshop/">Workshop Descriptions</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Misc</span></p>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../faq/common/">Common Issues</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/common/">Common Issues</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../faq/faq/">FAQ</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/faq/">FAQ</a>
                     </li>
                 </ul>
       </div>
@@ -107,7 +135,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Palmetto Documentation</a>
+        <a href="../..">Palmetto Documentation</a>
       </nav>
 
       
@@ -115,11 +143,15 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
+    <li><a href="../..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Basic &raquo;</li>
+        
+      
     
-    <li>Basic</li>
+    <li>Getting Started</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -130,134 +162,7 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="logging-in">Logging in</h2>
-<p>Any user with a Palmetto Cluster account can log-in using
-<a href="https://en.wikipedia.org/wiki/Comparison_of_SSH_clients">SSH (Secure Shell)</a>.
-Mac OS X and Linux systems come with an SSH client installed,
-while Windows users will need to download one.</p>
-<h3 id="two-factor-authentication-2fa">Two-Factor Authentication (2FA)</h3>
-<p>All connections to Palmetto require 2FA. If you are not enrolled in 2FA yet,
-you may enroll using the link <a href="https://2fa.clemson.edu/">https://2fa.clemson.edu/</a>.
-2FA comes with three options for registerd devices (smart phone or tablet):</p>
-<pre><code>Using keyboard-interactive authentication.
-Duo two-factor login for $user
-
-Enter a passcode or select one of the following options:
-
- 1. Duo Push to XXX-XXX-XXXX
- 2. Phone call to XXX-XXX-XXXX
- 3. SMS passcodes to XXX-XXX-XXXX
-
-Passcode or option (1-3):
-</code></pre>
-
-<ul>
-<li>Option 1: response to Duo Push to your device by clicking <strong>Approve</strong></li>
-<li>Option 2: listen to the automatic call from system and select any key on your device.</li>
-<li>Option 3: You will receive 10 different passcodes sent to your device. Enter any of the passcode to the command prompt.</li>
-<li>Option 4: If user connecting with DUO token device purchased from CCIT, use the token generated passcode</li>
-</ul>
-<pre><code>Passcode or option (1-3): 1234567
-</code></pre>
-
-<p>More information can be found at <a href="https://ccit.clemson.edu/support/current-students/two-factor-authentication-2fa/">here</a></p>
-<h3 id="mac-os-x-and-linux-users">Mac OS X and Linux users</h3>
-<p>Mac OS X or Linux users may open a Terminal, and
-type in the following command:</p>
-<pre><code>$ ssh username@login.palmetto.clemson.edu 
-</code></pre>
-
-<p>where <code>username</code> is your Clemson user ID.
-You will be prompted for both your password and DUO authentication.</p>
-<h3 id="windows">Windows</h3>
-<p>MobaXterm is the recommended SSH client for Windows and can be downloaded
-<a href="http://mobaxterm.mobatek.net/download.html">here</a>.
-This software is recommended because it is free and comes with:</p>
-<ul>
-<li>
-<p>A built-in file transfer client,
-which allows you to exchange files and folders
-between your own computer and Palmetto</p>
-</li>
-<li>
-<p>An X11 server which allows you to run graphical
-programs on Palmetto cluster</p>
-</li>
-<li>
-<p>A graphical port-forwarding interface
-to support easy access to web-based programs launched inside Palmetto</p>
-</li>
-</ul>
-<p>After downloading and installing MobaXterm,
-users can log-in by following these steps:</p>
-<ol>
-<li>
-<p>Launch the MobaXterm program</p>
-<p><img src="{{site.baseurl}}/images/mobaxterm_01.png" style="width:1000px"></p>
-</li>
-<li>
-<p>On the top-left corner of MobaXterm, click the <strong>Session</strong> button. Select
-    the SSH setting and confirm that the following settings are set:</p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Remote host</td>
-<td><code>login.palmetto.clemson.edu</code></td>
-</tr>
-<tr>
-<td>Port</td>
-<td>22</td>
-</tr>
-<tr>
-<td>X11-Forwarding</td>
-<td>enabled</td>
-</tr>
-<tr>
-<td>Compression</td>
-<td>enabled</td>
-</tr>
-<tr>
-<td>Remote environment</td>
-<td>Interactive shell</td>
-</tr>
-<tr>
-<td>SSH-browser type</td>
-<td><strong>SCP (enhanced speed)</strong></td>
-</tr>
-</tbody>
-</table>
-<p><img src="{{site.baseurl}}/images/mobaxterm_02.png" style="width:1000px"></p>
-</li>
-<li>
-<p>Click <strong>OK</strong> and a new session window will be opened, where you will be
-    prompted for your Palmetto password and the DUO authentication.</p>
-<p><img src="{{site.baseurl}}/images/mobaxterm_03.png" style="width:1000px"></p>
-</li>
-<li>
-<p>After being authenticated, you will login to the <strong>login001</strong> node.</p>
-<p><img src="{{site.baseurl}}/images/mobaxterm_04.png" style="width:1000px"></p>
-<p>All settings for this session are saved, and for future logins, you
-can select this session from the <strong>Recent sessions</strong> form of the main MobaXterm
-window as well as the <strong>Saved sessions</strong> tab of the side window. The side
-window can be displayed or hidden by clicking on the blue double-arrow sign
-on the top left of MobaXterm.</p>
-<p><img src="{{site.baseurl}}/images/mobaxterm_05.png" style="width:1000px"></p>
-<p><img src="{{site.baseurl}}/images/mobaxterm_06.png" style="width:1000px"></p>
-<p>MobaXterm also comes with a built-in file browser and transfer GUI
-(SSH-browser). This GUI is accessible via the <strong>SCP</strong> tab of the side
-window. Using the Upload (green arrow pointing up) and
-and Download (blue arrow pointing down) buttons at the top of the SCP tab,
-you can easily transfer files between Palmetto and your local computer.</p>
-<p><img src="{{site.baseurl}}/images/mobaxterm_07.png" style="width:1000px"></p>
-</li>
-</ol>
-<h2 id="basic-tasks">Basic tasks</h2>
+                <h2 id="basic-tasks">Basic tasks</h2>
 <h3 id="storing-files-and-folders">Storing files and folders</h3>
 <h4 id="home-and-scratch-directories">Home and scratch directories</h4>
 <p>Various filesystems are available for users to store data.
@@ -994,44 +899,19 @@ we see that each user can have a maximum of <strong>5</strong> running jobs in t
 <p>A list of example PBS scripts for submitting
 jobs to the Palmetto cluster can be found
 <a href="https://github.com/clemsonciti/palmetto-examples">here</a>.</p>
-<h2 id="common-problemsissues">Common problems/issues</h2>
-<h3 id="program-crashes-on-login-node-with-message-killed">Program crashes on login node with message <code>Killed</code></h3>
-<p>When running commands or editing files on the login node, users may
-notice that their processes end abruptly with the error message <code>Killed</code>.
-Processes with names such as <code>a.out</code>, <code>matlab</code>, etc.,
-are automatically killed on the login node because they may consume
-excessive computational resources. Unfortunately, this also means that
-benign processes, such as editing a file with the word <code>matlab</code> as part
-of its name could also be killed.</p>
-<p><strong>Solution:</strong> Request an interactive session on a compute node (<code>qsub -I</code>),
-and then run the application/command.</p>
-<h3 id="home-or-scratch-directories-are-sluggish-or-unresponsive">Home or scratch directories are sluggish or unresponsive</h3>
-<p>The <code>/home</code> and <code>/scratch</code> directories can become slow/unresponsive
-when a user (or several users) read/write large amounts of data to
-these directories. When this happens, all users are affected as these
-filesystems are shared by all nodes of the cluster.</p>
-<p>To avoid this issue, keep in mind the following:</p>
-<ol>
-<li>
-<p><strong>Never</strong> use the <code>/home</code> directory as the working directory for
-jobs that read/write data. If too many jobs read/write data to the <code>/home</code>
-directory, it can render the cluster unusable by all users.
-Copy any input data to one of the <code>/scratch</code> directories and use
-that <code>/scratch</code> directory as the working directory for jobs.
-Periodically move important data back to the <code>/home</code> directory.</p>
-</li>
-<li>
-<p>Try to use <code>/local_scratch</code> whenever possible. Unlike <code>/home</code>
-or the <code>/scratch</code> directories, which are shared by all nodes, each
-node has its own <code>/local_scratch</code> directory. It is much faster to read/write
-data to <code>/local_scratch</code>, and doing so will not affect other users.
-(see example [here])(https://www.palmetto.clemson.edu/palmetto/userguide_howto_choose_right_filesystem.html).</p>
-</li>
-</ol>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../jupyter/" class="btn btn-neutral float-right" title="JupyterLab">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../login/" class="btn btn-neutral" title="Login"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -1055,12 +935,16 @@ data to <code>/local_scratch</code>, and doing so will not affect other users.
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../login/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../jupyter/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
     <script defer>
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
