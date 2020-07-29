@@ -18,8 +18,8 @@ nav:
     - Training Schedule: training/schedule.md 
     - Workshop Descriptions: training/workshop.md
   - Misc: 
-    - Common Issues: faq/common.md
-    - FAQ: faq/faq.md
+    - FAQ/Common Issues: faq/common.md
+    - Facilities Document: faq/fac.md
 
 theme: readthedocs
 
