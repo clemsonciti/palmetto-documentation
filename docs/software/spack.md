@@ -55,7 +55,7 @@ Modify the `config.yaml` file inside `.spack` with the following content:
     lmod:   ~/software/ModuleFiles/lmod
 
 ...
-  ```
+```
 
 In the file above: 
 - `install_tree` specifies where in your home directory you want to install your software. 
@@ -79,7 +79,8 @@ First, run the following command to view information about R on Spack
 ```
 $ spack info r
 ```
-<img src="../../images/spack/r.png" style="width:600px">
+
+<img src="../../images/software/spack/r.png" style="width:600px">
 
 - `Safe versions` list all versions that the Spack team inspected and considered safe/stable to use. You
 can see that 3.3.0 is listed among them. 
@@ -102,7 +103,7 @@ by Spack.
 - If there is any problem with the installation specification (version conflicts, etc), the `spec` call will 
 catch the majority of them here. 
   
-<img src="../../images/spack/r_spec.png" style="width:600px">
+<img src="../../images/software/spack/r_spec.png" style="width:600px">
 
 If there is no error reported during `spack spec`, we can start the installation process:
 
@@ -110,6 +111,32 @@ If there is no error reported during `spack spec`, we can start the installation
 $ spack install r@3.3.0 arch=x86_64 +external-lapack +memory_profiling
 ```
 
+After finishing the installation, you will need to add the path to your new module file directory to `$MODULEPATH`:
+
+```
+$ export MODULEPATH=$MODULEPATH:~/software/ModuleFiles/modules/linux-centos8-x86_64/
+$ module avail
+```
+
+You can see your newly install R package:
+
+<img src="../../images/software/spack/r_module.PNG" style="width:600px">
+
+Using `module` allows you to manage the primary installed software, `R 3.3.0`. However, Spack also installed a 
+number of dependencies for you. To view all dependencies, run:
+
+```
+$ spack find
+```
+
+<img src="../../images/software/spack/r_spack_find.PNG" style="width:600px">
+
+These dependencies will be reused by Spack when you install other software packages that require the same 
+dependencies. For example, if you run `spack spec -Il r@4.0.0 arch=x86_64`, you will see that many of the 
+dependency lines have the green `[+]` sign, indicating that that dependency is already installed. 
+
+<img src="../../images/software/spack/r_dependency.PNG" style="width:600px">
 
 
+Further information about installing packages using Spack can be found on [Spack's documentation page](https://spack.readthedocs.io/en/latest/basic_usage.html)
 
