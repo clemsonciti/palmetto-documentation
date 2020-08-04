@@ -1,40 +1,37 @@
 # Starting out on Palmetto
 
+When you first logged into Palmetto, you will be presented with a welcome message. This is called the **motd**, or **Message of the day**. This message typically contains a quick introduction to Palmetto, links to user guides, and a list of useful commands. 
+Information about upcoming maintenance will also be posted here. 
+
+<img src="../../images/basic/started/palmetto_01.png" style="width:600px">
 
 
-
-
-### Storing files and folders
-
-#### Home and scratch directories
+## Available storage on Palmetto
 
 Various filesystems are available for users to store data.
 These differ in capacity, data-persistence, and efficiency,
 and it is important that users understand which filesystem
 to use under which circumstances.
 
-Location                |	Available space                     | Notes
-------------------------|---------------------------------------|---------------------------------------------------------------------------
-`/home/username`        |   100 GB per user                     | Backed-up nightly, permanent storage space accessible from all nodes
-`/scratch1/username`    |   233 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, OrangeFS Parallel File System
-`/scratch2/username`    |   160 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, XFS
-`/local_scratch`        |   Varies between nodes (99GB-800GB)   | Per-node temporary work space, accessible only for the lifetime of job
+#### Home and scratch directories
 
-The `/home` and `/scratch` directories are shared by all nodes.
-In contrast, each node has its own `/local_scratch` directory.
+Location                 |	 Available space                       | Notes                                                                       |      
+------------------------ | --------------------------------------- | --------------------------------------------------------------------------- |
+`/home/username`         |   100 GB per user                       | Backed-up nightly, permanent storage space accessible from all nodes |
+`/scratch1/username`     |   1.9 PB shared by all users            | Not backed up, temporary work space accessible from all nodes, BeeGFS Parallel File System |
+`/scratch2/username`     |   189 TB shared by all users            | Not backed up, temporary work space accessible from all nodes, ZFS|
+`/local_scratch`         |   Varies between nodes (99GB-3.6TB)     | Per-node temporary work space, accessible only for the lifetime of job |
 
-All data in the `/home` directory is permanent
-(not automatically deleted) and backed-up on a nightly basis.
-If you lose data in the `/home` directory,
-it may be possible to recover it if it was previously backed up.
+- The `/home` and `/scratch1` directories are shared by all nodes.
+- The `/scratch2` directory is not available on the login node (`login001`).
+- Each node has its own `/local_scratch` directory.
 
-Data in the `/scratch` directories is **not** backed up,
-and any data that is untouched for 30 days is automatically
-removed from the `/scratch` directories.
-Data that cannot easily be reproduced should **not** be stored
-in the `/scratch` directories,
-and any data that is not required should be
-removed as soon as possible.
+All data in the `/home` directory is permanent (not automatically deleted) and backed-up on a nightly basis.
+If you lose data in the `/home` directory, it may be possible to recover it if it was previously backed up.
+
+Data in the `/scratch1` and `/scratch2` directories is **not** backed up, and any data that is untouched for 30 days is automatically
+removed from the `/scratch` directories. Data that cannot easily be reproduced should **not** be stored in the `/scratch` directories,
+and any data that is not required should be removed as soon as possible.
 
 See [this guide]({{site.baseurl}}/userguide_howto_choose_right_filesystem.html)
 on how to choose the appropriate filesystem for your work.
@@ -54,22 +51,26 @@ Reservation requests can be made [here](https://citi.sites.clemson.edu/new-reser
 
 #### Purchased storage
 
-Users or groups may also
-purchase storage in 1 TB increments.
+Users or groups may also purchase storage in 1 TB increments.
 For details about purchased storage, please contact the Palmetto support staff
 (<ithelp@clemson.edu>, and include the word "Palmetto" in the subject line).
 
-### Moving data in and out of the cluster
+## Data transfer in and out of Palmetto
 
-#### Small files (kilobytes or a few megabytes)
+Data can be transferred in and out of Palmetto via the following recommended methods:
+- Direct transfer using `login001`: Data size smaller than 10GB. 
+- Direct transfer using `xfer01`: Data size between 10-100GB. 
+- Transfer using Globus: Data size larger than 100GB. 
 
-On Windows machines, using the MobaXterm SSH client,
-the built-in file browser can be used (**SCP** tab of the side window).
-Using the Upload (green arrow pointing up) and
-and Dowload (blue arrow pointing down) buttons at the top of the SCP tab,
-you can easily transfer small files between Palmetto and your local computer.
+#### Direct transfer
 
-<img src="{{site.baseurl}}/images/mobaxterm_07.png" style="width:1000px">
+On Windows machines, using the MobaXterm SSH client, the built-in file browser can be used (**SCP** tab of the side window).
+Using the Upload (green arrow pointing up) and and Dowload (blue arrow pointing down) buttons at the top of the SCP tab,
+you can easily transfer small files between Palmetto and your local computer. 
+
+**You can setup an SSH session to `xfer01-ext.palmetto.clemson.edu` similar to how you login to `login001.palmetto.clemson.edu`.** 
+
+<img src="../../images/basic/started/palmetto_02.png" style="width:300px">
 
 On Unix systems, you can use the `scp` (secure copy) command to
 perform file transfers. The general form of the `scp` command is:
@@ -105,7 +106,8 @@ For folders, include the `-r` switch:
 $ scp -r myfolder username@xfer01-ext.palmetto.clemson.edu:/home/username
 ~~~
 
-#### Transfering larger files (more than a few megabytes)
+
+#### Transfer large files using Globus
 
 For larger files, we recommend using the [Globus](https://www.globus.org/)
 file transfer application. Here, we demonstrate how to use Globus Online
@@ -138,57 +140,68 @@ However, Globus can be used for file transfers to/from other locations as well.
 4.  As the second endpoint,
     choose `clemson#xfer01-ext.clemson.edu`.
 
+5. Make sure that you check the options to `verify file integrity after transfer` and `encrypt transfer` under the `Transfer & Sync Options`. 
+
 5.  You can now transfer files between any locations on your
     local machine and the Palmetto cluster.
 
-  
 
-### Checking available compute hardware
+<img src="../../images/basic/started/palmetto_03.png" style="width:1000px">
 
-The login node `login001` (the node that users first log-in to),
-is not meant for running computationally intensive tasks.
-Instead, users must reserve hardware from the **compute nodes**
-of the cluster. Currently, Palmetto cluster has over 2020 compute
-nodes. The hardware configuration of the different nodes is available
-in the file `/etc/hardware-table`:
+
+## Viewing all Palmetto's hardware
+
+The login node `login001` (the node that users first log-in to), is not meant for running computationally intensive tasks.
+Instead, users must reserve hardware from the **compute nodes** of the cluster. Currently, Palmetto cluster has over 2040 compute
+nodes. The hardware configuration of the different nodes is available in the file `/etc/hardware-table`:
 
 ~~~
-[atrikut@login001 ~]$ cat /etc/hardware-table
+[lngo@login001 ~]$ cat /etc/hardware-table
 
-PALMETTO HARDWARE TABLE      Last updated:  Mar 04 2019
+PALMETTO HARDWARE TABLE      Last updated:  Jun 15 2020
 
-PHASE COUNT  MAKE   MODEL    CHIP(0)                CORES  RAM(1)    /local_scratch   Interconnect     GPUs  PHIs SSD
- 0      6    HP     DL580    Intel Xeon    7542       24   505 GB(2)    99 GB         1ge               0     0    0
- 0      1    HP     DL980    Intel Xeon    7560       64     2 TB(2)    99 GB         1ge               0     0    0
- 0      1    HP     DL560    Intel Xeon    E5-4627v4  40   1.5 TB(2)   881 GB         10ge              0     0    0
- 0      1    Dell   R830     Intel Xeon    E5-4627v4  40   1.0 TB(2)   880 GB         10ge              0     0    0
- 0      2    HP     DL560    Intel Xeon    6138G      80   1.5 TB(2)   3.6 TB         10ge              0     0    0
- 1     75    Dell   PE1950   Intel Xeon    E5345       8    12 GB       37 GB         1g                0     0    0
- 2a   158    Dell   PE1950   Intel Xeon    E5410       8    12 GB       37 GB         1g                0     0    0
- 2b    84    Dell   PE1950   Intel Xeon    E5410       8    16 GB       37 GB         1g                0     0    0
- 3    225    Sun    X2200    AMD   Opteron 2356        8    16 GB      193 GB         1g                0     0    0
- 4    326    IBM    DX340    Intel Xeon    E5410       8    16 GB      111 GB         1g                0     0    0
- 5a   320    Sun    X6250    Intel Xeon    L5420       8    32 GB       31 GB         1g                0     0    0
- 5b     9    Sun    X4150    Intel Xeon    E5410       8    32 GB       99 GB         1g                0     0    0
- 6     67    HP     DL165    AMD   Opteron 6176       24    48 GB      193 GB         1g                0     0    0
- 7a    42    HP     SL230    Intel Xeon    E5-2665    16    64 GB      240 GB         56g, fdr          0     0    0
- 7b    12    HP     SL250s   Intel Xeon    E5-2665    16    64 GB      240 GB         56g, fdr          2(3)  0    0
- 8a    71    HP     SL250s   Intel Xeon    E5-2665    16    64 GB      900 GB         56g, fdr          2(4)  0    300 GB(7)
- 8b    57    HP     SL250s   Intel Xeon    E5-2665    16    64 GB      420 GB         56g, fdr          2(4)  0    0
- 8c    88    Dell   PEC6220  Intel Xeon    E5-2665    16    64 GB      350 GB         10ge              0     0    0
- 9     72    HP     SL250s   Intel Xeon    E5-2665    16   128 GB      420 GB         56g, fdr, 10ge    2(4)  0    0
-10     80    HP     SL250s   Intel Xeon    E5-2670v2  20   128 GB      800 GB         56g, fdr, 10ge    2(4)  0    0
-11a    40    HP     SL250s   Intel Xeon    E5-2670v2  20   128 GB      800 GB         56g, fdr, 10ge    2(6)  0    0
-11b     4    HP     SL250s   Intel Xeon    E5-2670v2  20   128 GB      800 GB         56g, fdr, 10ge    0     2(8) 0
-12     30    Lenovo NX360M5  Intel Xeon    E5-2680v3  24   128 GB      800 GB         56g, fdr, 10ge    2(6)  0    0
-13     24    Dell   C4130    Intel Xeon    E5-2680v3  24   128 GB      1.8 TB         56g, fdr, 10ge    2(6)  0    0
-14     12    HP     XL1X0R   Intel Xeon    E5-2680v3  24   128 GB      880 GB         56g, fdr, 10ge    2(6)  0    0
-15     32    Dell   C4130    Intel Xeon    E5-2680v3  24   128 GB      1.8 TB         56g, fdr, 10ge    2(6)  0    0
-16     40    Dell   C4130    Intel Xeon    E5-2680v4  28   128 GB      1.8 TB         56g, fdr, 10ge    2(9)  0    0
-17     20    Dell   C4130    Intel Xeon    E5-2680v4  28   128 GB      1.8 TB         56g, fdr, 10ge    2(9)  0    0
-18a     2    Dell   C4140    Intel Xeon    6148G      40   372 GB      1.9 TB(12)     56g, fdr, 25ge    4(10) 0    0
-18b    65    Dell   R740     Intel Xeon    6148G      40   372 GB      1.8 TB         56g, fdr, 25ge    2(11) 0    0
-18c    10    Dell   R740     Intel Xeon    6148G      40   748 GB      1.8 TB         56g, fdr, 25ge    2(11) 0    0
+PHASE COUNT  MAKE   MODEL    CHIP(0)                CORES  RAM(1)    /local_scratch   Interconnect     GPUs  SSD
+
+ 0      6    HP     DL580    Intel Xeon    7542       24   505 GB(2)    99 GB         1ge               0     0
+ 0      5    Dell   R820     Intel Xeon    E5-4640    32   750 GB(2)   740 GB(12)     10ge              0     0
+ 0      1    HP     DL560    Intel Xeon    E5-4627v4  40   1.5 TB(2)   881 GB         10ge              0     0
+ 0      1    Dell   R830     Intel Xeon    E5-4627v4  40   1.0 TB(2)   880 GB         10ge              0     0
+ 0      1    HPE    DL560    Intel Xeon    6138G      80   1.5 TB(2)   3.6 TB         10ge              0     0
+ 0      1    HPE    DL560    Intel Xeon    6148G      80   1.5 TB(2)   3.6 TB         10ge              0     0
+ 0      1    HPE    DL560    Intel Xeon    6148G      80   1.5 TB(2)   745 GB(12)     10ge              0     0
+
+ 1a   116    Dell   R610     Intel Xeon    E5520       8    31 GB      220 GB         1g                0     0
+ 1b    40    Dell   R610     Intel Xeon    E5645      12    92 GB      220 GB         1g                0     0
+ 2a    30    Dell   R620     Intel Xeon    E5-2660    16   375 GB      2.7 TB         1g                0     0
+ 2b   134    Dell   PE1950   Intel Xeon    E5410       8    15 GB       37 GB         1g                0     0
+ 3    224    Sun    X2200    AMD   Opteron 2356        8    15 GB      193 GB         1g                0     0
+ 4    323    IBM    DX340    Intel Xeon    E5410       8    15 GB      111 GB         1g                0     0
+ 5a   310    Sun    X6250    Intel Xeon    L5420       8    31 GB       31 GB         1g                0     0
+ 5b     9    Sun    X4150    Intel Xeon    E5410       8    31 GB       99 GB         1g                0     0
+ 5c    19    Dell   R510     Intel Xeon    E5640       8    22 GB        7 TB         1g                0     0
+ 5d    20    Dell   R520     Intel Xeon    E5-2450    12    46 GB      2.7 TB         1g                0     0
+ 6     66    HP     DL165    AMD   Opteron 6176       24    46 GB      193 GB         1g                0     0
+
+ 7a    42    HP     SL230    Intel Xeon    E5-2665    16    62 GB      240 GB         56g, fdr, 10ge    0     0
+ 7b    12    HP     SL250s   Intel Xeon    E5-2665    16    62 GB      240 GB         56g, fdr, 10ge    2(3)  0
+ 8a    71    HP     SL250s   Intel Xeon    E5-2665    16    62 GB      900 GB         56g, fdr, 10ge    2(4)  300 GB(7)
+ 8b    57    HP     SL250s   Intel Xeon    E5-2665    16    62 GB      420 GB         56g, fdr, 10ge    2(4)  0
+ 8c    88    Dell   PEC6220  Intel Xeon    E5-2665    16    62 GB      350 GB         56g, fdr, 10ge    0     0
+ 9     72    HP     SL250s   Intel Xeon    E5-2665    16   126 GB      420 GB         56g, fdr, 10ge    2(4)  0
+10     80    HP     SL250s   Intel Xeon    E5-2670v2  20   126 GB      800 GB         56g, fdr, 10ge    2(4)  0
+11a    40    HP     SL250s   Intel Xeon    E5-2670v2  20   126 GB      800 GB         56g, fdr, 10ge    2(6)  0
+11b     4    HP     SL250s   Intel Xeon    E5-2670v2  20   126 GB      800 GB         56g, fdr, 10ge    0     0
+12     30    Lenovo NX360M5  Intel Xeon    E5-2680v3  24   126 GB      800 GB         56g, fdr, 10ge    2(6)  0
+13     24    Dell   C4130    Intel Xeon    E5-2680v3  24   126 GB      1.8 TB         56g, fdr, 10ge    2(6)  0
+14     12    HPE    XL1X0R   Intel Xeon    E5-2680v3  24   126 GB      880 GB         56g, fdr, 10ge    2(6)  0
+15     32    Dell   C4130    Intel Xeon    E5-2680v3  24   126 GB      1.8 TB         56g, fdr, 10ge    2(6)  0
+16     40    Dell   C4130    Intel Xeon    E5-2680v4  28   126 GB      1.8 TB         56g, fdr, 10ge    2(8)  0
+17     20    Dell   C4130    Intel Xeon    E5-2680v4  28   126 GB      1.8 TB         56g, fdr, 10ge    2(8)  0
+18a     2    Dell   C4140    Intel Xeon    6148G      40   372 GB      1.9 TB(12)    100g, hdr, 10ge    4(9)  0
+18b    65    Dell   R740     Intel Xeon    6148G      40   372 GB      1.8 TB        100g, hdr, 25ge    2(10) 0
+18c    10    Dell   R740     Intel Xeon    6148G      40   748 GB      1.8 TB        100g, hdr, 25ge    2(10) 0
+19a    28    Dell   R740     Intel Xeon    6248G      40   372 GB      1.8 TB        100g, hdr, 25ge    2(10) 0
+19b     4    HPE    XL170    Intel Xeon    6252G      48   372 GB      1.8 TB         56g, fdr, 10ge    0     0
 
   *** PBS resource requests are always lowercase ***
 
@@ -200,14 +213,14 @@ PHASE COUNT  MAKE   MODEL    CHIP(0)                CORES  RAM(1)    /local_scra
 (5) 2 NVIDIA Tesla M2070-Q cards per node, use resource request "ngpus=[1|2]" and "gpu_model=m2070q"
 (6) 2 NVIDIA Tesla K40m cards per node, use resource request "ngpus=[1|2]" and "gpu_model=k40"
 (7) Use resource request "ssd=true" to request a chunk with SSD in location /ssd1, /ssd2, and /ssd3 (100GB max each)
-(8) Use resource request "nphis=[1|2]" to request phi nodes, the model is Xeon 7120p
-(9) 2 NVIDIA Tesla P100 cards per node, use resource request "ngpus=[1|2]" and "gpu_model=p100"
-(10)4 NVIDIA Tesla V100 cards per node with NVLINK2, use resource request "ngpus=[1|2|3|4]" and "gpu_model=v100nv"
-(11)2 NVIDIA Tesla V100 cards per node, use resource request "ngpus=[1|2]" and "gpu_model=v100"
-(12)Phase18a nodes contain only NVMe storage for local_scratch.
+(8) 2 NVIDIA Tesla P100 cards per node, use resource request "ngpus=[1|2]" and "gpu_model=p100"
+(9) 4 NVIDIA Tesla V100 cards per node with NVLINK2, use resource request "ngpus=[1|2|3|4]" and "gpu_model=v100nv"
+(10)2 NVIDIA Tesla V100 cards per node, use resource request "ngpus=[1|2]" and "gpu_model=v100"
+(11)Phase18a nodes contain NVMe storage for /local_scratch.
+(12)local_scratch is housed entirely on SSD
 ~~~
 
-The compute nodes are divided into "phases" (currently phases 0-18).
+The compute nodes are divided into "phases" (currently phases 0-19).
 Each phase is composed of several nodes with identical configuration,
 e.g., each node in phase 5a has 8 cores, 32 GB ram, 31 GB local disk space,
 and 10 Gbps Myrinet interconnect.
@@ -216,15 +229,57 @@ A useful command on the login node is `whatsfree`, which gives information
 about how many nodes from each phase are currently in use, free, or offlined
 for maintenance.
 
+~~~
+[lngo@login001 ~]$ ./whatsfree
+
+Mon Aug 03 2020 22:37:26
+
+TOTAL NODES: 2102     NODES FREE: 2035     NODES OFFLINE: 14     NODES RESERVED: 0
+
+PHASE 0    TOTAL =  16  FREE =  15  OFFLINE =   0  BIGMEM nodes: (6) 24cores/500GB, (5) 32cores/750GB, (3) 80cores/1.5TB, (1) 40cores/1.5TB, (1) 40cores/1TB, (1) 64cores/2TB
+PHASE 1a   TOTAL = 117  FREE =  94  OFFLINE =   0  TYPE = Dell   R610    Intel Xeon  E5520,      8 cores,  31GB, 1g
+PHASE 1b   TOTAL =  40  FREE =  40  OFFLINE =   0  TYPE = Dell   R610    Intel Xeon  E5645,     12 cores,  94GB, 1g
+PHASE 2a   TOTAL =  30  FREE =  30  OFFLINE =   0  TYPE = Dell   R620    Intel Xeon  E5-2660    16 cores, 382GB, 1g
+PHASE 2b   TOTAL = 162  FREE = 162  OFFLINE =   0  TYPE = Dell   PE1950  Intel Xeon  E5410,      8 cores,  15GB, 1g
+PHASE 3    TOTAL = 224  FREE = 224  OFFLINE =   0  TYPE = Sun    X2200   AMD Opteron 2356,       8 cores,  15GB, 1g
+PHASE 4    TOTAL = 319  FREE = 319  OFFLINE =   0  TYPE = IBM    DX340   Intel Xeon  E5410,      8 cores,  15GB, 1g
+PHASE 5a   TOTAL = 308  FREE = 308  OFFLINE =   0  TYPE = Sun    X6250   Intel Xeon  L5420,      8 cores,  30GB, 1g
+PHASE 5b   TOTAL =   9  FREE =   9  OFFLINE =   0  TYPE = Sun    X4150   Intel Xeon  E5410,      8 cores,  15GB, 1g
+PHASE 5c   TOTAL =  34  FREE =  34  OFFLINE =   0  TYPE = Dell   R510    Intel Xeon  E5460,      8 cores,  23GB, 1g
+PHASE 5d   TOTAL =  23  FREE =  23  OFFLINE =   0  TYPE = Dell   R520    Intel Xeon  E5-2450    12 cores,  46GB, 1g
+PHASE 6    TOTAL =  65  FREE =  64  OFFLINE =   0  TYPE = HP     DL165   AMD Opteron 6176,      24 cores,  46GB, 1g
+PHASE 7a   TOTAL =  42  FREE =  38  OFFLINE =   0  TYPE = HP     SL230   Intel Xeon  E5-2665,   16 cores,  62GB, FDR
+PHASE 7b   TOTAL =  12  FREE =   0  OFFLINE =   0  TYPE = HP     SL250s  Intel Xeon  E5-2665,   16 cores,  62GB, FDR, M2075
+PHASE 8a   TOTAL =  71  FREE =  61  OFFLINE =   0  TYPE = HP     SL250s  Intel Xeon  E5-2665,   16 cores,  62GB, FDR, K20, SSD
+PHASE 8b   TOTAL =  57  FREE =  57  OFFLINE =   0  TYPE = HP     SL250s  Intel Xeon  E5-2665,   16 cores,  62GB, FDR, K20
+PHASE 8c   TOTAL =  88  FREE =  78  OFFLINE =  10  TYPE = Dell   PEC6220 Intel Xeon  E5-2665,   16 cores,  62GB, 10ge
+PHASE 9    TOTAL =  72  FREE =  69  OFFLINE =   0  TYPE = HP     SL250s  Intel Xeon  E5-2665,   16 cores, 125GB, FDR, K20, 10ge
+PHASE 10   TOTAL =  80  FREE =  76  OFFLINE =   0  TYPE = HP     SL250s  Intel Xeon  E5-2670v2, 20 cores, 125GB, FDR, K20, 10ge
+PHASE 11a  TOTAL =  40  FREE =  39  OFFLINE =   0  TYPE = HP     SL250s  Intel Xeon  E5-2670v2, 20 cores, 125GB, FDR, K40, 10ge
+PHASE 11b  TOTAL =   4  FREE =   4  OFFLINE =   0  TYPE = HP     SL250s  Intel Xeon  E5-2670v2, 20 cores, 125GB, FDR, Phi, 10ge
+PHASE 12   TOTAL =  30  FREE =  30  OFFLINE =   0  TYPE = Lenovo MX360M5 Intel Xeon  E5-2680v3, 24 cores, 125GB, FDR, K40, 10ge
+PHASE 13   TOTAL =  24  FREE =  24  OFFLINE =   0  TYPE = Dell   C4130   Intel Xeon  E5-2680v3, 24 cores, 125GB, FDR, K40, 10ge
+PHASE 14   TOTAL =  12  FREE =  12  OFFLINE =   0  TYPE = HP     XL190r  Intel Xeon  E5-2680v3, 24 cores, 125GB, FDR, K40, 10ge
+PHASE 15   TOTAL =  32  FREE =  32  OFFLINE =   0  TYPE = Dell   C4130   Intel Xeon  E5-2680v3, 24 cores, 125GB, FDR, K40, 10ge
+PHASE 16   TOTAL =  40  FREE =  37  OFFLINE =   0  TYPE = Dell   C4130   Intel Xeon  E5-2680v4, 28 cores, 125GB, FDR, P100, 10ge
+PHASE 17   TOTAL =  20  FREE =  20  OFFLINE =   0  TYPE = Dell   C4130   Intel Xeon  E5-2680v4, 28 cores, 125GB, FDR, P100, 10ge
+PHASE 18a  TOTAL =   2  FREE =   0  OFFLINE =   0  TYPE = Dell   C4140   Intel Xeon  6148G,     40 cores, 372GB, HDR, V100nv, 10ge
+PHASE 18b  TOTAL =  65  FREE =  55  OFFLINE =   0  TYPE = Dell   R740    Intel Xeon  6148G,     40 cores, 372GB, HDR, V100, 25ge
+PHASE 18c  TOTAL =  10  FREE =  10  OFFLINE =   0  TYPE = Dell   R740    Intel Xeon  6148G,     40 cores, 748GB, HDR, V100, 25ge
+PHASE 19a  TOTAL =  28  FREE =  24  OFFLINE =   4  TYPE = Dell   R740    Intel Xeon  6248G,     40 cores, 372GB, HDR, V100, 25ge
+PHASE 19b  TOTAL =   4  FREE =   3  OFFLINE =   0  TYPE = HPE    XL170   Intel Xeon  6252G,     48 cores, 372GB, 10ge
+PHASE 20   TOTAL =  22  FREE =  22  OFFLINE =   0  TYPE = Dell   R740    Intel Xeon  6238R,     56 cores, 372GB, HDR, V100S, 25ge
+
+ NOTE: Your job will land on the oldest phase that satisfies your PBS resource requests.
+~~~
+
 Later sections of this guide will describe how to submit **jobs** to
 the cluster, i.e., reserve compute nodes for running computational tasks.
 
-### Checking and using available software
+## Checking and using available software
 
-The Palmetto cluster provides a limited number of packages
-(including site-licensed packages),
-that can be used by all Palmetto users.
-These packages are available as **modules**,
+The Palmetto cluster provides a limited number of packages (including site-licensed packages),
+that can be used by all Palmetto users. These packages are available as **modules**,
 and must be activated/deactivated using the `module` command:
 
 Command                         |   Purpose
@@ -235,24 +290,28 @@ Command                         |   Purpose
 `module rm package/version`     | Remove a currently loaded package
 `module purge`                  | Remove *all* currently loaded packages
 
-For example, to load the GCC (v4.8.1), CUDA Toolkit (v6.5.14)
-and OpenMPI (v1.8.4) modules, you can use the command:
+For example, to load the GCC (v9.3.0), CUDA Toolkit (v10.2.89)
+and OpenMPI (v3.1.6) modules, you can use the command:
 
 ~~~
-$ module add gcc/4.8.1 cuda-toolkit/6.5.14 openmpi/1.8.4
+[lngo@login001 ~]$ module add gcc/9.3.0-gcc/8.3.1 cuda/10.2.89-gcc/8.3.1 openmpi/3.1.6-gcc/8.3.1-cuda10_2-ucx
 ~~~
 
-Then, check the version of `gcc`:
+Then, check the loaded modules and version of `gcc`:
 
 ~~~
-$ gcc --version
-~~~
+[lngo@login001 ~]$ module list
 
-~~~
-gcc (GCC) 4.8.1
-Copyright (C) 2013 Free Software Foundation, Inc.
+Currently Loaded Modules:
+  1) gmp/6.1.2-gcc/8.3.1   2) gcc/9.3.0-gcc/8.3.1   3) cuda/10.2.89-gcc/8.3.1   4) openmpi/3.1.6-gcc/8.3.1-cuda10_2-ucx
+
+[lngo@login001 ~]$ gcc --version
+gcc (Spack GCC) 9.3.0
+Copyright (C) 2019 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+[lngo@login001 ~]$
 ~~~
 
 Some modules when loaded, implicitly load other modules as well.
@@ -270,14 +329,33 @@ before and after loading some module:
 
 ~~~
 $ echo $PATH
-$ module add python/2.7.13
+$ module add anaconda3/2019.10-gcc/8.3.1
 $ echo $PATH
 ~~~
 
-You can also look at the modulefiles in `/software/modulefiles`
-to understand what happens when you add a module.
+## Job submission and control on Palmetto
 
-### Start an interactive job
+The Palmetto cluster uses the Portable Batch Scheduling system (PBS)
+to manage jobs. Here are some basic PBS commands
+for submitting, querying and deleting jobs:
+
+Command                         | Action
+--------------------------------|--------------------------------
+`qsub -I`                       | Submit an interactive job (reserves 1 core, 1gb RAM, 30 minutes walltime)
+`qsub xyz.pbs`                  | Submit the job script `xyz.pbs`
+`qstat <job id>`                | Check the status of the job with given job ID
+`qstat -u <username>`           | Check the status of all jobs submitted by given username
+`qstat -xf <job id>`            | Check detailed information for job with given job ID
+`qsub -q <queuename> xyz.pbs`   | Submit to queue `queuename`
+`qdel <job id>`                 | Delete the job (queued or running) with given job ID
+`qpeek <job id>`                | "Peek" at the standard output from a running job
+`qdel -Wforce <job id>`         | Use when job not responding to just `qdel`
+
+For more details and more advanced commands for submitting and controlling jobs,
+please refer to the [PBS Professional User's Guide](http://www.pbsworks.com/pdfs/PBSUserGuide14.2.pdf).
+
+
+### Starting an interactive job
 
 An interactive job can be started using the `qsub` command.
 Here is an example of an interactive job:
@@ -288,7 +366,7 @@ qsub (Warning): Interactive jobs will be treated as not rerunnable
 qsub: waiting for job 8730.pbs02 to start
 qsub: job 8730.pbs02 ready
 
-[username@node0021 ~]$ module add python/3.4
+[username@node0021 ~]$ module add anaconda3/2019.10-gcc/8.3.1
 [username@node0021 ~]$ python runsim.py
 .
 .
@@ -320,7 +398,7 @@ In the batch job below, we really don't do anything useful
 #PBS -N example
 #PBS -l select=1:ncpus=1:mem=2gb,walltime=00:10:00
 
-module add gcc/4.8.1
+module add gcc/9.3.0-gcc/8.3.1
 
 cd /home/username
 echo Hello World from `hostname`
@@ -351,27 +429,6 @@ and `example.e8738` (containing errors if any) from your job.
 [username@login001 ~]$ cat example.o8738
 Hello World from node0230.palmetto.clemson.edu
 ~~~
-
-## Job submission and control on Palmetto
-
-The Palmetto cluster uses the Portable Batch Scheduling system (PBS)
-to manage jobs. Here are some basic PBS commands
-for submitting, querying and deleting jobs:
-
-Command                         | Action
---------------------------------|--------------------------------
-`qsub -I`                       | Submit an interactive job (reserves 1 core, 1gb RAM, 30 minutes walltime)
-`qsub xyz.pbs`                  | Submit the job script `xyz.pbs`
-`qstat <job id>`                | Check the status of the job with given job ID
-`qstat -u <username>`           | Check the status of all jobs submitted by given username
-`qstat -xf <job id>`            | Check detailed information for job with given job ID
-`qsub -q <queuename> xyz.pbs`   | Submit to queue `queuename`
-`qdel <job id>`                 | Delete the job (queued or running) with given job ID
-`qpeek <job id>`                | "Peek" at the standard output from a running job
-`qdel -Wforce <job id>`         | Use when job not responding to just `qdel`
-
-For more details and more advanced commands for submitting and controlling jobs,
-please refer to the [PBS Professional User's Guide](http://www.pbsworks.com/pdfs/PBSUserGuide14.2.pdf).
 
 ### PBS job options
 
@@ -617,30 +674,33 @@ Users can see what the current limits
 are using the `checkqueuecfg` command:
 
 ~~~
-$ checkqueuecfg
+[lngo@login001 ~]$ checkqueuecfg
 
-MX QUEUES     min_cores_per_job  max_cores_per_job   max_mem_per_queue  max_jobs_per_queue   max_walltime
-c1_solo                       1                  1              4000gb                2000      168:00:00
-c1_single                     2                 24             90000gb                 750      168:00:00
-c1_tiny                      25                128             25600gb                  25      168:00:00
-c1_small                    129                512             24576gb                   6      168:00:00
-c1_medium                   513               2048             81920gb                   5      168:00:00
-c1_large                   2049               4096             32768gb                   1      168:00:00
+1G QUEUES     min_cores_per_job  max_cores_per_job   max_mem_per_queue  max_jobs_per_queue   max_walltime
+c1_solo                       1                  1               800gb                 100      168:00:00
+c1_single                     2                 24              1200gb                  10      168:00:00
+c1_tiny                      25                128              5120gb                   5      168:00:00
+c1_small                    129                512              4096gb                   1      168:00:00
+c1_medium                   513               2048                 0gb                   0      168:00:00
+c1_large                   2049               4096                 0gb                   0      168:00:00
 
 IB QUEUES     min_cores_per_job  max_cores_per_job   max_mem_per_queue  max_jobs_per_queue   max_walltime
-c2_single                     1                 24               600gb                   5       72:00:00
-c2_tiny                      25                128              4096gb                   2       72:00:00
-c2_small                    129                512              6144gb                   1       72:00:00
+c2_single                     1                 40              4000gb                  10       72:00:00
+c2_tiny                      41                200              6400gb                   2       72:00:00
+c2_small                    201                512              6144gb                   1       72:00:00
 c2_medium                   513               2048             16384gb                   1       72:00:00
 c2_large                   2049               4096                 0gb                   0       72:00:00
 
 GPU QUEUES     min_gpus_per_job   max_gpus_per_job  min_cores_per_job  max_cores_per_job   max_mem_per_queue  max_jobs_per_queue   max_walltime
-gpu_small                     1                  4                  1                 96              3840gb                  20       72:00:00
-gpu_medium                    5                 16                  1                256              5120gb                   5       72:00:00
-gpu_large                    17                128                  1               1024             20480gb                   5       72:00:00
+gpu_small                     1                  4                  1                 96              1440gb                   5       72:00:00
+gpu_medium                    5                 16                  1                256              3072gb                   2       72:00:00
+gpu_large                    17                256                  1               2048              6144gb                   1       72:00:00
+
+VGPU QUEUES   min_vgpus_per_job  max_vgpus_per_job  min_cores_per_job  max_cores_per_job   max_mem_per_queue  max_jobs_per_queue   max_walltime
+vgpu_small                    1                  1                  1                  4                 0gb                   0       72:00:00
 
 SMP QUEUE     min_cores  max_cores   max_jobs   max_walltime
-bigmem                1         64          3       72:00:00
+bigmem                1         80          1      168:00:00
 
 
    'max_mem' is the maximum amount of memory all your jobs in this queue can
@@ -648,6 +708,10 @@ bigmem                1         64          3       72:00:00
    is 4000gb, and your solo jobs each need 10gb, then you can run a
    maximum number of 4000/10 = 400 jobs in the solo queue, even though the
    current max_jobs setting for the solo queue may be set higher than 400.
+
+
+[lngo@login001 ~]$
+
 ~~~
 
 The `qstat` command tells you which of the execution queues
