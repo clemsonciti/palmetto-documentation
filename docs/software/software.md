@@ -13,5 +13,6 @@
 {! software/packages/matlab.md !}
 {! software/packages/paraview.md !}
 {! software/packages/rclone.md !}
+{! software/packages/tensorflow.md !}
 {! software/packages/singularity.md !}
 
