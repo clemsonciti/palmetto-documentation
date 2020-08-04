@@ -22,9 +22,13 @@ Location                 |	 Available space                       | Notes       
 `/scratch2/username`     |   189 TB shared by all users            | Not backed up, temporary work space accessible from all nodes, ZFS|
 `/local_scratch`         |   Varies between nodes (99GB-3.6TB)     | Per-node temporary work space, accessible only for the lifetime of job |
 
-- The `/home` and `/scratch1` directories are shared by all nodes.
-- The `/scratch2` directory is not available on the login node (`login001`).
+- The `/home`, `scratch1`, `/scratch2` directories are shared by all nodes.
 - Each node has its own `/local_scratch` directory.
+- The parallel file system, `/scratch1`, is best suited for workflows issuing large read or write requests or creating a large number of files and 
+directories.  A large read or write is when data is accessed in large chunks, such as 1MB at a time.  A large number of files and directories refers 
+to workflows that generate thousands of files and directories during its processing. `/scratch1` is also ideal for non-parallel jobs with heavy I/O needs.
+- The remaining scratch system, /scratch2, is best suited for workflows without heavy I/O needs.   They are much like using your home directory but you 
+are not limited to space, and you are allowed to run jobs against these file systems.
 
 All data in the `/home` directory is permanent (not automatically deleted) and backed-up on a nightly basis.
 If you lose data in the `/home` directory, it may be possible to recover it if it was previously backed up.
