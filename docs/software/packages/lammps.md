@@ -35,6 +35,33 @@ mpirun -np 8 lmp -in in.lj > output.txt        # 8 MPI, 8 MPI/GPU
 ~~~
 
 ### Several way to run LAAMPS
-## Running LAMMPS with KOKKOS packages
-mpirun -np 8 lmp -k on -sf kk -in in.lj > output_kokkos.txt 
+~~~
+# Running LAMMPS with KOKKOS packages using 8 MPI tasks/nodes, no multi-threading
+mpirun -np 8 lmp -k on -sf kk -in in.lj > output_kokkos1.txt 
 
+# Running LAMMPS with KOKKOS packages using 2 MPI tasks/nodes, 8 threads/tasks
+mpirun -np 2 lmp -k on t 8 -sf kk -in in.lj > output_kokkos2.txt 
+
+# Running LAMMPS with 1 GPU 
+lmp -sf gpu -pk gpu 1 -in in.lj > output_1gpu.txt
+
+# Running LAMMPS with 4 mpi task share 2 gpus on single 8 cores node
+mpirun -np 4 lmp -sf gpu -pk gpu 2 -in in.lj > output_2gpu.txt
+
+# Running LAMMPS with 1 MPI task, 8 threads
+export OMP_NUM_THREADS=8
+lmp -sf omp -in in.lj > output_1mpi_8omp.txt         
+
+# Running LAMMPS with 4 MPI task, 4 OMP threads
+export OMP_NUM_THREADS=4
+mpirun -np 4 lmp -sf omp -pk omp 4 -in in.lj > output_4mpi_4omp.txt
+
+# Running LAMMPS with OPT in serial mode
+lmp -sf opt -in in.lj > output_opt_serial.txt
+
+# Running LAMMPS with OPT in parallel mode
+mpirun -np 8 lmp -sf opt -in in.lj > output_opt_parallel.txt
+~~~
+
+For more information on comparison between various accelerator packages please visit:
+https://lammps.sandia.gov/doc/Speed_compare.html
