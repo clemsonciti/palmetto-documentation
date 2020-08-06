@@ -1,5 +1,14 @@
 # Research Support (during Covid-19 operation period)
 
+### Palmetto Maintenance Seminar
+
+This is the [link to the recording of our Palmetto seminar](https://clemson.zoom.us/rec/share/581wNKzX-D5LX6uU5l_NAqQeDofHaaa8g3NK_PVZy06Geob3uW-ZRe2_wEZYD8tS) 
+where we discussed and provide a Q&A session on the recent major changes on Palemetto after the 
+July 2020 maintenance. 
+
+Here is the [link to the written Q&A Google doc](https://docs.google.com/document/d/1bfKIg0vK8WtLE2htL3o8uZr0JdMaQh3SCRowmTc4qg0/edit?usp=sharing)
+
+
 ### Office Hours (in-person support) 
 
 In response to recent events and effective Monday, March 16, the CITI ACDS team 
