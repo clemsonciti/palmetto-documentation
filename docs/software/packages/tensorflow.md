@@ -28,7 +28,7 @@ $ source activate tf_gpu_env
 
 5) Install Tensorflow with GPU support from the `anaconda` channel:
 ~~~
-$ conda install -c anaconda tensorflow-gpu=2.2.0
+$ conda install -c anaconda tensorflow-gpu=2.2.0 python=3.8.3
 ~~~
 
 This will automatically install some packages that are required for Tensorflow, like SciPy or NumPy. To see the list of installed packages, type
