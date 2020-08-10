@@ -24,14 +24,14 @@ Select the crrect architecture based on the CPU model:
 - E5-2670v2: ivybridge
 - E5-2680v3: haswell
 - E5-2680v4: broadwell
-- 6148G: skyake
+- 6148G: skylake
 - 6252G: cascadelake
 - 6238R: cascadelake
 
 In this example, given the previous `qsub` command, we most likely will get a broadwell node:
 
 ~~~
-$ export TARGE=broadwell
+$ export TARGET=broadwell
 ~~~
 
 ### Installing cuda
@@ -57,6 +57,7 @@ spack install fftw@3.3.8~mpi+openmp target=$TARGET
 $ export MODULEPATH=$MODULEPATH:~/software/ModuleFiles/modules/linux-centos8-broadwell/
 $ module load fftw-3.3.8-gcc-8.3.1-openmp cuda-10.2.89-gcc-8.3.1
 $ spack spec -Il gromacs@2018.3+cuda~mpi target=$TARGET ^cuda/hash_value_you_memorize_earlier
+$ spack install gromacs@2018.3+cuda~mpi target=$TARGET ^cuda/hash_value_you_memorize_earlier
 ~~~
 
 Gromacs will now be available in your local module path
