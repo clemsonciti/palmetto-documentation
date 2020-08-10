@@ -77,6 +77,7 @@ $ cd /scratch1/$USER/gromacs_ADH_benchmark
 $ wget ftp://ftp.gromacs.org/pub/benchmarks/ADH_bench_systems.tar.gz
 $ tar -xzf ADH_bench_systems.tar.gz
 $ export MODULEPATH=$MODULEPATH:~/software/ModuleFiles/modules/linux-centos8-broadwell/
+$ export OMP_NUM_THREADS=10
 $ module load fftw-3.3.8-gcc-8.3.1-openmp cuda-10.2.89-gcc-8.3.1 gromacs-2018.3-gcc-8.3.1-cuda10_2-openmp
 $ gmx mdrun -g adh_cubic.log -pin on -resethway -v -noconfout -nsteps 10000 -s topol.tpr -ntmpi 2 -ntomp 10
 ~~~
