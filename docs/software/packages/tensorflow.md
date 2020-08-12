@@ -23,7 +23,7 @@ $ conda create -n tf_gpu_env
 
 4) Activate the conda environment:
 ~~~
-$ source activate tf_gpu_env
+$ conda activate tf_gpu_env
 ~~~
 
 5) Install Tensorflow with GPU support from the `anaconda` channel:
@@ -55,7 +55,7 @@ running Python:
 
 ~~~
 $ module load cuda/10.2.89-gcc/8.3.1 cudnn/8.0.0.180-10.2-linux-x64-gcc/8.3.1 anaconda3/2019.10-gcc/8.3.1
-$ source activate tf_env
+$ conda activate tf_env
 ~~~
 
 ### Installing Tensorflow for non-GPU node
@@ -81,7 +81,7 @@ $ conda create -n tf_env_cpu
 4) Activate the conda environment:
 
 ~~~
-$ source activate tf_env_cpu
+$ conda activate tf_env_cpu
 ~~~
 
 5) Install Tensorflow from the `anaconda` channel:

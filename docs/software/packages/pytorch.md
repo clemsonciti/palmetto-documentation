@@ -23,7 +23,7 @@ $ conda create -n pytorch_env pip python=3.8.3
 
 4) Activate the conda environment:
 ~~~
-$ source activate pytorch_env
+$ conda activate pytorch_env
 ~~~
 
 5) Install Pytorch with GPU support from the `pytorch` channel:
@@ -55,7 +55,7 @@ running Python:
 
 ~~~
 $ module load cuda/9.2.88-gcc/7.1.0 cudnn/7.6.5.32-9.2-linux-x64-gcc/7.1.0-cuda9_2 anaconda3/2019.10-gcc/8.3.1
-$ source activate pytorch_env
+$ conda activate pytorch_env
 ~~~
 
 
