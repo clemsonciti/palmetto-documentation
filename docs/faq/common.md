@@ -53,4 +53,5 @@ Host key verification failed.
 Resolution: type one of the following command into the terminal before login to Palmetto (Note the number must match with the given key):
 
 $ sed -i '**1**d' ~/.ssh/known_hosts
+
 $ perl -pi -e 's/\Q$_// if ($. == **1**);' ~/.ssh/known_hosts$
