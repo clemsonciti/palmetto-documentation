@@ -46,10 +46,11 @@ The fingerprint for the RSA key sent by the remote host is
 SHA256:Z2WLGvz7vX2t9VPap6ITwS3cBlCafN69FoIm8wmmF6g.
 Please contact your system administrator.
 Add correct host key in /Users/abcd/.ssh/known_hosts to get rid of this message.
-Offending RSA key in /Users/abcd/.ssh/known_hosts:
+Offending RSA key in /Users/abcd/.ssh/known_hosts: **1**
 RSA host key for login.palmetto.clemson.edu has changed and you have requested strict checking.
 Host key verification failed.
 
 Resolution: type one of the following command into the terminal before login to Palmetto (Note the number must match with the given key):
-$ sed -i '1d' ~/.ssh/known_hosts
-$ perl -pi -e 's/\Q$_// if ($. == 1);' ~/.ssh/known_hosts$
+
+$ sed -i '**1**d' ~/.ssh/known_hosts
+$ perl -pi -e 's/\Q$_// if ($. == **1**);' ~/.ssh/known_hosts$
