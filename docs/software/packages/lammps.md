@@ -89,7 +89,7 @@ $ more ../cmake/presets/my.cmake
 - Next, we need to modify `../cmake/presets/kokkos-cuda.cmake` so that `kokkos` is built to the correct
 architectural specification. For Palmetto, the follow
 
-Palmetto GPU architectures       |   Architecture name for Kokko
+Palmetto GPU architectures       |   Architecture name for Kokkos
 --------------------|-------------------------------------
 K20 and K40         | KEPLER35
 P100                | PASCAL60
