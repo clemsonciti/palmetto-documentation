@@ -26,7 +26,7 @@ Faculty who conducts course that required Palmetto account for all students, ple
 5. Enter the information requested.
 5. Once the form is complete, press the "Submit" button.
 
-### On-boarding sessions
+## On-boarding sessions
 
 - For new users of Palmetto, we offer on-boarding sessions **every 
 Friday from 9:00AM to 10:00AM**. You can register to attend this online Zoom session 
