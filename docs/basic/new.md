@@ -15,6 +15,17 @@ can request an account following the procedure detailed below:
 
 Account requests are typically reviewed and approved between 24-48 hours.
 
+## Obtaining Bulk Account for course
+
+Faculty who conducts course that required Palmetto account for all students, please submit the Bulk Account request instead of having student submititng individually:
+
+1. Access the new ITHelp Portal at <https://clemson.cherwellondemand.com/CherwellPortal>
+2. After Logging in Select "Browse Our Services"
+3. Select Research > Research Computing > High Perf Computing and Storage
+4. Under High Perf Computing and Storage, select "Request Bulk Account"
+5. Enter the information requested.
+5. Once the form is complete, press the "Submit" button.
+
 ### On-boarding sessions
 
 - For new users of Palmetto, we offer on-boarding sessions **every 
