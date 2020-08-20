@@ -55,7 +55,7 @@ build multiple lammps executables within a single source download.
 
 #### Lammps build with kokkos and gpu
 
-- Create a directory called `build-kokos-cuda`
+- Create a directory called `build-kokkos-cuda`
 - Change into this directory. 
 
 ~~~
