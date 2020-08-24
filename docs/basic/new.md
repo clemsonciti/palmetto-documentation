@@ -23,7 +23,7 @@ Faculty who conducts course that required Palmetto account for all students, ple
 2. After Logging in Select "Browse Our Services"
 3. Select Research > Research Computing > High Perf Computing and Storage
 4. Under High Perf Computing and Storage, select "Request Bulk Account"
-5. Enter the list of Clemson user ID, not the name.
+5. Enter the **list of Clemson user ID**, not the name.
 5. Once the form is complete, press the "Submit" button.
 
 ## On-boarding sessions
