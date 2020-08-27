@@ -15,10 +15,6 @@ $ module avail gcc
 $ module avail intel
 ~~~
 
-~~~
-$ module avail pgi
-~~~
-
 ## Compiling "Hello World" Program
 
 ### C
