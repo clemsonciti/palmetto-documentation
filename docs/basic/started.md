@@ -234,7 +234,7 @@ about how many nodes from each phase are currently in use, free, or offlined
 for maintenance.
 
 ~~~
-[lngo@login001 ~]$ ./whatsfree
+[lngo@login001 ~]$ whatsfree
 
 Mon Aug 03 2020 22:37:26
 
@@ -499,6 +499,9 @@ Here are some examples of resource limits specification:
 -l select=1:ncpus=2:mem=15gb:host=node1479,walltime=00:20:00
 -l select=2:ncpus=2:mem=15gb,walltime=00:20:00,place=scatter    # force each chunk to be on a different node
 -l select=2:ncpus=2:mem=15gb,walltime=00:20:00,place=pack       # force each chunk to be on the same node
+-l select=2:ncpus=2:mem=15gb:phase=9,walltime=00:20:00          # force each chunk to be on the same phase
+-l select=1:ncpus=16:mpiprocs=16:mem=15gb,walltime=00:20:00     # specify number of mpi processing
+
 ~~~
 
 and examples of options you can use in the job limit specification:
