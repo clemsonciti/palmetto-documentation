@@ -7,15 +7,15 @@ you must [log-in with tunneling enabled]({{site.baseurl}}/userguide_howto_run_gr
 and then ask for an interactive session:
 
 ~~~
-$ qsub -I -X -l select=1:ncpus=8:mpiprocs=8:mem=6gb:interconnect=1g,walltime=01:00:00
+$ qsub -I -X -l select=1:ncpus=8:mpiprocs=8:mem=6gb:interconnect=fdr,walltime=01:00:00
 ~~~
 
 Once logged-in to an interactive compute node,
 you must first load the ANSYS module along with the Intel module:
 
 ~~~
-$ module add ansys/17.2
-$ module add intel/12.1
+$ module add ansys/19.5
+
 ~~~
 
 And then launch the required program:
@@ -23,10 +23,10 @@ And then launch the required program:
 **For ANSYS APDL**
 
 ~~~
-$ ansys172 -g
+$ ansys195 -g
 ~~~
 
-If you are using e.g., ANSYS 17.0 instead, then the executable is called `ansys170`.
+If you are using e.g., ANSYS 20.2 instead, then the executable is called `ansys202`.
 
 **For CFX**
 
@@ -46,7 +46,7 @@ $ runwb2
 $ fluent
 ~~~
 
-**For ANSYS Electromagnetics**
+**For ANSYS Electromagnetics** (only available for ansys/20.2)
 
 ~~~
 $ ansysedt
@@ -62,7 +62,7 @@ You can obtain the files required to run this example
 using the following commands:
 
 ~~~
-$ cd /scratch2/username
+$ cd /scratch1/username
 $ module add examples
 $ example get ANSYS
 $ cd ANSYS && ls
@@ -81,7 +81,7 @@ The batch script `job.sh` submits the batch job to the cluster:
 #PBS -j oe
 
 module purge
-module add ansys/17.2
+module add ansys/19.5
 
 cd $PBS_O_WORKDIR
 
@@ -94,7 +94,7 @@ do
 done
 
 cd $TMPDIR
-ansys172 -dir $TMPDIR -j EXAMPLE -s read -l en-us -b -i input.txt -o output.txt -dis -machines $machines -usessh
+ansys195 -dir $TMPDIR -j EXAMPLE -s read -l en-us -b -i input.txt -o output.txt -dis -machines $machines -usessh
 
 for node in `uniq $PBS_NODEFILE`
 do
@@ -125,7 +125,7 @@ In the batch script `job.sh`:
    such as the path to the `input.txt` file, the scratch directory to use, etc.,
 
    ~~~
-   ansys172 -dir $TMPDIR -j EXAMPLE -s read -l en-us -b -i input.txt -o output.txt -dis -machines $machines -usessh
+   ansys195 -dir $TMPDIR -j EXAMPLE -s read -l en-us -b -i input.txt -o output.txt -dis -machines $machines -usessh
    ~~~  
 
 4. Finally, the following lines copy all the data
