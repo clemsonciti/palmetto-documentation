@@ -54,4 +54,4 @@ Resolution: type one of the following command into the terminal before login to 
 
 $ sed -i '**1**d' ~/.ssh/known_hosts
 
-$ perl -pi -e 's/\Q$_// if ($. == **1**);' ~/.ssh/known_hosts$
+$ perl -pi -e 's/\Q$_// if ($. == **1**);' ~/.ssh/known_hosts
