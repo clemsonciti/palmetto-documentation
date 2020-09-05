@@ -29,7 +29,7 @@ Copy any input data to one of the `/scratch` directories and use
 that `/scratch` directory as the working directory for jobs.
 Periodically move important data back to the `/home` directory.
 
-1.  Try to use `/local_scratch` whenever possible. Unlike `/home`
+2.  Try to use `/local_scratch` whenever possible. Unlike `/home`
 or the `/scratch` directories, which are shared by all nodes, each
 node has its own `/local_scratch` directory. It is much faster to read/write
 data to `/local_scratch`, and doing so will not affect other users.
