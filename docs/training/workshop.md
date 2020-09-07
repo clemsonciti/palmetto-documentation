@@ -23,7 +23,7 @@ export of big-data, basic usage, and how to submit scalable data analysis jobs. 
 workshop will incorporate the use of JupyterHub and Jupyter “Notebooks”. An understanding 
 of the Linux command line and some Python experience is necessary.
 
-### Introduction to Big Data Analytics using Spark/Python
+### [Introduction to Big Data Analytics using Spark/Python](https://clemsonciti.github.io/workshop-spark/)
 
 This workshop will teach how to how to utilize Apache Spark and Python to perform large-scale, 
 in-memory data analytics. Learning outcomes of this workshop include understanding the overall 
