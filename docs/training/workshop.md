@@ -15,7 +15,7 @@ This Workshop will introduce Python for those that have little to no programming
 - Python II: Introduction to Numpy, Matplotlib and Anaconda Environments (Prerequisite: Python I)
 - Python III: Introduction to Data Analysis using Pandas (Prerequisite: Python I Recommended: Python II)
 
-### Introduction to Hadoop on Palmetto
+### [Introduction to Hadoop on Palmetto](https://clemsonciti.github.io/workshop-hadoop/)
 
 This workshop introduces participants to the Hadoop ecosystem deployable on Palmetto. 
 We will cover Hadoop’s architecture, how it can be deployed on Palmetto, import and 
