@@ -14,7 +14,7 @@
     - October 14, 9:00AM - 12:00PM
 - [Python III](workshop.md#introduction-to-programming-in-python)
     - October 16, 9:00AM - 12:00PM
-- [R for Data Science](workshop.md#introduction-to-data-science-using-r)
+- [R Programming](workshop.md#introduction-to-data-science-using-r)
     - October 6, 9:00AM - 12:00PM
     - October 8, 9:00AM - 12:00PM
 - [Big Data Analytics: Introduction to Hadoop](workshop.md#introduction-to-hadoop-on-palmetto)
