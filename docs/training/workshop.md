@@ -31,7 +31,7 @@ conceptual design of Spark and demonstrate the advantages of using Spark over tr
 MapReduce. Participants will also learn to develop Spark programs using Python and to leverage 
 Spark’s specific capabilities such as SQLContext and DataFrame to assist with data analytics. 
 
-### Introduction to Data Science using R
+### Introduction to R Programming
 
 Introduction to R language for data analytics using RStudio on PC and also Jupyter notebooks 
 on Palmetto. Workshop contents include basic understand of R, installation of additional R 
