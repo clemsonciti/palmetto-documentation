@@ -55,3 +55,8 @@ Resolution: type one of the following command into the terminal before login to 
 $ sed -i '**1**d' ~/.ssh/known_hosts
 
 $ perl -pi -e 's/\Q$_// if ($. == **1**);' ~/.ssh/known_hosts
+
+## Error when creating conda environment after loading anaconda module
+If error occurs, please try the following command:
+
+`export LD_PRELOAD="" `
