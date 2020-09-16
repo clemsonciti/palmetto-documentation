@@ -59,4 +59,4 @@ $ perl -pi -e 's/\Q$_// if ($. == **1**);' ~/.ssh/known_hosts
 ## Error when creating conda environment after loading anaconda module
 If error occurs, please try the following command:
 
-`export LD_PRELOAD="" `
+`$ export LD_PRELOAD="" `
