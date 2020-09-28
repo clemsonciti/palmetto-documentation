@@ -19,7 +19,7 @@
     - [October 8, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
 - [Big Data Analytics: Introduction to Hadoop](workshop.md#introduction-to-hadoop-on-palmetto)
     - [September 18, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
-    - October 16, 9:00AM - 12:00PM
+    - [October 16, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
 - [Big Data Analytics: Introduction to Spark](workshop.md#introduction-to-big-data-analytics-using-sparkpython)
     - [October 2 , 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
     - [October 30, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
