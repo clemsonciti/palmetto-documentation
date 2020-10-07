@@ -10,6 +10,8 @@ nav:
     - Login: basic/login.md
     - Getting Started: basic/started.md
     - JupyterLab: basic/jupyter.md
+  - Advanced:
+    - Socket Proxy Access: advanced/proxy.md
   - Software: 
     - Software on Palmetto: software/software.md
     - User Software Installation: software/spack.md

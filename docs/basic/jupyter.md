@@ -1,5 +1,5 @@
 
-# JuputerLab Interface to Palmetto
+# JupyterLab Interface to Palmetto
 
 {! basic/jupyter/jupyterhub_on_palmetto.md !}
 {! basic/jupyter/basic_interface.md !}
