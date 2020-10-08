@@ -17,9 +17,9 @@ on Chrome, Edge, and Safari will be added.
 
 - Notation: `USERNAME` means your Palmetto login name. 
 
-## Setup socket proxy access on MacOS
+## Setup socket proxy access on MacOS/Linux
 
-- First, you need to setup the SSH tunnel with port forwarding 
+- Setup the SSH tunnel with port forwarding 
 to Palmetto. Open a terminal and run the following command (*this terminal 
 must be kept opened for the socket proxy to be active*):
 
@@ -27,25 +27,43 @@ must be kept opened for the socket proxy to be active*):
 $ ssh -D 8080 -C -q -N USERNAME@login.palmetto.clemson.edu
 ~~~
 
-<img src="../../images/advanced/mac_00.png" style="width:300px">
-
-
-
-- Next, setup SOCKS proxy for your MacOS
-  - Select `Apple` then `System Preferences`
-  - Click `Network`
-  - Select the network interface you wish to use (i.e. AirPort)
-  - Click `Advanced`
-  - Click `Proxies` and check the box beside `SOCKS Proxy`
-  - Fill in `localhost` and `8080` for the two boxes under
-  `SOCKS Proxy Server`. 
-  - Make sure that `Use Passive FTP Mode (PASV)` is unchecked. 
-  - Click `OK`
-  - Click `Apply`
-
 <img src="../../images/advanced/mac_01.png" style="width:600px">
 
 
+## Setup socket proxy access on Windows
+
+- On the menu button bar of MobaXterm, click Tunneling
+
+<img src="../../images/advanced/win_01.png" style="width:600px">
+
+- Select `New SSH tunnel`, then select `Dynamic port forwarding (SOCKS proxy)`
+- Filling the information as follows:
+  - `<Forwarded port>`: `8080`
+  - `<SSH server>`: `login.palmetto.clemson.edu`
+  - `<SSH login>`: USERNAME
+  - `<SSH port>`: `22`
+- Click `Save`
+
+<img src="../../images/advanced/win_02.png" style="width:600px">
+
+- Click the **play** icon to activate the tunnel. 
+
+<img src="../../images/advanced/win_03.png" style="width:600px">
+
+
+- You will first be asked for password, that is your Palmetto password. 
+- Next, you will be asked for a Duo two-factor login, enter `1` to receive a 
+DUO push to your phone. 
+- The **play** icon will be blurred, and the **stop** icon will become bolded.
+Your tunnel is now activated. You can click on the `X` at the top right corner
+to close this windows, and the tunnel will keep running. 
+
+<img src="../../images/advanced/win_04.png" style="width:600px">
+
+
+## Enable Firefox to view website through the proxy
+
+- This is similar across all 
 - Download and install Firefox if you don't already have it. 
 - Setup Firefox:
   - Select `Firefox` then `Preferences`. 
@@ -70,6 +88,8 @@ $ qsub -I
 $ module load anaconda3/2020.07
 $ jupyter notebook ip=0.0.0.0 --no-browser
 ~~~
+
+If you are on a Windows machine, use MobaXterm to login to Palmetto as normal. 
 
 <img src="../../images/advanced/test_01.png" style="width:600px">
 
