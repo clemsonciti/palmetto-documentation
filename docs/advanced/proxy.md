@@ -76,6 +76,9 @@ to close this windows, and the tunnel will keep running.
 
 <img src="../../images/advanced/mac_02.png" style="width:600px">
 
+- If Firefox is your primary browser, you will need to reverse the process and 
+change back to the default `Use system proxy settings` in your Firefox' 
+`Preferences`/`General`/`Network Settings` after you are done. 
 
 ## Test proxy
 
@@ -86,7 +89,7 @@ notebook server.
 $ ssh USERNAME@login.palmetto.clemson.edu
 $ qsub -I
 $ module load anaconda3/2020.07
-$ jupyter notebook ip=0.0.0.0 --no-browser
+$ jupyter notebook --ip=0.0.0.0 --no-browser
 ~~~
 
 If you are on a Windows machine, use MobaXterm to login to Palmetto as normal. 
