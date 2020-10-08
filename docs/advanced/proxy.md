@@ -88,7 +88,7 @@ notebook server.
 ~~~
 $ ssh USERNAME@login.palmetto.clemson.edu
 $ qsub -I
-$ module load anaconda3/2020.07
+$ module load anaconda3/2020.07-gcc/8.3.1
 $ jupyter notebook --ip=0.0.0.0 --no-browser
 ~~~
 
