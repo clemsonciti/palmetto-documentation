@@ -4,7 +4,7 @@ This page explains how to install the [Tensorflow](https://www.tensorflow.org/)
 package for use with GPUs on the cluster,
 and how to use it from Jupyter Notebook via [JupyterHub](https://www.palmetto.clemson.edu/palmetto/jupyterhub_index.html).
 
-### GPU node
+### Installing Tensorflow GPU node
 
 1) Request an interactive session on a GPU node. For example:
 ~~~
@@ -109,7 +109,7 @@ $ python
 >>> import tensorflow as tf
 ~~~
 
-### Add Jupyter kernel
+### Setup Jupyter kernel
 
 If you would like to use Tensorflow from Jupyter Notebook on Palmetto via
 [JupyterHub](palmetto.clemson.edu/jupyterhub), you need the following additional steps:
