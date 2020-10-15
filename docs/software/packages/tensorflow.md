@@ -109,7 +109,7 @@ $ python
 >>> import tensorflow as tf
 ~~~
 
-### Add Jupyter kernel:
+### Add Jupyter kernel
 
 If you would like to use Tensorflow from Jupyter Notebook on Palmetto via
 [JupyterHub](palmetto.clemson.edu/jupyterhub), you need the following additional steps:
@@ -160,7 +160,7 @@ in the Launcher.
 <img src="../../images/software/packages/tensorflow_03.png" style="width:600px">
 
 
-### Example Deep Learning - Multiple Object Detections:
+### Example Deep Learning - Multiple Object Detections
 
 This is a demonstration for the tensorflow gpu kernel. Steps for 
 non-gpu kernel are similar. 
