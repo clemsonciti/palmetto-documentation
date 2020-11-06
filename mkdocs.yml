@@ -10,16 +10,17 @@ nav:
     - Login: basic/login.md
     - Getting Started: basic/started.md
     - JupyterLab: basic/jupyter.md
+    - VNC: basic/vnc.md
   - Advanced:
     - Socket Proxy Access: advanced/proxy.md
-  - Software: 
+  - Software:
     - Software on Palmetto: software/software.md
     - User Software Installation: software/spack.md
     - Software Development: software/programming.md
   - Training and Outreach:
-    - Training Schedule: training/schedule.md 
+    - Training Schedule: training/schedule.md
     - Workshop Descriptions: training/workshop.md
-  - Misc: 
+  - Misc:
     - FAQ/Common Issues: faq/common.md
     - Facilities Document: faq/fac.md
 
