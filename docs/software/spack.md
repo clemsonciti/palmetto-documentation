@@ -35,7 +35,7 @@ as necessary.
 $ cp -R /software/spack-src/spack-yaml ~/.spack
 ```
 
-Modify the `config.yaml` file inside `.spack` with the following content:
+Modify the `config.yaml` file inside `~/.spack/linux/` with the following content:
 
 ```
 ...
