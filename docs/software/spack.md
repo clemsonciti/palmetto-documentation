@@ -16,6 +16,7 @@ The following command needs to be run to setup Spack:
 ```
 $ cd
 $ mkdir software
+$ cd software
 $ git clone https://github.com/spack/spack.git
 $ source ~/software/spack/share/spack/setup-env.sh
 ```
@@ -31,7 +32,7 @@ Copy the default configurations for Spack from Palmetto. You can customize these
 as necessary. 
 
 ```
-$ cp -R /software/spack-src/spack-yaml .spack
+$ cp -R /software/spack-src/spack-yaml ~/.spack
 ```
 
 Modify the `config.yaml` file inside `.spack` with the following content:
