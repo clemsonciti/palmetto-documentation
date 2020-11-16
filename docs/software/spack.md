@@ -45,7 +45,7 @@ Modify the `config.yaml` file inside `~/.spack/linux/` with the following conten
 
   # Locations where templates should be found
   template_dirs:
-    - /software/spack/share/spack/templates/
+    - ~/software/spack/share/spack/templates/
 
   # Default directory layout
   install_path_scheme: "${ARCHITECTURE}/${COMPILERNAME}-${COMPILERVER}/${PACKAGE}-${VERSION}-${HASH}"
