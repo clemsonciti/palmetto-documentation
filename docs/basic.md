@@ -379,7 +379,7 @@ before and after loading some module:
 
 ~~~
 $ echo $PATH
-$ module add python/2.7.13
+$ module add anaconda3/2019.10-gcc/8.3.1
 $ echo $PATH
 ~~~
 
@@ -392,12 +392,12 @@ An interactive job can be started using the `qsub` command.
 Here is an example of an interactive job:
 
 ~~~
-[username@login001 ~]$ qsub -I -l select=1:ncpus=2:mem=4gb,walltime=4:00:00
+[username@login001 ~]$ qsub -I -l select=1:ncpus=2:mem=4gb:interconnect=1g,walltime=4:00:00
 qsub (Warning): Interactive jobs will be treated as not rerunnable
 qsub: waiting for job 8730.pbs02 to start
 qsub: job 8730.pbs02 ready
 
-[username@node0021 ~]$ module add python/3.4
+[username@node0021 ~]$ module add anaconda3/2019.10-gcc/8.3.1
 [username@node0021 ~]$ python runsim.py
 .
 .
@@ -427,9 +427,9 @@ In the batch job below, we really don't do anything useful
 
 ~~~
 #PBS -N example
-#PBS -l select=1:ncpus=1:mem=2gb,walltime=00:10:00
+#PBS -l select=1:ncpus=1:mem=2gb:interconnect=1g,walltime=00:10:00
 
-module add gcc/4.8.1
+module add gcc/9.3.0-gcc/8.3.1
 
 cd /home/username
 echo Hello World from `hostname`

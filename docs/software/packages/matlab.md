@@ -18,7 +18,7 @@ you must [log-in with tunneling enabled]({{site.baseurl}}/userguide_howto_run_gr
 and then ask for an interactive session:
 
 ~~~
-$ qsub -I -X -l select=1:ncpus=2:mem=24gb,walltime=1:00:00
+$ qsub -I -X -l select=1:ncpus=2:mem=24gb:interconnect=1g,walltime=1:00:00
 ~~~
 
 Once logged-in, you must load one of the MATLAB modules:
@@ -79,7 +79,7 @@ a batch script as follows:
 #!/bin/bash
 #
 #PBS -N test_matlab
-#PBS -l select=1:ncpus=1:mem=5gb
+#PBS -l select=1:ncpus=1:mem=5gb:interconnect=1g
 #PBS -l walltime=1:00:00
 
 module add matlab/2018b

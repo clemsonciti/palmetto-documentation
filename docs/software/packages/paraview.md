@@ -21,7 +21,7 @@ Compilation instructions can be found in the Paraview
 First, log-in with X11 tunneling enabled, and request an interactive session:
 
 ~~~
-$ qsub -I -X -l select=4:ncpus=2:mpiprocs=2:ngpus=2:mem=32gb,walltime=1:00:00
+$ qsub -I -X -l select=4:ncpus=2:mpiprocs=2:ngpus=2:mem=32gb:interconnect=10ge,walltime=1:00:00
 ~~~
 
 In the above example, we request 4 nodes with 2 GPUs each.

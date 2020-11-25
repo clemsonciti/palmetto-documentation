@@ -8,7 +8,7 @@ using [instructions from the following links](https://www.palmetto.clemson.edu/p
 - Get a node (choose the node type you wish to run Gromacs on)
 
 ~~~
-$ qsub -I -l select=1:ncpus=20:mem=20gb:ngpus=1:gpu_model=p100,walltime=5:00:00
+$ qsub -I -l select=1:ncpus=20:mem=20gb:ngpus=1:gpu_model=p100:interconnect=10ge,walltime=5:00:00
 ~~~
 
 - Identify architecture type:
@@ -71,7 +71,7 @@ we'll consider running the GROMACS ADH benchmark.
 First, request an interactive job:
 
 ~~~
-$ qsub -I -l select=1:ncpus=20:mem=100gb:ngpus=2:gpu_model=p100,walltime=5:00:00
+$ qsub -I -l select=1:ncpus=20:mem=100gb:ngpus=2:gpu_model=p100:interconnect=10ge,walltime=5:00:00
 $ mkdir -p /scratch1/$USER/gromacs_ADH_benchmark
 $ cd /scratch1/$USER/gromacs_ADH_benchmark
 $ wget ftp://ftp.gromacs.org/pub/benchmarks/ADH_bench_systems.tar.gz
@@ -95,7 +95,7 @@ and this directory already contains the input files:
 
 ~~~
 #PBS -N adh_cubic
-#PBS -l select=1:ngpus=2:ncpus=16:mem=20gb:gpu_model=p100,walltime=5:00:00
+#PBS -l select=1:ngpus=2:ncpus=16:mem=20gb:gpu_model=p100:interconnect=10ge,walltime=5:00:00
 
 cd $PBS_O_WORKDIR
 

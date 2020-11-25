@@ -22,7 +22,7 @@ using `kokkos` with GPU, one using `kokkos` without GPU support.
 Reserve a node, and pay attention to its GPU model.
 
 ~~~
-$ qsub -I -l select=1:ncpus=24:mem=100gb:ngpus=2:gpu_model=v100,walltime=10:00:00
+$ qsub -I -l select=1:ncpus=24:mem=100gb:ngpus=2:gpu_model=v100:interconnect=25ge,walltime=10:00:00
 ~~~
 
 Create a directory named `software` (if you don't already have it) in your 
@@ -138,7 +138,7 @@ Here is a sample batch script `job.sh` for this example:
 
 ~~~
 #PBS -N accelerate 
-#PBS -l select=1:ncpus=8:mpiprocs=8:ngpus=2:gpu_model=v100:mem=64gb,walltime=4:00:00
+#PBS -l select=1:ncpus=8:mpiprocs=8:ngpus=2:gpu_model=v100:mem=64gb:interconnect=25ge,walltime=4:00:00
 #PBS -j oe
 
 cd $PBS_O_WORKDIR

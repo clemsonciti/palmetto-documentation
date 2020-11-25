@@ -6,7 +6,7 @@ To run graphics-heavy applications that use sophisticated graphical user interfa
 We really recommend using MobaXTerm, because it comes with built-in VNC client, which makes the process much easier. Use MobaXTerm to log into Palmetto; then, go on a compute node with GPUs:
 
 ~~~
-qsub -I -l select=1:ncpus=4:mem=50gb:ngpus=2:gpu_model=p100,walltime=8:00:00
+qsub -I -l select=1:ncpus=4:mem=50gb:ngpus=2:gpu_model=p100:interconnect=10ge,walltime=8:00:00
 ~~~
 
 Here, we requested P100 GPUs; you can request any GPU type, based on what's available (see the output of `whatsfree` and `cat /etc/hardware-table`).
@@ -63,7 +63,7 @@ Install [TurboVNC for Mac](https://sourceforge.net/projects/turbovnc/files/2.2.3
 Open a terminal (most likely, it’s in the **Applications** -> **Utilities** folder). Sign into Palmetto, and connect to a compute node (here, we request P100 GPUs; you can request any GPU type which we have available on Palmetto, see the output of `cat /etc/hardware-table` and `whatsfree`):
 
 ~~~
-qsub -I -l select=1:ncpus=4:mem=50gb:ngpus=2:gpu_model=p100,walltime=8:00:00
+qsub -I -l select=1:ncpus=4:mem=50gb:ngpus=2:gpu_model=p100:interconnect=10ge,walltime=8:00:00
 ~~~
 
 Start TurboVNC server:

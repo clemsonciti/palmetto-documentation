@@ -109,10 +109,8 @@ using Palmetto:
 Location        |	Available space                     | Notes
 ----------------|---------------------------------------|---------------------------------------------------------------------------
 `/home`         |   100 GB per user                     | Backed-up nightly, permanent storage space accessible from all nodes
-`/scratch1`     |   233 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, BeeGFS Parallel File Sytem
-`/scratch2`     |   160 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, XFS
-`/scratch3`     |   129 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, ZFS
-`/scratch4`     |   174 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, BeeGFS Parallel File Sytem
+`/scratch1`     |   2PB shared by all users             | Not backed up, temporary work space accessible from all nodes, BeeGFS Parallel File Sytem
+`/scratch2`     |   190 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, ZFS
 `/local_scratch`|   Varies between nodes (99GB-800GB)   | Per-node temporary work space, accessible only for the lifetime of job
 
 Additional high-performance and backed-up storage may be purchased

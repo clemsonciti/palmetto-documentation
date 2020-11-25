@@ -356,8 +356,10 @@ Command                         | Action
 `qdel -Wforce <job id>`         | Use when job not responding to just `qdel`
 
 For more details and more advanced commands for submitting and controlling jobs,
-please refer to the [PBS Professional User's Guide](http://www.pbsworks.com/pdfs/PBSUserGuide14.2.pdf).
+please refer to the [PBS Professional User's Guide](http://www.pbsworks.com/pdfs/PBSUserGuide14.2.pdf).  
 
+It should be noted that for Palmetto, user will need to specify `interconnect` in order to  
+get an allocation, unless you submit a default `qsub -I` with no parameters. 
 
 ### Starting an interactive job
 
@@ -365,7 +367,7 @@ An interactive job can be started using the `qsub` command.
 Here is an example of an interactive job:
 
 ~~~
-[username@login001 ~]$ qsub -I -l select=1:ncpus=2:mem=4gb,walltime=4:00:00
+[username@login001 ~]$ qsub -I -l select=1:ncpus=2:mem=4gb:interconnect=1g,walltime=4:00:00
 qsub (Warning): Interactive jobs will be treated as not rerunnable
 qsub: waiting for job 8730.pbs02 to start
 qsub: job 8730.pbs02 ready
@@ -400,7 +402,7 @@ In the batch job below, we really don't do anything useful
 
 ~~~
 #PBS -N example
-#PBS -l select=1:ncpus=1:mem=2gb,walltime=00:10:00
+#PBS -l select=1:ncpus=1:mem=2gb,interconnect=1g,walltime=00:10:00
 
 module add gcc/9.3.0-gcc/8.3.1
 
@@ -443,7 +445,7 @@ or with a `#PBS` directive in a batch script.
 Parameter | Purpose | Example
 ----------|---------|---------
 `-N`      | Job name (7 characters)	| `-N maxrun1`
-`-l`      | Job limits (lowercase L), hardware & other requirements for job. | `-l select=1:ncpus=8:mem=1gb`
+`-l`      | Job limits (lowercase L), hardware & other requirements for job. | `-l select=1:ncpus=8:mem=1gb:interconnect=1g`
 `-q`      | Queue to direct this job to (`workq` is the default, `supabad` is an example of specific research group's job queue) | `-q supabad`
 `-o`      | Path to stdout file for this job (environment variables are not accepted here) | `-o stdout.txt`
 `-e`      | Path to stderr file for this job (environment variables are not accepted here) | `-e stderr.txt`
@@ -456,7 +458,7 @@ For example, in a batch script:
 
 ~~~
 #PBS -N hydrogen
-#PBS -l select=1:ncpus=24:mem=200gb,walltime=4:00:00
+#PBS -l select=1:ncpus=24:mem=200gb:interconnect=1g,walltime=4:00:00
 #PBS -q bigmem
 #PBS -m abe
 #PBS -M userid@domain.com
@@ -466,7 +468,7 @@ For example, in a batch script:
 And in an interactive job request on the command line:
 
 ~~~
-$ qsub -I -N hydrogen -q bigmem -j oe -l select=1:ncpus=24:mem=200gb,walltime=4:00:00
+$ qsub -I -N hydrogen -q bigmem -j oe -l select=1:ncpus=24:mem=200gb:interconnect=1g,walltime=4:00:00
 ~~~
 
 For more detailed information, please take a look at:
@@ -490,17 +492,16 @@ Option      | Purpose
 Here are some examples of resource limits specification:
 
 ~~~
--l select=1:ncpus=8:chip_model=opteron:interconnect=10g
--l select=1:ncpus=16:chip_type=e5-2665:interconnect=56g:mem=62gb,walltime=16:00:00
--l select=1:ncpus=8:chip_type=2356:interconnect=10g:mem=15gb
--l select=1:ncpus=1:node_manufacturer=ibm:mem=15gb,walltime=00:20:00
--l select=1:ncpus=4:mem=15gb:ngpus=2,walltime=00:20:00
--l select=1:ncpus=4:mem=15gb:ngpus=1:gpu_model=k40,walltime=00:20:00
--l select=1:ncpus=2:mem=15gb:host=node1479,walltime=00:20:00
--l select=2:ncpus=2:mem=15gb,walltime=00:20:00,place=scatter    # force each chunk to be on a different node
--l select=2:ncpus=2:mem=15gb,walltime=00:20:00,place=pack       # force each chunk to be on the same node
--l select=2:ncpus=2:mem=15gb:phase=9,walltime=00:20:00          # force each chunk to be on the same phase
--l select=1:ncpus=16:mpiprocs=16:mem=15gb,walltime=00:20:00     # specify number of mpi processing
+-l select=1:ncpus=8:chip_model=opteron:interconnect=1g
+-l select=1:ncpus=16:chip_type=e5-2665:interconnect=10ge:mem=62gb,walltime=16:00:00
+-l select=1:ncpus=8:chip_type=2356:interconnect=10ge:mem=15gb
+-l select=1:ncpus=4:mem=15gb:ngpus=2:interconnect=fdr,walltime=00:20:00
+-l select=1:ncpus=4:mem=15gb:ngpus=1:gpu_model=k40:interconnect=fdr,walltime=00:20:00
+-l select=1:ncpus=2:mem=15gb:host=node1479:interconnect=1g,walltime=00:20:00
+-l select=2:ncpus=2:mem=15gb:interconnect=1g,walltime=00:20:00,place=scatter    # force each chunk to be on a different node
+-l select=2:ncpus=2:mem=15gb:interconnect=10g,walltime=00:20:00,place=pack       # force each chunk to be on the same node
+-l select=2:ncpus=2:mem=15gb:phase=9:interconnect=fdr,walltime=00:20:00          # force each chunk to be on the same phase
+-l select=1:ncpus=16:mpiprocs=16:mem=15gb:interconnect=hdr,walltime=00:20:00     # specify number of mpi processing
 
 ~~~
 

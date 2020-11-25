@@ -61,7 +61,7 @@ Start by requesting an interactive job.
 NOTE: Singularity can only be run on the compute nodes and Palmetto Login VMs:
 
 ```
-$ qsub -I -l select=1:ngpus=2:ncpus=16:mpiprocs=16:mem=120gb,walltime=5:00:00
+$ qsub -I -l select=1:ngpus=2:ncpus=16:mpiprocs=16:mem=120gb:interconnect=10ge,walltime=5:00:00
 ```
 
 We recommend that all users store built singularity images
