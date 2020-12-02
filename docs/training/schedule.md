@@ -1,25 +1,47 @@
-## Fall 2020 Training Schedule
+## Spring 2021 Training Schedule
 
-*Linked time indicates availability on CUCOURSE*
+*Linked time indicates availability on CUCOURSE*  
+
+*Starting Spring 2021, we will also test our recorded workshop features, 
+where Zoom-based workshops are recorded and posted. All recordings will 
+require Clemson's authentication to view. Downloading is not permitted.*
 
 - [Introduction to Linux](workshop.md#introduction-to-linux)  
-    - September 14, 9:00AM - 12:00PM
-    - [October 5, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
+    - January 12, 9:00AM - 12:00PM
+    - January 12, 5:00PM - 8:00PM
+    - [Link to recorded workshop]()
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
-    - September 8, 9:00AM - 12:00PM
-    - [October 12, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
+    - January 14, 9:00AM - 12:00PM
+    - January 14, 5:00PM - 8:00PM
+    - [Link to recorded workshop]()
 - [Python I](workshop.md#introduction-to-programming-in-python)
-    - [October 12, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
+    - January 25, 5:00PM - 8:00PM
+    - [Link to recorded workshop]()
 - [Python II](workshop.md#introduction-to-programming-in-python)
-    - [October 14, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
+    - January 27, 5:00PM - 8:00PM
+    - [Link to recorded workshop]()
 - [Python III](workshop.md#introduction-to-programming-in-python)
-    - [October 16, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
+    - January 27, 5:00PM - 8:00PM
+    - [Link to recorded workshop]()
 - [R Programming](workshop.md#introduction-to-data-science-using-r)
-    - [October 6, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
-    - [October 8, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
+    - Part 1 (basic): February 2, 9:00AM - 12:00PM
+    - Part 2 (advanced): February 4, 9:00AM - 12:00PM
+    - [Link to recorded workshop]()
 - [Big Data Analytics: Introduction to Hadoop](workshop.md#introduction-to-hadoop-on-palmetto)
-    - [September 18, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
-    - [October 16, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
+    - February 11, 5:00PM - 8:00PM
+    - March 18, 5:00PM - 8:00PM
+    - [Link to recorded workshop]()
 - [Big Data Analytics: Introduction to Spark](workshop.md#introduction-to-big-data-analytics-using-sparkpython)
-    - [October 2 , 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
-    - [October 30, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/)
+    - February 18, 5:00PM - 8:00PM
+    - March 25, 5:00PM - 8:00PM
+    - [Link to recorded workshop]()
+- [Applied Deep Learning: Object Detection Model using Tensorflow API](workshop.md#introduction-to-applied-deep-learning-object-detection-model-using-tensorflow-api)
+    - April 15, 5:00PM - 8:00PM
+    - [Link to recorded workshop]()
+- [Matlab](workshop.md#matlab)
+    - January 22, 9:00AM - 12:00PM
+    - [Link to recorded workshop]()
+- [RAPIDS]()
+    - TBD
+    - [Link to recorded workshop]()
+

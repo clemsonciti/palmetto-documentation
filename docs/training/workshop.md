@@ -1,9 +1,9 @@
 ## Workshop Descriptions
 
-### Introduction to Linux
+### [Introduction to Linux](https://clemsonciti.github.io/workshop-linux-GY/index.html)
 Introduction to the Linux Command Line Interface for researchers
 
-### Introduction to Research Computing on Palmetto Cluster
+### [Introduction to Research Computing on Palmetto Cluster](https://clemsonciti.github.io/workshop-palmetto/)
 This workshop introduces participants to the Palmetto Cluster--Clemson University's largest high-performance computing resource--its structure and basic usage and how to submit computational tasks to the cluster.
 
 ### Introduction to Programming in Python
@@ -31,9 +31,23 @@ conceptual design of Spark and demonstrate the advantages of using Spark over tr
 MapReduce. Participants will also learn to develop Spark programs using Python and to leverage 
 Spark’s specific capabilities such as SQLContext and DataFrame to assist with data analytics. 
 
-### Introduction to R Programming
+### [Introduction to R Programming](https://clemsonciti.github.io/workshop-R/index.html)
 
 Introduction to R language for data analytics using RStudio on PC and also Jupyter notebooks 
 on Palmetto. Workshop contents include basic understand of R, installation of additional R 
 modules, introduction to data manipulation, introduction to visualization, and several best 
 practices for using R. No prior knowledge of R or programming in general is required.
+
+### [Introduction to Applied Deep Learning: Object Detection Model using Tensorflow API]()
+
+This workshop introduces how to apply the Python Tensorflow API to object detection, a common 
+computer vision and deep learning concept. We will go through the steps involved in the process 
+of creating a custom object detection model from scratch. This includes getting images, label 
+them, train, evaluate, and export models on these images, and finally using the model to 
+classify images. 
+
+### [Matlab]()
+
+This is an introductory course about data analysis with MATLAB. We will cover such topics as 
+the MATLAB interface, flow control and loops, working with vectors and matrices, using scripts 
+and functions, and plotting. No prior knowledge of MATLAB or programming in general is required.
