@@ -21,7 +21,7 @@ require Clemson's authentication to view. Downloading is not permitted.*
     - January 27, 5:00PM - 8:00PM
     - [Link to recorded workshop]()
 - [Python III](workshop.md#introduction-to-programming-in-python)
-    - January 27, 5:00PM - 8:00PM
+    - January 29, 5:00PM - 8:00PM
     - [Link to recorded workshop]()
 - [R Programming](workshop.md#introduction-to-data-science-using-r)
     - Part 1 (basic): February 2, 9:00AM - 12:00PM

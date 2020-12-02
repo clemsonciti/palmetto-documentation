@@ -1,6 +1,6 @@
 ## Workshop Descriptions
 
-### [Introduction to Linux](https://clemsonciti.github.io/workshop-linux-GY/index.html)
+### [Introduction to Linux](https://clemsonciti.github.io/workshop-linux/index.html)
 Introduction to the Linux Command Line Interface for researchers
 
 ### [Introduction to Research Computing on Palmetto Cluster](https://clemsonciti.github.io/workshop-palmetto/)
