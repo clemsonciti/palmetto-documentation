@@ -41,7 +41,8 @@ require Clemson's authentication to view. Downloading is not permitted.*
 - [Matlab](workshop.md#matlab)
     - January 22, 9:00AM - 12:00PM
     - [Link to recorded workshop]()
-- [RAPIDS]()
-    - TBD
+- [RAPIDS](https://www.nvidia.com/content/dam/en-zz/Solutions/deep-learning/deep-learning-education/DLI-Workshop-Fundamentals-of-Accelerated-Data-Science-with-RAPIDS.pdf)
+    - March 11th, 9am-5pm
     - [Link to recorded workshop]()
-
+- [CUDA Python]()
+    - February 25th, 9am-5pm
