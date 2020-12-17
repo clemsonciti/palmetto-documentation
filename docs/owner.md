@@ -81,3 +81,30 @@ may expand existing storage at the same price.
 Individuals interested in purchase of Palmetto hardware
 may contact the Advanced Computing and Data Science team by email ithelp@clemson.edu
 and include “Palmetto nodes purchase” in the subject line.
+
+## Using purchased Palmetto storage or queue
+
+Purchased storage is accessible to the owner (and the members of the owner group) as a folder in the `/zfs` directory. For example, if your storage folder is called `my_storage`, you can access it by typing
+
+~~~
+cd /zfs/my_storage
+~~~
+
+If you bought priority access to compute nodes on Palmetto, we will create a special queue for you and your group. To submit a job into your queue, you can use the `-q` flag in `qsub`. For example, if your queue is called `my_queue`, an interactive job can be started by
+
+~~~
+qsub -I -q my_queue -l select=1:ncpus=2:mem=10gb,walltime=1:00:00
+~~~
+
+To submit a batch job into your queue, you should specify the `-q` flag in your PBS script. For example:
+
+~~~
+#PBS -N my_job
+#PBS -l select=1:ncpus=24:mem=200gb:interconnect=1g,walltime=4:00:00
+#PBS -q my_queue
+#PBS -m abe
+#PBS -M userid@domain.com
+#PBS -j oe
+~~~
+
+If you are the owner and you would like to add a Palmetto user to your group, please email <hpc-admin@clemson.edu>.
