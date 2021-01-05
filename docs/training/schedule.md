@@ -7,11 +7,11 @@ where Zoom-based workshops are recorded and posted. All recordings will
 require Clemson's authentication to view. Downloading is not permitted.*
 
 - [Introduction to Linux](workshop.md#introduction-to-linux)  
-    - January 12, 9:00AM - 12:00PM
+    - [January 12, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
     - [January 12, 5:00PM - 8:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
     - [Link to recorded workshop]()
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
-    - January 14, 9:00AM - 12:00PM
+    - [January 14, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
     - [January 14, 5:00PM - 8:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
     - [Link to recorded workshop]()
 - [Python I](workshop.md#introduction-to-programming-in-python)
