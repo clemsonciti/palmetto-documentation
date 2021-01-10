@@ -8,7 +8,7 @@ and how to use it from Jupyter Notebook via [JupyterHub](https://www.palmetto.cl
 
 1) Request an interactive session on a GPU node. For example:
 ~~~
-$ qsub -I -l select=1:ncpus=16:mem=20gb:ngpus=1:gpu_model=p100:interconnect=25ge,walltime=3:00:00
+$ qsub -I -l select=1:ncpus=16:mem=20gb:ngpus=1:gpu_model=p100:interconnect=10ge,walltime=3:00:00
 ~~~
 
 2) Load the Anaconda module:
