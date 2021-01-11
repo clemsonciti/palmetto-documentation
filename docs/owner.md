@@ -10,8 +10,7 @@ Such "owners" enjoy the following benefits:
 4. Request access for external collaborators (unaffiliated with Clemson University) to purchased compute resource
 
 For more information about condominium model and purchasing Palmetto nodes,
-including Palmetto nodes on grants please contact
-<hpc-admin@clemson.edu>.
+including Palmetto nodes on grants, please send an email to <ithelp@clemson.edu> and include the word "Palmetto" in the subject line.
 
 ### Condominium model
 
@@ -107,4 +106,4 @@ To submit a batch job into your queue, you should specify the `-q` flag in your 
 #PBS -j oe
 ~~~
 
-If you are the owner and you would like to add a Palmetto user to your group, please email <hpc-admin@clemson.edu>.
+If you are the owner and you would like to add a Palmetto user to your group, please email <ithelp@clemson.edu> with the subject "Adding a user to my Palmetto user group".
