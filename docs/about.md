@@ -114,8 +114,7 @@ Location        |	Available space                     | Notes
 `/local_scratch`|   Varies between nodes (99GB-800GB)   | Per-node temporary work space, accessible only for the lifetime of job
 
 Additional high-performance and backed-up storage may be purchased
-for group usage. Please visit [http://citi.clemson.edu/infrastructure](http://citi.clemson.edu/infrastructure)
-for details and pricing.
+for group usage. Please visit the [Owner's Guide](https://www.palmetto.clemson.edu/palmetto/owner/index.html).
 
 ## Job scheduling
 
@@ -127,7 +126,7 @@ jobs.
 
 Palmetto cluster operates in a condominium model which allows faculty to
 purchase immediate access to compute nodes on the cluster.
-More information can be found in the [Owner's Guide]({{site.baseurl}}/owners.html).
+More information can be found in the [Owner's Guide](https://www.palmetto.clemson.edu/palmetto/owner/index.html).
 
 
 ## Acknowledging Palmetto Cluster
