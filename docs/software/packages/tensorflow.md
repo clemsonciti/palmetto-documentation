@@ -162,7 +162,7 @@ in the Launcher.
 For Tensorflow with GPU support, you can check whether it is detecting the GPU properly with the line
 
 ~~~
-tf.config.list_physical_devices('GPU'
+tf.config.list_physical_devices('GPU')
 ~~~
 
 
