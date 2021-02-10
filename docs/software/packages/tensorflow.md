@@ -23,7 +23,7 @@ $ conda create -n tf_gpu_env
 
 4) Activate the conda environment:
 ~~~
-$ conda activate tf_gpu_env
+$ source activate tf_gpu_env
 ~~~
 
 5) Install Tensorflow with GPU support from the `anaconda` channel:
@@ -158,6 +158,12 @@ in the Launcher.
 6) You are now able to launch a notebook using the tensorflow with GPU kernel:
 
 <img src="../../images/software/packages/tensorflow_03.png" style="width:600px">
+
+For Tensorflow with GPU support, you can check whether it is detecting the GPU properly with the line
+
+~~~
+tf.config.list_physical_devices('GPU'
+~~~
 
 
 ### Example Deep Learning - Multiple Object Detections
