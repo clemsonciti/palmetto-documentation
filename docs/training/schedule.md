@@ -33,6 +33,7 @@ require Clemson's authentication to view. Downloading is not permitted.*
     - [Link to recorded workshop]()
 - [Big Data Analytics: Introduction to Hadoop](workshop.md#introduction-to-hadoop-on-palmetto)
     - [February 11, 5:00PM - 8:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
+      - [Recording](https://clemson.zoom.us/rec/share/O51tHIAY4Nghx4OTHE1yBZ890aIfQXTljipx0d2wpFM1GrN-4JfuNTBG_yMBgAHQ.AIuaKFMq09oE7ENj)
     - [March 18, 5:00PM - 8:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
     - [Link to recorded workshop]()
 - [Big Data Analytics: Introduction to Spark](workshop.md#introduction-to-big-data-analytics-using-sparkpython)
