@@ -13,6 +13,7 @@ nav:
     - VNC: basic/vnc.md
   - Advanced:
     - Socket Proxy Access: advanced/proxy.md
+    - DGX user guide: advanced/dgx.md
   - Software:
     - Software on Palmetto: software/software.md
     - User Software Installation: software/spack.md
