@@ -28,7 +28,7 @@ $ source activate tf_gpu_env
 
 5) Install Tensorflow with GPU support from the `anaconda` channel:
 ~~~
-$ conda install -c anaconda tensorflow-gpu=2.2.0 python=3.8.3
+$ conda install -c anaconda tensorflow-gpu=2.0
 ~~~
 
 This will automatically install some packages that are required for Tensorflow, like SciPy or NumPy. To see the list of installed packages, type
@@ -55,7 +55,7 @@ running Python:
 
 ~~~
 $ module load cuda/10.2.89-gcc/8.3.1 cudnn/8.0.0.180-10.2-linux-x64-gcc/8.3.1 anaconda3/2019.10-gcc/8.3.1
-$ conda activate tf_env
+$ source activate tf_env
 ~~~
 
 ### Installing Tensorflow for non-GPU node
@@ -81,13 +81,13 @@ $ conda create -n tf_cpu_env
 4) Activate the conda environment:
 
 ~~~
-$ conda activate tf_cpu_env
+$ source activate tf_cpu_env
 ~~~
 
 5) Install Tensorflow from the `anaconda` channel:
 
 ~~~
-$ conda install -c anaconda tensorflow=2.2.0
+$ conda install -c anaconda tensorflow=2.0
 ~~~
 
 This will automatically install some packages that are required for Tensorflow, like SciPy or NumPy. To see the list of installed packages, type
@@ -95,7 +95,7 @@ This will automatically install some packages that are required for Tensorflow, 
 ~~~
 $ conda list
 ~~~
-   
+
 If you need additional packages (for example, Pandas), you can type
 
 ~~~
@@ -108,6 +108,8 @@ $ conda install pandas
 $ python
 >>> import tensorflow as tf
 ~~~
+
+
 
 ### Setup Jupyter kernel
 
@@ -125,7 +127,7 @@ $ conda install jupyter
 ~~~
 $ python -m ipykernel install --user --name tf_gpu_env --display-name TensorflowGPU
 ~~~
-  
+
 For Tensorflow without GPU support, do:
 
 ~~~
@@ -151,7 +153,7 @@ selection if you want to use the GPU tensorflow kernel
 <img src="../../images/software/packages/tensorflow_01.png" style="width:600px">
 
 5) Once your JupyterHub has started, you should see the Tensorflow kernel in your list of kernels
-in the Launcher. 
+in the Launcher.
 
 <img src="../../images/software/packages/tensorflow_02.png" style="width:600px">
 
@@ -168,8 +170,8 @@ tf.config.list_physical_devices('GPU')
 
 ### Example Deep Learning - Multiple Object Detections
 
-This is a demonstration for the tensorflow gpu kernel. Steps for 
-non-gpu kernel are similar. 
+This is a demonstration for the tensorflow gpu kernel. Steps for
+non-gpu kernel are similar.
 
 1) Request an interactive session on a GPU node. For example:
 ~~~
@@ -183,7 +185,7 @@ $ module load cuda/10.2.89-gcc/8.3.1 cudnn/8.0.0.180-10.2-linux-x64-gcc/8.3.1 an
 
 3) Activate the conda environment:
 ~~~
-$ conda activate tf_gpu_env
+$ source activate tf_gpu_env
 ~~~
 
 4) Install supporting conda modules:
@@ -211,5 +213,5 @@ $ cd ~/tensorflow
 $ cp /zfs/citi/deeplearning/multi_object.ipynb .
 ~~~
 
-Open Jupyter Server, change into the `tensorflow` directory, then open and run 
-the `multi_object.ipynb` notebook. 
+Open Jupyter Server, change into the `tensorflow` directory, then open and run
+the `multi_object.ipynb` notebook.
