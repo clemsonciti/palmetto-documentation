@@ -23,7 +23,7 @@ $ conda create -n pytorch_env pip python=3.8.3
 
 4) Activate the conda environment:
 ~~~
-$ conda activate pytorch_env
+$ source activate pytorch_env
 ~~~
 
 5) Install Pytorch with GPU support from the `pytorch` channel:
@@ -55,7 +55,7 @@ running Python:
 
 ~~~
 $ module load cuda/9.2.88-gcc/7.1.0 cudnn/7.6.5.32-9.2-linux-x64-gcc/7.1.0-cuda9_2 anaconda3/2019.10-gcc/8.3.1
-$ conda activate pytorch_env
+$ source activate pytorch_env
 ~~~
 
 
@@ -75,7 +75,7 @@ $ conda install -c conda-forge jupyterlab
 ~~~
 $ python -m ipykernel install --user --name pytorch_env --display-name Pytorch
 ~~~
-  
+
 3) Create/edit the file `.jhubrc` in your home directory:
 
 ~~~
@@ -95,11 +95,10 @@ selection if you want to use the GPU pytorch kernel
 <img src="../../images/software/packages/pytorch_01.png" style="width:600px">
 
 5) Once your JupyterHub has started, you should see the Pytorch kernel in your list of kernels
-in the Launcher. 
+in the Launcher.
 
 <img src="../../images/software/packages/pytorch_02.png" style="width:600px">
 
 6) You are now able to launch a notebook using the pytorch with GPU kernel:
 
 <img src="../../images/software/packages/pytorch_03.png" style="width:600px">
-
