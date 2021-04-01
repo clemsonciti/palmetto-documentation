@@ -1,1 +1,5 @@
 .wy-side-nav-search{ background-color: #F56600}
+
+.wy-nav-content {
+  max-width: 1600;
+}
