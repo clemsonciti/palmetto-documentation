@@ -1,7 +1,7 @@
 # Starting out on Palmetto
 
-When you first logged into Palmetto, you will be presented with a welcome message. This is called the **motd**, or **Message of the day**. This message typically contains a quick introduction to Palmetto, links to user guides, and a list of useful commands. 
-Information about upcoming maintenance will also be posted here. 
+When you first logged into Palmetto, you will be presented with a welcome message. This is called the **motd**, or **Message of the day**. This message typically contains a quick introduction to Palmetto, links to user guides, and a list of useful commands.
+Information about upcoming maintenance will also be posted here.
 
 <img src="../../images/basic/started/palmetto_01.png" style="width:600px">
 
@@ -24,10 +24,10 @@ Location                 |	 Available space                       | Notes       
 
 - The `/home`, `scratch1`, `/scratch2` directories are shared by all nodes.
 - Each node has its own `/local_scratch` directory.
-- The parallel file system, `/scratch1`, is best suited for workflows issuing large read or write requests or creating a large number of files and 
-directories.  A large read or write is when data is accessed in large chunks, such as 1MB at a time.  A large number of files and directories refers 
+- The parallel file system, `/scratch1`, is best suited for workflows issuing large read or write requests or creating a large number of files and
+directories.  A large read or write is when data is accessed in large chunks, such as 1MB at a time.  A large number of files and directories refers
 to workflows that generate thousands of files and directories during its processing. `/scratch1` is also ideal for non-parallel jobs with heavy I/O needs.
-- The remaining scratch system, /scratch2, is best suited for workflows without heavy I/O needs.   They are much like using your home directory but you 
+- The remaining scratch system, /scratch2, is best suited for workflows without heavy I/O needs.   They are much like using your home directory but you
 are not limited to space, and you are allowed to run jobs against these file systems.
 
 All data in the `/home` directory is permanent (not automatically deleted) and backed-up on a nightly basis.
@@ -62,17 +62,17 @@ For details about purchased storage, please contact the Palmetto support staff
 ## Data transfer in and out of Palmetto
 
 Data can be transferred in and out of Palmetto via the following recommended methods:
-- Direct transfer using `login001`: Data size smaller than 10GB. 
-- Direct transfer using `xfer01`: Data size between 10-100GB. 
-- Transfer using Globus: Data size larger than 100GB. 
+- Direct transfer using `login001`: Data size smaller than 10GB.
+- Direct transfer using `xfer01`: Data size between 10-100GB.
+- Transfer using Globus: Data size larger than 100GB.
 
 #### Direct transfer
 
 On Windows machines, using the MobaXterm SSH client, the built-in file browser can be used (**SCP** tab of the side window).
 Using the Upload (green arrow pointing up) and and Dowload (blue arrow pointing down) buttons at the top of the SCP tab,
-you can easily transfer small files between Palmetto and your local computer. 
+you can easily transfer small files between Palmetto and your local computer.
 
-**You can setup an SSH session to `xfer01-ext.palmetto.clemson.edu` similar to how you login to `login001.palmetto.clemson.edu`.** 
+**You can setup an SSH session to `xfer01-ext.palmetto.clemson.edu` similar to how you login to `login001.palmetto.clemson.edu`.**
 
 <img src="../../images/basic/started/palmetto_02.png" style="width:300px">
 
@@ -125,7 +125,7 @@ However, Globus can be used for file transfers to/from other locations as well.
 2.  To begin transfering files,
     navigate to the Globus Online transfer utility
     here:
-    [https://www.globus.org/app/transfer](https://www.globus.org/app/transfer).
+    [https://app.globus.org/](https://app.globus.org/).
 
 3.  The transfer utility allows you to transfer
     files between "endpoints".
@@ -139,18 +139,18 @@ However, Globus can be used for file transfers to/from other locations as well.
     After installing,
     ensure that the application is running.
     You should then be able to set your local machine as one endpoint.
-    In the figure below, the endpoint is named `My Personal Mac`.
+    In the figure below, the endpoint is named `grigori_mac`.
 
 4.  As the second endpoint,
     choose `clemson#xfer01-ext.clemson.edu`.
 
-5. Make sure that you check the options to `verify file integrity after transfer` and `encrypt transfer` under the `Transfer & Sync Options`. 
+5. Make sure that you check the option to `verify file integrity after transfer` under the `Transfer & Sync Options`.
 
 5.  You can now transfer files between any locations on your
     local machine and the Palmetto cluster.
 
 
-<img src="../../images/basic/started/palmetto_03.png" style="width:1000px">
+<img src="../../images/basic/started/globus_screen.png" style="width:1000px">
 
 
 ## Viewing all Palmetto's hardware
@@ -359,7 +359,7 @@ For more details and more advanced commands for submitting and controlling jobs,
 please refer to the [PBS Professional User's Guide](http://www.pbsworks.com/pdfs/PBSUserGuide14.2.pdf).  
 
 It should be noted that for Palmetto, user will need to specify `interconnect` in order to  
-get an allocation, unless you submit a default `qsub -I` with no parameters. 
+get an allocation, unless you submit a default `qsub -I` with no parameters.
 
 ### Starting an interactive job
 
@@ -449,7 +449,7 @@ Parameter | Purpose | Example
 `-q`      | Queue to direct this job to (`workq` is the default, `supabad` is an example of specific research group's job queue) | `-q supabad`
 `-o`      | Path to stdout file for this job (environment variables are not accepted here) | `-o stdout.txt`
 `-e`      | Path to stderr file for this job (environment variables are not accepted here) | `-e stderr.txt`
-`-m`      | mail event: Email from the PBS server with flag **a**bort\ **b**egin\ **e**nd \ or **n**o mail for job's notification.  | `-m abe` 
+`-m`      | mail event: Email from the PBS server with flag **a**bort\ **b**egin\ **e**nd \ or **n**o mail for job's notification.  | `-m abe`
 `-M`      | Specify list of user to whom mail about the job is sent. The user list argument is of the form: [user[@host],user[@host],...]. If **-M** is not used and **-m** is specified, PBS will send email to userid@clemson.edu | `-M user1@domain1.com,user2@domain2.com`
 `-j oe`   | Join the output and error streams and write to a single file | `-j oe`
 `-r n`	  | Ask PBS **not** to restart the job if it's failed	|  `-r n`
@@ -673,7 +673,7 @@ will be forwarded to these queues.
 
 Each execution queue has its own limits for
 how many jobs can be running at one time,
-and how many jobs can 
+and how many jobs can
 be waiting in that execution queue.
 The maximum number of running jobs per user in
 execution queues may vary
@@ -750,4 +750,3 @@ we see that each user can have a maximum of **5** running jobs in this queue.
 A list of example PBS scripts for submitting
 jobs to the Palmetto cluster can be found
 [here](https://github.com/clemsonciti/palmetto-examples).
-

@@ -12,6 +12,8 @@ Such "owners" enjoy the following benefits:
 For more information about condominium model and purchasing Palmetto nodes,
 including Palmetto nodes on grants, please send an email to <ithelp@clemson.edu> and include the word "Palmetto" in the subject line.
 
+**Please note that the Palmetto cluster should not be used to store sensitive and/or confidential information. Please review Clemson's list of data categories [here](https://ccit.clemson.edu/cybersecurity/policy/data-classification/) to make sure that your data belong to "public" or "internal use" categories. Data belonging to other categories ("confidential" and "restricted") cannot be stored on Palmetto.**
+
 ### Condominium model
 
 In the condo model model, faculty/staff purchase "pre-emption" units,
@@ -61,6 +63,8 @@ Owners of storage on Palmetto cluster enjoy the following benefits:
 1. 	Daily "snapshots" of data for up to 42 days (included in the purchased space).
 	Configurable snapshot frequency and period.
 1.	Full mirror for system recovery (ITC and main campus)
+
+**Please note that the Palmetto cluster should not be used to store sensitive and/or confidential information. Please review Clemson's list of data categories [here](https://ccit.clemson.edu/cybersecurity/policy/data-classification/) to make sure that your data belong to "public" or "internal use" categories. Data belonging to other categories ("confidential" and "restricted") cannot be stored on Palmetto.**
 
 ### Current storage pricing
 
