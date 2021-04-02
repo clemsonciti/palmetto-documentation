@@ -1,6 +1,6 @@
 ## April 1st, 2021: Requesting "interconnect=any" and "gpu_model=any" in a qsub
 
-When you request resources on Almetto, you need to specify the type of interconnect (e.g. "fdr", "hdr", "1g"). If you have no preference about the type of interconnect, you can specify `interconnect=any`. Likewise, if you would like to request a compute node with a GPU but you have no preference for a particular GPU model (e.g. "k20", "k40", "p100", "v100"), you can specify `gpu_model=any`. This feature is also implemented in the JupyterHub interface.
+When you request resources on Palmetto, you need to specify the type of interconnect (e.g. "fdr", "hdr", "1g"). If you have no preference about the type of interconnect, you can specify `interconnect=any`. Likewise, if you would like to request a compute node with a GPU but you have no preference for a particular GPU model (e.g. "k20", "k40", "p100", "v100"), you can specify `gpu_model=any`. This feature is also implemented in the JupyterHub interface.
 
 For example:
 
