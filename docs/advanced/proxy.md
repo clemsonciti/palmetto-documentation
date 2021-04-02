@@ -72,9 +72,11 @@ to close this windows, and the tunnel will keep running.
   - Select `Manual Proxy configuration` and fill in `localhost` for 
   `SOCKS Host` and `8080` for `Port`. 
   - Check `SOCKS v5`. 
+  - Check `Proxy DNS when using SOCKS v5`.
+  - Check `Enable DNS over HTTPS`.
   - Make sure everything else is unchecked, then click `OK`. 
 
-<img src="../../images/advanced/mac_02.png" style="width:600px">
+<img src="../../images/advanced/win_05.png" style="width:600px">
 
 - If Firefox is your primary browser, you will need to reverse the process and 
 change back to the default `Use system proxy settings` in your Firefox' 
