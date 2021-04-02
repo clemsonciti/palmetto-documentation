@@ -14,6 +14,8 @@ The benefit of this feature is that it increases the pool of nodes that fit your
 
 Please be aware of the differences in maximum walltime for different interconnect types (the walltime limit for `interconnect=1g` is 336 hours, whereas the walltime limit for `interconnect=fdr` and `interconnect=hdr` is 72 hours). If you request `interconnect=any`, you cannot request for more than 72 hours of walltime. If you need to request more than 72 hours, please use `interconnect=1g`.
 
+Also, **if you are using OpenMPI**, it would be better to stick with `interconnect=1g`, `interconnect=fdr`, and `interconnect=hdr`, rather than use `interconnect=any`. The MPI modules are different on Ethernet nodes (1g) versus Infiniband nodes (fdr and hdr), so there is no guarantee that OpenMPI will run smoothly across nodes with heterogeneous interconnect type.
+
 The old specifications will still work, for example
 ~~~
 qsub -I -l select=3:ncpus=4:mem=10gb:interconnect=1g,walltime=200:00:00
