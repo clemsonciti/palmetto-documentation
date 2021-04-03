@@ -123,7 +123,7 @@ $ python3 -m ipykernel install --user --name tf1_gpu --display-name Tensorflow_1
 2) CPU
 
 ~~~
-$ qsub -I -l select=1:ncpus=16:mem=62gb:ngpus=2:gpu_model=k20:interconnect=10ge,walltime=72:00:00
+$ qsub -I -l select=1:ncpus=16:mem=62gb:interconnect=10ge,walltime=72:00:00
 $ mkdir -p ~/software/venv
 $ python3 -m venv --system-site-packages ./software/venv/tf1_cpu
 $ source ~/software/venv/tf1_cpu/bin/activate
