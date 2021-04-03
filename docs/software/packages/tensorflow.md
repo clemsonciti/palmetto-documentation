@@ -4,8 +4,12 @@ This page explains how to install the [TensorFlow](https://www.tensorflow.org/)
 package for use with GPUs on the cluster,
 and how to use it from Jupyter Notebook via [JupyterHub](https://www.palmetto.clemson.edu/palmetto/jupyterhub_index.html).
 
-This guide is created for TensorFlow 2+. This version of TensorFlow requires AVX2 support from CPU, 
-which is not available on the older nodes. Currently Palmetto nodes from **Phase 12 and up** support AVX2. 
+This guide is created primarily for TensorFlow 2+. This version of TensorFlow requires AVX2 support 
+from CPU, which is not available on the older nodes. Currently Palmetto nodes from **Phase 12 and up** support AVX2. 
+
+We will also include notes on how to setup TensorFlow 1. Since TensorFlow 1 distributions are no 
+longer available via pip, the installation instruction will specify local installation pip wheels. 
+The current versions available are `1.13.1`, `1.14.0`, and `1.15.0`.  
 
 If you are using codes built using TensorFlow 1, please refer to 
 this [migration documentation](https://www.tensorflow.org/guide/migrate) to help with your code. 
@@ -30,11 +34,13 @@ $ python3 -m venv --system-site-packages ./software/venv/tf_gpu
 ~~~
 
 4) Activate the virtual environment:
+
 ~~~
 $ source ~/software/venv/tf_gpu/bin/activate
 ~~~
 
 5) Install TensorFlow:
+
 ~~~
 $ pip install --upgrade pip
 $ pip install tensorflow==2.4
@@ -99,6 +105,32 @@ $ pip install pandas
 $ python3 -m ipykernel install --user --name tf_cpu --display-name TensorflowCPU
 ~~~
 
+### Install TensorFlow 1
+
+This example is for tensorflow version `1.15.0`. You can change it with `1.14.0` or `1.13.1`. 
+
+1) GPU
+
+~~~
+$ qsub -I -l select=1:ncpus=16:mem=62gb:ngpus=2:gpu_model=k20:interconnect=10ge,walltime=72:00:00
+$ mkdir -p ~/software/venv
+$ python3 -m venv --system-site-packages ./software/venv/tf1_gpu
+$ source ~/software/venv/tf1_gpu/bin/activate
+$ pip install --ignore-install /zfs/citi/tensorflow_gpu-1.15.0-cp37-cp37m-manylinux2010_x86_64.whl
+$ python3 -m ipykernel install --user --name tf1_gpu --display-name Tensorflow_1_GPU
+~~~
+
+2) CPU
+
+~~~
+$ qsub -I -l select=1:ncpus=16:mem=62gb:ngpus=2:gpu_model=k20:interconnect=10ge,walltime=72:00:00
+$ mkdir -p ~/software/venv
+$ python3 -m venv --system-site-packages ./software/venv/tf1_cpu
+$ source ~/software/venv/tf1_cpu/bin/activate
+$ pip install --ignore-install /zfs/citi/tensorflow-1.15.0-cp37-cp37m-manylinux2010_x86_64.whl
+$ python3 -m ipykernel install --user --name tf1_cpu --display-name Tensorflow_1_CPU
+~~~
+
 
 ### Test TensorFlow Jupyter Kernels
 
@@ -107,12 +139,12 @@ selection if you want to use the GPU TensorFlow kernel
 
 <img src="../../images/software/packages/tensorflow_01.png" style="width:1200px">
 
-5) Once your JupyterHub has started, you should see the TensorFlow kernels in your list of kernels
+2) Once your JupyterHub has started, you should see the TensorFlow kernels in your list of kernels
 in the Launcher.
 
 <img src="../../images/software/packages/tensorflow_02.png" style="width:1200px">
 
-6) You are now able to launch a notebook using the one of the TensorFlow with GPU kernel:
+3) You are now able to launch a notebook using the one of the TensorFlow with GPU kernel:
 
 <img src="../../images/software/packages/tensorflow_03.png" style="width:1200px">
 
