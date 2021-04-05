@@ -118,7 +118,7 @@ $ module load cuda/10.0.130-gcc/7.1.0 cudnn/7.4.1.5-10.0-linux-x64-gcc/8.3.1 ana
 $ mkdir -p ~/software/venv
 $ python3 -m venv --system-site-packages ./software/venv/tf1_gpu
 $ source ~/software/venv/tf1_gpu/bin/activate
-$ pip install --ignore-install /zfs/citi/tensorflow_gpu-1.15.0-cp37-cp37m-manylinux2010_x86_64.whl
+$ pip install --ignore-install /zfs/citi/tf_downloads/tensorflow_gpu-1.15.0-cp37-cp37m-manylinux2010_x86_64.whl
 $ python3 -m ipykernel install --user --name tf1_gpu --display-name Tensorflow_1_GPU
 ~~~
 
@@ -131,7 +131,7 @@ $ module load anaconda3/2019.10-gcc/8.3.1
 $ mkdir -p ~/software/venv
 $ python3 -m venv --system-site-packages ./software/venv/tf1_cpu
 $ source ~/software/venv/tf1_cpu/bin/activate
-$ pip install --ignore-install /zfs/citi/tensorflow-1.15.0-cp37-cp37m-manylinux2010_x86_64.whl
+$ pip install --ignore-install /zfs/citi/tf_downloads/tensorflow-1.15.0-cp37-cp37m-manylinux2010_x86_64.whl
 $ python3 -m ipykernel install --user --name tf1_cpu --display-name Tensorflow_1_CPU
 ~~~
 
