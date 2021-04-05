@@ -113,6 +113,8 @@ This example is for tensorflow version `1.15.0`. You can change it with `1.14.0`
 
 ~~~
 $ qsub -I -l select=1:ncpus=16:mem=62gb:ngpus=2:gpu_model=k20:interconnect=10ge,walltime=72:00:00
+$ module purge
+$ module load cuda/10.0.130-gcc/7.1.0 cudnn/7.4.1.5-10.0-linux-x64-gcc/8.3.1 anaconda3/2019.10-gcc/8.3.1
 $ mkdir -p ~/software/venv
 $ python3 -m venv --system-site-packages ./software/venv/tf1_gpu
 $ source ~/software/venv/tf1_gpu/bin/activate
@@ -124,6 +126,8 @@ $ python3 -m ipykernel install --user --name tf1_gpu --display-name Tensorflow_1
 
 ~~~
 $ qsub -I -l select=1:ncpus=16:mem=62gb:interconnect=10ge,walltime=72:00:00
+$ module purge
+$ module load anaconda3/2019.10-gcc/8.3.1
 $ mkdir -p ~/software/venv
 $ python3 -m venv --system-site-packages ./software/venv/tf1_cpu
 $ source ~/software/venv/tf1_cpu/bin/activate
