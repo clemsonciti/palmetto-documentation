@@ -107,7 +107,19 @@ $ python3 -m ipykernel install --user --name tf_cpu --display-name TensorflowCPU
 
 ### Install TensorFlow 1
 
-This example is for tensorflow version `1.15.0`. You can change it with `1.14.0` or `1.13.1`. 
+This example is for tensorflow version `1.15.0`. You can change it with `1.14.0` or `1.13.1` files:
+
+~~~
+$ ls -l /zfs/citi/tf_downloads/
+total 1641262
+-rw-r--r-- 1 lngo citi  39765989 Nov  9  2016 tensorflow-0.11.0-cp27-none-linux_x86_64.whl
+-rw-r--r-- 1 lngo citi  92637477 Feb 26  2020 tensorflow-1.13.1-cp37-cp37m-manylinux1_x86_64.whl
+-rw-r--r-- 1 lngo citi 109275882 Feb 26  2020 tensorflow-1.14.0-cp37-cp37m-manylinux1_x86_64.whl
+-rw-r--r-- 1 lngo citi 412289319 Feb 26  2020 tensorflow-1.15.0-cp37-cp37m-manylinux2010_x86_64.whl
+-rw-r--r-- 1 lngo citi 344955697 Feb 26  2020 tensorflow_gpu-1.13.1-cp37-cp37m-manylinux1_x86_64.whl
+-rw-r--r-- 1 lngo citi 377100278 Feb 26  2020 tensorflow_gpu-1.14.0-cp37-cp37m-manylinux1_x86_64.whl
+-rw-r--r-- 1 lngo citi 411506559 Feb 26  2020 tensorflow_gpu-1.15.0-cp37-cp37m-manylinux2010_x86_64.whl
+~~~
 
 1) GPU
 
