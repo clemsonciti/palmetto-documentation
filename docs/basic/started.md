@@ -402,7 +402,7 @@ In the batch job below, we really don't do anything useful
 
 ~~~
 #PBS -N example
-#PBS -l select=1:ncpus=1:mem=2gb,interconnect=1g,walltime=00:10:00
+#PBS -l select=1:ncpus=1:mem=2gb:interconnect=1g,walltime=00:10:00
 
 module add gcc/9.3.0-gcc/8.3.1
 
