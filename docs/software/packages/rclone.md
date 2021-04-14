@@ -26,7 +26,7 @@ $ qsub -I -X
 Once the job starts, load the `rclone` module:
 
 ~~~
-$ module add rclone/1.23
+$ module add rclone/1.51.0-gcc/8.3.1
 ~~~
 
 After `rclone` is loaded, you must set up a "remote". In this case,
@@ -139,7 +139,7 @@ Whenever transfering files (using `rclone` or otherwise), login to the transfer 
 Once logged-in, load the `rclone` module:
 
 ~~~
-$ module add rclone/1.23
+$ module add rclone/1.51.0-gcc/8.3.1
 ~~~
 
 You can check the content of the remote host **gmaildrive**:
