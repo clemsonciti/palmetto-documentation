@@ -43,7 +43,7 @@ from the terminal using the `ssh` command, providing the
 additional `-X` switch:
 
 ~~~
-$ ssh -X <your username>@login.palmetto.clemson.edu
+ssh -X <your username>@login.palmetto.clemson.edu
 ~~~
 
 Once you are connected, you can connect to an interactive compute node using the -X switch, for example

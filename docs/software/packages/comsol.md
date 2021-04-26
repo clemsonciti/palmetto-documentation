@@ -13,13 +13,13 @@ To see license usage of COMSOL-related packages,
 you can use the `lmstat` command:
 
 ~~~
-/software/USR_LOCAL/flexlm/lmstat -a -c /software/USR_LOCAL/flexlm/licenses/comsol.dat 
+/software/USR_LOCAL/flexlm/lmstat -a -c /software/USR_LOCAL/flexlm/licenses/comsol.dat
 ~~~
 
 ### Graphical Interface
 
 To run the COMSOL graphical interface,
-you must [log-in with tunneling enabled]({{site.baseurl}}/userguide_howto_run_graphical_applications.html),
+you must [log-in with X11 tunneling enabled](https://www.palmetto.clemson.edu/palmetto/basic/x11_tunneling/),
 and then ask for an interactive session:
 
 ~~~
@@ -98,4 +98,3 @@ cd $PBS_O_WORKDIR
 uniq $PBS_NODEFILE > comsol_nodefile
 comsol batch -clustersimple -f comsol_nodefile -tmpdir $TMPDIR -inputfile free_convection.mph -outputfile free_convection_output.mph
 ~~~
-

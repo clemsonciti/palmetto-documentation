@@ -18,7 +18,7 @@ Compilation instructions can be found in the Paraview
 [documentation](http://www.paraview.org/Wiki/ParaView:Build_And_Install).
 
 2. You will need to run the Paraview server on Palmetto cluster.
-First, log-in with X11 tunneling enabled, and request an interactive session:
+First, [log in with X11 tunneling enabled](https://www.palmetto.clemson.edu/palmetto/basic/x11_tunneling/), and request an interactive session:
 
 ~~~
 $ qsub -I -X -l select=4:ncpus=2:mpiprocs=2:ngpus=2:mem=32gb:interconnect=10ge,walltime=1:00:00

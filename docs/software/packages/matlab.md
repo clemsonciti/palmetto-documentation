@@ -13,13 +13,7 @@ $ /software/USR_LOCAL/flexlm/lmstat -a -c /software/USR_LOCAL/flexlm/licenses/ma
 
 ### Running the MATLAB graphical interface
 
-To launch the MATLAB graphical interface on a PC/Windows machine, you should use MobaXTerm, and then ask for an interactive session with a -X option:
-
-~~~
-$ qsub -I -X -l select=1:ncpus=4:mem=10gb:interconnect=1g,walltime=1:00:00
-~~~
-
-Once logged-in, you must load one of the MATLAB modules:
+To launch the MATLAB graphical interface, you can use [X11 tunneling](https://www.palmetto.clemson.edu/palmetto/basic/x11_tunneling/). Once you get on a compute node, you must load one of the MATLAB modules:
 
 ~~~
 $ module add matlab/2020a
@@ -30,8 +24,6 @@ And then launch the MATLAB program:
 ~~~
 $ matlab
 ~~~
-
-Mac users can run Matlab graphical interface through [VNC](https://www.palmetto.clemson.edu/palmetto/basic/vnc/#running-vnc-on-a-mac-platform).
 
 **Warning**: DO NOT attempt to run MATLAB right after
 logging-in (i.e., on the `login001` node).

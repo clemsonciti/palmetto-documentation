@@ -16,14 +16,8 @@ you must perform a one-time configuration.
 You can configure `rclone` to work with as many services as you like.
 
 For the one-time configuration, you will need to
-[log-in with tunneling enabled]({{site.baseurl}}/userguide_howto_run_graphical_applications.html).
-Once logged-in, ask for an interactive job:
-
-~~~
-$ qsub -I -X
-~~~
-
-Once the job starts, load the `rclone` module:
+[log-in with X11 tunneling enabled](https://www.palmetto.clemson.edu/palmetto/basic/x11_tunneling/).
+After you get on a compute node, load the `rclone` module:
 
 ~~~
 $ module add rclone/1.51.0-gcc/8.3.1
@@ -146,7 +140,7 @@ You can check the content of the remote host **gmaildrive**:
 
 ```
 $ rclone ls gmaildrive:
-$ rclone lsd gmaildrive: 
+$ rclone lsd gmaildrive:
 ```
 
 You can use `rclone` to (for example) copy a file from Palmetto to any folder in your Google Drive:
@@ -162,4 +156,3 @@ $ rclone copy gmaildrive:/path/to/folder/on/drive /path/to/file/on/palmetto
 ~~~
 
 Additional `rclone` commands can be found [here](http://rclone.org/docs/).
-

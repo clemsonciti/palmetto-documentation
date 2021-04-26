@@ -3,7 +3,7 @@
 ### Graphical Interfaces
 
 To run the various ANSYS graphical programs,
-you must [log-in with tunneling enabled]({{site.baseurl}}/userguide_howto_run_graphical_applications.html)
+you must [log-in with X11 tunneling enabled](https://www.palmetto.clemson.edu/palmetto/basic/x11_tunneling/)
 and then ask for an interactive session:
 
 ~~~
@@ -180,4 +180,3 @@ contains the results of the simulation which can be viewed
 using the ANSYS APDL graphical interface:
 
 <img src="{{site.baseurl}}/images/ansys-screenshot-results.png" style="width:650px">
-
