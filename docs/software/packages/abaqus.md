@@ -22,7 +22,7 @@ you can use the `lmstat` command:
 ### Running ABAQUS interactive viewer
 
 To run the interactive viewer,
-you must [log-in with tunneling enabled]({{site.baseurl}}/userguide_howto_run_graphical_applications.html),
+you must [log in with X11 tunneling enabled](https://www.palmetto.clemson.edu/palmetto/basic/x11_tunneling/),
 and then ask for an interactive session:
 
 ~~~
@@ -96,7 +96,7 @@ done
 cd $SCRATCH
 
 # run the abaqus program, providing the .inp file as input
-abaqus job=abdemo double input=$SCRATCH/boltpipeflange_axi_solidgask.inp scratch=$SCRATCH cpus=$NCORES mp_mode=mpi interactive 
+abaqus job=abdemo double input=$SCRATCH/boltpipeflange_axi_solidgask.inp scratch=$SCRATCH cpus=$NCORES mp_mode=mpi interactive
 
 # copy results back from scratch directory to $PBS_O_WORKDIR
 for node in `uniq $PBS_NODEFILE`

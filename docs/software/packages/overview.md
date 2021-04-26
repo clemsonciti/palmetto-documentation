@@ -40,8 +40,11 @@ Individual-owned or group-owned licensed software can also be run on Palmetto.
 
 ### Software with graphical applications
 
-See [this]({{site.baseurl}}/userguide_howto_run_graphical_applications.html) section
-of the User's Guide on how to use software with graphical user interface (GUI).
+There are two ways to run graphical software on Palmetto:
+
+1. with [X11 tunneling](https://www.palmetto.clemson.edu/palmetto/basic/x11_tunneling/): easy but slow and might not work for graphics-heavy applications;
+2. with [VNC](https://www.palmetto.clemson.edu/palmetto/basic/vnc/): fast, more reliable, but trickier to set up.
+
 
 ### Installing your own software
 
