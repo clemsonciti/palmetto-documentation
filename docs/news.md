@@ -1,3 +1,8 @@
+## April 30, 2021: a new version of XQuartz is released, so X11 tunneling now works for Mac OS > 10.14
+
+Good news for Mac users! Recently, there has been an update to [XQuartz](https://www.xquartz.org/), which we can use to set up X11 tunneling on Palmetto in order to run simple graphical applications. The older versions of XQuartz only supported Mac OS up to 10.14 (Mojave); the new version also supports Mac OS 10.15 (Catalina) and Mac OS 11 (Big Sur). We have added [the guide to X11 tunneling](https://www.palmetto.clemson.edu/palmetto/basic/x11_tunneling/) to our website. 
+
+
 ## April 1st, 2021: Requesting "interconnect=any" and "gpu_model=any" in a qsub
 
 When you request resources on Palmetto, you need to specify the type of interconnect (e.g. "fdr", "hdr", "1g"). If you have no preference about the type of interconnect, you can specify `interconnect=any`. Likewise, if you would like to request a compute node with a GPU but you have no preference for a particular GPU model (e.g. "k20", "k40", "p100", "v100"), you can specify `gpu_model=any`. This feature is also implemented in the JupyterHub interface.
