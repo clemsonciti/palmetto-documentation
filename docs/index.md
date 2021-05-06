@@ -38,3 +38,9 @@ produce the problem
 2. The exact output from each command
 3. The locations of the files/folders involved, especially your PBS batch script
 4. Other details which may be relevant (OS, SSH client, etc.,)
+
+### Acknowledging Palmetto Cluster
+
+We would appreciate if all publications that include results generated using the Palmetto cluster include a short statement in the Acknowledgment section. As an example, the acknowledgment may look like this:
+
+**Clemson University is acknowledged for generous allotment of compute time on Palmetto cluster.**
