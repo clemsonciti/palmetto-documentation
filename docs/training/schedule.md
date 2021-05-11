@@ -12,6 +12,7 @@ require Clemson's authentication to view. Downloading is not permitted.*
 <!---      - [January 12, 9:00AM - 12:00PM](https://clemson.zoom.us/rec/share/G0dgZqiMYzo_AYbGoA0TD3liLCZJ3IlWjBJXUj9a1Rl627fEBu12D4-0ZEuiLoci.ssdkbiEEIKG7dTrF) -->
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
     - [May 21, 12:00PM - 3:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
+    - [Link to recorded workshop]()
  - [Python I](workshop.md#introduction-to-programming-in-python)
     - [May 31, 9:00AM - 12:00PM]
     - [Link to recorded workshop]()
@@ -33,7 +34,7 @@ require Clemson's authentication to view. Downloading is not permitted.*
     - Part 1: June 7, 9:00AM - 12:00PM
     - Part 2: June 9, 9:00AM - 12:00PM
     - [Link to recorded workshop]()
-<!-- - [Big Data Analytics: Introduction to Hadoop](workshop.md#introduction-to-hadoop-on-palmetto)
+<!--- - [Big Data Analytics: Introduction to Hadoop](workshop.md#introduction-to-hadoop-on-palmetto)
     - [February 11, 5:00PM - 8:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
       - [Recording](https://clemson.zoom.us/rec/share/O51tHIAY4Nghx4OTHE1yBZ890aIfQXTljipx0d2wpFM1GrN-4JfuNTBG_yMBgAHQ.AIuaKFMq09oE7ENj)
     - [March 18, 5:00PM - 8:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
