@@ -1,4 +1,4 @@
-## Spring 2021 Training Schedule
+## Summer 2021 Training Schedule
 
 *Linked time indicates availability on CUCOURSE*  
 
@@ -13,13 +13,13 @@ require Clemson's authentication to view. Downloading is not permitted.*
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
     - [May 21, 12:00PM - 3:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
  - [Python I](workshop.md#introduction-to-programming-in-python)
-    - [May 31, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
+    - [May 31, 9:00AM - 12:00PM]
     - [Link to recorded workshop]()
 - [Python II](workshop.md#introduction-to-programming-in-python)
-    - [June 2, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
+    - [June 2, 9:00AM - 12:00PM]
     - [Link to recorded workshop]()
 - [Python III](workshop.md#introduction-to-programming-in-python)
-    - [June 4, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
+    - [June 4, 9:00AM - 12:00PM]
     - [Link to recorded workshop]()
 - [R Programming](workshop.md#introduction-to-data-science-using-r)
     - Part 1 (basic): June 21, 9:00AM - 12:00PM
@@ -39,8 +39,8 @@ require Clemson's authentication to view. Downloading is not permitted.*
     - [March 18, 5:00PM - 8:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
     - [Link to recorded workshop]() -->
 - [Big Data Analytics: Introduction to Spark and Python](workshop.md#introduction-to-big-data-analytics-using-sparkpython)
-    - [June 8, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
+    - [June 8, 9:00AM - 12:00PM]
     - [Link to recorded workshop]()
 - [Applied Deep Learning: Object Detection Model using Tensorflow API](workshop.md#introduction-to-applied-deep-learning-object-detection-model-using-tensorflow-api)
-    - [June 10, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
+    - [June 10, 9:00AM - 12:00PM]
     - [Link to recorded workshop]()
