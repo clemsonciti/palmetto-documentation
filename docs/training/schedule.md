@@ -9,7 +9,8 @@ require Clemson's authentication to view. Downloading is not permitted.*
 - [Introduction to Linux](workshop.md#introduction-to-linux)  
     - [May 20, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
     - Link to recorded workshop()
-//      - [January 12, 9:00AM - 12:00PM](https://clemson.zoom.us/rec/share/G0dgZqiMYzo_AYbGoA0TD3liLCZJ3IlWjBJXUj9a1Rl627fEBu12D4-0ZEuiLoci.ssdkbiEEIKG7dTrF)
+
+#      - [January 12, 9:00AM - 12:00PM](https://clemson.zoom.us/rec/share/G0dgZqiMYzo_AYbGoA0TD3liLCZJ3IlWjBJXUj9a1Rl627fEBu12D4-0ZEuiLoci.ssdkbiEEIKG7dTrF)
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
     - [May 21, 12:00PM - 3:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
  - [Python I](workshop.md#introduction-to-programming-in-python)
