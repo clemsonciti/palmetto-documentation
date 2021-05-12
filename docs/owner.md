@@ -43,8 +43,8 @@ Owner jobs have a maximum walltime of 336 hours
 The node in phase 20 configuration currently available for purchase at subsidized rate for Clemson faculty/staff is **$7500** for a period of **4 years**:
 
 * 2 x Intel “Cascade Lake” Xeon Gold CLX 6248R (for a total of 56 cores)
-* 2 x NVIDIA Tesla V100 GPU 32GB
-* 372 GB DDR4 RAM
+* 2 x NVIDIA A100 GPU (40GB mem per GPU)
+* 384 GB DDR4 RAM
 * On-board 25Gbps Ethernet NIC
 * Infiniband HDR-100 Gbps network card
 
