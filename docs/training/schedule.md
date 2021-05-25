@@ -14,7 +14,7 @@ require Clemson's authentication to view. Downloading is not permitted.*
     - [May 21, 12:00PM - 3:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
     - Link to recorded workshop: [part 1](https://clemson.zoom.us/rec/share/2ZBy93ubEbwGCtzUMKBkatQjhlBWWA5Tga8unzEs52dL6iDRapmLHIFcIQh-MlTJ.D20ZUCu3xZZQDO2j?startTime=1621613640000); [part 2](https://clemson.zoom.us/rec/share/2ZBy93ubEbwGCtzUMKBkatQjhlBWWA5Tga8unzEs52dL6iDRapmLHIFcIQh-MlTJ.D20ZUCu3xZZQDO2j?startTime=1621621056000)
  - [Python I](workshop.md#introduction-to-programming-in-python)
-    - [May 31, 9:00AM - 12:00PM]
+    - [June 1, 9:00AM - 12:00PM]
     - [Link to recorded workshop]
 - [Python II](workshop.md#introduction-to-programming-in-python)
     - [June 2, 9:00AM - 12:00PM]
