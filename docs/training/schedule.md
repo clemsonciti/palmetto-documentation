@@ -12,7 +12,7 @@ require Clemson's authentication to view. Downloading is not permitted.*
 <!---      - [January 12, 9:00AM - 12:00PM](https://clemson.zoom.us/rec/share/G0dgZqiMYzo_AYbGoA0TD3liLCZJ3IlWjBJXUj9a1Rl627fEBu12D4-0ZEuiLoci.ssdkbiEEIKG7dTrF) -->
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
     - [May 21, 12:00PM - 3:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
-    - Link to recorded workshop: [part 1](https://clemson.zoom.us/rec/share/2ZBy93ubEbwGCtzUMKBkatQjhlBWWA5Tga8unzEs52dL6iDRapmLHIFcIQh-MlTJ.D20ZUCu3xZZQDO2j?startTime=1621613640000) [part 2](https://clemson.zoom.us/rec/share/2ZBy93ubEbwGCtzUMKBkatQjhlBWWA5Tga8unzEs52dL6iDRapmLHIFcIQh-MlTJ.D20ZUCu3xZZQDO2j?startTime=1621621056000)
+    - Link to recorded workshop: [part 1](https://clemson.zoom.us/rec/share/2ZBy93ubEbwGCtzUMKBkatQjhlBWWA5Tga8unzEs52dL6iDRapmLHIFcIQh-MlTJ.D20ZUCu3xZZQDO2j?startTime=1621613640000); [part 2](https://clemson.zoom.us/rec/share/2ZBy93ubEbwGCtzUMKBkatQjhlBWWA5Tga8unzEs52dL6iDRapmLHIFcIQh-MlTJ.D20ZUCu3xZZQDO2j?startTime=1621621056000)
  - [Python I](workshop.md#introduction-to-programming-in-python)
     - [May 31, 9:00AM - 12:00PM]
     - [Link to recorded workshop]()
