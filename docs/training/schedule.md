@@ -23,12 +23,12 @@ require Clemson's authentication to view. Downloading is not permitted.*
     - [June 4, 9:00AM - 12:00PM]
     - [Link to recorded workshop]
 - [R Programming](workshop.md#introduction-to-data-science-using-r)
-    - Part 1 (basic): June 21, 9:00AM - 12:00PM
-    - Part 2 (advanced): June 23, 9:00AM - 12:00PM
+    - Part 1 (basic): June 21, 9:30AM - 12:30PM
+    - Part 2 (advanced): June 22, 9:30AM - 12:30PM
     - [Link to recorded workshop]
 - [Machine learning in R (caret)](workshop.md#machine-learning-in-r)
-    - Part 1: June 25, 9:00AM - 12:00PM
-    - Part 2: June 28, 9:00AM - 12:00PM
+    - Part 1: June 23, 9:30AM - 12:30PM
+    - Part 2: June 25, 9:30AM - 12:30PM
     - [Link to recorded workshop]
 - [Machine learning in Python (sklearn)](workshop.md#machine-learning-in-python)
     - Part 1: June 7, 9:00AM - 12:00PM
