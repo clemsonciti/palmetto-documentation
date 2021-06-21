@@ -15,6 +15,12 @@ nav:
   - Advanced:
     - Socket Proxy Access: advanced/proxy.md
     - DGX user guide: advanced/dgx.md
+  - Open OnDemand:
+    - Introduction: openondemand/intro.md
+    - Files: openondemand/files.md
+    - Jobs: openondemand/jobs.md
+    - Clusters: openondemand/clusters.md
+    - Interactive Apps: openondemand/apps.md
   - Software:
     - Software on Palmetto: software/software.md
     - User Software Installation: software/spack.md
