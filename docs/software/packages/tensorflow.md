@@ -30,7 +30,7 @@ $ module load anaconda3/2019.10-gcc/8.3.1 cuda/11.0.3-gcc/7.5.0 cudnn/8.0.0.180-
 
 ~~~
 $ mkdir -p ~/software/venv
-$ python3 -m venv --system-site-packages ./software/venv/tf_gpu
+$ python3 -m venv --system-site-packages ~/software/venv/tf_gpu
 ~~~
 
 4) Activate the virtual environment:
@@ -78,7 +78,7 @@ $ module load cuda/10.2.89-gcc/8.3.1
 
 ~~~
 $ mkdir -p ~/software/venv
-$ python3 -m venv --system-site-packages ./software/venv/tf_cpu
+$ python3 -m venv --system-site-packages ~/software/venv/tf_cpu
 ~~~
 
 4) Activate the virtual environment:
