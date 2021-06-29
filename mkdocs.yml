@@ -18,7 +18,7 @@ nav:
   - Open OnDemand:
     - Introduction: openondemand/intro.md
     - Files: openondemand/files.md
-    - Jobs: openondemand/jobs.md
+#    - Jobs: openondemand/jobs.md
     - Clusters: openondemand/clusters.md
     - Interactive Apps: openondemand/apps.md
   - Software:
