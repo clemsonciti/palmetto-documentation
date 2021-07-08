@@ -56,8 +56,9 @@ vglrun -np 4 <program name>
 ~~~
 
 ## Running VNC on a Mac platform
+<!---
 Install [TurboVNC for Mac](https://sourceforge.net/projects/turbovnc/files/2.2.3/TurboVNC-2.2.3.dmg/download).
-
+-->
 Open a terminal (most likely, it’s in the **Applications** -> **Utilities** folder). Sign into Palmetto, and connect to a compute node with two GPUs (the GPU model doesn't matter, so we will request `gpu_model=any`):
 
 ~~~
@@ -92,10 +93,16 @@ For our example, I should type (my username is `gyourga`):
 ssh -L 10000:node1871.palmetto.clemson.edu:5901 gyourga@login.palmetto.clemson.edu
 ~~~
 
+Finally, open a third terminal, and type
+
+~~~
+open vnc://localhost:10000
+~~~
+<!---
 Finally, on your local computer, open TurboVNC viewer. In "VNC server" field, specify localhost::10000:
 
 <img src="../../images/basic/started/turbovnc_setup4.png" style="width:400px">
-
+-->
 Enter password when prompted; this is the password that you have set up earlier when you started the VNC server.
 This will open a graphical window which runs on Palmetto. It will, most likely, have a Firefox browser running; close it by closing all tabs. You should also see a terminal window running. To make it more user-friendly, type in this window:
 
