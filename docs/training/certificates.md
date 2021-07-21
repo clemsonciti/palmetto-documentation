@@ -4,5 +4,6 @@
 
 - [](https://www.palmetto.clemson.edu/palmetto/images/training/mac_01.png)
 - []()
+- testing
 
 ### Summer 2021 Python Bootcamp
