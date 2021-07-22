@@ -9,19 +9,20 @@ Spark is a high-level cluster computing system that has binding for Python. It c
 
 1. Go to the [OpenOD website](https://openod02.palmetto.clemson.edu/).
 2. Log in with your Palmetto user ID and password:
-3. Click on **Jupyter + Spark** link under Interactive Apps on the top navigation bar. 
+3. Once you are logged in, click on "Interactive apps" on the top navigation bar.
+4. Click on the **Jupyter + Spark** link. 
 
 <img src="../../images/ood/apps/spark/spark_select.png" style="width:600px">
 
-4. Once you have arrived at the server configuration page, select the resources (CPU cores, memory, walltime, etc.,) required for your session. When using spark you usually want more than 1 resource chunk.
+5. Once you have arrived at the server configuration page, select the resources (CPU cores, memory, walltime, etc.,) required for your session. When using spark you usually want more than 1 resource chunk.
  Here you can also choose what version of spark you would like to use.
 
 <img src="../../images/ood/apps/spark/spark_server_options.png" style="width:600px">
 
-Once you launch your server you will be taken to your [current list of interactive sessions](https://openod02.palmetto.clemson.edu/pun/sys/dashboard/batch_connect/sessions "current list of interactive sessions"). Your job will be queued until resources are available to handle your request. Once that has happened you will be able to connect to your Jupyter server with a button.
+6. Once you launch your server you will be taken to your [current list of interactive sessions](https://openod02.palmetto.clemson.edu/pun/sys/dashboard/batch_connect/sessions "current list of interactive sessions"). Your job will be queued until resources are available to handle your request. 
 <img src="../../images/ood/apps/spark/connect_to_spark.png" style="width:1000px">
 
-5. your browser will then be sent to the JupyterLab **dashboard**.
+7. Once your server has had it's resources allocated you can connect to your server with a button that says `Connect to Jupyter`, your browser will then be sent to the JupyterLab **dashboard**.
 
 ### Running Python with spark
 
