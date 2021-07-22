@@ -55,6 +55,7 @@ The first item is the directory browser this is where you can create, edit, or d
 
 The second item is a find and replace tool that works throughout your entire working directory.
 We can see here that searching for `return` showed up in 3 different files in our current working directory.
+
 <img src="../../images/ood/apps/vscode/search_keyword.png" style="width:500px">
 
 The third item allows VSCode to integrate with github, intially you can start a repository within your current working directory or if you are already in a git repository you can see file changes made and perform git operations.<br />
