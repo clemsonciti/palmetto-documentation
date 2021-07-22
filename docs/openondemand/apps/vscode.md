@@ -5,7 +5,8 @@ VSCode is a text editor and debugger for working with many different language. V
 Currently, [VSCode Server version 3.10.2](https://github.com/cdr/code-server "VSCode Server version 3.10.2") is available on the Palmetto cluster.
 
 ### Starting a VSCode Server
-Start by heading to the [Open OnDemand website](https://openod02.palmetto.clemson.edu/ "Open OnDemand website") where on the nav bar you can find the interactive apps.\
+Start by heading to the [Open OnDemand website](https://openod02.palmetto.clemson.edu/ "Open OnDemand website") where on the nav bar you can find the interactive apps.
+
 Select `Code Server (VSCode)`
 
 <img src="../../images/ood/apps/vscode/navbar_select.png" style="width:600px">
@@ -16,8 +17,11 @@ Once you have selected to create a VSCode server you will be prompted with a GUI
 
 Normally, the number of resource chunks should be `1` unless you are working with a clustered computing software.
 
-Once you launch your server you will be taken to your [current list of interactive sessions](https://openod02.palmetto.clemson.edu/pun/sys/dashboard/batch_connect/sessions "current list of interactive sessions"). Your job will be queued until resources are available to handle your request. Once that has happened you will be able to connect to your VSCode server with a button.
+Once you launch your server you will be taken to your [current list of interactive sessions](https://openod02.palmetto.clemson.edu/pun/sys/dashboard/batch_connect/sessions "current list of interactive sessions"). Your job will be queued until resources are available to handle your request. 
+
 <img src="../../images/ood/apps/vscode/server_running.png" style="width:800px">
+
+Once your resources are available you will be able to connect to your VSCode server with a button that says `Connect to Jupyter`.
 
 If you get stuck in the queuing phase, try lowering the resources your server is using or making sure `interconnect = any` in the server request options.
 
@@ -44,11 +48,11 @@ Currently Loaded Modules:
 
 The leftmost area of the screen has a few icons where you can use some of the features of the VSCode text editor.
 In order of appearence these features are : 
-1. Directory browser<br />
-2. Find and replace tool<br />
-3. Github integration<br />
-4. Debugger<br />
-5. Extension marketplace<br />
+1) Directory browser<br />
+2) Find and replace tool<br />
+3) Github integration<br />
+4) Debugger<br />
+5) Extension marketplace<br />
 
 The first item is the directory browser this is where you can create, edit, or delete files.
 <img src="../../images/ood/apps/vscode/directory_browser.png" style="width:500px">
