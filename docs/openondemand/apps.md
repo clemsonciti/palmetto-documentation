@@ -23,8 +23,8 @@ be provided, and any special consideration, if necessary, will be provided.
 
 {! openondemand/apps/abaqus.md !}
 {! openondemand/apps/vscode.md !}
-{! openondemand/apps/jupyter.md !}
 {! openondemand/apps/spark.md !}
 {! openondemand/apps/tensorflow.md !}
 {! openondemand/apps/rstudio.md !}
 {! openondemand/apps/tensorboard.md !}
+{! openondemand/apps/jupyter.md !}
