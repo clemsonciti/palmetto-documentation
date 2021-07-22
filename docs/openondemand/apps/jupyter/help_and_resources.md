@@ -1,4 +1,4 @@
-## Resources and other readings
+### Resources and other readings
 
 ### Notebook gallery
 

@@ -1,5 +1,5 @@
 
-## JupyterLab dashboard
+### JupyterLab dashboard
 
 After your Jupyter server successfully launched on Palmetto, your browser will present you
 with a JupyterLab dashboard. 

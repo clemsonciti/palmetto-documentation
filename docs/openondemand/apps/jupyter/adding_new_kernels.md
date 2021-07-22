@@ -1,4 +1,4 @@
-## Adding new notebook kernels
+### Adding new notebook kernels
 
 In addition to the default kernels provided (Python, R, and MATLAB), it is possible to create your own kernels. To install kernels for other languages, see the setup instructions for the language [here](https://github.com/ipython/ipython/wiki/IPython-kernels-for-other-languages).
 

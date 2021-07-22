@@ -1,4 +1,4 @@
-## Jupyter Lab on the Palmetto Cluster
+### Jupyter Lab on the Palmetto Cluster
 
 JupyterHub allows users to interact with the Palmetto cluster
 from their web browsers using the [Jupyter Lab](http://jupyter.org/) interface,
@@ -6,7 +6,7 @@ and to prototype and develop code in **Python**, **R**, **MATLAB** and several o
 
 <img src="../../../images/ood/apps/jupyter/jupyterlab.png" style="width:1000px">
 
-## Launching a Jupyter Server on Palmetto
+### Launching a Jupyter Server on Palmetto
 
 1. Go to the [OpenOD website](https://openod02.palmetto.clemson.edu/).
 2. Click on the **JupyterHub** link. 
