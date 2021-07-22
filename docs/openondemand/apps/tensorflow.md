@@ -1,4 +1,4 @@
-## Tensorflow
+## Tensorflow + Jupyter
 
 This page explains how to install the [TensorFlow](https://www.tensorflow.org/)
 package for use with GPUs on the cluster,

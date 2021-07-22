@@ -1,4 +1,4 @@
-## Launching a Jupyter Lab Server with spark on Palmetto
+## Spark + Jupyter
 
 OpenOD has pre-configured jupyter sessions when working with the [spark](https://spark.apache.org/docs/0.9.1/index.html) python library.
 
@@ -6,7 +6,7 @@ When selecting an application from the interavtice app tab select Jupyter with s
 <img src="../../images/ood/apps/jupyter/jupyter_with_spark.png" style="width:600px">
 
 
-## Launching a Jupyter Lab Server with spark on Palmetto
+### Launching a Jupyter Lab Server with spark on Palmetto
 
 1. Go to the [OpenOD website](https://openod02.palmetto.clemson.edu/).
 2. Click on the **JupyterHub** link. 
@@ -27,7 +27,7 @@ Once you launch your server you will be taken to your [current list of interacti
 7. When resources are allocated and the Jupyter server finished launching, your browser
 will show the JupyterLab **dashboard**.
 
-## Running Python with spark
+### Running Python with spark
 
 Example text
 
