@@ -25,7 +25,7 @@ It is in fact a job submitted to Palmetto under your username.
 <img src="../../../images/ood/apps/jupyter/jupyter_startup.png" style="width:600px">
 
 7. When resources are allocated and the Jupyter server finished launching, your browser
-will show the JupyterLab **dashboard**
+will show the JupyterLab **dashboard**.
 
 
 
