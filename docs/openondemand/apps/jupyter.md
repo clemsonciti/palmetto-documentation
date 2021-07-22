@@ -1,5 +1,5 @@
 
-## Jupyter Lab
+## JupyterLab
 
 {! openondemand/apps/jupyter/jupyter_on_palmetto.md !}
 {! openondemand/apps/jupyter/basic_interface.md !}
