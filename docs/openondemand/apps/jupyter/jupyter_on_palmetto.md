@@ -1,6 +1,6 @@
 ### Jupyter Lab on the Palmetto Cluster
 
-JupyterHub allows users to interact with the Palmetto cluster
+OpenOD allows users to interact with the Palmetto cluster
 from their web browsers using the [Jupyter Lab](http://jupyter.org/) interface,
 and to prototype and develop code in **Python**, **R**, **MATLAB** and several other languages.
 
@@ -9,23 +9,22 @@ and to prototype and develop code in **Python**, **R**, **MATLAB** and several o
 ### Launching a Jupyter Server on Palmetto
 
 1. Go to the [OpenOD website](https://openod02.palmetto.clemson.edu/).
-2. Click on the **JupyterHub** link. 
-3. Log in with your Palmetto user ID and password:
-4. Once you are logged in, click on "Interactive apps" on the top navigation bar.
+2. Log in with your Palmetto user ID and password:
+3. Once you are logged in, click on "Interactive apps" on the top navigation bar.
+4. Click on the [Jupyter Notbook](https://openod02.palmetto.clemson.edu/pun/sys/dashboard/batch_connect/sys/ood_jupyter/session_contexts/new) link.
 
-<img src="../../../images/ood/apps//jupyter/jupyter_login.png" style="width:600px">
+
+<img src="../../../images/ood/apps//jupyter/jupyter_selection.png" style="width:600px">
 
 5. Select the resources (CPU cores, memory, walltime, etc.,) required for your session.
 
 <img src="../../../images/ood/apps/jupyter/jupyter_queue.png" style="width:600px">
 
-6. If the resources you request are available, a notebook server will be started for you.
-It is in fact a job submitted to Palmetto under your username. 
+6. Once you launch your server you will be taken to your [current list of interactive sessions](https://openod02.palmetto.clemson.edu/pun/sys/dashboard/batch_connect/sessions "current list of interactive sessions"). Your job will be queued until resources are available to handle your request. Once that has happened you will be able to connect to your Jupyter server with a button.
 
 <img src="../../../images/ood/apps/jupyter/jupyter_startup.png" style="width:600px">
 
-7. When resources are allocated and the Jupyter server finished launching, your browser
-will show the JupyterLab **dashboard**.
+7. Once your server has had it's resources allocated you can connect to your server with a button that says `Connect to Jupyter`, your browser will then be sent to the JupyterLab **dashboard**.
 
 
 
