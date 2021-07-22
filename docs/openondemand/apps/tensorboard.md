@@ -1,3 +1,4 @@
+<!--
 ## Tensorboard
 
 TensorFlow 2+ has `tensorboard` included with the installation package. To run TensorBoard, 
@@ -25,3 +26,4 @@ image.
 2 at port 6006
 
 <img src="../../images/software/packages/tensorboard_03.png" style="width:1200px">
+-->

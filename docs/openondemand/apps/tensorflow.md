@@ -50,13 +50,15 @@ If you need additional packages (for example, Pandas), you can type
 $ pip install pandas
 ~~~
 
+<!--
 6) Install TensorFlow Jupyter Kernel and add the required libraries to the jhubrc file. More info on the jhubrc file can be found [here](https://clemsonciti.github.io/jupyter-docs/Configuring.html).
+
 
 ~~~
 $ python3 -m ipykernel install --user --name tf_gpu --display-name TensorflowGPU
 $ echo "module load anaconda3/2019.10-gcc/8.3.1 cuda/11.0.3-gcc/7.5.0 cudnn/8.0.0.180-11.0-linux-x64-gcc/7.5.0" >> ~/.jhubrc
 ~~~
-
+-->
 ### Installing TensorFlow for non-GPU node
 
 1) Request an interactive session without GPU specification. For example:
@@ -95,30 +97,42 @@ If you need additional packages (for example, Pandas), you can type
 ~~~
 $ pip install pandas
 ~~~
-
+<!--
 6) Install TensorFlow Jupyter Kernel:
 
 ~~~
 $ python3 -m ipykernel install --user --name tf_cpu --display-name TensorflowCPU
 ~~~
-
+-->
 
 
 ### Test TensorFlow Jupyter Kernels
 
-1) Log into [OpenOD] and click go to [interactive apps -> jupyter with tensorflow]. Make sure you have GPU in your
-selection if you want to use the GPU TensorFlow kernel
+1) Log into [OpenOD](https://openod02.palmetto.clemson.edu/) and click go to Interactive Apps on the nav bar then click Jupyter For Tensroflow
 
-<img src="../../images/software/packages/tensorflow_01.png" style="width:1200px">
+2) When choosing server resources make sure you have GPU in your
+selection if you want to use the GPU TensorFlow kernel.
 
-2) Once your Jupyter Lab session has started, you should see the TensorFlow kernels in your list of kernels
+3) Load the modules needed for the version of tensorflow you are using by filling in the textbox. In this case we are loading the following modules
+
+~~~
+anaconda3/2019.10-gcc/8.3.1 cuda/11.0.3-gcc/7.5.0 cudnn/8.0.0.180-11.0-linux-x64-gcc/7.5.0
+~~~
+4) Set the path of Tensorflow virtual enviorement we created earlier. In our example it was created at 
+~~~
+~software/venv/tf_gpu
+~~~
+
+<img src="../../images/ood/apps/tensorflow/server_settings.png" style="width:600px">
+
+5) Once your Jupyter Lab session has started, you should see the TensorFlow kernels in your list of kernels
 in the Launcher.
 
-<img src="../../images/software/packages/tensorflow_02.png" style="width:1200px">
+<img src="../../images/ood/apps/tensorflow/tensorflow_02.png" style="width:1200px">
 
 3) You are now able to launch a notebook using the one of the TensorFlow with GPU kernel:
 
-<img src="../../images/software/packages/tensorflow_03.png" style="width:1200px">
+<img src="../../images/ood/apps/tensorflow/tensorflow_03.png" style="width:1200px">
 
 For Tensorflow with GPU support, the notebook cell containing `tf.config.list_physical_devices('GPU')`
 will produce a non-empty list. 

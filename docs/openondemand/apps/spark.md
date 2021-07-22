@@ -1,6 +1,6 @@
 ## Spark + Jupyter
 
-OpenOD has the ability to use the Python [Spark](https://spark.apache.org/docs/0.9.1/index.html) library by using pre-configured jupyter lab sessions. Currently, Spark versions `2.4.8` and `3.1.2` are available on Palmetto
+OpenOD has the ability to use the Python [Spark](https://spark.apache.org/docs/0.9.1/index.html) library by using pre-configured JupyterLab sessions. Currently, Spark versions `2.4.8` and `3.1.2` are available on Palmetto
 
 Spark is a high-level cluster computing system that has binding for Python. It can be used to write programs that utilize parallelization for faster computation when working with big data or machine learning.
 
@@ -21,7 +21,6 @@ Spark is a high-level cluster computing system that has binding for Python. It c
 Once you launch your server you will be taken to your [current list of interactive sessions](https://openod02.palmetto.clemson.edu/pun/sys/dashboard/batch_connect/sessions "current list of interactive sessions"). Your job will be queued until resources are available to handle your request. Once that has happened you will be able to connect to your Jupyter server with a button.
 <img src="../../images/ood/apps/spark/connect_to_spark.png" style="width:1000px">
 
-
 5. your browser will then be sent to the JupyterLab **dashboard**.
 
 ### Running Python with spark
@@ -33,7 +32,7 @@ The launcher can be accessed by clicking the plus sign ``(+)`` at the top left o
 
 From the launcher you can start a notebook or a Python terminal using the spark kernel. The Python kernel with spark  will be named ``PySpark``.
 
-<img src="../../images/ood/apps/spark/spark_kernel.png" style="width:1000px">
+<img src="../../images/ood/apps/spark/spark_kernel.png">
 
 After clicking these you will be put into a Notebook or Console that is running the python + Spark kernel.
 
