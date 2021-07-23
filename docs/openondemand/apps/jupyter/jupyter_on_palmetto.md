@@ -10,7 +10,7 @@ and to prototype and develop code in **Python**, **R**, **MATLAB** and several o
 
 1. Go to the [OpenOD website](https://openod02.palmetto.clemson.edu/).
 2. Log in with your Palmetto user ID and password:
-3. Once you are logged in, click on "Interactive apps" on the top navigation bar.
+3. Once you are logged in, click on **Interactive Apps** on the top navigation bar.
 4. Click on the **Jupyter Notbook** link.
 
 

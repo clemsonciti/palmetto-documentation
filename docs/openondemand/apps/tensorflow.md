@@ -50,7 +50,7 @@ If you need additional packages (for example, Pandas), you can type
 $ pip install pandas
 ~~~
 
-<!--
+
 6) Install TensorFlow Jupyter Kernel and add the required libraries to the jhubrc file. More info on the jhubrc file can be found [here](https://clemsonciti.github.io/jupyter-docs/Configuring.html).
 
 
@@ -58,7 +58,7 @@ $ pip install pandas
 $ python3 -m ipykernel install --user --name tf_gpu --display-name TensorflowGPU
 $ echo "module load anaconda3/2019.10-gcc/8.3.1 cuda/11.0.3-gcc/7.5.0 cudnn/8.0.0.180-11.0-linux-x64-gcc/7.5.0" >> ~/.jhubrc
 ~~~
--->
+
 ### Installing TensorFlow for non-GPU node
 
 1) Request an interactive session without GPU specification. For example:
@@ -97,13 +97,13 @@ If you need additional packages (for example, Pandas), you can type
 ~~~
 $ pip install pandas
 ~~~
-<!--
+
 6) Install TensorFlow Jupyter Kernel:
 
 ~~~
 $ python3 -m ipykernel install --user --name tf_cpu --display-name TensorflowCPU
 ~~~
--->
+
 
 
 ### Test TensorFlow Jupyter Kernels
