@@ -12,5 +12,5 @@
 
 <details>
 <summary>Example</summary>
-[abc]<img src="https://apaskulin.github.io/waxtechnical/images/pup.jpg" width="500">
+[abc](https://apaskulin.github.io/waxtechnical/images/pup.jpg")
 </details>
