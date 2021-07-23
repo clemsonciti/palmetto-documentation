@@ -2,7 +2,7 @@
 
 OpenOD has the ability to use the Python [Spark](https://spark.apache.org/docs/0.9.1/index.html) library by using pre-configured JupyterLab sessions. Currently, Spark versions `2.4.8` and `3.1.2` are available on Palmetto
 
-Spark is a high-level cluster computing system that has binding for Python. It can be used to write programs that utilize parallelization for faster computation when working with big data or machine learning.
+Spark is a high-level cluster computing system that has bindings for Python. It can be used to write programs that utilize parallelization for faster computation when working with big data or machine learning.
 
 
 ### Launching a Jupyter Lab Server with spark on Palmetto
