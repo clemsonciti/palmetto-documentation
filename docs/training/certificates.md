@@ -18,13 +18,10 @@
 </details>
 
 
-# A collapsible section with markdown
+## Summer 2021 Python Bootcamp
 <details>
   <summary>Click to expand!</summary>
   
-  ## Heading
   1. [Brandon William](https://www.palmetto.clemson.edu/palmetto/images/training/2021_summer_python/bew3.JPG)
-  2. list
-     * With some
-     * Sub bullets
+  
 </details>
