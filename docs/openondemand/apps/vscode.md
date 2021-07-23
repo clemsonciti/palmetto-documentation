@@ -70,5 +70,5 @@ The fourth item is the built in debugger. The debugger requires extensions to us
 
 The fifth item is the extension marketplace where you can install community made extensions to modify your version of VSCode.These extensions differ from the desktop version of VSCode as some are closed source. The extensions will persist throughout vscode server sessions as they are stored in your home directory at `~/.local/share/code-server/extensions`
 
-You can see further documentation and VSCode server specific commands at the [code server documentation website](https://coder.com/docs/code-server/v3.10.2 "code server documentation website").
+You can see further documentation and VSCode server specific commands at the [code server documentation website](https://coder.com/docs/code-server/v3.10.2 "code server documentation website")
 
