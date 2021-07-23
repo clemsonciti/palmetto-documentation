@@ -5,7 +5,7 @@
   
   [Brandon William] <img src="../images/training/2021_summer_python/bew3.JPG" style="width:600px">
   
-  [Brandon William] (https://github.com/clemsonciti/palmetto-documentation/tree/master/docs/images/training/2021_summer_python/bew3.JPG)
+  [Brandon William] (https://www.palmetto.clemson.edu/palmetto/images/about/palmetto_front_view.png)
   
 </details>
 
