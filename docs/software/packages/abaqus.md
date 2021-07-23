@@ -2,13 +2,13 @@
 
 ABAQUS is a Finite Element Analysis software used
 for engineering simulations.
-Currently, ABAQUS versions 6.10, 6.13, 6.14 are available on Palmetto cluster
+Currently, ABAQUS versions 6.14, 2018, 2020, and 2021 are available on Palmetto cluster
 as modules.
 
 ~~~
 $ module avail abaqus
 
-abaqus/6.10 abaqus/6.13 abaqus/6.14
+abaqus/6.14 abaqus/2018 abaqus/2020 abaqus/2021
 ~~~
 
 To see license usage of ABAQUS-related packages,
