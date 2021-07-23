@@ -3,7 +3,7 @@
 <details close>
 <summary> Summer 2021 Python Bootcamp </summary>
   
-[Brandon William](https://www.palmetto.clemson.edu/palmetto/images/training/2021_summer_python/bew3.JPG)
+<p>[Brandon William](https://www.palmetto.clemson.edu/palmetto/images/training/2021_summer_python/bew3.JPG)</p>
   
 </details>
 
@@ -12,5 +12,5 @@
 
 <details>
 <summary>Example</summary>
-[abc](https://apaskulin.github.io/waxtechnical/images/pup.jpg")
+<p>[abc](https://apaskulin.github.io/waxtechnical/images/pup.jpg")</p>
 </details>
