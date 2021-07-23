@@ -108,7 +108,7 @@ $ python3 -m ipykernel install --user --name tf_cpu --display-name TensorflowCPU
 
 ### Test TensorFlow Jupyter Kernels
 
-1) Log into [OpenOD](https://openod02.palmetto.clemson.edu/) and click go to Interactive Apps on the nav bar then click Jupyter For Tensroflow
+1) Log into [OpenOD](https://openod02.palmetto.clemson.edu/) and click go to **Interactive Apps** on the nav bar then click **Jupyter For TensorFlow**.
 
 2) When choosing server resources make sure you have GPU in your
 selection if you want to use the GPU TensorFlow kernel.
