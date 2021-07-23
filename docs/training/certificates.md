@@ -15,6 +15,7 @@
 </details>
 
 <p> </p>
+
 ## Fall 2019 R Bootcamp
 <details>
   <summary>Certificate of Attendence</summary>
@@ -31,6 +32,7 @@
 </details>
 
 <p> </p>
+
 ## Spring 2020 R Bootcamp
 <details>
   <summary>Certificate of Attendence</summary>
