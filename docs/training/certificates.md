@@ -3,9 +3,9 @@
 <details close>
 <summary> Summer 2021 Python Bootcamp </summary>
   
-  [Brandon William]  <img src="../docs/images/training/2021_summer_python/bew3.JPG" style="width:600px">
+  [Brandon William] (<img src="../images/training/2021_summer_python/bew3.JPG" style="width:600px">)
+  [Brandon William]("../images/training/2021_summer_python/bew3.JPG")
   
-  ('../docs/images/training/2021_summer_python/bew3.JPG')
 </details>
 
 
