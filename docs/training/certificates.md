@@ -1,3 +1,48 @@
+## Summer 2019 R Bootcamp
+<details>
+  <summary>Certificate of Attendence</summary>
+  
+  1. [Bikal Shakya](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201907/bshakya.PNG)
+  2. [Rohan Gupta](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201907/gupta7.PNG)
+  3. [Joseph Ligato](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201907/jligato.PNG)
+  4. [Maher Al-Ghalayini](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201907/malghal.PNG)
+  5. [Matthew Myers](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201907/mmyers6.PNG)
+  6. [Thomas Delvaus](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201907/tdelvau.PNG)
+  7. [Tiantian Yang](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201907/tiantiy.PNG)
+  8. [Vatsa Shah](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201907/vasa.PNG)
+  9. [Zhen Liu](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201907/zliu2.PNG)
+  
+</details>
+
+## Fall 2019 R Bootcamp
+<details>
+  <summary>Certificate of Attendence</summary>
+  
+  1. [Anurata Hridi](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201911/ahridi.PNG)
+  2. [Bipin Sharma](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201911/bipins.PNG)
+  3. [George Lockhart](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201911/blockha.PNG)
+  4. [Dac Nguyen](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201911/dacn.PNG)
+  5. [David Krag](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201911/dkarig.PNG)
+  6. [Guncha Babajanova](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201911/gbabaja.PNG)
+  7. [Qiao Guangshun](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201911/gqiao.PNG)
+  8. [Pamela Michael](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201911/pemicha.PNG)
+    
+</details>
+
+## Spring 2020 R Bootcamp
+<details>
+  <summary>Certificate of Attendence</summary>
+  
+  1. [Annamaria Wolf](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202002/avw.PNG)
+  2. [Guo Li](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202002/gli2.PNG)
+  3. [Hafeera Shabbir](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202002/hshabbi.PNG)
+  4. [John Absher](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202002/jabhser.PNG)
+  5. [Joshua Saliutama](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202002/jsaliut.PNG)
+  6. [Matthew Browning](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202002/mhb.PNG)
+  7. [Ricardo Garcia](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202002/rgarci4.PNG)
+      
+</details>
+
 ## Summer 2021 Python Bootcamp
 <details>
   <summary>Certificate of Attendence</summary>
