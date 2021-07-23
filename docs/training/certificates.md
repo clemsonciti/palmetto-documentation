@@ -5,29 +5,9 @@
   
   [Brandon William] <img src="../images/training/2021_summer_python/bew3.JPG" style="width:600px">
   
-  [Brandon William](https://github.com/clemsonciti/palmetto-documentation/tree/master/docs/images/training/2021_summer_python/bew3.JPG)
+  [Brandon William] (https://github.com/clemsonciti/palmetto-documentation/tree/master/docs/images/training/2021_summer_python/bew3.JPG)
   
 </details>
 
 
 ### Summer 2021 R Bootcamp
-
-<details>
-<summary>Heading</summary>
-    + markdown list 1
-        + nested list 1
-        + nested list 2
-    + markdown list 2
-</details>
-
-
-<details open>
-<summary>Write Markdown!</summary>
-<!--All you need is a blank line-->
-
-**Python** *Code*
-```python
-from __future__ import print_function
-print('Hello world!')
-```
-</details>
