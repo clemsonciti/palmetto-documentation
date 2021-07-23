@@ -1,18 +1,31 @@
 ## Certificates of Attendence
 
-### Summer 2021 Python Bootcamp
+<details close>
+<summary> Summer 2021 Python Bootcamp </summary>
+  
+- [Brandon William](https://github.com/clemsonciti/palmetto-documentation/blob/master/docs/images/training/2021_summer_python/bew3.JPG)
+  
+</details>
+
 
 ### Summer 2021 R Bootcamp
 
-- [Brandon William](https://github.com/clemsonciti/palmetto-documentation/blob/master/docs/images/training/2021_summer_python/bew3.JPG)
+<details>
+<summary>Heading</summary>
+    + markdown list 1
+        + nested list 1
+        + nested list 2
+    + markdown list 2
+</details>
 
-<img src="../images/training/2021_summer_python/bew3.JPG" style="width:1000px">
-
-- []()
-- testing
 
 <details open>
-<summary>Want to ruin the surprise?</summary>
-<br>
-Well, you asked for it!
+<summary>Write Markdown!</summary>
+<!--All you need is a blank line-->
+
+**Python** *Code*
+```python
+from __future__ import print_function
+print('Hello world!')
+```
 </details>
