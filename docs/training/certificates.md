@@ -67,6 +67,27 @@
 
 <p> </p>
 
+## Summer 2021 R Bootcamp
+<details>
+  <summary>Certificate of Attendence</summary>
+  
+  1. [Alex Raymon McDaniel](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/armcdan.PNG)
+  2. [Bohua Wu](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/bohua.PNG)
+  3. [Meena Rajagopal](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/changar.PNG)
+  4. [Daniela Almeida](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/dmalmei.PNG)
+  5. [Gwendolyn Paige Watson](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/gwendow.PNG)
+  6. [Mahesh Koirala](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/mkoiral.PNG)
+  7. [Phoebe Xoxakos](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/pxoxako.PNG)
+  
+  8. [Ryan Joseph Gagnon](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/rjgagno.PNG)
+  6. [Rong Wang](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/rwang6.PNG)
+  7. [Yu-Chen Pan](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/yp.PNG)
+      
+</details>
+
+<p> </p>
+
+
 ## Summer 2021 Python Bootcamp
 <details>
   <summary>Certificate of Attendence</summary>
