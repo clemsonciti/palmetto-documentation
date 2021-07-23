@@ -1,5 +1,7 @@
 ## Certificates of Attendence
 
+[Brandon William](https://www.palmetto.clemson.edu/palmetto/images/training/2021_summer_python/bew3.JPG)
+
 <details close>
 <summary> Summer 2021 Python Bootcamp </summary>
   
