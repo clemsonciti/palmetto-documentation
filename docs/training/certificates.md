@@ -80,8 +80,10 @@
   7. [Phoebe Xoxakos](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/pxoxako.PNG)
   
   8. [Ryan Joseph Gagnon](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/rjgagno.PNG)
-  6. [Rong Wang](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/rwang6.PNG)
-  7. [Yu-Chen Pan](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/yp.PNG)
+  9. [Rong Wang](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/rwang6.PNG)
+  10. [Yu-Chen Pan](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/yp.PNG)
+  11. [Bryan Riordan](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/briorda.PNG) 
+  
       
 </details>
 
