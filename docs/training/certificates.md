@@ -14,5 +14,5 @@
 
   [Brandon William] <img src="../images/training/2021_summer_python/bew3.JPG" style="width:600px">
   
-  [Brandon William](https://www.palmetto.clemson.edu/palmetto/images/about/bew3.JPG)
+  [Brandon William](https://www.palmetto.clemson.edu/palmetto/images/training/2021_summer_python/bew3.JPG)
   
