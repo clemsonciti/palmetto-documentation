@@ -144,7 +144,11 @@ The next pop up contains more options to customize how the job executes. For thi
 
 ![28](https://drive.google.com/file/d/17C56x1dB3DsbBSncRiAGQ9D8Xnpe33_p/view?usp=sharing)
 
-Now to run the simulation, expand jobs in the design tree and righthttps://drive.google.com/file/d/1XVixfyGAYejSOW5zGFkyzIHXwJX6gEQ-/view?usp=sharing click on your job. Click submit.
+Now to run the simulation, expand jobs in the design tree and right
+
+![29](https://drive.google.com/file/d/1XVixfyGAYejSOW5zGFkyzIHXwJX6gEQ-/view?usp=sharing)
+
+.click on your job. Click submit.
 In the bottom window you will see a message when the job is completed
 
 
