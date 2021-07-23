@@ -14,6 +14,7 @@
   
 </details>
 
+<p> </p>
 ## Fall 2019 R Bootcamp
 <details>
   <summary>Certificate of Attendence</summary>
@@ -29,6 +30,7 @@
     
 </details>
 
+<p> </p>
 ## Spring 2020 R Bootcamp
 <details>
   <summary>Certificate of Attendence</summary>
@@ -42,6 +44,8 @@
   7. [Ricardo Garcia](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202002/rgarci4.PNG)
       
 </details>
+
+<p> </p>
 
 ## Summer 2021 Python Bootcamp
 <details>
