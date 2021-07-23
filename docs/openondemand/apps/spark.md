@@ -9,7 +9,7 @@ Spark is a high-level cluster computing system that has binding for Python. It c
 
 1. Go to the [OpenOD website](https://openod02.palmetto.clemson.edu/).
 2. Log in with your Palmetto user ID and password:
-3. Once you are logged in, click on "Interactive apps" on the top navigation bar.
+3. Once you are logged in, click on **Interactive Apps** on the top navigation bar.
 4. Click on the **Jupyter + Spark** link. 
 
 <img src="../../images/ood/apps/spark/spark_select.png" style="width:600px">
