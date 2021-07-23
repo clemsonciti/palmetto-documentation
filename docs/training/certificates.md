@@ -4,6 +4,6 @@
 
 ### Summer 2021 R Bootcamp
 
-- [](https://www.palmetto.clemson.edu/palmetto/images/training/mac_01.png)
+- [Brandon William](palmetto-documentation/docs/images/training/2021_summer_python/bew3.JPG)
 - []()
 - testing
