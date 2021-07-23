@@ -13,7 +13,7 @@ Spark is a high-level cluster computing system that has binding for Python. It c
 4. Click on the **Jupyter + Spark** link. <img src="../../images/ood/apps/spark/spark_select.png" style="width:600px">
 
 
-5. Once you have arrived at the server configuration page, select the resources (CPU cores, memory, walltime, etc.,) required for your session. When using spark you usually want more than 1 resource chunk.
+5. Once you have arrived at the server configuration page, select the resources (CPU cores, memory, walltime, etc.,) required for your session. When using Spark you usually want more than 1 resource chunk.
  Here you can also choose what version of spark you would like to use.<img src="../../images/ood/apps/spark/spark_server_options.png" style="width:600px">
 
 
