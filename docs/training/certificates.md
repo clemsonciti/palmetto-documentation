@@ -5,5 +5,8 @@
 ### Summer 2021 R Bootcamp
 
 - [Brandon William](https://github.com/clemsonciti/palmetto-documentation/blob/master/docs/images/training/2021_summer_python/bew3.JPG)
+
+<img src="../images/training/2021_summer_python/bew3.JPG" style="width:1000px">
+
 - []()
 - testing
