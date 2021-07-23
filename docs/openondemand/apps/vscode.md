@@ -21,7 +21,7 @@ Once you launch your server you will be taken to your [current list of interacti
 
 <img src="../../images/ood/apps/vscode/server_running.png" style="width:800px">
 
-Once your resources are available you will be able to connect to your VSCode server with a button that says `Connect to Jupyter`.
+Once your resources are available you will be able to connect to your VSCode server with a button that says `Connect to VS Code`.
 
 If you get stuck in the queuing phase, try lowering the resources your server is using or making sure `interconnect = any` in the server request options.
 
