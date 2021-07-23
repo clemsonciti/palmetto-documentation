@@ -47,7 +47,7 @@ Currently Loaded Modules:
 ### Utilizing VSCode features
 
 The leftmost area of the screen has a few icons where you can use some of the features of the VSCode text editor.
-In order of appearence these features are : 
+In order of appearence these features are : <br />
 1) Directory browser<br />
 2) Find and replace tool<br />
 3) Github integration<br />
