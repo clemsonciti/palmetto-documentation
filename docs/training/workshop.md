@@ -1,4 +1,4 @@
-## Workshop Descriptions
+## Workshop Description
 
 ### [Introduction to Linux](https://clemsonciti.github.io/workshop-linux/index.html)
 Introduction to the Linux Command Line Interface for researchers

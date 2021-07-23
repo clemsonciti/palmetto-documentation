@@ -3,7 +3,7 @@
 *Linked time indicates availability on CUCOURSE*  
 
 *Starting Spring 2021, we will also test our recorded workshop features, 
-where Zoom-based workshops are recorded and posted. All recordings will 
+where Zoom-based workshops are recorded and sent by request. All recordings will 
 require Clemson's authentication to view. Downloading is not permitted.*
 
 - [Introduction to Linux](workshop.md#introduction-to-linux)  
