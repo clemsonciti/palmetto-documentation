@@ -24,7 +24,7 @@
   
   1. [Brandon William](https://www.palmetto.clemson.edu/palmetto/citi-python7-certificate_2021_summer/bew3.JPG)
   
-  1. [Brandon William](../../../../citi-python7-certificate_2021_summer/bew3.JPG)
+  2. [Brandon William](../../../../citi-python7-certificate_2021_summer/bew3.JPG)
   
   2. [Bohua Wu](https://www.palmetto.clemson.edu/palmetto/images/training/2021_summer_python/bohua.JPG)
   3. [Bulent Koc](https://www.palmetto.clemson.edu/palmetto/images/training/2021_summer_python/bulent.JPG)
