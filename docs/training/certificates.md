@@ -10,7 +10,7 @@
 
 ### Summer 2021 R Bootcamp
 
-  [Brandon William] <img src="../images/training/2021_summer_python/bew3.JPG" style="width:400px">
-  
-  
-  
+<details>
+<summary>Example</summary>
+[abc]<img src="https://apaskulin.github.io/waxtechnical/images/pup.jpg" width="500">
+</details>
