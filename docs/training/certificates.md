@@ -3,7 +3,7 @@
 <details close>
 <summary> Summer 2021 Python Bootcamp </summary>
   
-- [Brandon William](https://github.com/clemsonciti/palmetto-documentation/blob/master/docs/images/training/2021_summer_python/bew3.JPG)
+- [Brandon William]('../docs/images/training/2021_summer_python/bew3.JPG')
   
 </details>
 
