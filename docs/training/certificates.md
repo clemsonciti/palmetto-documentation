@@ -1,4 +1,4 @@
-## Certificates
+## Certificates of Attendence
 
 ### Summer 2021 Python Bootcamp
 
