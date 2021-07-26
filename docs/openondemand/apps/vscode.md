@@ -9,17 +9,17 @@ Start by heading to the [Open OnDemand website](https://openod02.palmetto.clemso
 
 Select `Code Server (VSCode)`
 
-<img src="../../../images/ood/apps/vscode/navbar_select.png" style="width:600px">
+<img src="../../images/ood/apps/vscode/navbar_select.png" style="width:600px">
 
 
 Once you have selected to create a VSCode server you will be prompted with a GUI where you can choose what hardware and software your server will have.
-<img src="../../../images/ood/apps/vscode/server_options.png" style="width:600px">
+<img src="../../images/ood/apps/vscode/server_options.png" style="width:600px">
 
 Normally, the number of resource chunks should be `1` unless you are working with a clustered computing software.
 
 Once you launch your server you will be taken to your [current list of interactive sessions](https://openod02.palmetto.clemson.edu/pun/sys/dashboard/batch_connect/sessions "current list of interactive sessions"). Your job will be queued until resources are available to handle your request. 
 
-<img src="../../../images/ood/apps/vscode/server_running.png" style="width:800px">
+<img src="../../images/ood/apps/vscode/server_running.png" style="width:800px">
 
 Once your resources are available you will be able to connect to your VSCode server with a button that says `Connect to VS Code`.
 
@@ -29,10 +29,10 @@ If you get stuck in the queuing phase, try lowering the resources your server is
 
 Once you have connect to your VSCode server you will be sent to the VSCode dashboard.
 Here you can choose a directory to start working in by clicking open folder then specifying the directory.
-<img src="../../../images/ood/apps/vscode/choosing_cwd.png" style="width:1400px">
+<img src="../../images/ood/apps/vscode/choosing_cwd.png" style="width:1400px">
 
 Additionally in the VSCode server you have access to the terminal. Clicking on the context menu on the top leftmost position of the screen will bring up a menu from there you are able to open up a terminal by following the path `Terminal->New Terminal`.
-<img src="../../../images/ood/apps/vscode/open_terminal.png" style="width:600px">
+<img src="../../images/ood/apps/vscode/open_terminal.png" style="width:600px">
 
 Once you are in your terminal you can run any of the software that you loaded while requesting the server.
 ~~~
@@ -55,16 +55,16 @@ In order of appearence these features are : <br />
 5) Extension marketplace<br />
 
 The first item is the directory browser this is where you can create, edit, or delete files.
-<img src="../../../images/ood/apps/vscode/directory_browser.png" style="width:500px">
+<img src="../../images/ood/apps/vscode/directory_browser.png" style="width:500px">
 
 The second item is a find and replace tool that works throughout your entire working directory.
 We can see here that searching for `return` showed up in 3 different files in our current working directory.
 
-<img src="../../../images/ood/apps/vscode/search_keyword.png" style="width:500px">
+<img src="../../images/ood/apps/vscode/search_keyword.png" style="width:500px">
 
 The third item allows VSCode to integrate with github, intially you can start a repository within your current working directory or if you are already in a git repository you can see file changes made and perform git operations.<br />
 Here we can see that the file `readme.txt` has been added and  `Test.c` has been modified.
-<img src="../../../images/ood/apps/vscode/git_changes.png" style="width:500px">
+<img src="../../images/ood/apps/vscode/git_changes.png" style="width:500px">
 
 The fourth item is the built in debugger. The debugger requires extensions to use and compatibility with Palmetto's VSCode server is not guaranteed.
 
