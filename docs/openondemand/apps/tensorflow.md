@@ -123,16 +123,16 @@ anaconda3/2019.10-gcc/8.3.1 cuda/11.0.3-gcc/7.5.0 cudnn/8.0.0.180-11.0-linux-x64
 ~software/venv/tf_gpu
 ~~~
 
-<img src="../../images/ood/apps/tensorflow/server_settings.png" style="width:600px">
+<img src="../../../images/ood/apps/tensorflow/server_settings.png" style="width:600px">
 
 5) Once your Jupyter Lab session has started, you should see the TensorFlow kernels in your list of kernels
 in the Launcher.
 
-<img src="../../images/ood/apps/tensorflow/tensorflow_02.png" style="width:1200px">
+<img src="../../../images/ood/apps/tensorflow/tensorflow_02.png" style="width:1200px">
 
 3) You are now able to launch a notebook using the one of the TensorFlow with GPU kernel:
 
-<img src="../../images/ood/apps/tensorflow/tensorflow_03.png" style="width:1200px">
+<img src="../../../images/ood/apps/tensorflow/tensorflow_03.png" style="width:1200px">
 
 For Tensorflow with GPU support, the notebook cell containing `tf.config.list_physical_devices('GPU')`
 will produce a non-empty list. 

@@ -19,7 +19,7 @@ Spark is a high-level cluster computing system that has bindings for Python. It 
 
 
 6. Once you launch your server you will be taken to your [current list of interactive sessions](https://openod02.palmetto.clemson.edu/pun/sys/dashboard/batch_connect/sessions "current list of interactive sessions"). Your job will be queued until resources are available to handle your request. 
-<img src="../../images/ood/apps/spark/connect_to_spark.png" style="width:1000px">
+<img src="../../../images/ood/apps/spark/connect_to_spark.png" style="width:1000px">
 
 7. Once your server has had it's resources allocated you can connect to your server with a button that says `Connect to Jupyter`, your browser will then be sent to the JupyterLab **dashboard**.
 
@@ -28,16 +28,16 @@ Spark is a high-level cluster computing system that has bindings for Python. It 
 When arriving to the Jupyter Lab dashboard you can either open an existing notebook using the file browser or create a new one with the launcher.
 
 The launcher can be accessed by clicking the plus sign ``(+)`` at the top left of the dash board
-<img src="../../images/ood/apps/spark/jupyter_launcher.png" style="width:500px">
+<img src="../../../images/ood/apps/spark/jupyter_launcher.png" style="width:500px">
 
 From the launcher you can start a notebook or a Python terminal using the spark kernel. The Python kernel with spark  will be named ``PySpark``.
 
-<img src="../../images/ood/apps/spark/spark_kernel.png">
+<img src="../../../images/ood/apps/spark/spark_kernel.png">
 
 After clicking these you will be put into a Notebook or Console that is running the python + Spark kernel.
 
 You can also change the kernel of an existing notebook to the Spark kernel by clicking on the kernel name at the top right of the notebook and selecting ``PySpark`` on the dropdown menu for kernels.
 
-<img src="../../images/ood/apps/spark/change_kernel_spark.png" > 
+<img src="../../../images/ood/apps/spark/change_kernel_spark.png" > 
 
 You can get started with programming with Python + Spark at the offical [Spark docs](https://spark.apache.org/docs/0.9.1/python-programming-guide.html)
