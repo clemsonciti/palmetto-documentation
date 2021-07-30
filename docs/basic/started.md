@@ -446,7 +446,7 @@ Parameter | Purpose | Example
 ----------|---------|---------
 `-N`      | Job name (7 characters)	| `-N maxrun1`
 `-l`      | Job limits (lowercase L), hardware & other requirements for job. | `-l select=1:ncpus=8:mem=1gb:interconnect=1g`
-`-q`      | Queue to direct this job to (`workq` is the default, `supabad` is an example of specific research group's job queue) | `-q supabad`
+`-q`      | Queue to direct this job to (`work1` is the default, `supabad` is an example of specific research group's job queue) | `-q supabad`
 `-o`      | Path to stdout file for this job (environment variables are not accepted here) | `-o stdout.txt`
 `-e`      | Path to stderr file for this job (environment variables are not accepted here) | `-e stderr.txt`
 `-m`      | mail event: Email from the PBS server with flag **a**bort\ **b**egin\ **e**nd \ or **n**o mail for job's notification.  | `-m abe`
