@@ -82,7 +82,8 @@
   8. [Ryan Joseph Gagnon](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/rjgagno.PNG)
   9. [Rong Wang](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/rwang6.PNG)
   10. [Yu-Chen Pan](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/yp.PNG)
-  11. [Bryan Riordan](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/briorda.PNG) 
+  11. [Bryan Riordan](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/briorda.PNG)
+  12. [Hruday Charan Reddy Santimalla](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202107/hsantim.PNG)
   
       
 </details>
