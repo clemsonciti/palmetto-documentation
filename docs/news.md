@@ -1,6 +1,16 @@
 ## Townhall meeting Aug 3rd 2021
 After Palmetto maintenance Jul 2021, we hosted the Townhall meeting with all users to talked about changes to Palmetto after maintenance.
-The recording and Q&A can be found in the following link: bit.ly/CITI_Townhall_2021
+The following points were discussed in detail:
+1. Introduction Open OnDemand
+2. 34 new A100 GPU nodes in phase 27
+3. New OMP_NUM_THREADS behavior
+4. Renaming of certain Modulefile names
+5. Autofs features 
+6. Globus transfer file and scratch 1 reinitializing soon
+7. New Data transfer node. 
+
+The recording and Q&A can be found in the following link: 
+bit.ly/CITI_Townhall_2021
 
 ## April 30, 2021: a new version of XQuartz is released, so X11 tunneling now works for Mac OS > 10.14
 
