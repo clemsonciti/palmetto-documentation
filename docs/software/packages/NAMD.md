@@ -14,7 +14,7 @@ namd/2.14
 To run NAMD in batch mode on Palmetto cluster,
 you can use the job script in the following example as a template.
 This example shows how to run NAMD in parallel.
-More examples ad tutorials for NAMD simulation can be found at: https://www.ks.uiuc.edu/Research/namd/
+More examples and tutorials for NAMD simulation can be found at: https://www.ks.uiuc.edu/Research/namd/
 
 You can obtain the files required to run this example
 using the following commands:
