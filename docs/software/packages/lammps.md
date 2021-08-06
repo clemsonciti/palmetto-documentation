@@ -149,9 +149,9 @@ mpirun -np 8 lmp -in in.lj > output.txt        # 8 MPI, 8 MPI/GPU
 # to write the output to a file
 ~~~
 
-### LAAMPS with multiple GPUs
+### LAMMPS with multiple GPUs
 
-When using LAAMPS with multiple GPUs it is most efficient to have a number of mpi tasks that is equal or greater to the number of GPUs used.
+When using LAMMPS with multiple GPUs it is most efficient to have a number of mpi tasks that is equal or greater to the number of GPUs used.
 
 Requesting a single node with `ngpus = 2` requires at least 2 MPI tasks to utilize both GPUs. Setting `mpiprocs` to a number that is a factor of `ncpus` in the qsub command will accomplish this. <br>
 For instance the following request uses 4 GPUs in total by selecting 2 nodes with 2 GPUs each.
