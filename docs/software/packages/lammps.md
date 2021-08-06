@@ -156,7 +156,7 @@ When using LAAMPS with multiple GPUs it is most efficient to have a number of mp
 Requesting a single node with `ngpus = 2` requires at least 2 MPI tasks to utilize both GPUs. Setting `mpiprocs` to a number that is a factor of `ncpus` in the qsub command will accomplish this. <br>
 For instance the following request uses 4 GPUs in total by selecting 2 nodes with 2 GPUs each.
 ~~~
-qsub -I -l select=2:ncpus=8:mpiprocs=2:mem=20gb:ngpus=1:gpu_model=k20:interconnect=any,walltime=10:00:00
+qsub -I -l select=2:ncpus=8:mpiprocs=2:mem=20gb:ngpus=2:gpu_model=k20:interconnect=any,walltime=10:00:00
 ~~~
 
 Once we have 2 nodes we can use open MPI to create 4 tasks for our LAAMP command.
