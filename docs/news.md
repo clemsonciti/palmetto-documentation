@@ -10,7 +10,7 @@ The following points were discussed in detail:
 6. Globus transfer file and scratch 1 reinitializing soon
 7. New Data transfer node. 
 
-The recording and Q&A can be found in the following link: 
+The recording and Q&A can be found in the following link (pls login using g.clemson.edu): 
 bit.ly/CITI_Townhall_2021
 
 ## April 30, 2021: a new version of XQuartz is released, so X11 tunneling now works for Mac OS > 10.14
