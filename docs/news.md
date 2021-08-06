@@ -1,3 +1,18 @@
+## Townhall meeting Aug 3rd 2021
+After Palmetto maintenance Jul 2021, we hosted the Townhall meeting with all users to talked about changes to Palmetto after maintenance.
+The following points were discussed in detail:
+
+1. Introduction Open OnDemand
+2. 34 new A100 GPU nodes in phase 27
+3. New OMP_NUM_THREADS behavior
+4. Renaming of certain Modulefile names
+5. Autofs features 
+6. Globus transfer file and scratch 1 reinitializing on Monday 08/09/2021 at 9am
+7. New Data transfer node. 
+
+The recording and Q&A can be found in the following link (pls login using g.clemson.edu): 
+bit.ly/CITI_Townhall_2021
+
 ## April 30, 2021: a new version of XQuartz is released, so X11 tunneling now works for Mac OS > 10.14
 
 Good news for Mac users! Recently, there has been an update to [XQuartz](https://www.xquartz.org/), which we can use to set up X11 tunneling on Palmetto in order to run simple graphical applications. The older versions of XQuartz only supported Mac OS up to 10.14 (Mojave); the new version also supports Mac OS 10.15 (Catalina) and Mac OS 11 (Big Sur). We have added [the guide to X11 tunneling](https://www.palmetto.clemson.edu/palmetto/basic/x11_tunneling/) to our website. 
