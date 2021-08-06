@@ -13,6 +13,23 @@ The following points were discussed in detail:
 The recording and Q&A can be found in the following link (pls login using g.clemson.edu): 
 bit.ly/CITI_Townhall_2021
 
+## Palmetto maintenance
+Palmetto’s yearly maintenance is scheduled for the week of July 16th - July 23rd, 2021. During the maintenance period there will be no access to Palmetto/JupyterHub/LoginVM. Please retrieve any files you may need before the cluster goes offline.
+All nodes and all storage will be down during the maintenance period. Storage will be available when we bring the non-GPU nodes back online before benchmarking.
+This year's plan for maintenance:
+
+- We are adding a new phase with new nodes.
+- Various Operating System Updates and Patches
+- Updating Spack and doing some housekeeping on the current packages installed.
+- Nodes in Phase 7a – 21 will be used for benchmarking. Phase 0 – 6 and storage will be brought back online before running the benchmark. We will send a notification once these systems are online and available.
+
+Note:
+1)	/scratch1 will not be wiped but /scratch2 will be wiped. Please back up any data stored in your /scratch2 directories as it will not be recoverable after maintenance.
+2)	Any jobs that are started before maintenance with a walltime that conflicts with the start of the maintenance will not run.
+
+If you have any questions or concerns, please reach out to us by emailing ithelp@clemson.edu with “Palmetto Maintenance” in the subject line.
+
+
 ## April 30, 2021: a new version of XQuartz is released, so X11 tunneling now works for Mac OS > 10.14
 
 Good news for Mac users! Recently, there has been an update to [XQuartz](https://www.xquartz.org/), which we can use to set up X11 tunneling on Palmetto in order to run simple graphical applications. The older versions of XQuartz only supported Mac OS up to 10.14 (Mojave); the new version also supports Mac OS 10.15 (Catalina) and Mac OS 11 (Big Sur). We have added [the guide to X11 tunneling](https://www.palmetto.clemson.edu/palmetto/basic/x11_tunneling/) to our website. 
