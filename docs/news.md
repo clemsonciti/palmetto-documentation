@@ -1,6 +1,7 @@
 ## Townhall meeting Aug 3rd 2021
 After Palmetto maintenance Jul 2021, we hosted the Townhall meeting with all users to talked about changes to Palmetto after maintenance.
 The following points were discussed in detail:
+
 1. Introduction Open OnDemand
 2. 34 new A100 GPU nodes in phase 27
 3. New OMP_NUM_THREADS behavior
