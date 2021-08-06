@@ -14,8 +14,17 @@ The recording and Q&A can be found in the following link (pls login using g.clem
 bit.ly/CITI_Townhall_2021
 
 ## Palmetto maintenance
-Palmetto’s yearly maintenance is scheduled for the week of July 16th - July 23rd, 2021. During the maintenance period there will be no access to Palmetto/JupyterHub/LoginVM. Please retrieve any files you may need before the cluster goes offline.
-All nodes and all storage will be down during the maintenance period. Storage will be available when we bring the non-GPU nodes back online before benchmarking.
+Palmetto’s yearly maintenance is scheduled for the week of July 16th - July 23rd, 2021. 
+
+During the maintenance period there will be no access to Palmetto/JupyterHub/LoginVM.
+
+Please retrieve any files you may need before the cluster goes offline.
+
+
+All nodes and all storage will be down during the maintenance period.
+
+Storage will be available when we bring the non-GPU nodes back online before benchmarking.
+
 This year's plan for maintenance:
 
 - We are adding a new phase with new nodes.
@@ -24,6 +33,7 @@ This year's plan for maintenance:
 - Nodes in Phase 7a – 21 will be used for benchmarking. Phase 0 – 6 and storage will be brought back online before running the benchmark. We will send a notification once these systems are online and available.
 
 Note:
+
 1)	/scratch1 will not be wiped but /scratch2 will be wiped. Please back up any data stored in your /scratch2 directories as it will not be recoverable after maintenance.
 2)	Any jobs that are started before maintenance with a walltime that conflicts with the start of the maintenance will not run.
 
