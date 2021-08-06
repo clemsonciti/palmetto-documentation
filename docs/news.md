@@ -7,7 +7,7 @@ The following points were discussed in detail:
 3. New OMP_NUM_THREADS behavior
 4. Renaming of certain Modulefile names
 5. Autofs features 
-6. Globus transfer file and scratch 1 reinitializing soon
+6. Globus transfer file and scratch 1 reinitializing on Monday 08/09/2021 at 9am
 7. New Data transfer node. 
 
 The recording and Q&A can be found in the following link (pls login using g.clemson.edu): 
