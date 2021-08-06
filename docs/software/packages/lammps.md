@@ -149,6 +149,22 @@ mpirun -np 8 lmp -in in.lj > output.txt        # 8 MPI, 8 MPI/GPU
 # to write the output to a file
 ~~~
 
+### LAAMPS with multiple GPUs
+
+When using LAAMPS with multiple GPUs it is most efficient to have a number of mpi tasks that is equal or greater to the number of GPUs used.
+
+Requesting a single node with `ngpus = 2` requires at least 2 mpi tasks to utilize both gpus. Setting `mpiprocs` to a number that is a factor of `ncpus` will accomplish this in the qsub command. <br>
+For instance the following request uses 4 GPUs in total by selecting 2 nodes with 2 GPUs each.
+~~~
+qsub -I -l select=2:ncpus=8:mpiprocs=2:mem=20gb:ngpus=1:gpu_model=k20:interconnect=any,walltime=10:00:00
+~~~
+
+Once we have 2 nodes we can use open MPI to create 4 tasks for our LAAMP command.
+
+~~~
+mpirun -np 4 lmp -sf gpu -pk gpu 2 -in in.lj >output4_gpu.txt        # 4 MPI, 1 MPI/GPU
+~~~
+
 
 #### Lammps build with kokkos and gpu
 
@@ -183,22 +199,6 @@ lmp -sf opt -in in.lj > output_opt_serial.txt
 
 # Running LAMMPS with OPT in parallel mode
 mpirun -np 8 lmp -sf opt -in in.lj > output_opt_parallel.txt
-~~~
-
-### LAAMPS with multiple GPUs
-
-When using LAAMPS with multiple GPUs it may be more efficient to divide your computing resources equally across nodes based on the amount of GPUs used.
-
-Requesting a node with `ngpus > 1` would be faster if split into multiple nodes with  `ngpus = 1```. <br>
-For instance the following request uses 4 GPUs with 1 GPU per node.
-~~~
-qsub -I -l select=4:ncpus=8:mem=20gb:ngpus=1:gpu_model=k20:interconnect=any,walltime=10:00:00
-~~~
-
-Once we have 4 nodes we can use open MPI to create 4 tasks for our LAAMP command.
-
-~~~
-mpirun -np 4 lmp -sf gpu -pk gpu 4 -in in.lj >output4_gpu.txt
 ~~~
 
 
