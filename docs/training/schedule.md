@@ -28,7 +28,7 @@ require Clemson's authentication to view. Downloading is not permitted. Please c
 - [R Programming](workshop.md#introduction-to-data-science-using-r)
     - R 1 (basic): August 31, 9:00AM - 12:00PM
     - R 2 (advanced): September 02, 9:00AM - 12:00PM
-        
+    - [Registration](https://docs.google.com/forms/d/1Mr2h_a7Xyfc8rT9BryvlAxzmCaZakQKQUM8r9uXDrAI/edit) available on August 23
         
 - [Machine learning in R (caret)](workshop.md#machine-learning-in-r)
     - Part 1: September 07, 9:00AM - 12:00PM
