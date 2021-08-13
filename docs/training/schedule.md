@@ -1,10 +1,11 @@
 ## Fall 2021 Training Schedule
 
-*Linked time indicates availability on CUCOURSE*  
-
 *Starting Spring 2021, we will also test our recorded workshop features, 
 where Zoom-based workshops are recorded and sent by request. All recordings will 
 require Clemson's authentication to view. Downloading is not permitted. Please contact ithelp@clemson.edu for the link* 
+
+Please click on Registration for each of the workshop below. The Registration link will be accessible 1 week prior to the workshop.
+Once done, our workshop facilitator will send the zoom link to your registered email few days before the workshop date.
 
 - [Introduction to Linux](workshop.md#introduction-to-linux)  
     - August 20, 1:00PM - 4:00PM
