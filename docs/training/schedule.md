@@ -8,22 +8,27 @@ require Clemson's authentication to view. Downloading is not permitted. Please c
 
 - [Introduction to Linux](workshop.md#introduction-to-linux)  
     - August 20, 1:00PM - 4:00PM
+    
    
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
     - August 23, 9:00AM - 12:00PM
+    
     
  - [Python](workshop.md#introduction-to-programming-in-python)
     - Python 1: September 13, 9:00AM - 12:00PM]
     - Python 2: September 15, 9:00AM - 12:00PM]
     - Python 3: September 17, 9:00AM - 12:00PM]
 
+
 - [Machine learning in Python (sklearn)](workshop.md#machine-learning-in-python)
     - Part 1: September 21, 9:00AM - 12:00PM
     - Part 2: September 23, 9:00AM - 12:00PM
 
+
 - [R Programming](workshop.md#introduction-to-data-science-using-r)
     - R 1 (basic): August 31, 9:00AM - 12:00PM
     - R 2 (advanced): September 02, 9:00AM - 12:00PM
+        
         
 - [Machine learning in R (caret)](workshop.md#machine-learning-in-r)
     - Part 1: September 07, 9:00AM - 12:00PM
@@ -33,6 +38,7 @@ require Clemson's authentication to view. Downloading is not permitted. Please c
 - [Big Data Analytics: Introduction to Spark and Python](workshop.md#introduction-to-big-data-analytics-using-sparkpython)    
     - October 05, 9:00AM - 12:00PM
     - December 07, 9:00AM - 12:00PM
+    
     
 - [Applied Deep Learning: Object Detection Model using Tensorflow API](workshop.md#introduction-to-applied-deep-learning-object-detection-model-using-tensorflow-api)
     - October 07, 9:00AM - 12:00PM
