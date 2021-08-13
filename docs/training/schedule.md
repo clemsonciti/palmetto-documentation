@@ -8,7 +8,7 @@ require Clemson's authentication to view. Downloading is not permitted. Please c
 
 - [Introduction to Linux](workshop.md#introduction-to-linux)  
     - August 20, 1:00PM - 4:00PM
-    - Registration available on August 13
+    - [Registration](https://docs.google.com/forms/d/e/1FAIpQLSeP5l9HeY6YWVN6D10kzJdHRn3_ZTX-Cg2AeJb9Y-12sH_27w/viewform) available on August 13
    
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
     - August 23, 9:00AM - 12:00PM
