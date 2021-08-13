@@ -51,6 +51,7 @@ Registration link will be automatically closed once it hits max 60 participants.
 
 ** [Certificate](https://www.palmetto.clemson.edu/palmetto/training/certificates/) eligible:
 Our group offers Certificate of Attendence for R and Python workshop series:
+
 - For R: participants need to attend total 4 sessions in R Programming (2) and Machine Learning in R (2), and submit final project.
 
 - For Python: participants need to attend total 7 sessions in Python (3), Machine Learning in Python (2), Big Data (1) and Deep Learning (1), and submit final project.
