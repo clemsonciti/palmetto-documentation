@@ -2,14 +2,14 @@
 <details>
   <summary>Certificate of Attendence</summary>
   
-  1. [Brandyn Miller](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/brendym.PNG)
-  2. [Christine Murphy](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/ccm.PNG)
-  3. [Guanglin Liu](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/guangll.PNG)
-  4. [Huan Chen](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/huanc.PNG)
-  5. [Jonathan Heywood](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/jheywoo.PNG)
-  6. [Lisa Sembach](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/lsembac.PNG)
-  7. [Amir Nasrollah Zadeh](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/snasrol.PNG)
-  8. [Yuqing Hang](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/yhang.PNG)
+  1. [Brandyn Miller](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/brendym.png)
+  2. [Christine Murphy](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/ccm.png)
+  3. [Guanglin Liu](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/guangll.png)
+  4. [Huan Chen](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/huanc.png)
+  5. [Jonathan Heywood](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/jheywoo.png)
+  6. [Lisa Sembach](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/lsembac.png)
+  7. [Amir Nasrollah Zadeh](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/snasrol.png)
+  8. [Yuqing Hang](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/yhang.png)
   
   
 </details>
