@@ -16,7 +16,7 @@ Registration link will be automatically closed once it hits max 60 participants.
    
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
     - August 23, 9:00AM - 12:00PM
-    - Registration available on August 16
+    - [Registration] https://docs.google.com/forms/d/e/1FAIpQLScF_FFYrvpjtzKs0qbbpVSipbbH46tHE83js9z6eC8JeF_f2A/viewform available on August 16
     
  - [Python](workshop.md#introduction-to-programming-in-python)
     - Python 1: September 13, 9:00AM - 12:00PM]
