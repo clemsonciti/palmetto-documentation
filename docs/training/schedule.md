@@ -32,7 +32,7 @@ Registration link will be automatically closed once it hits max 60 participants.
 - [R Programming](workshop.md#introduction-to-data-science-using-r)
     - R 1 (basic): August 31, 9:30AM - 12:30PM
     - R 2 (advanced): September 02, 9:30AM - 12:30PM
-    - Registration available on August 23
+    - [Registration](https://docs.google.com/forms/d/e/1FAIpQLSeF5ZhMyq7h0iPFKRGLKhChGSEgfpaWVwH0VFaGvin7HNF8Yw/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link) is opened.
         
 - [Machine learning in R (caret)](workshop.md#machine-learning-in-r)
     - Part 1: September 07, 9:30AM - 12:30PM
