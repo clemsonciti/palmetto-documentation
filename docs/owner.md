@@ -60,7 +60,7 @@ Owners of storage on Palmetto cluster enjoy the following benefits:
 	Clemson students, faculty or staff
 1.	Request access for external collaborators (unaffiliated with Clemson University)
 	to purchased storage
-1. 	Daily "snapshots" of data for up to 42 days (included in the purchased space).
+1. 	Daily "snapshots" of data for up to 7 days (included in the purchased space).
 	Configurable snapshot frequency and period.
 1.	Full mirror for system recovery (ITC and main campus)
 
