@@ -47,6 +47,8 @@ data to `/local_scratch`, and doing so will not affect other users.
 (see example [here])(https://www.palmetto.clemson.edu/palmetto/userguide_howto_choose_right_filesystem.html).
 
 ## For MacOS user, first time login to Palmetto
+
+```bash
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -60,6 +62,7 @@ Add correct host key in /Users/abcd/.ssh/known_hosts to get rid of this message.
 Offending RSA key in /Users/abcd/.ssh/known_hosts: **1**
 RSA host key for login.palmetto.clemson.edu has changed and you have requested strict checking.
 Host key verification failed.
+```
 
 Resolution: type one of the following command into the terminal before login to Palmetto (Note the number must match with the given key):
 
