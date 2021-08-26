@@ -2,7 +2,8 @@
 
 ## Account not found in /zfs, /scratch2?
 We recently introduced autofs feature that automatically mount the user directory to /zfs and /scratch2 file system.
-While there are several benefits such as if user is using GUI software, they only see their storage and not other (to avoid scrolling multiple names). However, it also affects user in such a way that they do not see their directory in /zfs or /scratch2 storage when in a compute node.
+While there are several benefits such as if user is using GUI software, they only see their storage and not other (to avoid scrolling multiple names). However, it also affects users in such a way that they do not see their directory in /zfs or /scratch2 storage when in a compute node (or even using Tab autocompletion).
+
 The best way to avoid it is to 'cd' directly into their account, for example:
 
 ```bash
@@ -62,11 +63,14 @@ Host key verification failed.
 
 Resolution: type one of the following command into the terminal before login to Palmetto (Note the number must match with the given key):
 
+```bash
 $ sed -i '**1**d' ~/.ssh/known_hosts
-
 $ perl -pi -e 's/\Q$_// if ($. == **1**);' ~/.ssh/known_hosts
+```
 
 ## Error when creating conda environment after loading anaconda module
 If error occurs, please try the following command:
 
+```bash
 `$ export LD_PRELOAD="" `
+```
