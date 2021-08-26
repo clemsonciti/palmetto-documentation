@@ -1,10 +1,10 @@
 # Common problems/issues
 
 ## Account not found in /zfs, /scratch2?
-We recently introduced autofs feature that automatically mount the user directory to /zfs and /scratch2 file system.
-While there are several benefits such as if user is using GUI software, they only see their storage and not other (to avoid scrolling multiple names). However, it also affects users in such a way that they do not see their directory in /zfs or /scratch2 storage when in a compute node (or even using Tab autocompletion).
+We recently introduced `autofs` feature that automatically mount the user directory to `/zfs` and `/scratch2` file system.
+While there are several benefits such as if user is using GUI software, they only see their storage and not other (to avoid scrolling multiple names). However, it also affects users in such a way that they do not see their directory in `/zfs` or `/scratch2` storage when in a compute node (or even using Tab autocompletion).
 
-The best way to avoid it is to 'cd' directly into their account, for example:
+The best way to avoid it is to `cd` directly into their account, for example:
 
 ```bash
 $ cd /zfs/mygroup
