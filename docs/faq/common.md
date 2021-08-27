@@ -1,15 +1,14 @@
 # Common problems/issues
 
-## Account not found in /zfs, /scratch2?
-We recently introduced `autofs` feature that automatically mount the user directory to `/zfs` and `/scratch2` file system.
-While there are several benefits such as if user is using GUI software, they only see their storage and not other (to avoid scrolling multiple names). However, it also affects users in such a way that they do not see their directory in `/zfs` or `/scratch2` storage when in a compute node (or even using Tab autocompletion).
-
-The best way to avoid it is to `cd` directly into their account, for example:
+## I don't seem my folder when I do "ls /zfs" or "ls /scratch2"
+We recently introduced `autofs` feature that automatically mounts the user directory to `/zfs` and `/scratch2` file system when they access it, and unmounts it after 5 hours of inactivity. This feature increases the robustness of our file system, and will greatly decrease the visual clutter (especially important if you are accessing Palmetto through a graphical interface). Due to the automatic mounting, you will not initially see your folder in /scratch2 or /zfs, and tab completion won't work. However, the folder is still there. You can `cd` directly into it, and you will not have any issues:
 
 ```bash
 $ cd /zfs/mygroup
 $ cd /scratch2/myusername
 ```
+
+After you access it, you will see it when you do `ls /zfs` or 'ls /scratch1'. If you won't use it for 5 hours or longer, it will be unmounted, so next time you will have to `cd` into it in order to see it. 
 
 ## Program crashes on login node with message `Killed`
 
