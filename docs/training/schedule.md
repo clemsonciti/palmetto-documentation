@@ -25,8 +25,8 @@ Registration link will be automatically closed once it hits max 60 participants.
     - Registration available on September 6
 
 - [Machine learning in Python (sklearn)](workshop.md#machine-learning-in-python)
-    - Part 1: September 21, 9:30AM - 12:30PM
-    - Part 2: September 23, 9:30AM - 12:30PM
+    - Part 1: September 22, 9:30AM - 12:30PM
+    - Part 2: September 24, 9:30AM - 12:30PM
     - Registration available on September 14
 
 - [R Programming](workshop.md#introduction-to-data-science-using-r)
@@ -37,7 +37,7 @@ Registration link will be automatically closed once it hits max 60 participants.
 - [Machine learning in R (caret)](workshop.md#machine-learning-in-r)
     - Part 1: September 07, 9:30AM - 12:30PM
     - Part 2: September 09, 9:30AM - 12:30PM
-    - Registration available on August 31
+    - [Registration](https://docs.google.com/forms/d/e/1FAIpQLSeOqN9V5mnfJmvh9sYfoF5kgQ-_Ui6WtmBCYyBp70-jGVZCgg/viewform) is opened
    
 - [Big Data Analytics: Introduction to Spark and Python](workshop.md#introduction-to-big-data-analytics-using-sparkpython)    
     - October 05, 9:00AM - 12:00PM
