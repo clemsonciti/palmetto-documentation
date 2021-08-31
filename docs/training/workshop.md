@@ -50,6 +50,12 @@ Machine learning is the science of teaching computers to reproduce the assigned 
 
 Pre-requisite for the course is "Introduction to Python", offered by CITI team.
 
+### Deep learning in Python
+
+This workshop provides an overall introduction to deep learning specifically with Python programming language which utilizes abundance of keras package. Such topics include: (1) Introduction to Deep Learning (2) Regression & Classification with Deep Learning (3) Image classification with CNN (4) Time series forecasting with RNN, LSTM
+
+Pre-requisite for the course is "Machine Learning in Python", offered by CITI team.
+
 ### [Introduction to Applied Deep Learning: Object Detection Model using Tensorflow API]()
 
 This workshop introduces how to apply the Python Tensorflow API to object detection, a common 
