@@ -40,7 +40,7 @@ Registration link will be automatically closed once it hits max 60 participants.
     - Part 2: September 24, 9:30AM - 12:30PM
     - Registration available on September 14
 
-- [Deep Learning in Python (keras)]
+- [Deep Learning in Python (keras)](workshop.md#deep-learning-in-python)
     - Part 1: September 29, 9:30AM - 12:30PM
     - Part 2: October 01, 9:30AM - 12:30PM
     - Registration available on September 22
