@@ -47,6 +47,8 @@ $ conda install pandas
 ~~~
 $ python
 >>> import torch
+>>> print (torch.cuda.is_available())
+True
 ~~~
 
 Each time you login, you will first need to load the required modules
