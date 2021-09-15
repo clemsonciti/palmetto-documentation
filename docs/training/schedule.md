@@ -38,7 +38,7 @@ Registration link will be automatically closed once it hits max 60 participants.
 - [Machine learning in Python (sklearn)](workshop.md#machine-learning-in-python)
     - Part 1: September 22, 9:30AM - 12:30PM
     - Part 2: September 24, 9:30AM - 12:30PM
-    - Registration available on September 14
+    - [Registration](https://docs.google.com/forms/d/1jFwNQ1vbRkLR1y_DVb_KXU4JMs26X6nuhH5p6LWeGZA/edit) is opened
 
 - [Deep Learning in Python (keras)](workshop.md#deep-learning-in-python)
     - Part 1: September 29, 9:30AM - 12:30PM
