@@ -29,7 +29,7 @@ $ source ~/software/spack/share/spack/setup-env.sh
 You will have to install Spack only once, but, every time you want to use Spack, you will need to run the configuration script after logging into Palmetto. To avoid doing this, you can run the script from `.bashrc` file which is executed when you log into Palmetto (or go on a compute node). In order to add the script to the `.bashrc` file, you can do this:
 
 ```
-$ echo "source ~/software/spack/share/spack/setup-env.sh" >> ~/.bashrc
+$ echo -e "\nsource ~/software/spack/share/spack/setup-env.sh" >> ~/.bashrc
 $ source ~/.bashrc
 ```
 
