@@ -43,7 +43,7 @@ Registration link will be automatically closed once it hits max 60 participants.
 - [Deep Learning in Python (keras)](workshop.md#deep-learning-in-python)
     - Part 1: September 29, 9:30AM - 12:30PM
     - Part 2: October 01, 9:30AM - 12:30PM
-    - Registration available on September 22
+    - [Registration](https://docs.google.com/forms/d/1jFwNQ1vbRkLR1y_DVb_KXU4JMs26X6nuhH5p6LWeGZA/edit) is opened
 
 
 - [Big Data Analytics: Introduction to Spark and Python](workshop.md#introduction-to-big-data-analytics-using-sparkpython)    
