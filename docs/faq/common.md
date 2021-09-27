@@ -1,5 +1,39 @@
 # Common problems/issues
 
+## I bought storage on Palmetto; how do I check how much of it I am currently using?
+
+When you buy Palmetto storage, this storage is automatically backed up every day, and the storage space that you have bought is used to store the back-up snapshots. IT is very important that your owned storage is less than 90% full, otherwise backups won't work. To check how much space you are using on your bought storage, you can run the script called `checkzfs` from the login node. Let's say I bought 8 Tb of storage, and it's called `mydata`. To check it, I run
+
+~~~
+checkzfs mydata
+~~~
+
+The output will look something like this:
+
+~~~
+ZFS QUOTA for /zfs/mydata located on hpczfs05
+
+Max  quota = 8T
+Used space = 3.42T
+   dataset = 3.42T
+   snaps   = 8.71M
+
+(used quota is refreshed every 2 minutes)
+
+
+ZFS QUOTA for /zfs/mydata located on hpczfsback02
+
+Max  quota = 8T
+Used space = 3.65T
+   dataset = 3.65T
+   snaps   = 36.8M
+
+(used quota is refreshed every 2 minutes)
+
+~~~
+
+The first report (for hpczfs05) is for my primary storage, and the second (for hpczfsback02) is for my backup. I can see that my primary storage uses 3.42 Tb out of 8 Tb, so I am good for now. I need to do it from time to time, to make sure my storage does not exceed 90% (in my case, 7.92 Tb).
+
 ## MobaXTerm throws `Authorisation not recognized` error when I try to log into Palmetto
 
 This error looks like this:
