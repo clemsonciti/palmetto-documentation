@@ -2,7 +2,7 @@
 
 ## I bought storage on Palmetto; how do I check how much of it I am currently using?
 
-When you buy Palmetto storage, this storage is automatically backed up every day, and the storage space that you have bought is used to store the back-up snapshots. IT is very important that your owned storage is less than 90% full, otherwise backups won't work. To check how much space you are using on your bought storage, you can run the script called `checkzfs` from the login node. Let's say I bought 8 Tb of storage, and it's called `mydata`. To check it, I run
+When you buy Palmetto storage, this storage is automatically backed up every day, and the storage space that you have bought is used to store the back-up snapshots. It is very important that your owned storage is less than 90% full, otherwise backups won't work. To check how much space you are using on your bought storage, you can run the script called `checkzfs` from the login node. Let's say I bought 8 Tb of storage, and it's called `mydata`. To check it, I run
 
 ~~~
 checkzfs mydata
