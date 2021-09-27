@@ -1,6 +1,17 @@
 # Common problems/issues
 
-## I don't seem my folder when I do `ls /zfs` or `ls /scratch2`
+## MobaXTerm throws `Authorisation not recognized` error when I try to log into Palmetto
+
+This error looks like this:
+
+~~~
+/usr/bin/xauth:  error in locking authority file /home/username/.Xauthority
+MoTTY X11 proxy: Authorisation not recognized
+~~~
+
+Usually this happens when your home directory is full. Log into Palmetto with another terminal application (for example, [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/)) and free up some space in your home directory. Then, MobaXTerm should work fine.
+
+## I don't see my folder when I do `ls /zfs` or `ls /scratch2`
 We recently introduced `autofs` feature that automatically mounts the user directory to `/zfs` and `/scratch2` file system when they access it, and unmounts it after 5 minutes of inactivity. This feature increases the robustness of our file system, and will greatly decrease the visual clutter (especially important if you are accessing Palmetto through a graphical interface). Due to the automatic mounting, you will not initially see your folder in /scratch2 or /zfs, and tab completion won't work. However, the folder is still there. You can `cd` directly into it, and you will not have any issues:
 
 ```bash
