@@ -29,7 +29,6 @@ Used space = 3.65T
    snaps   = 36.8M
 
 (used quota is refreshed every 2 minutes)
-
 ~~~
 
 The first report (for hpczfs05) is for my primary storage, and the second (for hpczfsback02) is for my backup. I can see that my primary storage uses 3.42 Tb out of 8 Tb, so I am good for now. I need to do it from time to time, to make sure my storage does not exceed 90% (in my case, 7.92 Tb).
