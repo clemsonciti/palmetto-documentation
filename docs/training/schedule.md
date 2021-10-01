@@ -49,12 +49,12 @@ Registration link will be automatically closed once it hits max 60 participants.
 - [Big Data Analytics: Introduction to Spark and Python](workshop.md#introduction-to-big-data-analytics-using-sparkpython)    
     - October 05, 9:00AM - 12:00PM
     - December 07, 9:00AM - 12:00PM
-    - Registration available on September 28
+    - [Registration for October 05](https://docs.google.com/forms/d/e/1FAIpQLSeA9naXR6wYbWYe2YAEf7I8MWU_eUdNA3Xb1pNsZ8in16I2Og/viewform) is opened.
     
 - [Applied Deep Learning: Object Detection Model using Tensorflow API](workshop.md#introduction-to-applied-deep-learning-object-detection-model-using-tensorflow-api)
     - October 07, 9:00AM - 12:00PM
     - December 09, 9:00AM - 12:00PM
-    - Registration available on September 30
+    - [Registration for October 07](https://docs.google.com/forms/d/e/1FAIpQLSdePSzb2nQp5fCo0ojXVyzww57_QZ-u86xHS73zsgJ6FNEVsg/viewform) is opened.
 
 ** [Certificate](https://www.palmetto.clemson.edu/palmetto/training/certificates/) eligible:
 Our group offers Certificate of Attendence for R and Python workshop series:
