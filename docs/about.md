@@ -15,9 +15,9 @@ and features:
 * 100 GB of personal space (backed up daily for 42 days) for each user
 * 2.2 PB of scratch storage space for computing and a burst-buffer
 * 10 and 25 Gbps Ethernet, and 56 and 100 Gbps Infiniband networks
-<!--* ranked 9th among the public academic institutions in the US (and 392nd overall among all world-wide supercomputers) on Top500 list, as of November 2019-->
 * benchmarked at 1.4 PFlops (44,016 cores from Infiniband part of Palmetto)
 * the cluster is 100% battery-backed
+<!--* ranked 9th among the public academic institutions in the US (and 392nd overall among all world-wide supercomputers) on Top500 list, as of November 2019-->
 
 ## Compute Hardware
 
