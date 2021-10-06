@@ -96,5 +96,5 @@ module add comsol/5.6 intelmpi/21.1.1
 
 cd $PBS_O_WORKDIR
 
-comsol batch -nn 2 -np 8 -clustersimple -mpi intel -mpiroot $I_MPI_ROOT -inputfile free_convection.mph -outputfile free_convection_output.mph
+comsol batch -nn 2 -np 8 -clustersimple -mpi intel -mpiroot $I_MPI_ROOT -tmpdir $TMPDIR -inputfile free_convection.mph -outputfile free_convection_output.mph
 ~~~
