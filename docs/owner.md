@@ -83,7 +83,7 @@ may expand existing storage at the same price.
 
 Individuals interested in purchase of Palmetto hardware
 may contact the Advanced Computing and Data Science team by email ithelp@clemson.edu
-and include “Palmetto nodes purchase” in the subject line.
+and include “Palmetto nodes purchase” (or "Palmetto storage purchase", or if you wish "Palmetto node and storage purchase") in the subject line.
 
 ## Using purchased Palmetto storage or queue
 
