@@ -79,8 +79,6 @@ Phase  	| Node count 	| Cores | RAM
 20   | 22     | 56  | 372 GB
 27   | 34     | 56  | 372 GB
 
-
-
 ### GPUs
 
 There are 639 nodes (phases 8a-11a, 12-19a, 20, 27)
