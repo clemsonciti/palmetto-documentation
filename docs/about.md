@@ -35,8 +35,8 @@ with 10 Gbps Ethernet interconnect. Maximum run time for a single task is limite
 
 Phase  	| Node count 	| Cores | RAM
 --------|---------------|-------|-------
-1a  		| 117    	| 8         	| 31 GB
-1b      | 43  		| 12        	| 92 GB
+1a  		| 118    	| 8         	| 31 GB
+1b      | 46  		| 12        	| 92 GB
 2a    	| 45    		| 16    	| 382 GB
 2b    	| 159    		| 8     	| 15 GB
 2c      | 88        | 16      | 62 GB
