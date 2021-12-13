@@ -1,3 +1,11 @@
+## Maintenance on December 20, 2021
+We will be decommissioning /scratch2 and Jupyterhub starting **9:00 am Monday December 20th, 2021**.
+We will also be making some changes to the servers hosting Open OnDemand, website and documentation at the same time. During this time Open OnDemand, website and documentation will be inaccessible. We expect the outage for Open OnDemand, website and documentation to take about 3 hours.
+After this outage Open OnDemand will no longer require Clemson VPN for access.
+We will send an update when Open OnDemand, website and documentation are back online.
+Rest of Palmetto will not be affected.
+[Open OnDemand](https://openod02.palmetto.clemson.edu) is a new web interface to Palmetto and provides functionality for deploying Jupyter servers in the same manner as JupyterHub.
+
 ## Townhall meeting Aug 3rd 2021
 After Palmetto maintenance Jul 2021, we hosted the Townhall meeting with all users to talked about changes to Palmetto after maintenance.
 The following points were discussed in detail:
