@@ -93,6 +93,8 @@ Purchased storage is accessible to the owner (and the members of the owner group
 cd /zfs/my_storage
 ~~~
 
+Make sure to [run the `checkzfs` script](https://www.palmetto.clemson.edu/palmetto/faq/common/#i-bought-storage-on-palmetto-how-do-i-check-how-much-of-it-i-am-currently-using) from time to time, to make sure that you don't run over 90% of your disk usage. Otherwise, the file system might start having problems backing up your data.
+
 If you bought priority access to compute nodes on Palmetto, we will create a special queue for you and your group. To submit a job into your queue, you can use the `-q` flag in `qsub`. For example, if your queue is called `my_queue`, an interactive job can be started by
 
 ~~~
