@@ -12,6 +12,7 @@ nav:
     - JupyterLab: basic/jupyter.md
     - X11 tunneling: basic/x11_tunneling.md
     - VNC: basic/vnc.md
+    - Special Reservation: basic/reservation.md
   - Advanced:
     - Socket Proxy Access: advanced/proxy.md
     - DGX user guide: advanced/dgx.md
