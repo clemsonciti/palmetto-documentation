@@ -14,17 +14,21 @@ Registration link will be automatically closed once it hits max 60 participants.
     - January 10, 9:00AM - 12:00PM
     - Registration opens on January 4
      
+     
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
     - January 11, 9:00AM - 12:00PM
     - Registration opens on January 4
+  
   
 - [R Programming](workshop.md#introduction-to-data-science-using-r)
     - R 1 (basic): January 18, 9:00AM - 12:00PM
     - R 2 (advanced): January 20, 9:00AM - 12:00PM
     - Registration opens on January 11
         
+        
 - [Machine learning in R (caret)](workshop.md#machine-learning-in-r)
     - not offered this semester
+   
    
  - [Python](workshop.md#introduction-to-programming-in-python)
     - Python 1: February 7, 9:00AM - 12:00PM
@@ -32,22 +36,27 @@ Registration link will be automatically closed once it hits max 60 participants.
     - Python 3: February 21, 9:00AM - 12:00PM
     - Registration opens on January 31
     
+    
 - [Machine learning in Python (sklearn)](workshop.md#machine-learning-in-python)
     - Part 1: March 7, 9:00AM - 12:00PM
     - Part 2: March 14, 9:00AM - 12:00PM
     - Registration opens on February 28
 
+
 - [Deep Learning in Python (keras)](workshop.md#deep-learning-in-python)
     - Part 1: March 21, 9:00AM - 12:00PM
     - Part 2: March 28, 9:00AM - 12:00PM
     - Registration opens on March 14
+    
 
 - [Big Data Analytics: Introduction to Spark and Python](workshop.md#introduction-to-big-data-analytics-using-sparkpython)    
     - April 4, 9:00AM - 12:00PM
     - Registration opens on March 28
     
+    
 - [Applied Deep Learning: Object Detection Model using Tensorflow API](workshop.md#introduction-to-applied-deep-learning-object-detection-model-using-tensorflow-api)
     - not offered this semester
+    
     
 ** [Certificate](https://www.palmetto.clemson.edu/palmetto/training/certificates/) eligible:
 Our group offers Certificate of Attendence for R and Python workshop series:
