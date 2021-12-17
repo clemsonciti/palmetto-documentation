@@ -1,47 +1,66 @@
-## Summer 2021 Training Schedule
-
-*Linked time indicates availability on CUCOURSE*  
+## Spring 2022 Training Schedule
 
 *Starting Spring 2021, we will also test our recorded workshop features, 
-where Zoom-based workshops are recorded and sent by request. All recordings will 
-require Clemson's authentication to view. Downloading is not permitted.*
+where Zoom-based workshops are recorded and sent by request **to workshop attendees only**. All recordings will 
+require Clemson's authentication to view. Downloading is not permitted. Please contact ithelp@clemson.edu for the link* 
+
+Please click on Registration for each of the workshop below. The Registration link will be accessible 1 week prior to the workshop. You will need to use g.clemson.edu to access the registration form.
+
+Once done, our workshop facilitator will send the zoom link to your registered email few days before the workshop date.
+
+Registration link will be automatically closed once it hits max 60 participants.
 
 - [Introduction to Linux](workshop.md#introduction-to-linux)  
-    - [May 20, 9:00AM - 12:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
-    - [Link to recorded workshop](https://clemson.zoom.us/rec/share/585fj0o-oP5KcwjEZVmPZKhr_Cv3863cZfRUK0tmPlTufCye-GlGgqq-zutlr5Vv.QcwTZUgQb8Vet2bY?startTime=1621516230000)
-<!---      - [January 12, 9:00AM - 12:00PM](https://clemson.zoom.us/rec/share/G0dgZqiMYzo_AYbGoA0TD3liLCZJ3IlWjBJXUj9a1Rl627fEBu12D4-0ZEuiLoci.ssdkbiEEIKG7dTrF) -->
+    - January 10, 9:00AM - 12:00PM
+    - Registration opens on January 4
+     
+     
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
-    - [May 21, 12:00PM - 3:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php)
-    - Link to recorded workshop: [part 1](https://clemson.zoom.us/rec/share/2ZBy93ubEbwGCtzUMKBkatQjhlBWWA5Tga8unzEs52dL6iDRapmLHIFcIQh-MlTJ.D20ZUCu3xZZQDO2j?startTime=1621613640000); [part 2](https://clemson.zoom.us/rec/share/2ZBy93ubEbwGCtzUMKBkatQjhlBWWA5Tga8unzEs52dL6iDRapmLHIFcIQh-MlTJ.D20ZUCu3xZZQDO2j?startTime=1621621056000)
- - [Python I](workshop.md#introduction-to-programming-in-python)
-    - [June 1, 9:00AM - 12:00PM]
-    - [Link to recorded workshop]
-- [Python II](workshop.md#introduction-to-programming-in-python)
-    - [June 2, 9:00AM - 12:00PM]
-    - [Link to recorded workshop]
-- [Python III](workshop.md#introduction-to-programming-in-python)
-    - [June 4, 9:00AM - 12:00PM]
-    - [Link to recorded workshop]
+    - January 11, 9:00AM - 12:00PM
+    - Registration opens on January 4
+  
+  
 - [R Programming](workshop.md#introduction-to-data-science-using-r)
-    - Part 1 (basic): June 21, 9:30AM - 12:30PM
-    - Part 2 (advanced): June 22, 9:30AM - 12:30PM
-    - [Link to recorded workshop]
+    - R 1 (basic): January 18, 9:00AM - 12:00PM
+    - R 2 (advanced): January 20, 9:00AM - 12:00PM
+    - Registration opens on January 11
+        
+        
 - [Machine learning in R (caret)](workshop.md#machine-learning-in-r)
-    - Part 1: June 23, 9:30AM - 12:30PM
-    - Part 2: June 25, 9:30AM - 12:30PM
-    - [Link to recorded workshop]
+    - not offered this semester
+   
+   
+ - [Python](workshop.md#introduction-to-programming-in-python)
+    - Python 1: February 7, 9:00AM - 12:00PM
+    - Python 2: February 14, 9:00AM - 12:00PM
+    - Python 3: February 21, 9:00AM - 12:00PM
+    - Registration opens on January 31
+    
+    
 - [Machine learning in Python (sklearn)](workshop.md#machine-learning-in-python)
-    - Part 1: June 7, 9:00AM - 12:00PM
-    - Part 2: June 9, 9:00AM - 12:00PM
-    - [Link to recorded workshop]
-<!-- - [Big Data Analytics: Introduction to Hadoop](workshop.md#introduction-to-hadoop-on-palmetto) -->
-<!--    - [February 11, 5:00PM - 8:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php) -->
-<!--      - [Recording](https://clemson.zoom.us/rec/share/O51tHIAY4Nghx4OTHE1yBZ890aIfQXTljipx0d2wpFM1GrN-4JfuNTBG_yMBgAHQ.AIuaKFMq09oE7ENj) -->
-<!--    - [March 18, 5:00PM - 8:00PM](https://cucourse.app.clemson.edu/it-training/sessions.php) -->
-<!--    - [Link to recorded workshop]() -->
-- [Big Data Analytics: Introduction to Spark and Python](workshop.md#introduction-to-big-data-analytics-using-sparkpython)
-    - [June 8, 9:00AM - 12:00PM]
-    - [Link to recorded workshop]
+    - Part 1: March 7, 9:00AM - 12:00PM
+    - Part 2: March 14, 9:00AM - 12:00PM
+    - Registration opens on February 28
+
+
+- [Deep Learning in Python (keras)](workshop.md#deep-learning-in-python)
+    - Part 1: March 21, 9:00AM - 12:00PM
+    - Part 2: March 28, 9:00AM - 12:00PM
+    - Registration opens on March 14
+    
+
+- [Big Data Analytics: Introduction to Spark and Python](workshop.md#introduction-to-big-data-analytics-using-sparkpython)    
+    - April 4, 9:00AM - 12:00PM
+    - Registration opens on March 28
+    
+    
 - [Applied Deep Learning: Object Detection Model using Tensorflow API](workshop.md#introduction-to-applied-deep-learning-object-detection-model-using-tensorflow-api)
-    - [June 10, 9:00AM - 12:00PM]
-    - [Link to recorded workshop]
+    - not offered this semester
+    
+    
+** [Certificate](https://www.palmetto.clemson.edu/palmetto/training/certificates/) eligible:
+Our group offers Certificate of Attendence for R and Python workshop series:
+
+- For R: participants need to attend total 4 sessions in R Programming and submit final mini project.
+
+- For Python: participants need to attend total 9 sessions and submit final mini project.

@@ -2,14 +2,14 @@
 <details>
   <summary>Certificate of Attendence</summary>
   
-  1. [Brandyn Miller](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/brendym.PNG)
-  2. [Christine Murphy](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/ccm.PNG)
-  3. [Guanglin Liu](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/guangll.PNG)
-  4. [Huan Chen](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/huanc.PNG)
-  5. [Jonathan Heywood](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/jheywoo.PNG)
-  6. [Lisa Sembach](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/lsembac.PNG)
-  7. [Amir Nasrollah Zadeh](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/snasrol.PNG)
-  8. [Yuqing Hang](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/yhang.PNG)
+  1. [Brandyn Miller](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/brendym.png)
+  2. [Christine Murphy](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/ccm.png)
+  3. [Guanglin Liu](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/guangll.png)
+  4. [Huan Chen](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/huanc.png)
+  5. [Jonathan Heywood](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/jheywoo.png)
+  6. [Lisa Sembach](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/lsembac.png)
+  7. [Amir Nasrollah Zadeh](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/snasrol.png)
+  8. [Yuqing Hang](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_201904/yhang.png)
   
   
 </details>
@@ -116,4 +116,34 @@
   18. [Yue Wang](https://www.palmetto.clemson.edu/palmetto/certificate_citi/citi-python7-certificate_2021_summer/yue6.JPG)
   
 </details>
+<p> </p>
+
+## Fall 2021 R workshop
+<details>
+  <summary>Certificate of Attendence</summary>
+  
+  1. [Carolina Ballen-Taborda](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202109/acballen.PNG)
+  2. [Joshua Alper](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202109/alper.PNG)
+  3. [Brennan J Miller](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202109/bjm8.PNG)
+  4. [Kathryn May Hixson](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202109/kmhixso.PNG)
+  5. [Shoab Ahmed Chowdhury](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202109/shoab.PNG)
+  6. [Shalika Dilhani Kamel Meedin](https://www.palmetto.clemson.edu/palmetto/certificate_citi/R_202109/skamelm.PNG)
+        
+</details>
+
+<p> </p>
+
+## Fall 2021 Python workshop
+<details>
+  <summary>Certificate of Attendence</summary>
+  
+  1. [Meena Rajagopal](https://www.palmetto.clemson.edu/palmetto/certificate_citi/Python_202109/changar.PNG)
+  2. [George Lawrence Hamilton III](https://www.palmetto.clemson.edu/palmetto/certificate_citi/Python_202109/ghamil4.PNG)
+  3. [Ibrahim Olayode Busari](https://www.palmetto.clemson.edu/palmetto/certificate_citi/Python_202109/ibusari.PNG)
+  4. [Jamal Nahofti Kohneh](https://www.palmetto.clemson.edu/palmetto/certificate_citi/Python_202109/jnahoft.PNG)
+  5. [Damiola Aiyetigbo](https://www.palmetto.clemson.edu/palmetto/certificate_citi/Python_202109/maiyeti.PNG)
+  6. [Nikhil Karthikeyan](https://www.palmetto.clemson.edu/palmetto/certificate_citi/Python_202109/nkarthi.PNG)
+        
+</details>
+
 <p> </p>

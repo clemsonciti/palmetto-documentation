@@ -31,7 +31,7 @@ conceptual design of Spark and demonstrate the advantages of using Spark over tr
 MapReduce. Participants will also learn to develop Spark programs using Python and to leverage 
 Spark’s specific capabilities such as SQLContext and DataFrame to assist with data analytics. 
 
-### [Introduction to R Programming](https://clemsonciti.github.io/workshop-R/index.html)
+### [Introduction to R Programming]
 
 Introduction to R language for data analytics using RStudio on PC and also Jupyter notebooks 
 on Palmetto. Workshop contents include basic understand of R, installation of additional R 
@@ -50,7 +50,13 @@ Machine learning is the science of teaching computers to reproduce the assigned 
 
 Pre-requisite for the course is "Introduction to Python", offered by CITI team.
 
-### [Introduction to Applied Deep Learning: Object Detection Model using Tensorflow API]()
+### Deep learning in Python
+
+This workshop provides an overall introduction to deep learning specifically with Python programming language which utilizes abundance of keras package. Such topics include: (1) Introduction to Deep Learning (2) Regression & Classification with Deep Learning (3) Image classification with CNN (4) Time series forecasting with RNN, LSTM
+
+Pre-requisite for the course is "Machine Learning in Python", offered by CITI team.
+
+### Introduction to Applied Deep Learning: Object Detection Model using Tensorflow API
 
 This workshop introduces how to apply the Python Tensorflow API to object detection, a common 
 computer vision and deep learning concept. We will go through the steps involved in the process 
@@ -58,7 +64,7 @@ of creating a custom object detection model from scratch. This includes getting 
 them, train, evaluate, and export models on these images, and finally using the model to 
 classify images. 
 
-### [Matlab]()
+### Matlab
 
 This is an introductory course about data analysis with MATLAB. We will cover such topics as 
 the MATLAB interface, flow control and loops, working with vectors and matrices, using scripts 

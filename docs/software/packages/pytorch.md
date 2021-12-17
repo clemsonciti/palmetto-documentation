@@ -13,7 +13,7 @@ $ qsub -I -l select=1:ncpus=16:mem=20gb:ngpus=1:gpu_model=p100:interconnect=10ge
 
 2) Load the Anaconda module:
 ~~~
-$ module load cuda/9.2.88-gcc/7.1.0 cudnn/7.6.5.32-9.2-linux-x64-gcc/7.1.0-cuda9_2 anaconda3/2019.10-gcc/8.3.1
+$ module load anaconda3/2021.05-gcc/8.3.1 cudnn/8.0.4.30-11.1-linux-x64-gcc/8.4.1 cuda/11.1.0-gcc/8.3.1
 ~~~
 
 3) Create a conda environment called `pytorch_env` (or any name you like):
@@ -28,7 +28,7 @@ $ source activate pytorch_env
 
 5) Install Pytorch with GPU support from the `pytorch` channel:
 ~~~
-$ conda install pytorch torchvision cudatoolkit=9.2 -c pytorch
+$ conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
 ~~~
 
 This will automatically install some packages that are required for Pytorch, like MKL or NumPy. To see the list of installed packages, type
@@ -47,6 +47,8 @@ $ conda install pandas
 ~~~
 $ python
 >>> import torch
+>>> print (torch.cuda.is_available())
+True
 ~~~
 
 Each time you login, you will first need to load the required modules
@@ -54,7 +56,7 @@ and also activate the `pytorch_env` conda environment before
 running Python:
 
 ~~~
-$ module load cuda/9.2.88-gcc/7.1.0 cudnn/7.6.5.32-9.2-linux-x64-gcc/7.1.0-cuda9_2 anaconda3/2019.10-gcc/8.3.1
+$ module load anaconda3/2021.05-gcc/8.3.1 cudnn/8.0.4.30-11.1-linux-x64-gcc/8.4.1 cuda/11.1.0-gcc/8.3.1
 $ source activate pytorch_env
 ~~~
 

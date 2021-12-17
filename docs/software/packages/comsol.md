@@ -6,7 +6,7 @@ To see the available COMSOL modules on Palmetto:
 ~~~
 $ module avail comsol
 
-comsol/4.3b comsol/4.4  comsol/5.0  comsol/5.1  comsol/5.2  comsol/5.3
+comsol/5.4    comsol/5.5    comsol/5.6 (D)
 ~~~
 
 To see license usage of COMSOL-related packages,
@@ -82,19 +82,19 @@ cd $PBS_O_WORKDIR
 comsol batch -np 8 -tmpdir $TMPDIR -inputfile free_convection.mph -outputfile free_convection_output.mph
 ~~~
 
-#### COMSOL batch job across several nodes
+#### COMSOL batch job across several nodes.
+Comsol by default uses its own intel mpi. However, the default intel mpi is not compatible with Palmetto's OS. Therefore, you need to force Comsol to use intel mpi installed in Palmetto:
 
 ~~~
 #!/bin/bash
 #PBS -N COMSOL
-#PBS -l select=2:ncpus=8:mpiprocs=8:mem=32gb,walltime=01:30:00
+#PBS -l select=2:ncpus=8:mpiprocs=8:mem=32gb:interconnect=hdr,walltime=01:30:00
 #PBS -j oe
 
 module purge
-module add comsol/5.2
+module add comsol/5.6 intelmpi/21.1.1
 
 cd $PBS_O_WORKDIR
 
-uniq $PBS_NODEFILE > comsol_nodefile
-comsol batch -clustersimple -f comsol_nodefile -tmpdir $TMPDIR -inputfile free_convection.mph -outputfile free_convection_output.mph
+comsol batch -nn 2 -np 8 -clustersimple -mpi intel -mpiroot $I_MPI_ROOT -tmpdir $TMPDIR -inputfile free_convection.mph -outputfile free_convection_output.mph
 ~~~

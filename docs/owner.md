@@ -60,7 +60,7 @@ Owners of storage on Palmetto cluster enjoy the following benefits:
 	Clemson students, faculty or staff
 1.	Request access for external collaborators (unaffiliated with Clemson University)
 	to purchased storage
-1. 	Daily "snapshots" of data for up to 42 days (included in the purchased space).
+1. 	Daily "snapshots" of data for up to 7 days (included in the purchased space).
 	Configurable snapshot frequency and period.
 1.	Full mirror for system recovery (ITC and main campus)
 
@@ -83,7 +83,7 @@ may expand existing storage at the same price.
 
 Individuals interested in purchase of Palmetto hardware
 may contact the Advanced Computing and Data Science team by email ithelp@clemson.edu
-and include “Palmetto nodes purchase” in the subject line.
+and include “Palmetto nodes purchase” (or "Palmetto storage purchase", or if you wish "Palmetto node and storage purchase") in the subject line.
 
 ## Using purchased Palmetto storage or queue
 
@@ -92,6 +92,8 @@ Purchased storage is accessible to the owner (and the members of the owner group
 ~~~
 cd /zfs/my_storage
 ~~~
+
+Make sure to [run the `checkzfs` script](https://www.palmetto.clemson.edu/palmetto/faq/common/#i-bought-storage-on-palmetto-how-do-i-check-how-much-of-it-i-am-currently-using) from time to time, to make sure that you don't run over 90% of your disk usage. Otherwise, the file system might start having problems backing up your data.
 
 If you bought priority access to compute nodes on Palmetto, we will create a special queue for you and your group. To submit a job into your queue, you can use the `-q` flag in `qsub`. For example, if your queue is called `my_queue`, an interactive job can be started by
 

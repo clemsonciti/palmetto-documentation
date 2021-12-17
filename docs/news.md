@@ -1,3 +1,13 @@
+## Maintenance on December 20, 2021
+We will be decommissioning /scratch2 and Jupyterhub starting **9:00 am Monday December 20th, 2021**.
+We will also be making some changes to the servers hosting Open OnDemand, website and documentation at the same time. During this time Open OnDemand, website and documentation will be inaccessible. We expect the outage for Open OnDemand, website and documentation to take about 3 hours.
+After this outage Open OnDemand will no longer require Clemson VPN for access.
+We will send an update when Open OnDemand, website and documentation are back online.
+
+Rest of Palmetto will not be affected.
+
+[Open OnDemand](https://openod02.palmetto.clemson.edu) is a new web interface to Palmetto and provides functionality for deploying Jupyter servers in the same manner as JupyterHub.
+
 ## Townhall meeting Aug 3rd 2021
 After Palmetto maintenance Jul 2021, we hosted the Townhall meeting with all users to talked about changes to Palmetto after maintenance.
 The following points were discussed in detail:
@@ -12,6 +22,33 @@ The following points were discussed in detail:
 
 The recording and Q&A can be found in the following link (pls login using g.clemson.edu): 
 bit.ly/CITI_Townhall_2021
+
+## Palmetto maintenance
+Palmetto’s yearly maintenance is scheduled for the week of July 16th - July 23rd, 2021. 
+
+During the maintenance period there will be no access to Palmetto/JupyterHub/LoginVM.
+
+Please retrieve any files you may need before the cluster goes offline.
+
+
+All nodes and all storage will be down during the maintenance period.
+
+Storage will be available when we bring the non-GPU nodes back online before benchmarking.
+
+This year's plan for maintenance:
+
+- We are adding a new phase with new nodes.
+- Various Operating System Updates and Patches
+- Updating Spack and doing some housekeeping on the current packages installed.
+- Nodes in Phase 7a – 21 will be used for benchmarking. Phase 0 – 6 and storage will be brought back online before running the benchmark. We will send a notification once these systems are online and available.
+
+Note:
+
+1)	/scratch1 will not be wiped but /scratch2 will be wiped. Please back up any data stored in your /scratch2 directories as it will not be recoverable after maintenance.
+2)	Any jobs that are started before maintenance with a walltime that conflicts with the start of the maintenance will not run.
+
+If you have any questions or concerns, please reach out to us by emailing ithelp@clemson.edu with “Palmetto Maintenance” in the subject line.
+
 
 ## April 30, 2021: a new version of XQuartz is released, so X11 tunneling now works for Mac OS > 10.14
 
