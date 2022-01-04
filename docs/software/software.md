@@ -12,7 +12,7 @@
 {! software/packages/lammps.md !}
 {! software/packages/matlab.md !}
 {! software/packages/paraview.md !}
-{! software/packages/pytorch.md !}
+## [Pytorch](https://github.com/clemsonciti/palmetto-examples/tree/master/PyTorch)
 {! software/packages/rclone.md !}
 {! software/packages/tensorflow.md !}
 {! software/packages/singularity.md !}
