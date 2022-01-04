@@ -12,7 +12,11 @@
 {! software/packages/lammps.md !}
 {! software/packages/matlab.md !}
 {! software/packages/paraview.md !}
-## [Pytorch](https://github.com/clemsonciti/palmetto-examples/tree/master/PyTorch)
+
+## PyTorch
+
+Instructions for installing and configuring Pytorch can be found on [Clemson CITI GitHub](https://github.com/clemsonciti/palmetto-examples/tree/master/PyTorch)
+
 {! software/packages/rclone.md !}
 {! software/packages/tensorflow.md !}
 {! software/packages/singularity.md !}
