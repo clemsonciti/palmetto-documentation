@@ -37,8 +37,7 @@ Data in the `/scratch1` and `/scratch2` directories is **not** backed up, and an
 removed from the `/scratch` directories. Data that cannot easily be reproduced should **not** be stored in the `/scratch` directories,
 and any data that is not required should be removed as soon as possible.
 
-See [this guide]({{site.baseurl}}/userguide_howto_choose_right_filesystem.html)
-on how to choose the appropriate filesystem for your work.
+See [this guide](https://www.palmetto.clemson.edu/palmetto/basic/storage/) on how to choose the appropriate filesystem for your work.
 
 #### Temporary reservations
 
