@@ -14,7 +14,7 @@ Registration link will be automatically closed once it hits max 60 participants.
     - January 10, 9:00AM - 12:00PM
     - [Registration Link](https://forms.gle/Z4p6Np42FywzZRCx8)
     - January 24, 9:00AM - 12:00PM
-    - Registration opens on January 17
+    - [Registration Link](https://forms.gle/3o5QhF4DxFXV6czY7)
      
      
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
