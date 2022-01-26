@@ -35,12 +35,12 @@ purchased resources represented by their owner queue. Owner jobs:
 3. cannot themselves be preempted.
 
 Preempted jobs are automatically requeued.
-Owner jobs have a maximum walltime of 336 hours
+Owner jobs have a maximum wall time of 336 hours
 (2 weeks).
 
 ### Current compute hardware and pricing
 
-The node in phase 27 configuration currently available for purchase at subsidized rate for Clemson faculty/staff is **$7500** for a period of **4 years**:
+The configuration of nodes from phase 27 includes:
 
 * 2 x Intel Xeon CLX 6258R (for a total of 56 cores)
 * 2 x NVIDIA A100 GPU (40GB mem per GPU)
@@ -48,7 +48,7 @@ The node in phase 27 configuration currently available for purchase at subsidize
 * On-board 25Gbps Ethernet NIC
 * Infiniband HDR-100 Gbps network card
 
-However, due to potential market fluctuations beyond the control of Clemson, we encourage PIs to budget for **$10,000** to ensure all costs are covered.
+The nodes in phase 27 configuration were available for purchase at subsidized rate for Clemson faculty/staff. At the moment, all the nodes were **sold out**. We will update this page once we have new hardware available for purchasing.  
 
 ## Purchasing Storage on Palmetto Cluster
 
@@ -58,32 +58,25 @@ Owners of storage on Palmetto cluster enjoy the following benefits:
 
 1.  Grant access to purchased storage for other
 	Clemson students, faculty or staff
-1.	Request access for external collaborators (unaffiliated with Clemson University)
+2.	Request access for external collaborators (unaffiliated with Clemson University)
 	to purchased storage
-1. 	Daily "snapshots" of data for up to 7 days (included in the purchased space).
+3. 	Daily "snapshots" of data for up to 7 days (included in the purchased space).
 	Configurable snapshot frequency and period.
-1.	Full mirror for system recovery (ITC and main campus)
+4.	Full mirror for system recovery (ITC and main campus)
 
 **Please note that the Palmetto cluster should not be used to store sensitive and/or confidential information. Please review Clemson's list of data categories [here](https://ccit.clemson.edu/cybersecurity/policy/data-classification/) to make sure that your data belong to "public" or "internal use" categories. Data belonging to other categories ("confidential" and "restricted") cannot be stored on Palmetto.**
 
-### Current storage pricing
+- Storage may be purchased in 1 TB chunks (server shared with other users) or 150 TB.
+- Purchase of 150 TB grants the owner access to an isolated storage system,
+which may offer better performance. 
 
-Storage may be purchased in 1 TB chunks (server shared with other users)
-or 150 TB.
-Purchase of 150 TB grants the owner access to an isolated storage system,
-which may offer better performance.
-The current price for both the above options is **$150 per TB**
-for a period of 4 years.
-
-The data is stored in the ZFS filesystem format.
-Owners of the previous SAMQFS storage
-may expand existing storage at the same price.
+The data is stored in the ZFS filesystem format. Owners of the previous SAMQFS storage may expand existing storage at the cost.
 
 ## Contact information
 
 Individuals interested in purchase of Palmetto hardware
-may contact the Advanced Computing and Data Science team by email ithelp@clemson.edu
-and include “Palmetto nodes purchase” (or "Palmetto storage purchase", or if you wish "Palmetto node and storage purchase") in the subject line.
+may contact the Advanced Computing and Data Science team to inquire about the availability and subsidized costs for compute node and storage 
+by email ithelp@clemson.edu and include “Palmetto nodes purchase” (or "Palmetto storage purchase", or if you wish "Palmetto node and storage purchase") in the subject line.
 
 ## Using purchased Palmetto storage or queue
 
