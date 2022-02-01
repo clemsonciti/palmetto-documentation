@@ -37,7 +37,7 @@ Registration link will be automatically closed once it hits max 60 participants.
     - Python 1: February 7, 9:00AM - 12:00PM
     - Python 2: February 14, 9:00AM - 12:00PM
     - Python 3: February 21, 9:00AM - 12:00PM
-    - Registration opens on January 31
+    - [Registration Link](https://forms.gle/XwSrTH2oh1zc27ys7)
     
     
 - [Machine learning in Python (sklearn)](workshop.md#machine-learning-in-python)
