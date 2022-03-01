@@ -41,15 +41,15 @@ Registration link will be automatically closed once it hits max 60 participants.
     
     
 - [Machine learning in Python (sklearn)](workshop.md#machine-learning-in-python)
-    - Part 1: March 7, 9:00AM - 12:00PM
+    - Part 1: March 11, 9:00AM - 12:00PM
     - Part 2: March 14, 9:00AM - 12:00PM
-    - Registration opens on February 28
+    - [Registration Link](https://forms.gle/2EjVBSYtzHt14qj8A)
 
 
 - [Deep Learning in Python (keras)](workshop.md#deep-learning-in-python)
-    - Part 1: March 21, 9:00AM - 12:00PM
-    - Part 2: March 28, 9:00AM - 12:00PM
-    - Registration opens on March 14
+    - Part 1: March 18, 9:00AM - 12:00PM
+    - Part 2: March 21, 9:00AM - 12:00PM
+    - [Registration Link](https://forms.gle/LsAyf4tWr7dpFywf8)
     
 
 - [Big Data Analytics: Introduction to Spark and Python](workshop.md#introduction-to-big-data-analytics-using-sparkpython)    
