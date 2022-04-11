@@ -174,7 +174,9 @@ node has its own `/local_scratch` directory. It is much faster to read/write
 data to `/local_scratch`, and doing so will not affect other users.
 (see example [here])(https://www.palmetto.clemson.edu/palmetto/userguide_howto_choose_right_filesystem.html).
 
-## For MacOS user, first time login to Palmetto
+## For MacOS users, problems with logging into Palmetto from the terminal
+
+If you are a Mac user, and try to `ssh` into Palmetto from the terminal, you might get this error message:
 
 ```bash
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -187,17 +189,29 @@ The fingerprint for the RSA key sent by the remote host is
 SHA256:Z2WLGvz7vX2t9VPap6ITwS3cBlCafN69FoIm8wmmF6g.
 Please contact your system administrator.
 Add correct host key in /Users/abcd/.ssh/known_hosts to get rid of this message.
-Offending RSA key in /Users/abcd/.ssh/known_hosts: **1**
+Offending RSA key in /Users/abcd/.ssh/known_hosts:5
 RSA host key for login.palmetto.clemson.edu has changed and you have requested strict checking.
 Host key verification failed.
 ```
 
-Resolution: type one of the following command into the terminal before login to Palmetto (Note the number must match with the given key):
+This is a common problem, and it's easy to fix. Please find the line "Offending RSA key" in the error message. In the example above, the number of the offending key is 5. This means that we have to remove 5th line from the lists of known SSH hosts so this line could be recreated.
 
-```bash
-$ sed -i '**1**d' ~/.ssh/known_hosts
-$ perl -pi -e 's/\Q$_// if ($. == **1**);' ~/.ssh/known_hosts
-```
+There are several ways to fix the error. The first one is, to type in terminal 
+
+~~~
+sed -i '5d' ~/.ssh/known_hosts
+~~~
+
+(Please replace the number 5 with the number of the offending RSA key from the error message)
+
+Alternatively, you can type in terminal 
+
+~~~
+perl -pi -e 's/\Q$_// if ($. == 5);' ~/.ssh/known_hosts
+~~~
+
+(Again, instead of number 5, put the number of the offending RSA key)
+
 
 ## Error when creating conda environment after loading anaconda module
 If error occurs, please try the following command:
