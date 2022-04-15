@@ -4,7 +4,8 @@ nav:
   - Home: index.md
   - About: about.md
   - News: news.md
-  - Owner: owner.md
+  - Node Owner: owner.md
+  - Storage Owner: zfs.md
   - Basic:
     - New Account Request: basic/new.md
     - Login: basic/login.md
