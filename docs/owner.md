@@ -50,43 +50,13 @@ The configuration of nodes from phase 27 includes:
 
 The nodes in phase 27 configuration were available for purchase at subsidized rate for Clemson faculty/staff. At the moment, all the nodes were **sold out**. We will update this page once we have new hardware available for purchasing.  
 
-## Purchasing Storage on Palmetto Cluster
-
-Long term storage solutions are available to users seeking
-dedicated high performance storage on the cluster.
-Owners of storage on Palmetto cluster enjoy the following benefits:
-
-1.  Grant access to purchased storage for other
-	Clemson students, faculty or staff
-2.	Request access for external collaborators (unaffiliated with Clemson University)
-	to purchased storage
-3. 	Daily "snapshots" of data for up to 7 days (included in the purchased space).
-	Configurable snapshot frequency and period.
-4.	Full mirror for system recovery (ITC and main campus)
-
-**Please note that the Palmetto cluster should not be used to store sensitive and/or confidential information. Please review Clemson's list of data categories [here](https://ccit.clemson.edu/cybersecurity/policy/data-classification/) to make sure that your data belong to "public" or "internal use" categories. Data belonging to other categories ("confidential" and "restricted") cannot be stored on Palmetto.**
-
-- Storage may be purchased in 1 TB chunks (server shared with other users) or 150 TB.
-- Purchase of 150 TB grants the owner access to an isolated storage system,
-which may offer better performance. 
-
-The data is stored in the ZFS filesystem format. Owners of the previous SAMQFS storage may expand existing storage at the cost.
-
 ## Contact information
 
 Individuals interested in purchase of Palmetto hardware
-may contact the Advanced Computing and Data Science team to inquire about the availability and subsidized costs for compute node and storage 
-by email ithelp@clemson.edu and include “Palmetto nodes purchase” (or "Palmetto storage purchase", or if you wish "Palmetto node and storage purchase") in the subject line.
+may contact the Advanced Computing and Data Science team to inquire about the availability and subsidized costs for compute nodes  
+by emailing ithelp@clemson.edu and including “Palmetto nodes purchase” in the subject line.
 
 ## Using purchased Palmetto storage or queue
-
-Purchased storage is accessible to the owner (and the members of the owner group) as a folder in the `/zfs` directory. For example, if your storage folder is called `my_storage`, you can access it by typing
-
-~~~
-cd /zfs/my_storage
-~~~
-
-Make sure to [run the `checkzfs` script](https://www.palmetto.clemson.edu/palmetto/faq/common/#i-bought-storage-on-palmetto-how-do-i-check-how-much-of-it-i-am-currently-using) from time to time, to make sure that you don't run over 90% of your disk usage. Otherwise, the file system might start having problems backing up your data.
 
 If you bought priority access to compute nodes on Palmetto, we will create a special queue for you and your group. To submit a job into your queue, you can use the `-q` flag in `qsub`. For example, if your queue is called `my_queue`, an interactive job can be started by
 
