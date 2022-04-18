@@ -21,7 +21,7 @@ To purchase storage, please email `ithelp@clemson.edu` with the subject "Palmett
 ## Using purchased Palmetto storage
 
 When a Palmetto user purchases storage, we create a folder in the /zfs directory, with the name that is specified by the user. This storage will be 
-accessible to the owner, and to any oter Palmetto user that owner wishes to grant access to (we need an explicit request from the owner in order to 
+accessible to the owner, and to any other Palmetto user that owner wishes to grant access to (we need an explicit request from the owner in order to 
 grant access to another Palmetto user). 
 
 Let's say I bought 5 TB of storage and want it to be called mystorage. I can access it via
