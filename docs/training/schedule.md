@@ -13,8 +13,8 @@ Registration link will be automatically closed once it hits max 60 participants.
 - [Introduction to Linux](workshop.md#introduction-to-linux)  
     - January 10, 9:00AM - 12:00PM
     - [Registration Link](https://forms.gle/Z4p6Np42FywzZRCx8)
-    - January 24, 9:00AM - 12:00PM
-    - [Registration Link](https://forms.gle/3o5QhF4DxFXV6czY7)
+    <!---- January 24, 9:00AM - 12:00PM
+    - [Registration Link](https://forms.gle/3o5QhF4DxFXV6czY7) -->
      
      
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
