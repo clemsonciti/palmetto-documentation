@@ -13,7 +13,7 @@ Registration link will be automatically closed once it hits max 60 participants.
 - [Introduction to Linux](workshop.md#introduction-to-linux)  
     - May 19, 9:00AM - 12:00PM
     - Registration opens on May 12
-    [Registration Link](https://forms.gle/spedAFRaUch5qKty8)
+    - [Registration Link](https://forms.gle/spedAFRaUch5qKty8)
      
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
     - May 24, 9:00AM - 12:00PM
