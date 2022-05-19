@@ -70,4 +70,4 @@ Our group offers Certificate of Attendence for R and Python workshop series:
 
 - For R: certificates are not offered this semester.
 
-- For Python: participants need to attend total 9 sessions and submit final mini project.
+- For Python: participants need to attend total 8 sessions and submit final mini project.
