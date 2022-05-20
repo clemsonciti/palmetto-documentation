@@ -123,13 +123,10 @@ to use under which circumstances.
 Location                |	Available space                     | Notes
 ------------------------|---------------------------------------|---------------------------------------------------------------------------
 `/home/username`        |   100 GB per user                     | Backed-up nightly, permanent storage space accessible from all nodes
-`/scratch1/username`    |   233 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, OrangeFS Parallel File System
-`/scratch2/username`    |   160 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, XFS
-`/scratch3/username`    |   129 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, ZFS
-`/scratch4/username`    |   175 TB shared by all users          | Not backed up, temporary work space accessible from all nodes, BeeGFS Parallel File System
+`/scratch1/username`    |   1.7 PB TB shared by all users          | Not backed up, temporary work space accessible from all nodes, OrangeFS Parallel File System
 `/local_scratch`        |   Varies between nodes (99GB-800GB)   | Per-node temporary work space, accessible only for the lifetime of job
 
-The `/home` and `/scratch` directories are shared by all nodes.
+The `/home` and `/scratch1` directories are shared by all nodes.
 In contrast, each node has its own `/local_scratch` directory.
 
 All data in the `/home` directory is permanent
@@ -137,11 +134,11 @@ All data in the `/home` directory is permanent
 If you lose data in the `/home` directory,
 it may be possible to recover it if it was previously backed up.
 
-Data in the `/scratch` directories is **not** backed up,
+Data in the `/scratch1` directories is **not** backed up,
 and any data that is untouched for 30 days is automatically
-removed from the `/scratch` directories.
+removed from the `/scratch1` directories.
 Data that cannot easily be reproduced should **not** be stored
-in the `/scratch` directories,
+in the `/scratch1` directories,
 and any data that is not required should be
 removed as soon as possible.
 
@@ -175,7 +172,7 @@ For details about purchased storage, please contact the Palmetto support staff
 On Windows machines, using the MobaXterm SSH client,
 the built-in file browser can be used (**SCP** tab of the side window).
 Using the Upload (green arrow pointing up) and
-and Dowload (blue arrow pointing down) buttons at the top of the SCP tab,
+and Download (blue arrow pointing down) buttons at the top of the SCP tab,
 you can easily transfer small files between Palmetto and your local computer.
 
 <img src="{{site.baseurl}}/images/mobaxterm_07.png" style="width:1000px">
@@ -805,7 +802,7 @@ and then run the application/command.
 
 ### Home or scratch directories are sluggish or unresponsive
 
-The `/home` and `/scratch` directories can become slow/unresponsive
+The `/home` and `/scratch1` directories can become slow/unresponsive
 when a user (or several users) read/write large amounts of data to
 these directories. When this happens, all users are affected as these
 filesystems are shared by all nodes of the cluster.
@@ -815,12 +812,12 @@ To avoid this issue, keep in mind the following:
 1.  **Never** use the `/home` directory as the working directory for
 jobs that read/write data. If too many jobs read/write data to the `/home`
 directory, it can render the cluster unusable by all users.
-Copy any input data to one of the `/scratch` directories and use
-that `/scratch` directory as the working directory for jobs.
+Copy any input data to one of the `/scratch1` directories and use
+that `/scratch1` directory as the working directory for jobs.
 Periodically move important data back to the `/home` directory.
 
 1.  Try to use `/local_scratch` whenever possible. Unlike `/home`
-or the `/scratch` directories, which are shared by all nodes, each
+or the `/scratch1` directories, which are shared by all nodes, each
 node has its own `/local_scratch` directory. It is much faster to read/write
 data to `/local_scratch`, and doing so will not affect other users.
 (see example [here])(https://www.palmetto.clemson.edu/palmetto/userguide_howto_choose_right_filesystem.html).
