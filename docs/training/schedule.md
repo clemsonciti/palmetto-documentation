@@ -24,7 +24,7 @@ Registration link will be automatically closed once it hits max 60 participants.
     - R 1 (basic): May 31, 9:00AM - 12:00PM
     - R 2 (advanced): June 2, 9:00AM - 12:00PM
     - Registration opens on May 24
-    <!--- - [Registration Link](https://forms.gle/ffEakcLWhroA2ZVJ7) -->
+    - [Registration Link](https://forms.gle/yRtiQ97X167EqCvd9)
         
         
 - [Machine learning in R (caret)](workshop.md#machine-learning-in-r)
