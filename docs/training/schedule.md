@@ -31,7 +31,7 @@ Registration link will be automatically closed once it hits max 60 participants.
     - part 1: June 7, 9:00AM - 12:00PM
     - part 2: June 9, 9:00AM - 12:00PM
     - Registration opens on May 31
-   
+    - [Registration Link](https://forms.gle/tv1zoVeJdAMMQ7rF8)
    
  - [Python](workshop.md#introduction-to-programming-in-python)
     - Python 1: June 20, 9:00AM - 12:00PM
