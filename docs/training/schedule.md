@@ -37,7 +37,7 @@ Registration link will be automatically closed once it hits max 60 participants.
     - Python 1: June 20, 9:00AM - 12:00PM
     - Python 2: June 22, 9:00AM - 12:00PM
     - Python 3: June 24, 9:00AM - 12:00PM
-    - Registration opens on June 13
+    - [Registration Link](https://forms.gle/wZC6iPPXZWdrsMQf6)
     <!--- - [Registration Link](https://forms.gle/XwSrTH2oh1zc27ys7) -->
     
     
