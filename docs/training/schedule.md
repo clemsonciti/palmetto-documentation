@@ -44,7 +44,6 @@ Registration link will be automatically closed once it hits max 60 participants.
 - [Machine learning in Python (sklearn)](workshop.md#machine-learning-in-python)
     - Part 1: July 6, 9:00AM - 12:00PM
     - Part 2: July 8, 9:00AM - 12:00PM
-    - Registration opens on June 29
     - [Registration Link](https://forms.gle/EugSmVTWouwznjjv7)
 
 
