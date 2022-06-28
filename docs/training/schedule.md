@@ -45,7 +45,7 @@ Registration link will be automatically closed once it hits max 60 participants.
     - Part 1: July 6, 9:00AM - 12:00PM
     - Part 2: July 8, 9:00AM - 12:00PM
     - Registration opens on June 29
-   <!---  - [Registration Link](https://forms.gle/2EjVBSYtzHt14qj8A) -->
+    - [Registration Link](https://forms.gle/EugSmVTWouwznjjv7)
 
 
 - [Deep Learning in Python (keras)](workshop.md#deep-learning-in-python)
