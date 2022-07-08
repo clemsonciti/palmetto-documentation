@@ -51,7 +51,7 @@ Registration link will be automatically closed once it hits max 60 participants.
     - Part 1: July 11, 9:00AM - 12:00PM
     - Part 2: July 13, 9:00AM - 12:00PM
     - Registration opens on July 4
-    <!--- - [Registration Link](https://forms.gle/LsAyf4tWr7dpFywf8) -->
+    - [Registration Link](https://forms.gle/RwQ1cST5s6h6iBEQ8)
     
 
 - [Big Data Analytics: Introduction to Spark and Python](workshop.md#introduction-to-big-data-analytics-using-sparkpython)    
