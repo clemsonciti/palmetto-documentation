@@ -57,7 +57,7 @@ Registration link will be automatically closed once it hits max 60 participants.
 - [Big Data Analytics: Introduction to Spark and Python](workshop.md#introduction-to-big-data-analytics-using-sparkpython)    
     - July 15, 9:00AM - 12:00PM
     - Registration opens on July 8
-    <!--- - [Registration Link](https://forms.gle/94puT2sd9hVjsHsKA) -->
+    - [Registration Link](https://forms.gle/s9ChjiF2wX8k71G28)
     
     
 - [Applied Deep Learning: Object Detection Model using Tensorflow API](workshop.md#introduction-to-applied-deep-learning-object-detection-model-using-tensorflow-api)
