@@ -5,7 +5,6 @@ Information about upcoming maintenance will also be posted here.
 
 <img src="../../images/basic/started/palmetto_01.png" style="width:600px">
 
-
 ## Available storage on Palmetto
 
 Various filesystems are available for users to store data.
@@ -15,17 +14,17 @@ to use under which circumstances.
 
 #### Home and scratch directories
 
-Location                 |	 Available space                       | Notes                                                                       |      
------------------------- | --------------------------------------- | --------------------------------------------------------------------------- |
-`/home/username`         |   100 GB per user                       | Backed-up nightly, permanent storage space accessible from all nodes |
-`/scratch1/username`     |   1.9 PB shared by all users            | Not backed up, temporary work space accessible from all nodes, BeeGFS Parallel File System |
-`/local_scratch`         |   Varies between nodes (99GB-3.6TB)     | Per-node temporary work space, accessible only for the lifetime of job |
+| Location             | Available space                   | Notes                                                                                      |
+| -------------------- | --------------------------------- | ------------------------------------------------------------------------------------------ |
+| `/home/username`     | 100 GB per user                   | Backed-up nightly, permanent storage space accessible from all nodes                       |
+| `/scratch1/username` | 1.9 PB shared by all users        | Not backed up, temporary work space accessible from all nodes, BeeGFS Parallel File System |
+| `/local_scratch`     | Varies between nodes (99GB-3.6TB) | Per-node temporary work space, accessible only for the lifetime of job                     |
 
 - The `/home` and `scratch1` directories are shared by all nodes.
 - Each node has its own `/local_scratch` directory.
 - The parallel file system, `/scratch1`, is best suited for workflows issuing large read or write requests or creating a large number of files and
-directories.  A large read or write is when data is accessed in large chunks, such as 1MB at a time.  A large number of files and directories refers
-to workflows that generate thousands of files and directories during its processing. `/scratch1` is also ideal for non-parallel jobs with heavy I/O needs.
+  directories. A large read or write is when data is accessed in large chunks, such as 1MB at a time. A large number of files and directories refers
+  to workflows that generate thousands of files and directories during its processing. `/scratch1` is also ideal for non-parallel jobs with heavy I/O needs.
 
 All data in the `/home` directory is permanent (not automatically deleted) and backed-up on a nightly basis.
 If you lose data in the `/home` directory, it may be possible to recover it if it was previously backed up.
@@ -46,8 +45,7 @@ of the following resources:
 
 All requests will be reviewed by Clemson University
 Computational Advisory Team (CU-CAT).
-Reservation requests can be made [here](https://citi.sites.clemson.edu/new-reservation/
-).
+Reservation requests can be made [here](https://citi.sites.clemson.edu/new-reservation/).
 
 #### Purchased storage
 
@@ -58,6 +56,7 @@ For details about purchased storage, please contact the Palmetto support staff
 ## Data transfer in and out of Palmetto
 
 Data can be transferred in and out of Palmetto via the following recommended methods:
+
 - Direct transfer using `login001`: Data size smaller than 10GB.
 - Direct transfer using `xfer01`: Data size between 10-100GB.
 - Transfer using Globus: Data size larger than 100GB.
@@ -75,9 +74,9 @@ you can easily transfer small files between Palmetto and your local computer.
 On Unix systems, you can use the `scp` (secure copy) command to
 perform file transfers. The general form of the `scp` command is:
 
-~~~
+```
 $ scp <path_to_source> username@xfer01-ext.palmetto.clemson.edu:<path_to_destination>
-~~~
+```
 
 For example, here is the `scp` command to copy a file from the
 current directory on your local machine to your
@@ -85,27 +84,26 @@ current directory on your local machine to your
 (this command is entered into a terminal
 when **not logged-in to Palmetto**):
 
-~~~
+```
 $ scp myfile.txt username@xfer01-ext.palmetto.clemson.edu:/home/username
-~~~
+```
 
 ... and to do the same in reverse,
 i.e., copy from Palmetto to your local machine.
 (again, from a terminal running on your local machine,
 **not** on Palmetto):
 
-~~~
+```
 $ scp username@xfer01-ext.palmetto.clemson.edu:/home/username/myfile.txt .
-~~~
+```
 
 The `.` represents the working directory on the local machine.
 
 For folders, include the `-r` switch:
 
-~~~
+```
 $ scp -r myfolder username@xfer01-ext.palmetto.clemson.edu:/home/username
-~~~
-
+```
 
 #### Transfer large files using Globus
 
@@ -140,14 +138,22 @@ However, Globus can be used for file transfers to/from other locations as well.
 4.  As the second endpoint,
     choose `clemson#xfer01-ext.clemson.edu`.
 
-5. Make sure that you check the option to `verify file integrity after transfer` under the `Transfer & Sync Options`.
+5.  Make sure that you check the option to `verify file integrity after transfer` under the `Transfer & Sync Options`.
 
-5.  You can now transfer files between any locations on your
+6.  You can now transfer files between any locations on your
     local machine and the Palmetto cluster.
-
 
 <img src="../../images/basic/started/globus_screen.png" style="width:1000px">
 
+#### MobaXTerm File Transfer Video
+
+<iframe src="https://drive.google.com/file/d/1Ykg3hIkLH6Am44IQ7cT85NaygKrkW-AA/preview" width="670" height="376" ></iframe>
+<br />
+
+#### Mac/Globus File Transfer Video
+
+<iframe src="https://drive.google.com/file/d/1fBZWxArbvb54s58ddF9Fj8xNsKRCGg-d/preview" width="670" height="376" ></iframe>
+<br />
 
 ## Viewing all Palmetto's hardware
 
@@ -155,7 +161,7 @@ The login node `login001` (the node that users first log-in to), is not meant fo
 Instead, users must reserve hardware from the **compute nodes** of the cluster. Currently, Palmetto cluster has over 2040 compute
 nodes. The hardware configuration of the different nodes is available in the file `/etc/hardware-table`:
 
-~~~
+```
 [lngo@login001 ~]$ cat /etc/hardware-table
 
 PALMETTO HARDWARE TABLE      Last updated:  Jun 15 2020
@@ -218,7 +224,7 @@ PHASE COUNT  MAKE   MODEL    CHIP(0)                CORES  RAM(1)    /local_scra
 (10)2 NVIDIA Tesla V100 cards per node, use resource request "ngpus=[1|2]" and "gpu_model=v100"
 (11)Phase18a nodes contain NVMe storage for /local_scratch.
 (12)local_scratch is housed entirely on SSD
-~~~
+```
 
 The compute nodes are divided into "phases" (currently phases 0-19).
 Each phase is composed of several nodes with identical configuration,
@@ -229,7 +235,7 @@ A useful command on the login node is `whatsfree`, which gives information
 about how many nodes from each phase are currently in use, free, or offlined
 for maintenance.
 
-~~~
+```
 [lngo@login001 ~]$ whatsfree
 
 Mon Aug 03 2020 22:37:26
@@ -271,7 +277,7 @@ PHASE 19b  TOTAL =   4  FREE =   3  OFFLINE =   0  TYPE = HPE    XL170   Intel X
 PHASE 20   TOTAL =  22  FREE =  22  OFFLINE =   0  TYPE = Dell   R740    Intel Xeon  6238R,     56 cores, 372GB, HDR, V100S, 25ge
 
  NOTE: Your job will land on the oldest phase that satisfies your PBS resource requests.
-~~~
+```
 
 Later sections of this guide will describe how to submit **jobs** to
 the cluster, i.e., reserve compute nodes for running computational tasks.
@@ -282,24 +288,24 @@ The Palmetto cluster provides a limited number of packages (including site-licen
 that can be used by all Palmetto users. These packages are available as **modules**,
 and must be activated/deactivated using the `module` command:
 
-Command                         |   Purpose
---------------------------------|----------------------------------------------------------------------
-`module avail`                  | List all packages available (on current system)
-`module add package/version`    | Add a package to your current shell environment
-`module list`                   | List packages you have loaded
-`module rm package/version`     | Remove a currently loaded package
-`module purge`                  | Remove *all* currently loaded packages
+| Command                      | Purpose                                         |
+| ---------------------------- | ----------------------------------------------- |
+| `module avail`               | List all packages available (on current system) |
+| `module add package/version` | Add a package to your current shell environment |
+| `module list`                | List packages you have loaded                   |
+| `module rm package/version`  | Remove a currently loaded package               |
+| `module purge`               | Remove _all_ currently loaded packages          |
 
 For example, to load the GCC (v9.3.0), CUDA Toolkit (v10.2.89)
 and OpenMPI (v3.1.6) modules, you can use the command:
 
-~~~
+```
 [lngo@login001 ~]$ module add gcc/9.3.0-gcc/8.3.1 cuda/10.2.89-gcc/8.3.1 openmpi/3.1.6-gcc/8.3.1-cuda10_2-ucx
-~~~
+```
 
 Then, check the loaded modules and version of `gcc`:
 
-~~~
+```
 [lngo@login001 ~]$ module list
 
 Currently Loaded Modules:
@@ -312,7 +318,7 @@ This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 [lngo@login001 ~]$
-~~~
+```
 
 Some modules when loaded, implicitly load other modules as well.
 If you use some modules to compile/install some software,
@@ -327,11 +333,11 @@ As an exercise,
 examine the environment variables PATH, LIBRARY_PATH, etc.,
 before and after loading some module:
 
-~~~
+```
 $ echo $PATH
 $ module add anaconda3/2019.10-gcc/8.3.1
 $ echo $PATH
-~~~
+```
 
 ## Job submission and control on Palmetto
 
@@ -339,20 +345,20 @@ The Palmetto cluster uses the Portable Batch Scheduling system (PBS)
 to manage jobs. Here are some basic PBS commands
 for submitting, querying and deleting jobs:
 
-Command                         | Action
---------------------------------|--------------------------------
-`qsub -I`                       | Submit an interactive job (reserves 1 core, 1gb RAM, 30 minutes walltime)
-`qsub xyz.pbs`                  | Submit the job script `xyz.pbs`
-`qstat <job id>`                | Check the status of the job with given job ID
-`qstat -u <username>`           | Check the status of all jobs submitted by given username
-`qstat -xf <job id>`            | Check detailed information for job with given job ID
-`qsub -q <queuename> xyz.pbs`   | Submit to queue `queuename`
-`qdel <job id>`                 | Delete the job (queued or running) with given job ID
-`qpeek <job id>`                | "Peek" at the standard output from a running job
-`qdel -Wforce <job id>`         | Use when job not responding to just `qdel`
+| Command                       | Action                                                                    |
+| ----------------------------- | ------------------------------------------------------------------------- |
+| `qsub -I`                     | Submit an interactive job (reserves 1 core, 1gb RAM, 30 minutes walltime) |
+| `qsub xyz.pbs`                | Submit the job script `xyz.pbs`                                           |
+| `qstat <job id>`              | Check the status of the job with given job ID                             |
+| `qstat -u <username>`         | Check the status of all jobs submitted by given username                  |
+| `qstat -xf <job id>`          | Check detailed information for job with given job ID                      |
+| `qsub -q <queuename> xyz.pbs` | Submit to queue `queuename`                                               |
+| `qdel <job id>`               | Delete the job (queued or running) with given job ID                      |
+| `qpeek <job id>`              | "Peek" at the standard output from a running job                          |
+| `qdel -Wforce <job id>`       | Use when job not responding to just `qdel`                                |
 
 For more details and more advanced commands for submitting and controlling jobs,
-please refer to the [PBS Professional User's Guide](http://www.pbsworks.com/pdfs/PBSUserGuide14.2.pdf).  
+please refer to the [PBS Professional User's Guide](http://www.pbsworks.com/pdfs/PBSUserGuide14.2.pdf).
 
 It should be noted that for Palmetto, user will need to specify `interconnect` in order to  
 get an allocation, unless you submit a default `qsub -I` with no parameters.
@@ -362,7 +368,7 @@ get an allocation, unless you submit a default `qsub -I` with no parameters.
 An interactive job can be started using the `qsub` command.
 Here is an example of an interactive job:
 
-~~~
+```
 [username@login001 ~]$ qsub -I -l select=1:ncpus=2:mem=4gb:interconnect=1g,walltime=4:00:00
 qsub (Warning): Interactive jobs will be treated as not rerunnable
 qsub: waiting for job 8730.pbs02 to start
@@ -375,7 +381,7 @@ qsub: job 8730.pbs02 ready
 .
 [username@node0021 ~]$ exit
 [username@login001 ~]$
-~~~
+```
 
 Above, we request an interactive job using 1 "chunk" of hardware (`select=1`),
 2 CPU cores per "chunk", and 4gb of RAM per "chunk", for a wall time of 4 hours.
@@ -396,7 +402,7 @@ Following is an example of a batch script (call it `example.pbs`).
 In the batch job below, we really don't do anything useful
 (just sleep or "do nothing" for 60 seconds),
 
-~~~
+```
 #PBS -N example
 #PBS -l select=1:ncpus=1:mem=2gb:interconnect=1g,walltime=00:10:00
 
@@ -405,32 +411,32 @@ module add gcc/9.3.0-gcc/8.3.1
 cd /home/username
 echo Hello World from `hostname`
 sleep 60
-~~~
+```
 
 After saving the above file, you can submit the batch job using `qsub`:
 
-~~~
+```
 [username@login001 ~]$ qsub example.pbs
 8738.pbs02
-~~~
+```
 
 The returned job ID can be used to query the status of the job (using `qstat`)
 (or delete it using `qdel`):
 
-~~~
+```
 [username@login001 ~]$ qstat 8738.pbs02
 Job id            Name             User              Time Use S Queue
 ----------------  ---------------- ----------------  -------- - -----
 8738.pbs02        example          username           00:00:00 R c1_solo
-~~~
+```
 
 Once the job is completed, you will see the files `example.o8738` (containing output if any)
 and `example.e8738` (containing errors if any) from your job.
 
-~~~
+```
 [username@login001 ~]$ cat example.o8738
 Hello World from node0230.palmetto.clemson.edu
-~~~
+```
 
 ### PBS job options
 
@@ -438,40 +444,40 @@ The following switches can be used either
 with `qsub` on the command line,
 or with a `#PBS` directive in a batch script.
 
-Parameter | Purpose | Example
-----------|---------|---------
-`-N`      | Job name (7 characters)	| `-N maxrun1`
-`-l`      | Job limits (lowercase L), hardware & other requirements for job. | `-l select=1:ncpus=8:mem=1gb:interconnect=1g`
-`-q`      | Queue to direct this job to (`work1` is the default, `supabad` is an example of specific research group's job queue) | `-q supabad`
-`-o`      | Path to stdout file for this job (environment variables are not accepted here) | `-o stdout.txt`
-`-e`      | Path to stderr file for this job (environment variables are not accepted here) | `-e stderr.txt`
-`-m`      | mail event: Email from the PBS server with flag **a**bort\ **b**egin\ **e**nd \ or **n**o mail for job's notification.  | `-m abe`
-`-M`      | Specify list of user to whom mail about the job is sent. The user list argument is of the form: [user[@host],user[@host],...]. If **-M** is not used and **-m** is specified, PBS will send email to userid@clemson.edu | `-M user1@domain1.com,user2@domain2.com`
-`-j oe`   | Join the output and error streams and write to a single file | `-j oe`
-`-r n`	  | Ask PBS **not** to restart the job if it's failed	|  `-r n`
+| Parameter | Purpose                                                                                                                                                                                                                 | Example                                       |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| `-N`      | Job name (7 characters)                                                                                                                                                                                                 | `-N maxrun1`                                  |
+| `-l`      | Job limits (lowercase L), hardware & other requirements for job.                                                                                                                                                        | `-l select=1:ncpus=8:mem=1gb:interconnect=1g` |
+| `-q`      | Queue to direct this job to (`work1` is the default, `supabad` is an example of specific research group's job queue)                                                                                                    | `-q supabad`                                  |
+| `-o`      | Path to stdout file for this job (environment variables are not accepted here)                                                                                                                                          | `-o stdout.txt`                               |
+| `-e`      | Path to stderr file for this job (environment variables are not accepted here)                                                                                                                                          | `-e stderr.txt`                               |
+| `-m`      | mail event: Email from the PBS server with flag **a**bort\ **b**egin\ **e**nd \ or **n**o mail for job's notification.                                                                                                  | `-m abe`                                      |
+| `-M`      | Specify list of user to whom mail about the job is sent. The user list argument is of the form: [user[@host],user[@host],...]. If **-M** is not used and **-m** is specified, PBS will send email to userid@clemson.edu | `-M user1@domain1.com,user2@domain2.com`      |
+| `-j oe`   | Join the output and error streams and write to a single file                                                                                                                                                            | `-j oe`                                       |
+| `-r n`    | Ask PBS **not** to restart the job if it's failed                                                                                                                                                                       | `-r n`                                        |
 
 For example, in a batch script:
 
-~~~
+```
 #PBS -N hydrogen
 #PBS -l select=1:ncpus=24:mem=200gb:interconnect=1g,walltime=4:00:00
 #PBS -q bigmem
 #PBS -m abe
 #PBS -M userid@domain.com
 #PBS -j oe
-~~~
+```
 
 And in an interactive job request on the command line:
 
-~~~
+```
 $ qsub -I -N hydrogen -q bigmem -j oe -l select=1:ncpus=24:mem=200gb:interconnect=1g,walltime=4:00:00
-~~~
+```
 
 For more detailed information, please take a look at:
 
-~~~
+```
 $man qsub
-~~~
+```
 
 ### Resource limits specification
 
@@ -479,15 +485,15 @@ The `-l` switch provided to `qsub` or along with the `#PBS` directive
 can be used to specify the amount and kind of compute hardware (cores, memory, GPUs, interconnect, etc.,),
 its location, i.e., the node(s) and phase from which to request hardware,
 
-Option      | Purpose
-------------|--------------------------------------------------------------
-`select`    | Number of chunks and resources per chunk. Two or more "chunks" can be placed on a single node, but a single "chunk" cannot span more than one node.
-`walltime`  | Expected wall time of job (job is terminated after this time)
-`place`     | Controls the placement of the different chunks
+| Option     | Purpose                                                                                                                                             |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `select`   | Number of chunks and resources per chunk. Two or more "chunks" can be placed on a single node, but a single "chunk" cannot span more than one node. |
+| `walltime` | Expected wall time of job (job is terminated after this time)                                                                                       |
+| `place`    | Controls the placement of the different chunks                                                                                                      |
 
 Here are some examples of resource limits specification:
 
-~~~
+```
 -l select=1:ncpus=8:chip_model=opteron:interconnect=1g
 -l select=1:ncpus=16:chip_type=e5-2665:interconnect=10ge:mem=62gb,walltime=16:00:00
 -l select=1:ncpus=8:chip_type=2356:interconnect=10ge:mem=15gb
@@ -499,11 +505,11 @@ Here are some examples of resource limits specification:
 -l select=2:ncpus=2:mem=15gb:phase=9:interconnect=fdr,walltime=00:20:00          # force each chunk to be on the same phase
 -l select=1:ncpus=16:mpiprocs=16:mem=15gb:interconnect=hdr,walltime=00:20:00     # specify number of mpi processing
 
-~~~
+```
 
 and examples of options you can use in the job limit specification:
 
-~~~
+```
 chip_manufacturer=amd
 chip_manufacturer=intel
 chip_model=opteron
@@ -526,24 +532,24 @@ interconnect=10ge   (10 Gbps Ethernet)
 interconnect=56g    (56 Gbps FDR InfiniBand, same as fdr)
 interconnect=fdr    (56 Gbps FDR InfiniBand, same as 56g)
 ssd=true   			(Use a node with an SSD hard drive)
-~~~
+```
 
 ### Querying job information and deleting jobs
 
 The `qstat` command can be used
 to query the status of a particular job:
 
-~~~
+```
 $ qstat 7600424.pbs02
 Job id            Name             User              Time Use S Queue
 ----------------  ---------------- ----------------  -------- - -----
 7600424.pbs02     pi-mpi           username           00:00:00 R c1_single
-~~~
+```
 
 To list the job IDs and status of all your jobs,
 you can use the `-u` switch:
 
-~~~
+```
 $ qstat -u username
 
 pbs02:
@@ -553,12 +559,12 @@ Job ID          Username Queue    Jobname    SessID NDS TSK Memory Time  S Time
 7600567.pbs02   username  c1_singl pi-mpi-1     1382   4   8    4gb 00:05 R 00:00
 7600569.pbs02   username  c1_singl pi-mpi-2    20258   4   8    4gb 00:05 R 00:00
 7600570.pbs02   username  c1_singl pi-mpi-3     2457   4   8    4gb 00:05 R 00:00
-~~~
+```
 
 Once a job has finished running,
 `qstat -xf` can be used to obtain detailed job information:
 
-~~~
+```
 $ qstat -xf 7600424.pbs02
 
 Job Id: 7600424.pbs02
@@ -625,7 +631,7 @@ Job Id: 7600424.pbs02
     Submit_arguments = job.sh
     history_timestamp = 1481656302
     project = _pbs_project_default
-~~~
+```
 
 Similarly, to get detailed information about
 a running job, you can use `qstat -f`.
@@ -633,9 +639,9 @@ a running job, you can use `qstat -f`.
 To delete a job (whether in queued, running or error status),
 you can use the `qdel` command.
 
-~~~
+```
 $ qdel 7600424.pbs02
-~~~
+```
 
 ### Job limits on Palmetto
 
@@ -656,14 +662,14 @@ based on job critera
 There are three classes of execution queues:
 
 1. MX queues (`c1_` queues): jobs submitted to run on the older hardware (phases 1-6)
-will be forwarded to theses queues.
+   will be forwarded to theses queues.
 
 2. IB queues (`c2_` queues): jobs submitted to run the newer hardware (phases 7 and up)
-will be forwarded to these queues.
+   will be forwarded to these queues.
 
 3. GPU queues (`gpu_` queues): jobs that
-[request GPUs]({{site.baseurl}}/userguide_howto_use_gpus.html)
-will be forwarded to these queues.
+   [request GPUs]({{site.baseurl}}/userguide_howto_use_gpus.html)
+   will be forwarded to these queues.
 
 4. bigmem queue: jobs submitted to the large-memory machines (phase 0).
 
@@ -677,7 +683,7 @@ throughout the day depending on cluster load.
 Users can see what the current limits
 are using the `checkqueuecfg` command:
 
-~~~
+```
 [lngo@login001 ~]$ checkqueuecfg
 
 1G QUEUES     min_cores_per_job  max_cores_per_job   max_mem_per_queue  max_jobs_per_queue   max_walltime
@@ -716,27 +722,27 @@ bigmem                1         80          1      168:00:00
 
 [lngo@login001 ~]$
 
-~~~
+```
 
 The `qstat` command tells you which of the execution queues
 your job is forwarded to. For example, here is an interactive
 job requesting 8 CPU cores, a K40 GPU, and 32gb RAM:
 
-~~~
+```
 $ qsub -I -l select=1:ncpus=8:ngpus=1:gpu_model=k40:mem=32gb,walltime=2:00:00
 qsub (Warning): Interactive jobs will be treated as not rerunnable
 qsub: waiting for job 9567792.pbs02 to start
-~~~
+```
 
 We see from `qstat` that the job request is forward to
 the `c2_single` queue:
 
-~~~
+```
 [username@login001 ~]$ qstat 9567792.pbs02
 Job id            Name             User              Time Use S Queue
 ----------------  ---------------- ----------------  -------- - -----
 9567792.pbs02     STDIN            username                  0 Q c2_single
-~~~
+```
 
 From the output of `checkqueuecfg` above,
 we see that each user can have a maximum of **5** running jobs in this queue.
