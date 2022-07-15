@@ -130,15 +130,14 @@ MoTTY X11 proxy: Authorisation not recognized
 
 Usually this happens when your home directory is full. Log into Palmetto with another terminal application (for example, [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/)) and free up some space in your home directory. Then, MobaXTerm should work fine.
 
-## I don't see my folder when I do `ls /zfs` or `ls /scratch2`
-We recently introduced `autofs` feature that automatically mounts the user directory to `/zfs` and `/scratch2` file system when they access it, and unmounts it after 5 minutes of inactivity. This feature increases the robustness of our file system, and will greatly decrease the visual clutter (especially important if you are accessing Palmetto through a graphical interface). Due to the automatic mounting, you will not initially see your folder in /scratch2 or /zfs, and tab completion won't work. However, the folder is still there. You can `cd` directly into it, and you will not have any issues:
+## I don't see my folder when I do `ls /zfs` 
+We recently introduced `autofs` feature that automatically mounts the user directory to `/zfs` file system when they access it, and unmounts it after 5 minutes of inactivity. This feature increases the robustness of our file system, and will greatly decrease the visual clutter (especially important if you are accessing Palmetto through a graphical interface). Due to the automatic mounting, you will not initially see your folder in /zfs, and tab completion won't work. However, the folder is still there. You can `cd` directly into it, and you will not have any issues:
 
 ```bash
 $ cd /zfs/mygroup
-$ cd /scratch2/myusername
 ```
 
-After you access it, you will see it when you do `ls /zfs` or `ls /scratch2`. If you won't use it for 5 minutes or longer, it will be unmounted, so next time you will have to `cd` into it in order to see it. 
+After you access it, you will see it when you do `ls /zfs`. If you won't use it for 5 minutes or longer, it will be unmounted, so next time you will have to `cd` into it in order to see it. 
 
 ## Program crashes on login node with message `Killed`
 
@@ -175,7 +174,9 @@ node has its own `/local_scratch` directory. It is much faster to read/write
 data to `/local_scratch`, and doing so will not affect other users.
 (see example [here])(https://www.palmetto.clemson.edu/palmetto/userguide_howto_choose_right_filesystem.html).
 
-## For MacOS user, first time login to Palmetto
+## For MacOS users, problems with logging into Palmetto from the terminal
+
+If you are a Mac user, and try to `ssh` into Palmetto from the terminal, you might get this error message:
 
 ```bash
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -188,17 +189,29 @@ The fingerprint for the RSA key sent by the remote host is
 SHA256:Z2WLGvz7vX2t9VPap6ITwS3cBlCafN69FoIm8wmmF6g.
 Please contact your system administrator.
 Add correct host key in /Users/abcd/.ssh/known_hosts to get rid of this message.
-Offending RSA key in /Users/abcd/.ssh/known_hosts: **1**
+Offending RSA key in /Users/abcd/.ssh/known_hosts:5
 RSA host key for login.palmetto.clemson.edu has changed and you have requested strict checking.
 Host key verification failed.
 ```
 
-Resolution: type one of the following command into the terminal before login to Palmetto (Note the number must match with the given key):
+This is a common problem, and it's easy to fix. Please find the line "Offending RSA key" in the error message. In the example above, the number of the offending key is 5. This means that we have to remove 5th line from the lists of known SSH hosts so this line could be recreated.
 
-```bash
-$ sed -i '**1**d' ~/.ssh/known_hosts
-$ perl -pi -e 's/\Q$_// if ($. == **1**);' ~/.ssh/known_hosts
-```
+There are several ways to fix the error. The first one is, to type in terminal 
+
+~~~
+sed -i '5d' ~/.ssh/known_hosts
+~~~
+
+(Please replace the number 5 with the number of the offending RSA key from the error message)
+
+Alternatively, you can type in terminal 
+
+~~~
+perl -pi -e 's/\Q$_// if ($. == 5);' ~/.ssh/known_hosts
+~~~
+
+(Again, instead of number 5, put the number of the offending RSA key)
+
 
 ## Error when creating conda environment after loading anaconda module
 If error occurs, please try the following command:
