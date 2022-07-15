@@ -30,7 +30,7 @@ Faculty who conducts course that required Palmetto account for all students, ple
 
 - For new users of Palmetto, we offer on-boarding sessions **every 
 Friday from 9:00AM to 10:00AM**. You can register to attend this online Zoom session 
-via the following link: <http://bit.ly/Palmetto_Fri_onboarding>. 
+via the following link: <http://bit.ly/3pTTwG1> 
 
 - Please drop by to discuss how Palmetto can help you realize your 
 research goals, and get help with getting started on Palmetto cluster.
