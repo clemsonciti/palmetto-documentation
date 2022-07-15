@@ -35,6 +35,11 @@ and any data that are not required should be removed as soon as possible.
 
 See [this guide](https://www.palmetto.clemson.edu/palmetto/basic/storage/) on how to choose the appropriate filesystem for your work.
 
+#### Storage Overview Video
+
+<iframe src="https://drive.google.com/file/d/1kdzeLSjOxJKZhSYMjpKftPAvLcuUT1vg/preview" width="670" height="376" ></iframe>
+<br />
+
 #### Temporary reservations
 
 All users may apply for temporary reservation

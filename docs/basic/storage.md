@@ -13,11 +13,6 @@ Both hard drives and flash drives have their place on Palmetto. Hard drives cost
 
 Contributing to the performance of any storage media is the file system that manages the data. Palmetto engages two types of file systems, traditional and parallel. Both types of file systems take advantage of the underlying storage medium; however, these file systems access data in divergent ways to provide the best possible performance. Traditional file systems, such as `ext4`, `xfs`, and `zfs`, perform best when requests originate from the same machine as the location of storage. Palmetto compute nodes provide a limited amount of this kind of storage, referred to as local storage, that can only be used by an active PBS job. Palmetto also uses a software package called `NFS`, Network File System, which allows compute nodes to access data housed in a traditional file system on a storage server over a network. Parallel file systems, such as `BeeGFS`, `Lustre`, and `GPFS`, perform best when there are many storage servers and a fast network between the compute nodes and the storage servers. These file systems spread data across a set of storage servers, optimizing performance by taking advantage of the processing power of each server and the fast network, while amortizing the time to process a request across the number of storage servers. That is, if a data request takes X amount of time using a traditional file system over a network, then the same request will take X/4 amount of time in a 4 storage server parallel file system. These file systems do not use `NFS` to communicate with the storage servers but have a client process on each compute node. Palmetto is currently using `BeeGFS` as its parallel file system of choice, and all nodes have access to our parallel file systems.
 
-#### Storage Overview Video
-
-<iframe src="https://drive.google.com/file/d/1kdzeLSjOxJKZhSYMjpKftPAvLcuUT1vg/preview" width="670" height="376" ></iframe>
-<br />
-
 ### Palmetto Data Spaces
 
 Palmetto provides three data spaces: home, scratch, and paid storage. Every user has a home directory and access to the scratch file systems. Paid storage is purchased by our research scientists to house their data and can only be accessed by users having the owner’s approval. Each data space is accessible from anywhere in the cluster.

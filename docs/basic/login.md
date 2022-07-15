@@ -85,7 +85,7 @@ After downloading and installing MobaXterm, users can log-in by following these 
     and Download (blue arrow pointing down) buttons at the top of the SCP tab,
     you can easily transfer files between Palmetto and your local computer.
 
-#### Video Instructions
+#### Windows Video Instructions
 
 <iframe src="https://drive.google.com/file/d/1iikVYeVkUC__Qu6TInhEOJqIdR02RAVp/preview" width="670" height="376" ></iframe>
 
