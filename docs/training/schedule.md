@@ -1,4 +1,4 @@
-## Summer 2022 Training Schedule
+## Fall 2022 Training Schedule
 
 *Starting Spring 2021, we will also test our recorded workshop features, 
 where Zoom-based workshops are recorded and sent by request **to workshop attendees only**. All recordings will 
