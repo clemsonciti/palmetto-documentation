@@ -1,3 +1,13 @@
+## Maintenance on July 18 - July 25, 2022
+The Palmetto cluster underwent yearly maintenance. Signifcant changes were made:
+- The operating system was changed from CentOS 8 to Rocky Linux. 
+- Old versions of modules have been retired, and the modules that were kept have been reinstalled and recompiled. This caused a change in module names (please use "module avail" to get the new module names). In particular, the gcc bersion was updated from 8.3 to 9.5.
+- Open OnDemand has been upgraded.
+- Scratch storage has been purged.
+- We have added new instances of the login node. The address is the same (login.palmetto.clemson.edu) but the user will end up on one of the several login nodes (login001, login002, login003, etc.)
+
+We had a townhall meeting to discuss these changes. The Zoom recording of the meeting is [available online](https://clemson.zoom.us/rec/share/Pn5luN9g2nFvT7BMdsl_dW-8zLIRjp1rMOIQ0GsdaBvQI8X58gczNHCb3_bKw6kP.eQu4r4n4Pg10PR9r). The Q&A sheet from the meeting is also [available online](https://docs.google.com/document/d/1IJxIy84TNWW4FW8w0Nbv6VdW_Iuut2Kxar03GbkzSp4/edit). You will need to log into g.clemson.edu to open these links.
+
 ## Maintenance on December 20, 2021
 We will be decommissioning /scratch2 and Jupyterhub starting **9:00 am Monday December 20th, 2021**.
 We will also be making some changes to the servers hosting Open OnDemand, website and documentation at the same time. During this time Open OnDemand, website and documentation will be inaccessible. We expect the outage for Open OnDemand, website and documentation to take about 3 hours.
