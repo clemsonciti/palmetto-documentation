@@ -16,52 +16,53 @@ Registration link will be automatically closed once it hits max 60 participants.
 <!---    - [Registration Link](https://forms.gle/spedAFRaUch5qKty8) -->
      
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
-    - May 24, 9:00AM - 12:00PM
-    - Registration opens on May 17
-    - [Registration Link](https://forms.gle/dVbeTSXAx81aWeTt6)
+    - August 29, 9:00AM - 12:00PM
+    - Registration opens on August 22
+<!---    - [Registration Link](https://forms.gle/dVbeTSXAx81aWeTt6) -->
   
 - [R Programming](workshop.md#introduction-to-data-science-using-r)
-    - R 1 (basic): May 31, 9:00AM - 12:00PM
-    - R 2 (advanced): June 2, 9:00AM - 12:00PM
-    - Registration opens on May 24
-    - [Registration Link](https://forms.gle/yRtiQ97X167EqCvd9)
+    - R 1 (basic): September 2, 9:00AM - 12:00PM
+    - R 2 (advanced): September 9, 9:00AM - 12:00PM
+    - Registration opens on August 26
+<!---    - [Registration Link](https://forms.gle/yRtiQ97X167EqCvd9) -->
         
         
 - [Machine learning in R (caret)](workshop.md#machine-learning-in-r)
-    - part 1: June 7, 9:00AM - 12:00PM
-    - part 2: June 9, 9:00AM - 12:00PM
-    - Registration opens on May 31
-    - [Registration Link](https://forms.gle/tv1zoVeJdAMMQ7rF8)
+    - part 1: September 16, 9:00AM - 12:00PM
+    - part 2: September 23, 9:00AM - 12:00PM
+    - Registration opens on September 9
+<!---    - [Registration Link](https://forms.gle/tv1zoVeJdAMMQ7rF8) -->
    
  - [Python](workshop.md#introduction-to-programming-in-python)
-    - Python 1: June 20, 9:00AM - 12:00PM
-    - Python 2: June 22, 9:00AM - 12:00PM
-    - Python 3: June 24, 9:00AM - 12:00PM
-    - [Registration Link](https://forms.gle/wZC6iPPXZWdrsMQf6)
-    <!--- - [Registration Link](https://forms.gle/XwSrTH2oh1zc27ys7) -->
+    - Python 1: September 7, 9:00AM - 12:00PM
+    - Python 2: September 14, 9:00AM - 12:00PM
+    - Python 3: September 21, 9:00AM - 12:00PM
+    - Registration opens on August 31
+<!--- - [Registration Link](https://forms.gle/XwSrTH2oh1zc27ys7) -->
     
     
 - [Machine learning in Python (sklearn)](workshop.md#machine-learning-in-python)
-    - Part 1: July 6, 9:00AM - 12:00PM
-    - Part 2: July 8, 9:00AM - 12:00PM
-    - [Registration Link](https://forms.gle/EugSmVTWouwznjjv7)
+    - Part 1: October 4, 1:00PM - 4:00PM
+    - Part 2: October 11, 1:00PM - 4:00PM
+    - Registration opens on September 27
+<!---    - [Registration Link](https://forms.gle/EugSmVTWouwznjjv7) -->
 
 
-- [Deep Learning in Python (keras)](workshop.md#deep-learning-in-python)
-    - Part 1: July 11, 9:00AM - 12:00PM
-    - Part 2: July 13, 9:00AM - 12:00PM
-    - Registration opens on July 4
-    - [Registration Link](https://forms.gle/RwQ1cST5s6h6iBEQ8)
+- [Deep Learning and Obect Detection in Python]
+    - Part 1: October 18, 1:00PM - 4:00PM
+    - Registration opens on October 11
+<!---    - [Registration Link](https://forms.gle/RwQ1cST5s6h6iBEQ8) -->
     
 
 - [Big Data Analytics: Introduction to Spark and Python](workshop.md#introduction-to-big-data-analytics-using-sparkpython)    
-    - July 15, 9:00AM - 12:00PM
-    - Registration opens on July 8
-    - [Registration Link](https://forms.gle/s9ChjiF2wX8k71G28)
+    - November 1, 1:00PM - 4:00PM
+    - Registration opens on October 25
+<!---    - [Registration Link](https://forms.gle/s9ChjiF2wX8k71G28) -->
     
+- [Containers and Cloud Computing on Palmetto]
+    - December 2, 1:00PM - 4:00PM
+    - Registration opens on November 25
     
-- [Applied Deep Learning: Object Detection Model using Tensorflow API](workshop.md#introduction-to-applied-deep-learning-object-detection-model-using-tensorflow-api)
-    - not offered this semester
     
     
 ** [Certificate](https://www.palmetto.clemson.edu/palmetto/training/certificates/) eligible:
