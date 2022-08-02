@@ -1,5 +1,5 @@
 ## Maintenance on July 18 - July 25, 2022
-The Palmetto cluster underwent yearly maintenance. Signifcant changes were made:
+The Palmetto cluster underwent yearly maintenance. Significant changes were made:
 
 - The operating system was changed from CentOS 8 to Rocky Linux. 
 - Old versions of modules have been retired, and the modules that were kept have been reinstalled and recompiled. This caused a change in module names (please use "module avail" to get the new module names). In particular, the gcc bersion was updated from 8.3 to 9.5.
