@@ -1,15 +1,11 @@
 # Dashboard Files
 
-- Click on OOD Dashboard's **Files** dropdown menu will display a list of three directories for the user:
+- Click on OOD Dashboard's **Files** dropdown menu will display a list of directories for the user:
 
 - `Home`
 - `/scratch1/`
-- `/scratch2/`
+- `/zfs` (if accessible)
 
-
-
-*We are investigating how to dynamically add additional accessible locations 
-for users in research groups with dedicated storage on ZFS*
 
 <img src="../../images/ood/files/01.png" style="width:400px">
 

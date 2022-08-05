@@ -16,13 +16,13 @@ improve our OOD deployment.
 At the moment, the OOD interface requires users to be either on-campus or on Clemson VPN in order 
 to access the page. Instructions on how to be on Clemson VPN from off campus [can be found here](https://ccit.clemson.edu/services/network-phones-cable/network/vpn/).
 
-The OOD site is located at [https://openod02.palmetto.clemson.edu](https://openod02.palmetto.clemson.edu). You will need to authenticate using both DUO and your Clemson password. 
+The OOD site is located at [https://openod.palmetto.clemson.edu](https://openod.palmetto.clemson.edu). You will need to authenticate using both DUO and your Clemson password. 
 
 <img src="../../images/ood/intro/01.png" style="width:1000px">
 
 The OOD dashboard contains all OOD utilities to access Palmetto:
 
-- **Files**: Links to `/home`, `/scratch1`, and `/scratch2` directories. The 
+- **Files**: Links to `/home`, `/scratch1`, and `/zfs` directories. The 
 destination link will provide users with the ability to browser, upload, download, 
 view, create, edit, and delete their files and folders. 
 - **Jobs**: Allow users to create, submit, and monitor batch jobs on Palmetto. 
