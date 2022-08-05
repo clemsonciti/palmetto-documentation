@@ -63,7 +63,7 @@ For details about purchased storage, please contact the Palmetto support staff
 Data can be transferred in and out of Palmetto via the following recommended methods:
 
 - Direct transfer using `login`: Data size smaller than 10GB.
-- Direct transfer using `xfer01`: Data size between 10-100GB.
+- Direct transfer using `xfer02`: Data size between 10-100GB.
 - Transfer using Globus: Data size larger than 100GB.
 
 #### Direct transfer
