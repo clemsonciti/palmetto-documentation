@@ -1,5 +1,15 @@
 # Common problems/issues
 
+## I get the error "undefined symbol: EVP_KDF_ctrl, version OPENSSL_1_1_1b"
+This error is caused by a version mismatch between the OpenSSL that is part of the Rocky operating system, and the versions that are required by some software packages. If you get that error, please load these modules:
+
+~~~
+module load libssh/0.8.5-gcc/9.5.0 krb5/1.19.3-gcc/9.5.0
+~~~
+
+If that fails, load the `anaconda3/2022.05-gcc/9.5.0` module.
+
+
 ## Fine-grained checking of resource availability
 
 Up until recently, whatsfree has been the standard tool to identify available computing resources 
