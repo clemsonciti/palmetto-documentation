@@ -18,6 +18,8 @@ $ cd
 $ mkdir software
 $ cd software
 $ git clone https://github.com/spack/spack.git
+$ cd spack
+$ git checkout v0.17.2
 ```
 
 After installation, we will need to run the configuration script to set up the Spack environment: 
@@ -89,6 +91,13 @@ If you haven't modified your `.bashrc` file, you will need to run the Spack conf
 
 ```
 $ source ~/software/spack/share/spack/setup-env.sh
+```
+
+We should make sure that spack knows about the compilers available.  Run the
+following and spack will automatically find available compilers.
+
+```
+$ spack compiler find
 ```
 
 Now, we will start the installation of software. As an example, let's install R 3.3.0, which is not currently available on Palmetto (oldest
