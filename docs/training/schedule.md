@@ -16,7 +16,7 @@ Registration link will be automatically closed once it hits max 60 participants.
      
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
     - August 29, 9:00AM - 12:00PM
-    - [Registration Link](https://forms.gle/DfujupG6HbkXwrU19)
+    - [Registration Link](https://docs.google.com/forms/d/17bgSLRUpPFfudmLZ3dP3G7oq6hame0NTDilepwNapCU/edit?usp=sharing)
   
 - [R Programming](workshop.md#introduction-to-data-science-using-r)
     - R 1 (basic): September 2, 9:00AM - 12:00PM
