@@ -4,7 +4,7 @@
 where Zoom-based workshops are recorded and sent by request **to workshop attendees only**. All recordings will 
 require Clemson's authentication to view. Downloading is not permitted. Please contact ithelp@clemson.edu for the link* 
 
-Please click on Registration for each of the workshop below. The Registration link will be accessible 1 week prior to the workshop. You will need to use g.clemson.edu to access the registration form.
+Please click on Registration for each of the workshop below. The Registration link will be accessible 1 week prior to the workshop. **You will need to use g.clemson.edu to access the registration form.**
 
 Once done, our workshop facilitator will send the zoom link to your registered email few days before the workshop date.
 
