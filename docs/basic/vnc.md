@@ -9,9 +9,10 @@ We really recommend using MobaXTerm, because it comes with built-in VNC client, 
 qsub -I -l select=1:ncpus=4:mem=50gb:ngpus=2:gpu_model=any:interconnect=fdr,walltime=8:00:00
 ~~~
 
-Once you get on the compute node, start the VNC server:
+Once you get on the compute node, copy the VNC settings into your home directory, and then start the VNC server:
 
 ~~~
+cp /hpc/.Xclients ~/
 LANG=C && /software/commercial/TurboVNC/bin/vncserver
 ~~~
 
@@ -35,12 +36,13 @@ Click OK. It will start the VNC session; the first part is two-factor identifica
 <img src="../../images/basic/started/turbovnc_setup3.png" style="width:700px">
 
 Don’t enter your password yet! Enter 1 (i.e. number one), which will send you the DUO push. The next step will be entering your password.
-This will open a graphical window which runs on Palmetto. It will, most likely, have a Firefox browser running; close it by closing all tabs. You should also see a terminal window running. To make it more user-friendly, type in this window:
+This will open a graphical window which runs on Palmetto. There should be a terminal window running. 
+<!---It will, most likely, have a Firefox browser running; close it by closing all tabs. You should also see a terminal window running. To make it more user-friendly, type in this window:
 
 ~~~
 icewm &
 ~~~
-
+-->
 We are now ready to run a graphical application! In order to run it, load the appropriate module, and then type
 
 ~~~
@@ -65,9 +67,10 @@ Open a terminal (most likely, it’s in the **Applications** -> **Utilities** fo
 qsub -I -l select=1:ncpus=4:mem=50gb:ngpus=2:gpu_model=any:interconnect=fdr,walltime=8:00:00
 ~~~
 
-Start TurboVNC server:
+Copy the VNC settings into your home directory and start TurboVNC server:
 
 ~~~
+cp /hpc/.Xclients ~/
 LANG=C && /software/commercial/TurboVNC/bin/vncserver
 ~~~
 
@@ -104,12 +107,14 @@ Finally, on your local computer, open TurboVNC viewer. In "VNC server" field, sp
 <img src="../../images/basic/started/turbovnc_setup4.png" style="width:400px">
 -->
 Enter password when prompted; this is the password that you have set up earlier when you started the VNC server.
-This will open a graphical window which runs on Palmetto. It will, most likely, have a Firefox browser running; close it by closing all tabs. You should also see a terminal window running. To make it more user-friendly, type in this window:
+This will open a graphical window which runs on Palmetto. There should be a terminal window running. 
+
+<!---It will, most likely, have a Firefox browser running; close it by closing all tabs. You should also see a terminal window running. To make it more user-friendly, type in this window:
 
 ~~~
 icewm &
 ~~~
-
+-->
 We are now ready to run a graphical application! In order to run it, load the appropriate module, and then type
 
 ~~~
