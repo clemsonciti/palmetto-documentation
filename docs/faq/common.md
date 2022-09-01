@@ -1,5 +1,31 @@
 # Common problems/issues
 
+## Jupyter Notebooks launched through Open Ondemand are asking for a password
+This is caused by the "conda initialize" statements in your .bashrc file.
+Remove the following section from your .bashrc file:
+~~~
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/software/spackages/linux-rocky8-x86_64/gcc-9.5.0/anaconda3-2022.05-zyrazrj6uvrtukupqzhaslr63w7hj6in/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/software/spackages/linux-rocky8-x86_64/gcc-9.5.0/anaconda3-2022.05-zyrazrj6uvrtukupqzhaslr63w7hj6in/etc/profile.d/conda.sh" ]; then
+        . "/software/spackages/linux-rocky8-x86_64/gcc-9.5.0/anaconda3-2022.05-zyrazrj6uvrtukupqzhaslr63w7hj6in/etc/profile.d/conda.sh"
+    else
+        export PATH="/software/spackages/linux-rocky8-x86_64/gcc-9.5.0/anaconda3-2022.05-zyrazrj6uvrtukupqzhaslr63w7hj6in/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+~~~
+
+After this section is removed, activate your conda environemts are with `source activate`.
+~~~
+module load anaconda3/2022.05-gcc/9.5.0
+source activate <name_of_environment>
+~~~
+
 ## I get the error "undefined symbol: EVP_KDF_ctrl, version OPENSSL_1_1_1b"
 This error is caused by a version mismatch between the OpenSSL that is part of the Rocky operating system, and the versions that are required by some software packages. If you get that error, please load these modules:
 
