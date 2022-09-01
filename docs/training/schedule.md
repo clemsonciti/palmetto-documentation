@@ -34,8 +34,9 @@ Registration link will be automatically closed once it hits max 60 participants.
     - Python 1: September 7, 9:00AM - 12:00PM
     - Python 2: September 14, 9:00AM - 12:00PM
     - Python 3: September 21, 9:00AM - 12:00PM
-<!---    - Registration opens on August 31 -->
     - [Registration Link](https://forms.gle/3h9efUBiZynGipKcA)
+<!---    - Registration opens on August 31 -->
+    
     
     
 - [Machine learning in Python (sklearn)](workshop.md#machine-learning-in-python)
