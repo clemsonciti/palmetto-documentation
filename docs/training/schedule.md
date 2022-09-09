@@ -28,7 +28,7 @@ Registration link will be automatically closed once it hits max 60 participants.
     - part 1: September 16, 9:00AM - 12:00PM
     - part 2: September 23, 9:00AM - 12:00PM
     - Registration opens on September 9
-<!---    - [Registration Link](https://forms.gle/tv1zoVeJdAMMQ7rF8) -->
+    - [Registration Link](https://forms.gle/CnMbgsjFUGTCNsnc7)
    
  - [Python](workshop.md#introduction-to-programming-in-python)
     - Python 1: September 7, 9:00AM - 12:00PM
