@@ -41,8 +41,8 @@ Registration link will be automatically closed once it hits max 60 participants.
 - [Machine learning in Python (sklearn)](workshop.md#machine-learning-in-python)
     - Part 1: October 4, 1:00PM - 4:00PM
     - Part 2: October 11, 1:00PM - 4:00PM
-    - Registration opens on September 27
-<!---    - [Registration Link](https://forms.gle/EugSmVTWouwznjjv7) -->
+<!---    - Registration opens on September 27  -->
+    - [Registration Link](https://forms.gle/QB8LSzkJDE2GLcgGA)
 
 
 - [Deep Learning and Obect Detection in Python]
