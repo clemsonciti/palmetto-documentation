@@ -2,8 +2,6 @@
 
 ## Obtaining an account
 
-**ACCOUNT SUBMISSION FORM IS CURRENTLY UNDER MAINTENANCE AND WILL BE BACK VERY SHORTLY**
-
 An account is required to access and use the Palmetto
 cluster. All Clemson University students, faculty and staff
 can request an account following the procedure detailed below:
