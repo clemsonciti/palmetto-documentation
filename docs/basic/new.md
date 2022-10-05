@@ -13,6 +13,8 @@ can request an account following the procedure detailed below:
 5. Enter the information requested.
 6. Once the form is complete, press the "Submit" button.
 
+Alternatively, the form can be accessed [here](http://clemson.cherwellondemand.com/CherwellPortal/IT/One-Step/CITIAccount) (it takes some time to load so be patient).
+
 Account requests are typically reviewed and approved between 24-48 hours.
 
 ## Obtaining Bulk Account for course
