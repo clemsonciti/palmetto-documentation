@@ -45,9 +45,9 @@ Registration link will be automatically closed once it hits max 60 participants.
 
 
 - [Deep Learning and Obect Detection in Python]
-    - Part 1: October 18, 1:00PM - 4:00PM
+    - October 18, 1:00PM - 4:00PM
     - Registration opens on October 11
-<!---    - [Registration Link](https://forms.gle/RwQ1cST5s6h6iBEQ8) -->
+    - [Registration Link](https://forms.gle/ZhPJq7ZTjHZoqGSt9)
     
 
 - [Big Data Analytics: Introduction to Spark and Python](workshop.md#introduction-to-big-data-analytics-using-sparkpython)    
