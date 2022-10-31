@@ -53,7 +53,7 @@ Registration link will be automatically closed once it hits max 60 participants.
 - [Big Data Analytics: Introduction to Spark and Python](workshop.md#introduction-to-big-data-analytics-using-sparkpython)    
     - November 1, 1:00PM - 4:00PM
     - Registration opens on October 25
-<!---    - [Registration Link](https://forms.gle/s9ChjiF2wX8k71G28) -->
+    - [Registration Link](https://forms.gle/a5zimKRZmVrDDsqP6)
     
 - [Containers and Cloud Computing on Palmetto]
     - December 2, 1:00PM - 4:00PM
