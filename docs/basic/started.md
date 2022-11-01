@@ -63,7 +63,7 @@ For details about purchased storage, please contact the Palmetto support staff
 Data can be transferred in and out of Palmetto via the following recommended methods:
 
 - Direct transfer using `login`: Data size smaller than 10GB.
-- Direct transfer using `xfer02`: Data size between 10-100GB.
+- Direct transfer using `xfer01`: Data size between 10-100GB.
 - Transfer using Globus: Data size larger than 100GB.
 
 #### Direct transfer
@@ -72,7 +72,7 @@ On Windows machines, using the MobaXterm SSH client, the built-in file browser c
 Using the Upload (green arrow pointing up) and and Dowload (blue arrow pointing down) buttons at the top of the SCP tab,
 you can easily transfer small files between Palmetto and your local computer.
 
-**You can setup an SSH session to `xfer02-ext.clemson.edu` similar to how you login to `login.palmetto.clemson.edu`.**
+**You can setup an SSH session to `xfer01-ext.clemson.edu` similar to how you login to `login.palmetto.clemson.edu`.**
 
 <img src="../../images/basic/started/palmetto_02.png" style="width:300px">
 
@@ -80,7 +80,7 @@ On Unix systems, you can use the `scp` (secure copy) command to
 perform file transfers. The general form of the `scp` command is:
 
 ```
-$ scp <path_to_source> username@xfer02-ext.clemson.edu:<path_to_destination>
+$ scp <path_to_source> username@xfer01-ext.clemson.edu:<path_to_destination>
 ```
 
 For example, here is the `scp` command to copy a file from the
@@ -90,7 +90,7 @@ current directory on your local machine to your
 when **not logged-in to Palmetto**):
 
 ```
-$ scp myfile.txt username@xfer02-ext.clemson.edu:/home/username
+$ scp myfile.txt username@xfer01-ext.clemson.edu:/home/username
 ```
 
 ... and to do the same in reverse,
@@ -99,7 +99,7 @@ i.e., copy from Palmetto to your local machine.
 **not** on Palmetto):
 
 ```
-$ scp username@xfer02-ext.clemson.edu:/home/username/myfile.txt .
+$ scp username@xfer01-ext.clemson.edu:/home/username/myfile.txt .
 ```
 
 The `.` represents the working directory on the local machine.
@@ -107,7 +107,7 @@ The `.` represents the working directory on the local machine.
 For folders, include the `-r` switch:
 
 ```
-$ scp -r myfolder username@xfer02-ext.clemson.edu:/home/username
+$ scp -r myfolder username@xfer01-ext.clemson.edu:/home/username
 ```
 
 #### Transfer large files using Globus
