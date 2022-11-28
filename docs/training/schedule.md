@@ -56,8 +56,9 @@ Registration link will be automatically closed once it hits max 60 participants.
     - [Registration Link](https://forms.gle/a5zimKRZmVrDDsqP6)
     
 - [Containers and Cloud Computing on Palmetto]
-    - December 2, 1:00PM - 4:00PM
+    - December 9, 1:00PM - 3:00PM
     - Registration opens on November 25
+    - [Registration Link](https://forms.gle/oGZ6dqEUJrGih77bA)
     
     
     
