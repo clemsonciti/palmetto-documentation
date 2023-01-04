@@ -26,7 +26,7 @@ link. If you do not receive an email within an hour, please notify <ithelp@clems
 2. Once you have access to Zoom, please use the following link to go to our Zoom channel and register for the date/time that works for you: 
 
   - [Wednesday Office-hours 8.30am – 11.30am](https://clemson.zoom.us/meeting/register/tJMkf-ytqDMuEtT_MXRVsa_QhBe8ibaqzD0A)
-  - [Friday Onboarding 9am-10am]() 
+  - [Friday Onboarding 9am-10am](https://clemson.zoom.us/meeting/register/tJ0scu-urj4oGNKPHm6s6rzUXwFF7OVM30BR) 
 
 ### Email Support
 
