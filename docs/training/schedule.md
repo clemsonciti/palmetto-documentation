@@ -12,11 +12,14 @@ Registration link will be automatically closed once it hits max 60 participants.
 
 - [Introduction to Linux](workshop.md#introduction-to-linux)  
     - January 25, 2023, 11:00AM - 1:30PM
-    - [Registration Link]()
+    - In-Person Location: Scholars' Lab ( Cooper 413)
+    - Scholars's Lab: https://libraries.clemson.edu/creative-spaces/scholars-lab/ 
+    - [Registration Link](https://forms.gle/hVH4JmVC453sBVCJ8)
      
 - [Introduction to Palmetto](workshop.md#introduction-to-research-computing-on-palmetto-cluster)
     - January 27, 2023, 11:00AM - 1:30PM
-    - [Registration Link]()
+    - In-Person Location: Cooper 204
+    - [Registration Link](https://forms.gle/KgCXbNUa6vQdrnZ67)
   
 - [R Programming](workshop.md#introduction-to-data-science-using-r)
     - R 1 (basic): February 20, 2023 9:00AM - 11:30AM
