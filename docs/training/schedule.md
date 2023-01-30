@@ -33,6 +33,8 @@ Registration link will be automatically closed once it hits max 60 participants.
     - [Registration Link]()
    
  - [Python](workshop.md#introduction-to-programming-in-python)
+    - In-Person Location: Scholars' Lab ( Cooper 413)
+    - Scholars's Lab: https://libraries.clemson.edu/creative-spaces/scholars-lab/ 
     - Python 1: February 06, 2023, 3:00PM - 5:30PM
     - Python 2: February 08, 2023, 3:00PM - 5:30PM
     - Python 3: February 10, 2023, 3:00PM - 5:30PM
