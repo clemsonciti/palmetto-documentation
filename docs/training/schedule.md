@@ -36,7 +36,7 @@ Registration link will be automatically closed once it hits max 60 participants.
     - Python 1: February 06, 2023, 3:00PM - 5:30PM
     - Python 2: February 08, 2023, 3:00PM - 5:30PM
     - Python 3: February 10, 2023, 3:00PM - 5:30PM
-    - [Registration Link]()
+    - [Registration Link](https://forms.gle/Zbjo3Km5exjN5igi7)
 <!---    - Registration opens on August 31 -->
     
     
