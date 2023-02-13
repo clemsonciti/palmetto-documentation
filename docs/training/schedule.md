@@ -24,7 +24,7 @@ Registration link will be automatically closed once it hits max 60 participants.
 - [R Programming](workshop.md#introduction-to-data-science-using-r)
     - R 1 (basic): February 20, 2023 9:00AM - 11:30AM
     - R 2 (advanced): February 22, 2023 9:00AM - 11:30AM
-    - [Registration Link]()
+    - [Registration Link](https://forms.gle/tgbAwZM61cuTefe59)
         
         
 - [Machine learning in R (caret)](workshop.md#machine-learning-in-r)
