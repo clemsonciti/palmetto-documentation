@@ -30,7 +30,7 @@ Registration link will be automatically closed once it hits max 60 participants.
 - [Machine learning in R (caret)](workshop.md#machine-learning-in-r)
     - part 1: March 06, 2023 9:00AM - 11:30AM
     - part 2: March 08, 2023 9:00AM - 11:30AM
-    - [Registration Link]()
+    - [Registration Link](https://forms.gle/2PiAzZKzJc9Upwcj6)
    
  - [Python](workshop.md#introduction-to-programming-in-python)
     - In-Person Location: Scholars' Lab ( Cooper 413)
