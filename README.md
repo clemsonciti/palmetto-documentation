@@ -6,7 +6,9 @@ Please see our new documentation site at [docs.rcd.clemson.edu](https://docs.rcd
 
 The below will remain for historical purposes.
 
-This repository contains the source code for the Palmetto Cluster documentation,
+## Overview
+
+This repository contains the source code for the **old** Palmetto Cluster documentation,
 live at [palmetto.clemson.edu/palmetto](https://palmetto.clemson.edu/palmetto).
 
 <img
